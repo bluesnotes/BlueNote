@@ -5,8 +5,14 @@
 #define Display_CS 5
 #define Display_RST 17
 
-#define EN1_PIN 26
-#define EN2_PIN 25
+#define ENCM_B_PIN 39
+#define ENCM_A_PIN 36
+#define ENCA_B_PIN 27
+#define ENCA_A_PIN 26
+#define ENCB_A_PIN 25
+#define ENCB_B_PIN 33
+#define ENCC_B_PIN 34
+#define ENCC_A_PIN 35
 
 #define ONE_WIRE_PIN 32
 #define PWM_FAN_PIN 2

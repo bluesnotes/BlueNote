@@ -1,8 +1,9 @@
-#include <Wire.h>
 #ifndef MCP23008_H
 #define MCP23008_H
+#include "pin.h"
+#include <Wire.h>
 
-#define address 0b0100000
+#define ADDR_MCP23008 0b0100000
 
 bool init_MCP23008(void);
 
