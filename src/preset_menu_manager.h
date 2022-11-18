@@ -55,9 +55,9 @@ class Menu {
     void processWirelessMenu();
     void displayAboutScreen();
 
-    void countEncoder(long *encP, long *encOp, ESP32Encoder *encoderSelect);
+    void countEncoder(bool *fastInc, long *encP, long *encOp, ESP32Encoder *encoderSelect);
 
-    void incDecItemPreset(bool inc_dec, unsigned char par);
+    void incDecItemPreset(bool inc_dec, bool fastInc, unsigned char par);
 
   public:
     Menu(unsigned char *inputs, float *temp);

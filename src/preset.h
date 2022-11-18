@@ -124,11 +124,11 @@ class Preset {
     // Setters
     void setPreseName(String s);
 
-    float getItemPreset(unsigned char effectSel, unsigned char page, unsigned char parameter);
+    float getItemMenuPreset(unsigned char page, unsigned char parameter);
 
-    void setItemPreset(unsigned char effectSel, unsigned char page, unsigned char parameter, float value);
+    void setItemPreset(unsigned char page, unsigned char parameter, float value);
 
-    void displayMenuPreset(unsigned char effectSel, unsigned char page, Adafruit_ILI9341 *d);
+    void displayMenuPreset(unsigned char page, unsigned char parameter, Adafruit_ILI9341 *d);
 
     friend int compare(const Preset &P1, const Preset &P2);
 };

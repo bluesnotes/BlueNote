@@ -250,64 +250,21 @@ void Preset::drawCursor(float value, const String &parameter_name, const String 
     }
 }
 
-float Preset::getItemPreset(unsigned char effectSel, unsigned char page, unsigned char parameter) {
-    if (effectSel == 0) {
-        if (parameter == 0)
-            return this->pre.getPreGain();
-        if (parameter == 1)
-            return this->pre.getPreClipUp();
-        if (parameter == 2)
-            return this->pre.getPreClipDown();
-    }
-    if (effectSel == 1) {
-        if (parameter == 0)
-            return this->compressor.getThreshold();
-        if (parameter == 1)
-            return this->compressor.getRatio();
-        if (parameter == 2)
-            return this->compressor.getMake_Up();
-    }
-    if (effectSel == 2) {
-        if (parameter == 0)
-            return this->compressor.getAttack();
-        if (parameter == 1)
-            return this->compressor.getRelease();
-        if (parameter == 2)
-            return this->compressor.getRMSTimeConstant();
-    }
-    if (effectSel == 3) {
-        if (parameter == 0)
-            return this->getEq1()->getEqGain();
-        if (parameter == 1)
-            return this->getEq1()->getEqFreq();
-    }
-    if (effectSel == 4) {
-        if (parameter == 0)
-            return this->getEq2()->getEqGain();
-        if (parameter == 1)
-            return this->getEq2()->getEqFreq();
-        if (parameter == 2)
-            return this->getEq2()->getEqQ();
-    }
-    if (effectSel == 5) {
-        if (parameter == 0)
-            return this->getEq3()->getEqGain();
-        if (parameter == 1)
-            return this->getEq3()->getEqFreq();
-        if (parameter == 2)
-            return this->getEq3()->getEqQ();
-    }
-    if (effectSel == 6) {
-        if (parameter == 0)
-            return this->getEq4()->getEqGain();
-        if (parameter == 1)
-            return this->getEq4()->getEqFreq();
-    }
-    return 0;
+float Preset::getItemMenuPreset(unsigned char page, unsigned char parameter) {
+    float tab[7][3]{
+        {this->pre.getPreGain(), this->pre.getPreClipUp(), this->pre.getPreClipDown()},
+        {this->compressor.getThreshold(), this->compressor.getRatio(), this->compressor.getMake_Up()},
+        {this->compressor.getAttack(), this->compressor.getRelease(), this->compressor.getRMSTimeConstant()},
+        {this->getEq1()->getEqGain(), this->getEq1()->getEqFreq(), 0},
+        {this->getEq2()->getEqGain(), this->getEq2()->getEqFreq(), this->getEq2()->getEqQ()},
+        {this->getEq3()->getEqGain(), this->getEq3()->getEqFreq(), this->getEq3()->getEqQ()},
+        {this->getEq4()->getEqGain(), this->getEq4()->getEqFreq(), 0}};
+    return tab[page][parameter];
 }
 
-void Preset::setItemPreset(unsigned char effectSel, unsigned char page, unsigned char parameter, float value) {
-    if (effectSel == 0) {
+void Preset::setItemPreset(unsigned char page, unsigned char parameter, float value) {
+
+    if (page == 0) {
         if (parameter == 0)
             this->pre.setPreGain(value);
         if (parameter == 1)
@@ -315,7 +272,7 @@ void Preset::setItemPreset(unsigned char effectSel, unsigned char page, unsigned
         if (parameter == 2)
             this->pre.setPreClipDown(value);
     }
-    if (effectSel == 1) {
+    if (page == 1) {
         if (parameter == 0)
             this->compressor.setThreshold(value);
         if (parameter == 1)
@@ -323,7 +280,7 @@ void Preset::setItemPreset(unsigned char effectSel, unsigned char page, unsigned
         if (parameter == 2)
             this->compressor.setMake_Up(value);
     }
-    if (effectSel == 2) {
+    if (page == 2) {
         if (parameter == 0)
             this->compressor.setAttack(value);
         if (parameter == 1)
@@ -331,13 +288,13 @@ void Preset::setItemPreset(unsigned char effectSel, unsigned char page, unsigned
         if (parameter == 2)
             this->compressor.setRMSTimeConstant(value);
     }
-    if (effectSel == 3) {
+    if (page == 3) {
         if (parameter == 0)
             this->getEq1()->setEqGain(value);
         if (parameter == 1)
             this->getEq1()->setEqFreq(value);
     }
-    if (effectSel == 4) {
+    if (page == 4) {
         if (parameter == 0)
             this->getEq2()->setEqGain(value);
         if (parameter == 1)
@@ -345,7 +302,7 @@ void Preset::setItemPreset(unsigned char effectSel, unsigned char page, unsigned
         if (parameter == 2)
             this->getEq2()->setEqQ(value);
     }
-    if (effectSel == 5) {
+    if (page == 5) {
         if (parameter == 0)
             this->getEq3()->setEqGain(value);
         if (parameter == 1)
@@ -353,7 +310,7 @@ void Preset::setItemPreset(unsigned char effectSel, unsigned char page, unsigned
         if (parameter == 2)
             this->getEq3()->setEqQ(value);
     }
-    if (effectSel == 6) {
+    if (page == 6) {
         if (parameter == 0)
             this->getEq4()->setEqGain(value);
         if (parameter == 1)
@@ -361,60 +318,91 @@ void Preset::setItemPreset(unsigned char effectSel, unsigned char page, unsigned
     }
 }
 
-void Preset::displayMenuPreset(unsigned char effectSel, unsigned char page, Adafruit_ILI9341 *d) {
+void Preset::displayMenuPreset(unsigned char page, unsigned char parameter, Adafruit_ILI9341 *d) {
     // this is just a processor for when you exit the top level menu
 
     String strAct = this->presetName;
-
-    drawPreset(this->identify, strAct, &d);
+    if (parameter == 4)
+        drawPreset(this->identify, strAct, &d);
 
     int value = 100;
     int y_gauge = 120;
 
-    if (effectSel == 0) {
-        drawEffect("Pre-Amp >", &d);
-        drawCursor(this->pre.getPreGain(), "gain", "dB", -40, 24, 54, y_gauge, &d);
-        drawCursor(this->pre.getPreClipUp(), "clip up", "", 0.1, 10, 152, y_gauge, &d);
-        drawCursor(this->pre.getPreClipDown(), "clip dn", "", 0.1, 10, 250, y_gauge, &d);
+    if (page == 0) {
+        if (parameter > 2)
+            drawEffect("Pre-Amp >", &d);
+        if (parameter > 2 || parameter == 0)
+            drawCursor(this->pre.getPreGain(), "gain", "dB", -40, 24, 54, y_gauge, &d);
+        if (parameter > 2 || parameter == 1)
+            drawCursor(this->pre.getPreClipUp(), "clip up", "", 0.1, 10, 152, y_gauge, &d);
+        if (parameter > 2 || parameter == 2)
+            drawCursor(this->pre.getPreClipDown(), "clip dn", "", 0.1, 10, 250, y_gauge, &d);
     }
-    if (effectSel == 1) {
-        drawEffect("<  Compressor  >", &d);
-        drawCursor(this->compressor.getThreshold(), "thresh.", "dB", -100, 0, 54, y_gauge, &d);
-        drawCursor(this->compressor.getRatio(), "ratio", ":1", 1, 100, 152, y_gauge, &d);
-        drawCursor(this->compressor.getMake_Up(), "make-up", "dB", -30, 24, 250, y_gauge, &d);
+    if (page == 1) {
+        if (parameter > 2)
+            drawEffect("<  Compressor  >", &d);
+        if (parameter > 2 || parameter == 0)
+            drawCursor(this->compressor.getThreshold(), "thresh.", "dB", -100, 0, 54, y_gauge, &d);
+        if (parameter > 2 || parameter == 1)
+            drawCursor(this->compressor.getRatio(), "ratio", ":1", 1, 100, 152, y_gauge, &d);
+        if (parameter > 2 || parameter == 2)
+            drawCursor(this->compressor.getMake_Up(), "make-up", "dB", -30, 24, 250, y_gauge, &d);
     }
-    if (effectSel == 2) {
-        drawEffect("<  Compressor  >", &d);
-        (*d).fillRect(0, 80, 320, 150, ILI9341_BLACK);
-        drawCursor(this->compressor.getAttack(), "att.", "ms", 0, 500, 54, y_gauge, &d);
-        drawCursor(this->compressor.getRelease(), "rel.", "ms", 0, 500, 152, y_gauge, &d);
-        drawCursor(this->compressor.getRMSTimeConstant(), "rms tc", "ms", 1, 500, 250, y_gauge, &d);
+    if (page == 2) {
+        if (parameter > 2) {
+            drawEffect("<  Compressor  >", &d);
+            (*d).fillRect(0, 80, 320, 150, ILI9341_BLACK);
+        }
+        if (parameter > 2 || parameter == 0)
+            drawCursor(this->compressor.getAttack(), "att.", "ms", 0, 500, 54, y_gauge, &d);
+        if (parameter > 2 || parameter == 1)
+            drawCursor(this->compressor.getRelease(), "rel.", "ms", 0, 500, 152, y_gauge, &d);
+        if (parameter > 2 || parameter == 2)
+            drawCursor(this->compressor.getRMSTimeConstant(), "rms tc", "ms", 1, 500, 250, y_gauge, &d);
     }
-    if (effectSel == 3) {
-        drawEffect("<  Eq. low freq.  >", &d);
-        (*d).fillRect(0, 80, 320, 150, ILI9341_BLACK);
-        drawCursor(this->getEq1()->getEqGain(), "gain", "dB", -15, 15, 105, y_gauge, &d);
-        drawCursor(this->getEq1()->getEqFreq(), "freq.", "Hz", 20, 2000, 210, y_gauge, &d);
+    if (page == 3) {
+        if (parameter > 2) {
+            drawEffect("<  Eq. low freq.  >", &d);
+            (*d).fillRect(0, 80, 320, 150, ILI9341_BLACK);
+        }
+        if (parameter > 2 || parameter == 0)
+            drawCursor(this->getEq1()->getEqGain(), "gain", "dB", -15, 15, 105, y_gauge, &d);
+        if (parameter > 2 || parameter == 1)
+            drawCursor(this->getEq1()->getEqFreq(), "freq.", "Hz", 20, 2000, 210, y_gauge, &d);
     }
-    if (effectSel == 4) {
-        drawEffect("<  Eq. par. 1  >", &d);
-        (*d).fillRect(0, 80, 320, 150, ILI9341_BLACK);
-        drawCursor(this->getEq2()->getEqGain(), "gain", "dB", -15, 15, 54, y_gauge, &d);
-        drawCursor(this->getEq2()->getEqFreq(), "freq.", "Hz", 20, 20000, 152, y_gauge, &d);
-        drawCursor(this->getEq2()->getEqQ(), "Q", "", 0, 16, 250, y_gauge, &d);
+    if (page == 4) {
+        if (parameter > 2) {
+            drawEffect("<  Eq. par. 1  >", &d);
+            (*d).fillRect(0, 80, 320, 150, ILI9341_BLACK);
+        }
+        if (parameter > 2 || parameter == 0)
+            drawCursor(this->getEq2()->getEqGain(), "gain", "dB", -15, 15, 54, y_gauge, &d);
+        if (parameter > 2 || parameter == 1)
+            drawCursor(this->getEq2()->getEqFreq(), "freq.", "Hz", 20, 20000, 152, y_gauge, &d);
+        if (parameter > 2 || parameter == 2)
+            drawCursor(this->getEq2()->getEqQ(), "Q", "", 0, 16, 250, y_gauge, &d);
     }
-    if (effectSel == 5) {
-        drawEffect("<  Eq. par. 2  >", &d);
-        (*d).fillRect(0, 80, 320, 150, ILI9341_BLACK);
-        drawCursor(this->getEq3()->getEqGain(), "gain", "dB", -15, 15, 54, y_gauge, &d);
-        drawCursor(this->getEq3()->getEqFreq(), "freq.", "Hz", 20, 20000, 152, y_gauge, &d);
-        drawCursor(this->getEq3()->getEqQ(), "Q", "", 0, 16, 250, y_gauge, &d);
+    if (page == 5) {
+        if (parameter > 2) {
+            drawEffect("<  Eq. par. 2  >", &d);
+            (*d).fillRect(0, 80, 320, 150, ILI9341_BLACK);
+        }
+        if (parameter > 2 || parameter == 0)
+            drawCursor(this->getEq3()->getEqGain(), "gain", "dB", -15, 15, 54, y_gauge, &d);
+        if (parameter > 2 || parameter == 1)
+            drawCursor(this->getEq3()->getEqFreq(), "freq.", "Hz", 20, 20000, 152, y_gauge, &d);
+        if (parameter > 2 || parameter == 2)
+            drawCursor(this->getEq3()->getEqQ(), "Q", "", 0, 16, 250, y_gauge, &d);
     }
-    if (effectSel == 6) {
-        drawEffect("<  Eq. high freq.", &d);
-        (*d).fillRect(0, 80, 320, 150, ILI9341_BLACK);
-        drawCursor(this->getEq4()->getEqGain(), "gain", "dB", -15, 15, 105, y_gauge, &d);
-        drawCursor(this->getEq4()->getEqFreq(), "freq.", "Hz", 200, 20000, 210, y_gauge, &d);
+    if (page == 6) {
+        if (parameter > 2) {
+            drawEffect("<  Eq. high freq.", &d);
+            (*d).fillRect(0, 80, 320, 150, ILI9341_BLACK);
+        }
+        if (parameter > 2 || parameter == 0)
+            drawCursor(this->getEq4()->getEqGain(), "gain", "dB", -15, 15, 105, y_gauge, &d);
+        if (parameter > 2 || parameter == 1)
+            drawCursor(this->getEq4()->getEqFreq(), "freq.", "Hz", 200, 20000, 210, y_gauge, &d);
     }
 
     d->fillRect(0, 230, 320, 10, ILI9341_RED);

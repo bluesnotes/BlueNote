@@ -12,7 +12,7 @@ int BlueatoothOption1 = 0;
 
 int WirelessOption1 = 0, WirelessOption2 = 0, WirelessOption3 = 0;
 
-unsigned char idSel = 0, effectSel = 0, pageSel = 0;
+unsigned char idSel = 0, pageSel = 0;
 
 // variables to store options, ONLY supports floats
 // if you want to edit an int in the Menu, still pass in a float and set decimal readout to 0
@@ -30,8 +30,12 @@ ESP32Encoder encoderC;
 Preset **Pusr = new Preset *[257];
 
 // encoder stuff
+bool fastInc = false;
+
 long encPos = 0, oldPos = 0, encPos_A = 0, oldPos_A = 0,
      encPos_B = 0, oldPos_B = 0, encPos_C = 0, oldPos_C = 0;
+
+uint64_t encSpeed1, encSpeed2;
 
 Menu::Menu(unsigned char *inputs, float *temp) {
     this->inputs = inputs;
@@ -40,31 +44,40 @@ Menu::Menu(unsigned char *inputs, float *temp) {
 
 Menu::~Menu() {}
 
-void Menu::countEncoder(long *encP, long *encOp, ESP32Encoder *encoderSelect) {
-    delay(30);
+void Menu::countEncoder(bool *fastInc, long *encP, long *encOp, ESP32Encoder *encoderSelect) {
+    delay(50);
     while (*encOp != *encP) {
+        encSpeed2 = encSpeed1;
+        encSpeed1 = esp_timer_get_time();
+
+        uint64_t speEnc = encSpeed1 - encSpeed2;
         *encOp = *encP;
         *encP = encoderSelect->getCount();
+        speEnc < 0.15e6 ? *fastInc = true : *fastInc = false;
     }
 }
 
-void Menu::incDecItemPreset(bool inc_dec, unsigned char par) {
-    float var = Pusr[idSel]->getItemPreset(effectSel, pageSel, par);
-    if (inc_dec)
+void Menu::incDecItemPreset(bool inc_dec, bool fastInc, unsigned char par) {
+    float var = Pusr[idSel]->getItemMenuPreset(pageSel, par);
+    if (inc_dec && !fastInc)
         var += 0.1;
-    else
+    else if (!inc_dec && !fastInc)
         var -= 0.1;
-    Pusr[idSel]->setItemPreset(effectSel, pageSel, par, var);
-    Pusr[idSel]->displayMenuPreset(effectSel, pageSel, &display);
+    else if (inc_dec && fastInc)
+        var += 1;
+    else if (!inc_dec && fastInc)
+        var -= 1;
+    Pusr[idSel]->setItemPreset(pageSel, par, var);
+    Pusr[idSel]->displayMenuPreset(pageSel, par, &display);
 }
 
 void Menu::openPresetMenu() {
-    bool presetEffectSel = false;
+    bool presetpageSel = false;
     int inMenuPreset = 1;
 
     display.fillScreen(MENU_BACKGROUND);
 
-    Pusr[idSel]->displayMenuPreset(0, 0, &display);
+    Pusr[idSel]->displayMenuPreset(0, 4, &display);
 
     while (inMenuPreset != 0) {
         encPos = encoder.getCount();
@@ -73,38 +86,38 @@ void Menu::openPresetMenu() {
         encPos_C = encoderC.getCount();
 
         if ((encPos - oldPos) > 0) {
-            countEncoder(&encPos, &oldPos, &encoder);
-            idSel++;
-            Pusr[idSel]->displayMenuPreset(effectSel, pageSel, &display);
+            countEncoder(&fastInc, &encPos, &oldPos, &encoder);
+            idSel < 255 ? idSel++ : idSel = 0;
+            Pusr[idSel]->displayMenuPreset(pageSel, 4, &display);
         }
         if ((encPos - oldPos) < 0) {
-            countEncoder(&encPos, &oldPos, &encoder);
+            countEncoder(&fastInc, &encPos, &oldPos, &encoder);
             idSel > 0 ? idSel-- : idSel = 255;
-            Pusr[idSel]->displayMenuPreset(effectSel, pageSel, &display);
+            Pusr[idSel]->displayMenuPreset(pageSel, 4, &display);
         }
         if ((encPos_A - oldPos_A) > 0) {
-            countEncoder(&encPos_A, &oldPos_A, &encoderA);
-            incDecItemPreset(1, 0);
+            countEncoder(&fastInc, &encPos_A, &oldPos_A, &encoderA);
+            incDecItemPreset(1, fastInc, 0);
         }
         if ((encPos_A - oldPos_A) < 0) {
-            countEncoder(&encPos_A, &oldPos_A, &encoderA);
-            incDecItemPreset(0, 0);
+            countEncoder(&fastInc, &encPos_A, &oldPos_A, &encoderA);
+            incDecItemPreset(0, fastInc, 0);
         }
         if ((encPos_B - oldPos_B) > 0) {
-            countEncoder(&encPos_B, &oldPos_B, &encoderB);
-            incDecItemPreset(1, 1);
+            countEncoder(&fastInc, &encPos_B, &oldPos_B, &encoderB);
+            incDecItemPreset(1, fastInc, 1);
         }
         if ((encPos_B - oldPos_B) < 0) {
-            countEncoder(&encPos_B, &oldPos_B, &encoderB);
-            incDecItemPreset(0, 1);
+            countEncoder(&fastInc, &encPos_B, &oldPos_B, &encoderB);
+            incDecItemPreset(0, fastInc, 1);
         }
         if ((encPos_C - oldPos_C) > 0) {
-            countEncoder(&encPos_C, &oldPos_C, &encoderC);
-            incDecItemPreset(1, 2);
+            countEncoder(&fastInc, &encPos_C, &oldPos_C, &encoderC);
+            incDecItemPreset(1, fastInc, 2);
         }
         if ((encPos_C - oldPos_C) < 0) {
-            countEncoder(&encPos_C, &oldPos_C, &encoderC);
-            incDecItemPreset(0, 2);
+            countEncoder(&fastInc, &encPos_C, &oldPos_C, &encoderC);
+            incDecItemPreset(0, fastInc, 2);
         }
         switch (*inputs) {
         case enterButton:
@@ -114,21 +127,21 @@ void Menu::openPresetMenu() {
         case menuButton:
             *inputs = 0;
             processMainMenu();
-            Pusr[idSel]->displayMenuPreset(effectSel, pageSel, &display);
+            Pusr[idSel]->displayMenuPreset(pageSel, 4, &display);
             break;
 
         case rightButton:
             *inputs = 0;
-            if (effectSel < 6)
-                effectSel++;
-            Pusr[idSel]->displayMenuPreset(effectSel, pageSel, &display);
+            if (pageSel < 6)
+                pageSel++;
+            Pusr[idSel]->displayMenuPreset(pageSel, 3, &display);
             break;
 
         case leftButton:
             *inputs = 0;
-            if (effectSel > 0)
-                effectSel--;
-            Pusr[idSel]->displayMenuPreset(effectSel, pageSel, &display);
+            if (pageSel > 0)
+                pageSel--;
+            Pusr[idSel]->displayMenuPreset(pageSel, 3, &display);
             break;
 
         default:
@@ -529,6 +542,4 @@ void Menu::setupMenu() {
 
     // menu code done, now proceed to your code
     display.fillScreen(MENU_BACKGROUND);
-
-    Serial.print("TFT_ID: ");
 }

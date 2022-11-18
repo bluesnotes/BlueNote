@@ -80,10 +80,5 @@ void setup() {
 
 void loop() {
     menu.openPresetMenu();
-    /*if (MCP23008Inputs == enterButton) {
-        MCP23008Inputs = 0;
-        menu.processMainMenu();
-        menu.display.fillScreen(MENU_BACKGROUND);
-    }*/
     vTaskDelay(50);
 }

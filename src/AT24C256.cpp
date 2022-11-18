@@ -21,7 +21,7 @@ void AT24C256::read(unsigned int readAdress, byte *buffer, byte len) {
     Wire.write((int)(readAdress >> 8));
     Wire.write((int)(readAdress & 0xFF));
     Wire.endTransmission();
-    Wire.requestFrom(_address, len);
+    Wire.requestFrom(_address, (int)len);
     int c = 0;
     for (c = 0; c < len; c++)
         if (Wire.available())
