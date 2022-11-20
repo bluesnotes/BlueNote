@@ -1,5 +1,7 @@
 #include "preset_menu_manager.h"
 
+#define numb_preset 50
+
 int MenuOption = 0;
 
 // must have variables for each Menu item
@@ -27,7 +29,7 @@ ESP32Encoder encoderA;
 ESP32Encoder encoderB;
 ESP32Encoder encoderC;
 
-Preset **Pusr = new Preset *[257];
+Preset **Pusr = new Preset *[numb_preset];
 
 // encoder stuff
 bool fastInc = false;
@@ -41,8 +43,6 @@ Menu::Menu(unsigned char *inputs, float *temp) {
     this->inputs = inputs;
     this->temp = temp;
 }
-
-Menu::~Menu() {}
 
 void Menu::countEncoder(bool *fastInc, long *encP, long *encOp, ESP32Encoder *encoderSelect) {
     delay(50);
@@ -58,7 +58,7 @@ void Menu::countEncoder(bool *fastInc, long *encP, long *encOp, ESP32Encoder *en
 }
 
 void Menu::incDecItemPreset(bool inc_dec, bool fastInc, unsigned char par) {
-    float var = Pusr[idSel]->getItemMenuPreset(pageSel, par);
+    float var = Pusr[idSel]->getValueEffectPreset(pageSel, par);
     if (inc_dec && !fastInc)
         var += 0.1;
     else if (!inc_dec && !fastInc)
@@ -67,12 +67,12 @@ void Menu::incDecItemPreset(bool inc_dec, bool fastInc, unsigned char par) {
         var += 1;
     else if (!inc_dec && fastInc)
         var -= 1;
-    Pusr[idSel]->setItemPreset(pageSel, par, var);
+    Pusr[idSel]->setValueEffectPreset(pageSel, par, var);
     Pusr[idSel]->displayMenuPreset(pageSel, par, &display);
 }
 
 void Menu::openPresetMenu() {
-    bool presetpageSel = false;
+    bool presetSel = false;
     int inMenuPreset = 1;
 
     display.fillScreen(MENU_BACKGROUND);
@@ -85,16 +85,30 @@ void Menu::openPresetMenu() {
         encPos_B = encoderB.getCount();
         encPos_C = encoderC.getCount();
 
+        // M encoder action
         if ((encPos - oldPos) > 0) {
             countEncoder(&fastInc, &encPos, &oldPos, &encoder);
-            idSel < 255 ? idSel++ : idSel = 0;
-            Pusr[idSel]->displayMenuPreset(pageSel, 4, &display);
+            if (presetSel) {
+                idSel < numb_preset - 2 ? idSel++ : idSel = 0;
+                Pusr[idSel]->displayMenuPreset(pageSel, 4, &display);
+            } else {
+                if (pageSel < Pusr[idSel]->)
+                    pageSel++;
+                Pusr[idSel]->displayMenuPreset(pageSel, 3, &display);
+            }
         }
         if ((encPos - oldPos) < 0) {
             countEncoder(&fastInc, &encPos, &oldPos, &encoder);
-            idSel > 0 ? idSel-- : idSel = 255;
-            Pusr[idSel]->displayMenuPreset(pageSel, 4, &display);
+            if (presetSel) {
+                idSel > 0 ? idSel-- : idSel = numb_preset - 2;
+                Pusr[idSel]->displayMenuPreset(pageSel, 4, &display);
+            } else {
+                if (pageSel > 0)
+                    pageSel--;
+                Pusr[idSel]->displayMenuPreset(pageSel, 3, &display);
+            }
         }
+        // A encoder action
         if ((encPos_A - oldPos_A) > 0) {
             countEncoder(&fastInc, &encPos_A, &oldPos_A, &encoderA);
             incDecItemPreset(1, fastInc, 0);
@@ -103,6 +117,7 @@ void Menu::openPresetMenu() {
             countEncoder(&fastInc, &encPos_A, &oldPos_A, &encoderA);
             incDecItemPreset(0, fastInc, 0);
         }
+        // B encoder action
         if ((encPos_B - oldPos_B) > 0) {
             countEncoder(&fastInc, &encPos_B, &oldPos_B, &encoderB);
             incDecItemPreset(1, fastInc, 1);
@@ -111,6 +126,7 @@ void Menu::openPresetMenu() {
             countEncoder(&fastInc, &encPos_B, &oldPos_B, &encoderB);
             incDecItemPreset(0, fastInc, 1);
         }
+        // C encoder action
         if ((encPos_C - oldPos_C) > 0) {
             countEncoder(&fastInc, &encPos_C, &oldPos_C, &encoderC);
             incDecItemPreset(1, fastInc, 2);
@@ -122,6 +138,7 @@ void Menu::openPresetMenu() {
         switch (*inputs) {
         case enterButton:
             *inputs = 0;
+            presetSel = !presetSel;
             break;
 
         case menuButton:
@@ -132,16 +149,12 @@ void Menu::openPresetMenu() {
 
         case rightButton:
             *inputs = 0;
-            if (pageSel < 6)
-                pageSel++;
-            Pusr[idSel]->displayMenuPreset(pageSel, 3, &display);
+
             break;
 
         case leftButton:
             *inputs = 0;
-            if (pageSel > 0)
-                pageSel--;
-            Pusr[idSel]->displayMenuPreset(pageSel, 3, &display);
+
             break;
 
         default:
@@ -361,14 +374,11 @@ void Menu::displayAboutScreen() {
 }
 // function to process main menu iteraction ideally this implementation makes it easy to launch your menu from anywhere in th
 void Menu::processMainMenu() {
-
     // set an inital flag that will be used to store what menu item the user exited on
     int MainMenuOption = 1;
 
-    // blank out the screen
     display.fillScreen(MENU_BACKGROUND);
 
-    // draw the main menu
     MainMenu.draw();
 
     // run the processing loop until user move selector to title bar (which becomes exit, i.e. 0 return val)
@@ -376,50 +386,32 @@ void Menu::processMainMenu() {
     // note menu code can return - 1 for errors so run unitl non zero
 
     while (MainMenuOption != 0) {
-
-        // standard encoder read
         encPos = encoder.getCount();
 
-        // attempt to debouce these darn things...
         if ((encPos - oldPos) > 0) {
             delay(DEBOUNCE);
             while (oldPos != encPos) {
                 oldPos = encPos;
                 encPos = encoder.getCount();
             }
-
-            // once encoder calms down and is done cycling, move selector up
-            // since encoder reads are increasing
-            // any menu wrapping is handled in the library
             MainMenu.MoveUp();
         }
-        // attempt to debouce these darn things...
+
         if ((encPos - oldPos) < 0) {
             delay(DEBOUNCE);
             while (oldPos != encPos) {
                 oldPos = encPos;
                 encPos = encoder.getCount();
             }
-            // once encoder calms down and is done cycling, move selector up
-            // since encoder reads are decreasing
-            // any menu wrapping is handled in the library
             MainMenu.MoveDown();
         }
 
-        // but wait...the user pressed the button on the encoder
         if (*inputs == enterButton) {
             *inputs = 0;
-            // get the row the selector is on
             MainMenuOption = MainMenu.selectRow();
 
-            // here is where you process accordingly
-            // remember on pressing button on title bar 0 is returned and will exit the loop
-
             if (MainMenuOption == MenuOption1) {
-                // item 1 was the Option menu
                 this->processOptionMenu();
-                // when done processing that menu, return here
-                // clear display and redraw this main menu
                 display.fillScreen(MENU_BACKGROUND);
                 MainMenu.draw();
             }
@@ -433,7 +425,6 @@ void Menu::processMainMenu() {
                 display.fillScreen(MENU_BACKGROUND);
                 MainMenu.draw();
             }
-
             if (MainMenuOption == MenuOption4) {
                 this->displayAboutScreen();
                 display.fillScreen(MENU_BACKGROUND);
@@ -445,25 +436,18 @@ void Menu::processMainMenu() {
     MenuOption = 0;
 }
 
-// menu to handle processing for a sub-menu
-// since this menu will be a menu that allows edits (EditMenu object type)
-// process is exactly the same as an ItemMenu
-// meaning you simply use the same MoveUp, MoveDown and the library will know if you are
-// wanting to move the selector or cycle through a range
-
 void Menu::setupMenu() {
+    // fire up the display
+    display.begin();
+    display.setRotation(1);
+
+    // menu code done, now proceed to your code
+    display.fillScreen(MENU_BACKGROUND);
 
     char strName[18];
-    for (int i = 0; i < 256; i++) {
+    for (int i = 0; i < numb_preset - 1; i++) {
         sprintf(strName, "Usr Preset %d", i);
-        Pusr[i] = new Preset(i, strName, *new Eq, *new Eq, *new Eq, *new Eq,
-                             *new Compressor, *new Pre);
-        Pusr[i]->getPre()->setPre(1, 5, 5);
-        Pusr[i]->getComp()->setCompressor(0, 1, 100, 10, 100, 0);
-        Pusr[i]->getEq1()->setEq(0, 80, 0);
-        Pusr[i]->getEq2()->setEq(0, 200, 1.41);
-        Pusr[i]->getEq3()->setEq(0, 800, 1.41);
-        Pusr[i]->getEq4()->setEq(0, 2000, 0);
+        Pusr[i] = new Preset(i, strName);
     }
 
     MainMenu.init(MENU_TEXT, MENU_BACKGROUND, MENU_HIGHLIGHTTEXT, MENU_HIGHLIGHT, 64, 3, "Main Menu", FONT_TITLE, FONT_TITLE);
@@ -472,9 +456,6 @@ void Menu::setupMenu() {
     MenuOption2 = MainMenu.addNI("Bluetooth");
     MenuOption3 = MainMenu.addNI("Wi-fi");
     MenuOption4 = MainMenu.addNI("About");
-
-    Serial.print("Enable State for MainMenu, MenuOption3: ");
-    Serial.println(MainMenu.getEnableState(MenuOption3));
 
     MainMenu.setTitleColors(TITLE_TEXT, TITLE_BACK);
     MainMenu.setTitleBarSize(0, 0, 320, 40);
@@ -535,11 +516,6 @@ void Menu::setupMenu() {
     encoderB.clearCount();
     encoderC.attachHalfQuad(ENCC_A_PIN, ENCC_B_PIN);
     encoderC.clearCount();
-
-    // fire up the display
-    display.begin();
-    display.setRotation(1);
-
-    // menu code done, now proceed to your code
-    display.fillScreen(MENU_BACKGROUND);
 }
+
+// end
