@@ -92,7 +92,7 @@ void Menu::openPresetMenu() {
                 idSel < numb_preset - 2 ? idSel++ : idSel = 0;
                 Pusr[idSel]->displayMenuPreset(pageSel, 4, &display);
             } else {
-                if (pageSel < Pusr[idSel]->)
+                if (pageSel < 5)
                     pageSel++;
                 Pusr[idSel]->displayMenuPreset(pageSel, 3, &display);
             }

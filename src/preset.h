@@ -1,6 +1,7 @@
 #ifndef PRESET_H
 #define PRESET_H
 
+#include "Display_Preset.h"
 #include "effects.h"
 #include "pin.h"
 #include <Adafruit_GFX.h>
@@ -13,13 +14,8 @@ class Preset {
     int identify;
     String presetName;
 
-    vector<Effects *> effects;
-
-    void drawCenterStr(const String &buf, int x, int y, Adafruit_ILI9341 ***d);
-    void drawPreset(int index, String &preset_name, Adafruit_ILI9341 **d);
-    void drawEffect(int enumNameStr, Adafruit_ILI9341 **d);
-    void drawCursor(float value, int enumName, int enumUnit,
-                    int min, int max, int center_x, int center_y, Adafruit_ILI9341 **d);
+    vector<Effects *>
+        effects;
 
   public:
     Preset(int id, char *prtName);
