@@ -57,6 +57,10 @@ void IRAM_ATTR MCP23008Interrupt() {
 
 void setup() {
 
+    // disableCore0WDT();
+
+    menu.setupMenu();
+
     Serial.begin(115200);
 
     timer = timerBegin(1, 0xC350, true); // timer 1, 80Mhz / 50k = 1.6kHz
@@ -64,18 +68,13 @@ void setup() {
     timerAlarmWrite(timer, 160, true);
     timerAlarmEnable(timer);
 
-    temperature = tempCtrl.setup();
-
-    // disableCore0WDT();
-
-    menu.setupMenu();
-
     // initPresetUsr();
+    temperature = tempCtrl.setup();
 
     init_MCP23008();
     attachInterrupt(INT_MCP23008_PIN, MCP23008Interrupt, RISING);
 
-    xTaskCreatePinnedToCore(interruptsSys, "Task1", 30000, NULL, 1, &Task1, 1);
+    xTaskCreatePinnedToCore(interruptsSys, "Task1", 30000, NULL, 4, &Task1, 1);
 }
 
 void loop() {

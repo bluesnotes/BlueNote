@@ -61,7 +61,7 @@ class Menu {
 
   public:
     Menu(unsigned char *inputs, float *temp);
-    ~Menu();
+    //~Menu();
 
     Adafruit_ILI9341 display = Adafruit_ILI9341(Display_CS, Display_DC, Display_RST);
 
