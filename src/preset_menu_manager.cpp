@@ -59,25 +59,38 @@ void Menu::countEncoder(bool *fastInc, long *encP, long *encOp, ESP32Encoder *en
 
 void Menu::incDecItemPreset(bool inc_dec, bool fastInc, unsigned char par) {
     float var = Pusr[idSel]->getValueEffectPreset(pageSel, par);
+    float incFact = Pusr[idSel]->getIncFactor(pageSel, par);
+    if (incFact == -1) {
+        float var1 = roundf(var);
+        var = var1;
+        incFact = roundf(var1 * 0.01);
+        if (incFact == 0)
+            incFact = 1;
+    }
     if (inc_dec && !fastInc)
-        var += 0.1;
+        var += 1 * incFact;
     else if (!inc_dec && !fastInc)
-        var -= 0.1;
+        var -= 1 * incFact;
     else if (inc_dec && fastInc)
-        var += 1;
+        var += 10 * incFact;
     else if (!inc_dec && fastInc)
-        var -= 1;
+        var -= 10 * incFact;
+    if (incFact == -1) {
+        float var1 = roundf(var);
+        var = var1;
+    }
     Pusr[idSel]->setValueEffectPreset(pageSel, par, var);
     Pusr[idSel]->displayMenuPreset(pageSel, par, &display);
 }
 
 void Menu::openPresetMenu() {
     bool presetSel = false;
+    unsigned char paramSel = 0;
     int inMenuPreset = 1;
 
     display.fillScreen(MENU_BACKGROUND);
 
-    Pusr[idSel]->displayMenuPreset(0, 4, &display);
+    Pusr[idSel]->displayMenuPreset(0, 254, &display);
 
     while (inMenuPreset != 0) {
         encPos = encoder.getCount();
@@ -88,53 +101,56 @@ void Menu::openPresetMenu() {
         // M encoder action
         if ((encPos - oldPos) > 0) {
             countEncoder(&fastInc, &encPos, &oldPos, &encoder);
+            paramSel = 0;
             if (presetSel) {
                 idSel < numb_preset - 2 ? idSel++ : idSel = 0;
-                Pusr[idSel]->displayMenuPreset(pageSel, 4, &display);
+                Pusr[idSel]->displayMenuPreset(pageSel, 254, &display); // change preset sel
             } else {
                 if (pageSel < 5)
                     pageSel++;
-                Pusr[idSel]->displayMenuPreset(pageSel, 3, &display);
+                Pusr[idSel]->displayMenuPreset(pageSel, 253, &display); // change effect sel
             }
         }
         if ((encPos - oldPos) < 0) {
             countEncoder(&fastInc, &encPos, &oldPos, &encoder);
+            paramSel = 0;
             if (presetSel) {
                 idSel > 0 ? idSel-- : idSel = numb_preset - 2;
-                Pusr[idSel]->displayMenuPreset(pageSel, 4, &display);
+                Pusr[idSel]->displayMenuPreset(pageSel, 254, &display);
             } else {
                 if (pageSel > 0)
                     pageSel--;
-                Pusr[idSel]->displayMenuPreset(pageSel, 3, &display);
+                Pusr[idSel]->displayMenuPreset(pageSel, 253, &display);
             }
         }
         // A encoder action
         if ((encPos_A - oldPos_A) > 0) {
             countEncoder(&fastInc, &encPos_A, &oldPos_A, &encoderA);
-            incDecItemPreset(1, fastInc, 0);
+            incDecItemPreset(1, fastInc, paramSel * 3);
         }
         if ((encPos_A - oldPos_A) < 0) {
             countEncoder(&fastInc, &encPos_A, &oldPos_A, &encoderA);
-            incDecItemPreset(0, fastInc, 0);
+            incDecItemPreset(0, fastInc, paramSel * 3);
         }
         // B encoder action
         if ((encPos_B - oldPos_B) > 0) {
             countEncoder(&fastInc, &encPos_B, &oldPos_B, &encoderB);
-            incDecItemPreset(1, fastInc, 1);
+            incDecItemPreset(1, fastInc, 1 + paramSel * 3);
         }
         if ((encPos_B - oldPos_B) < 0) {
             countEncoder(&fastInc, &encPos_B, &oldPos_B, &encoderB);
-            incDecItemPreset(0, fastInc, 1);
+            incDecItemPreset(0, fastInc, 1 + paramSel * 3);
         }
         // C encoder action
         if ((encPos_C - oldPos_C) > 0) {
             countEncoder(&fastInc, &encPos_C, &oldPos_C, &encoderC);
-            incDecItemPreset(1, fastInc, 2);
+            incDecItemPreset(1, fastInc, 2 + paramSel * 3);
         }
         if ((encPos_C - oldPos_C) < 0) {
             countEncoder(&fastInc, &encPos_C, &oldPos_C, &encoderC);
-            incDecItemPreset(0, fastInc, 2);
+            incDecItemPreset(0, fastInc, 2 + paramSel * 3);
         }
+        int bacdf = 0;
         switch (*inputs) {
         case enterButton:
             *inputs = 0;
@@ -144,17 +160,29 @@ void Menu::openPresetMenu() {
         case menuButton:
             *inputs = 0;
             processMainMenu();
-            Pusr[idSel]->displayMenuPreset(pageSel, 4, &display);
+            Pusr[idSel]->displayMenuPreset(pageSel, 254, &display);
             break;
 
         case rightButton:
             *inputs = 0;
+            bacdf = Pusr[idSel]->getLenghtEffect(pageSel);
+            if (paramSel * 4 < bacdf - 4) {
+                paramSel++;
 
+                for (int i = 0; i < 3; i++) {
+                    Pusr[idSel]->displayMenuPreset(pageSel, i + paramSel * 3, &display);
+                }
+            }
             break;
 
         case leftButton:
             *inputs = 0;
-
+            if (paramSel * 4 > 0) {
+                paramSel--;
+                for (int i = 0; i < 3; i++) {
+                    Pusr[idSel]->displayMenuPreset(pageSel, i + paramSel * 3, &display);
+                }
+            }
             break;
 
         default:

@@ -20,6 +20,14 @@ float Preset::getValueEffectPreset(unsigned char page, unsigned char parameter) 
     return effects[page]->properties[parameter]->value;
 }
 
+float Preset::getIncFactor(unsigned char page, unsigned char parameter) {
+    return effects[page]->properties[parameter]->incCoef;
+}
+
+int Preset::getLenghtEffect(unsigned char page) {
+    return effects[page]->properties.capacity();
+}
+
 void Preset::setValueEffectPreset(unsigned char page, unsigned char parameter, float value) {
     if (value <= effects[page]->properties[parameter]->max && value >= effects[page]->properties[parameter]->min) {
         effects[page]->properties[parameter]->value = value;
@@ -36,12 +44,12 @@ void Preset::displayMenuPreset(unsigned char page, unsigned char parameter, Adaf
     if (parameter % 3 == 2)
         x_gauge = 250;
 
-    if (parameter == 4)
+    if (parameter == 254)
         drawPreset(this->identify, this->presetName, &d);
 
     Property *ptr = effects[page]->properties[0];
 
-    if (parameter > 2) {
+    if (parameter > 252) {
         drawEffect(effects[page]->name, &d);
         ptr = effects[page]->properties[0];
         drawCursor(ptr->value, ptr->name, ptr->unit, ptr->min, ptr->max, 54, y_gauge, &d);

@@ -7,7 +7,7 @@ Effects::Effects() {}
 // 0.1 to 10
 Pre::Pre() {
     name = pre;
-    properties.push_back(new Property(gain, 0, db, -20, 24, 1));
+    properties.push_back(new Property(gain, 0, db, -20, 24, 0.1));
     properties.push_back(new Property(clip_up, 5, noth, 0.1, 10, 0.1));
     properties.push_back(new Property(clip_down, 5, noth, 0.1, 10, 0.1));
 }
