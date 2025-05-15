@@ -33,7 +33,6 @@ void Preset::setValueEffectPreset(unsigned char page, unsigned char parameter, f
         effects[page]->properties[parameter]->value = value;
     }
 }
-
 void Preset::displayMenuPreset(unsigned char page, unsigned char parameter, Adafruit_ILI9341 *d) {
     int x_gauge = 0;
     int y_gauge = 120;

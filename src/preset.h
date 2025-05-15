@@ -4,13 +4,13 @@
 #include "Display_Preset.h"
 #include "effects.h"
 #include "pin.h"
-#include <Adafruit_GFX.h>
+
 #include <Adafruit_ILI9341.h>
 
 using namespace std;
 
 class Preset {
-  private:
+  protected:
     int identify;
     String presetName;
 
@@ -31,6 +31,7 @@ class Preset {
     void setValueEffectPreset(unsigned char page, unsigned char parameter, float value);
 
     int getLenghtEffect(unsigned char page);
+
     void displayMenuPreset(unsigned char page, unsigned char parameter, Adafruit_ILI9341 *d);
 };
 

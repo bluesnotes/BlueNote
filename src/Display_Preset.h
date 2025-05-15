@@ -1,8 +1,6 @@
 #ifndef DISPLAY_PRESET_H
 #define DISPLAY_PRESET_H
-
 #include "preset.h"
-
 #include <Adafruit_GFX.h>
 #include <Adafruit_ILI9341.h>
 
