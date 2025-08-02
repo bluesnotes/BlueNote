@@ -1,6 +1,6 @@
 #include "preset_menu_manager.h"
 
-#define numb_preset 50
+#define NUMB_PRESET 15
 
 int MenuOption = 0;
 
@@ -8,7 +8,7 @@ int MenuOption = 0;
 // best to have these global so you can use them in processing functions
 int MenuOption1 = 0, MenuOption2 = 0, MenuOption3 = 0, MenuOption4 = 0;
 
-int OptionOption1 = 0, OptionOption2 = 0, OptionOption3 = 0;
+int OptionOption1 = 0, OptionOption2 = 0, OptionOption3 = 0, OptionOption4 = 0;
 
 int BlueatoothOption1 = 0;
 
@@ -19,7 +19,7 @@ unsigned char idSel = 0, pageSel = 0;
 // variables to store options, ONLY supports floats
 // if you want to edit an int in the Menu, still pass in a float and set decimal readout to 0
 // the recast the float to an int upon Menu comletion processing
-float pad = 1, lineLvl = 0, linePos = 0;
+float pad = 1, phantom = 1, lineLvl = 0, linePos = 0;
 
 const char *OffOnItems[] = {"Off", "On"};
 const char *OutLinePlaceItems[] = {"Direct", "P. Pre.", "P. Comp.", "P. Eq."};
@@ -29,7 +29,7 @@ ESP32Encoder encoderA;
 ESP32Encoder encoderB;
 ESP32Encoder encoderC;
 
-Preset **Pusr = new Preset *[numb_preset];
+Preset **Pusr = new Preset *[NUMB_PRESET];
 
 // encoder stuff
 bool fastInc = false;
@@ -60,13 +60,9 @@ void Menu::countEncoder(bool *fastInc, long *encP, long *encOp, ESP32Encoder *en
 void Menu::incDecItemPreset(bool inc_dec, bool fastInc, unsigned char par) {
     float var = Pusr[idSel]->getValueEffectPreset(pageSel, par);
     float incFact = Pusr[idSel]->getIncFactor(pageSel, par);
-    if (incFact == -1) {
-        float var1 = roundf(var);
-        var = var1;
-        incFact = roundf(var1 * 0.01);
-        if (incFact == 0)
-            incFact = 1;
-    }
+    if (incFact == -1)
+        incFact = powf(10, (floor(log10(fabs(var))))) / 10;
+
     if (inc_dec && !fastInc)
         var += 1 * incFact;
     else if (!inc_dec && !fastInc)
@@ -75,22 +71,19 @@ void Menu::incDecItemPreset(bool inc_dec, bool fastInc, unsigned char par) {
         var += 10 * incFact;
     else if (!inc_dec && fastInc)
         var -= 10 * incFact;
-    if (incFact == -1) {
-        float var1 = roundf(var);
-        var = var1;
-    }
+
     Pusr[idSel]->setValueEffectPreset(pageSel, par, var);
-    Pusr[idSel]->displayMenuPreset(pageSel, par, &display);
+    Pusr[idSel]->displayMenuPreset(pageSel, par, presetDisplay::oneGauge, &display);
 }
 
 void Menu::openPresetMenu() {
-    bool presetSel = false;
+    bool presetUnsel = false;
     unsigned char paramSel = 0;
     int inMenuPreset = 1;
 
     display.fillScreen(MENU_BACKGROUND);
 
-    Pusr[idSel]->displayMenuPreset(0, 254, &display);
+    Pusr[idSel]->displayMenuPreset(pageSel, paramSel, presetDisplay::selectPresetAllDisplay, &display);
 
     while (inMenuPreset != 0) {
         encPos = encoder.getCount();
@@ -102,25 +95,23 @@ void Menu::openPresetMenu() {
         if ((encPos - oldPos) > 0) {
             countEncoder(&fastInc, &encPos, &oldPos, &encoder);
             paramSel = 0;
-            if (presetSel) {
-                idSel < numb_preset - 2 ? idSel++ : idSel = 0;
-                Pusr[idSel]->displayMenuPreset(pageSel, 254, &display); // change preset sel
-            } else {
-                if (pageSel < 5)
-                    pageSel++;
-                Pusr[idSel]->displayMenuPreset(pageSel, 253, &display); // change effect sel
+            if (presetUnsel) {
+                idSel < NUMB_PRESET - 2 ? idSel++ : idSel = 0;
+                Pusr[idSel]->displayMenuPreset(pageSel, paramSel, presetDisplay::allDisplay, &display); // change preset sel
+            } else if (pageSel < Pusr[idSel]->getLenghtPreset()) {
+                pageSel++;
+                Pusr[idSel]->displayMenuPreset(pageSel, paramSel, presetDisplay::effectDisplay, &display); // change effect sel
             }
         }
         if ((encPos - oldPos) < 0) {
             countEncoder(&fastInc, &encPos, &oldPos, &encoder);
             paramSel = 0;
-            if (presetSel) {
-                idSel > 0 ? idSel-- : idSel = numb_preset - 2;
-                Pusr[idSel]->displayMenuPreset(pageSel, 254, &display);
-            } else {
-                if (pageSel > 0)
-                    pageSel--;
-                Pusr[idSel]->displayMenuPreset(pageSel, 253, &display);
+            if (presetUnsel) {
+                idSel > 0 ? idSel-- : idSel = NUMB_PRESET - 2;
+                Pusr[idSel]->displayMenuPreset(pageSel, paramSel, presetDisplay::allDisplay, &display);
+            } else if (pageSel > 0) {
+                pageSel--;
+                Pusr[idSel]->displayMenuPreset(pageSel, paramSel, presetDisplay::effectDisplay, &display);
             }
         }
         // A encoder action
@@ -150,41 +141,37 @@ void Menu::openPresetMenu() {
             countEncoder(&fastInc, &encPos_C, &oldPos_C, &encoderC);
             incDecItemPreset(0, fastInc, 2 + paramSel * 3);
         }
-        int bacdf = 0;
+        int lenghtEffect = 0;
         switch (*inputs) {
         case enterButton:
             *inputs = 0;
-            presetSel = !presetSel;
-            break;
+            presetUnsel = !presetUnsel;
+            if (presetUnsel) {
+                Pusr[idSel]->displayMenuPreset(pageSel, paramSel, presetDisplay::allDisplay, &display); // change preset sel
+            } else
+                Pusr[idSel]->displayMenuPreset(pageSel, paramSel, presetDisplay::selectPresetAllDisplay, &display); // change effect sel
 
+            break;
         case menuButton:
             *inputs = 0;
             processMainMenu();
-            Pusr[idSel]->displayMenuPreset(pageSel, 254, &display);
+            Pusr[idSel]->displayMenuPreset(pageSel, paramSel, presetDisplay::selectPresetAllDisplay, &display);
             break;
-
         case rightButton:
             *inputs = 0;
-            bacdf = Pusr[idSel]->getLenghtEffect(pageSel);
-            if (paramSel * 4 < bacdf - 4) {
-                paramSel++;
-
-                for (int i = 0; i < 3; i++) {
-                    Pusr[idSel]->displayMenuPreset(pageSel, i + paramSel * 3, &display);
-                }
+            lenghtEffect = Pusr[idSel]->getLenghtEffect(pageSel);
+            if (paramSel < lenghtEffect - 3) {
+                paramSel += 3;
+                Pusr[idSel]->displayMenuPreset(pageSel, paramSel, presetDisplay::effectDisplay, &display);
             }
             break;
-
         case leftButton:
             *inputs = 0;
-            if (paramSel * 4 > 0) {
-                paramSel--;
-                for (int i = 0; i < 3; i++) {
-                    Pusr[idSel]->displayMenuPreset(pageSel, i + paramSel * 3, &display);
-                }
+            if (paramSel > 0) {
+                paramSel -= 3;
+                Pusr[idSel]->displayMenuPreset(pageSel, paramSel, presetDisplay::effectDisplay, &display);
             }
             break;
-
         default:
             break;
         }
@@ -228,7 +215,7 @@ void Menu::processOptionMenu() {
             // 1. if a row was NOT selected, MoveUp / MoveDown will cycle throuh menu items
             // 2. if a row IS selected, MoveUp / MoveDown will cycle throuh the range of values withing the item
 
-            OptionMenu.MoveUp();
+            OptionMenu.MoveDown();
         }
 
         if ((encPos - oldPos) < 0) {
@@ -244,7 +231,7 @@ void Menu::processOptionMenu() {
             // the EditMenu object type is special cased
             // 1. if a row was NOT selected, MoveUp / MoveDown will cycle throuh menu items
             // 2. if a row IS selected, MoveUp / MoveDown will cycle throuh the range of values withing the item
-            OptionMenu.MoveDown();
+            OptionMenu.MoveUp();
         }
 
         if (*inputs == enterButton) {
@@ -277,6 +264,9 @@ void Menu::processOptionMenu() {
                     OptionMenu.drawRow(OptionOption4);
                 }
             }*/
+        } else if (*inputs == saveExitButton) {
+            *inputs = 0;
+            EditMenuOption = BluetoothMenu.backwardMenu();
         }
     }
 
@@ -315,7 +305,7 @@ void Menu::processBluetoothMenu() {
                 oldPos = encPos;
                 encPos = encoder.getCount();
             }
-            BluetoothMenu.MoveUp();
+            BluetoothMenu.MoveDown();
         }
         if ((encPos - oldPos) < 0) {
             delay(DEBOUNCE);
@@ -323,12 +313,15 @@ void Menu::processBluetoothMenu() {
                 oldPos = encPos;
                 encPos = encoder.getCount();
             }
-            BluetoothMenu.MoveDown();
+            BluetoothMenu.MoveUp();
         }
         if (*inputs == enterButton) {
             *inputs = 0;
 
             EditMenuOption = BluetoothMenu.selectRow();
+        } else if (*inputs == saveExitButton) {
+            *inputs = 0;
+            EditMenuOption = BluetoothMenu.backwardMenu();
         }
     }
 }
@@ -346,18 +339,21 @@ void Menu::processWirelessMenu() {
         encPos = encoder.getCount();
         if ((encPos - oldPos) > 0) {
             oldPos = encPos;
-            WirelessMenu.MoveUp();
+            WirelessMenu.MoveDown();
         }
 
         if ((encPos - oldPos) < 0) {
             oldPos = encPos;
-            WirelessMenu.MoveDown();
+            WirelessMenu.MoveUp();
         }
 
         if (*inputs == enterButton) {
             *inputs = 0;
 
             EditMenuOption = WirelessMenu.selectRow();
+        } else if (*inputs == saveExitButton) {
+            *inputs = 0;
+            EditMenuOption = MainMenu.backwardMenu();
         }
     }
 }
@@ -387,13 +383,13 @@ void Menu::displayAboutScreen() {
             display.println("2022-2023");
             display.print("Version : ");
             display.println("Alpha");
-            display.print("temp : ");
+            display.print("Temp : ");
             display.print(displayTemp);
             display.println(" degC");
             display.print("Fan speed : ");
             display.println("0 RPM");
         }
-        if (*inputs == enterButton) {
+        if (*inputs == saveExitButton) {
             *inputs = 0;
 
             EditMenuOption = AboutMenu.selectRow();
@@ -422,7 +418,7 @@ void Menu::processMainMenu() {
                 oldPos = encPos;
                 encPos = encoder.getCount();
             }
-            MainMenu.MoveUp();
+            MainMenu.MoveDown();
         }
 
         if ((encPos - oldPos) < 0) {
@@ -431,7 +427,7 @@ void Menu::processMainMenu() {
                 oldPos = encPos;
                 encPos = encoder.getCount();
             }
-            MainMenu.MoveDown();
+            MainMenu.MoveUp();
         }
 
         if (*inputs == enterButton) {
@@ -458,6 +454,9 @@ void Menu::processMainMenu() {
                 display.fillScreen(MENU_BACKGROUND);
                 MainMenu.draw();
             }
+        } else if (*inputs == saveExitButton) {
+            *inputs = 0;
+            MainMenuOption = MainMenu.backwardMenu();
         }
     }
     display.fillScreen(MENU_BACKGROUND);
@@ -467,13 +466,13 @@ void Menu::processMainMenu() {
 void Menu::setupMenu() {
     // fire up the display
     display.begin();
-    display.setRotation(1);
+    display.setRotation(3);
 
     // menu code done, now proceed to your code
     display.fillScreen(MENU_BACKGROUND);
 
     char strName[18];
-    for (int i = 0; i < numb_preset - 1; i++) {
+    for (unsigned char i = 0; i < NUMB_PRESET - 1; i++) {
         sprintf(strName, "Usr Preset %d", i);
         Pusr[i] = new Preset(i, strName);
     }
@@ -489,7 +488,7 @@ void Menu::setupMenu() {
     MainMenu.setTitleBarSize(0, 0, 320, 40);
     MainMenu.setTitleTextMargins(60, 30);
     MainMenu.setIconMargins(0, 0);
-    MainMenu.setMenuBarMargins(15, 310, 15, 4);
+    MainMenu.setMenuBarMargins(15, 310, 6, 4);
     MainMenu.setItemColors(MENU_DISABLE, MENU_HIGHBORDER);
     MainMenu.setItemTextMargins(45, 45, 5);
 
@@ -497,11 +496,9 @@ void Menu::setupMenu() {
                     DATA_COLUMN, ROW_HEIGHT, ROWS, "Option Menu", FONT_ITEM, FONT_TITLE);
 
     OptionOption1 = OptionMenu.addNI("Pad -15dB : ", pad, 0, sizeof(OffOnItems) / sizeof(OffOnItems[0]), 1, 0, OffOnItems);
-    OptionOption2 = OptionMenu.addNI("Lvl l.o. (dB):", lineLvl, -40.0, 0.0, .5, 2, NULL);
-    OptionOption3 = OptionMenu.addNI("Line out :", linePos, 0, sizeof(OutLinePlaceItems) / sizeof(OutLinePlaceItems[0]), 1, 0, OutLinePlaceItems);
-
-    OptionMenu.SetItemValue(OptionOption1, 0);
-    OptionMenu.SetItemValue(OptionOption3, 0); // the 2nd element in the ReadoutItems array
+    OptionOption2 = OptionMenu.addNI("Phantom (15V): ", phantom, 0, sizeof(OffOnItems) / sizeof(OffOnItems[0]), 1, 0, OffOnItems);
+    OptionOption3 = OptionMenu.addNI("Lvl l.o. (dB):", lineLvl, -40.0, 0.0, .5, 2, NULL);
+    OptionOption4 = OptionMenu.addNI("Line out :", linePos, 0, sizeof(OutLinePlaceItems) / sizeof(OutLinePlaceItems[0]), 1, 0, OutLinePlaceItems);
 
     OptionMenu.setTitleColors(TITLE_TEXT, TITLE_BACK);
     OptionMenu.setTitleBarSize(0, 0, 320, 40);

@@ -182,6 +182,11 @@ int EditMenu::selectRow() {
     return currentID;
 }
 
+int EditMenu::backwardMenu() {
+    item = 0;
+    return 0;
+}
+
 void EditMenu::drawHeader(bool hl, uint8_t style) {
 
     d->setFont(&titlef);
@@ -1319,6 +1324,14 @@ int ItemMenu::selectRow() {
     }
     item = currentID;
     return currentID;
+}
+
+int ItemMenu::backwardMenu() {
+    currentID = 0;
+    cr = 0;
+    sr = 0;
+    item = 0;
+    return 0;
 }
 
 void ItemMenu::setTitleColors(uint16_t TitleTextColor, uint16_t TitleFillColor) {

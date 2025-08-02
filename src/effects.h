@@ -8,6 +8,11 @@ using namespace std;
 
 enum effectName {
     pre,
+    oct,
+    env_filter,
+    fuzz_od,
+    chorus,
+    comp_2b,
     comp,
     eq
 };
@@ -17,13 +22,24 @@ enum propertyName {
     clip_up,
     clip_down,
     thresh,
+    threshLP,
+    threshHP,
     ratio,
     make_up,
     att,
     rel,
     rms,
     freq,
-    q_fact
+    q_fact,
+    strength,
+    decay_freq,
+    dry_freq,
+    wet_freq,
+    sel,
+    bias,
+    vol,
+    t_offset,
+    bld
 };
 
 enum propertyUnit {
@@ -64,6 +80,31 @@ class Effects : public Property {
 class Pre : public Effects {
   public:
     Pre();
+};
+
+class Octaver : public Effects {
+  public:
+    Octaver();
+};
+
+class EnvelopeFilter : public Effects {
+  public:
+    EnvelopeFilter();
+};
+
+class FuzzOd : public Effects {
+  public:
+    FuzzOd();
+};
+
+class CompTwoBand : public Effects {
+  public:
+    CompTwoBand();
+};
+
+class Chorus : public Effects {
+  public:
+    Chorus();
 };
 
 class Compressor : public Effects {

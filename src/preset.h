@@ -9,18 +9,30 @@
 
 using namespace std;
 
+enum presetDisplay : unsigned char {
+    allDisplay = 254,
+    selectPresetAllDisplay = 253,
+    effectTwoArrow = 252,
+    effectRightArrow = 251,
+    effectLeftArrow = 250,
+    effectDisplay = 249,
+    oneGauge = 0,
+};
+
 class Preset {
   protected:
-    int identify;
+    unsigned char identify;
     String presetName;
 
     vector<Effects *>
         effects;
 
   public:
-    Preset(int id, char *prtName);
+    Preset(unsigned char id, char *prtName);
 
     // Getters
+    // page select effect
+    // parameter select parameter
     int getID();
     String getPresetName();
     float getValueEffectPreset(unsigned char page, unsigned char parameter);
@@ -30,9 +42,11 @@ class Preset {
     void setPreseName(String s);
     void setValueEffectPreset(unsigned char page, unsigned char parameter, float value);
 
+    unsigned int getLenghtPreset();
+
     int getLenghtEffect(unsigned char page);
 
-    void displayMenuPreset(unsigned char page, unsigned char parameter, Adafruit_ILI9341 *d);
+    void displayMenuPreset(unsigned char page, unsigned char parameter, presetDisplay display, Adafruit_ILI9341 *d);
 };
 
 #endif

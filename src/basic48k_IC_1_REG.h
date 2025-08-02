@@ -1,8 +1,8 @@
 /*
- * File:           \\VBOXSVR\VirtualBox_VMs\SigmaStudioProjects\ADAU1452\filter_1452\filter_1452_IC 1\filter_1452_IC_1_REG.h
+ * File:           C:\Users\damla\OneDrive\Documents\Analog Devices\SigmaStudio 4.7\Basic48k\basic48k_IC_1_REG.h
  *
- * Created:        Friday, June 05, 2020 4:21:32 PM
- * Description:    filter_1452:IC 1 control register definitions.
+ * Created:        Sunday, July 27, 2025 1:41:35 PM
+ * Description:    basic48k:IC 1 control register definitions.
  *
  * This software is distributed in the hope that it will be useful,
  * but is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
@@ -14,10 +14,10 @@
  * are intended for resale to audio product end users. This software
  * may not be distributed whole or in any part to third parties.
  *
- * Copyright ©2020 Analog Devices, Inc. All rights reserved.
+ * Copyright ©2025 Analog Devices, Inc. All rights reserved.
  */
-#ifndef __FILTER_1452_IC_1_REG_H__
-#define __FILTER_1452_IC_1_REG_H__
+#ifndef __BASIC48K_IC_1_REG_H__
+#define __BASIC48K_IC_1_REG_H__
 
 
 /* PLL_CTRL0  - Registers (IC 1) */
@@ -48,7 +48,7 @@
 /* MCLK_OUT  - Registers (IC 1) */
 #define REG_MCLK_OUT_IC_1_ADDR                    0xF005
 #define REG_MCLK_OUT_IC_1_BYTE                    2
-#define REG_MCLK_OUT_IC_1_VALUE                   0x0
+#define REG_MCLK_OUT_IC_1_VALUE                   0x5
 
 /* PLL_WATCHDOG  - Registers (IC 1) */
 #define REG_PLL_WATCHDOG_IC_1_ADDR                0xF006
@@ -98,17 +98,17 @@
 /* POWER_ENABLE0  - Registers (IC 1) */
 #define REG_POWER_ENABLE0_IC_1_ADDR               0xF050
 #define REG_POWER_ENABLE0_IC_1_BYTE               2
-#define REG_POWER_ENABLE0_IC_1_VALUE              0x400
+#define REG_POWER_ENABLE0_IC_1_VALUE              0x1D41
 
 /* POWER_ENABLE1  - Registers (IC 1) */
 #define REG_POWER_ENABLE1_IC_1_ADDR               0xF051
 #define REG_POWER_ENABLE1_IC_1_BYTE               2
-#define REG_POWER_ENABLE1_IC_1_VALUE              0x0
+#define REG_POWER_ENABLE1_IC_1_VALUE              0x1
 
 /* ASRC_INPUT0  - Registers (IC 1) */
 #define REG_ASRC_INPUT0_IC_1_ADDR                 0xF100
 #define REG_ASRC_INPUT0_IC_1_BYTE                 2
-#define REG_ASRC_INPUT0_IC_1_VALUE                0x0
+#define REG_ASRC_INPUT0_IC_1_VALUE                0x1
 
 /* ASRC_INPUT1  - Registers (IC 1) */
 #define REG_ASRC_INPUT1_IC_1_ADDR                 0xF101
@@ -148,7 +148,7 @@
 /* ASRC_OUT_RATE0  - Registers (IC 1) */
 #define REG_ASRC_OUT_RATE0_IC_1_ADDR              0xF140
 #define REG_ASRC_OUT_RATE0_IC_1_BYTE              2
-#define REG_ASRC_OUT_RATE0_IC_1_VALUE             0x0
+#define REG_ASRC_OUT_RATE0_IC_1_VALUE             0x7
 
 /* ASRC_OUT_RATE1  - Registers (IC 1) */
 #define REG_ASRC_OUT_RATE1_IC_1_ADDR              0xF141
@@ -313,7 +313,7 @@
 /* SERIAL_BYTE_0_0  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_0_0_IC_1_ADDR             0xF200
 #define REG_SERIAL_BYTE_0_0_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_0_0_IC_1_VALUE            0x0
+#define REG_SERIAL_BYTE_0_0_IC_1_VALUE            0x91C8
 
 /* SERIAL_BYTE_0_1  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_0_1_IC_1_ADDR             0xF201
@@ -323,72 +323,72 @@
 /* SERIAL_BYTE_1_0  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_1_0_IC_1_ADDR             0xF204
 #define REG_SERIAL_BYTE_1_0_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_1_0_IC_1_VALUE            0x2400
+#define REG_SERIAL_BYTE_1_0_IC_1_VALUE            0x9000
 
 /* SERIAL_BYTE_1_1  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_1_1_IC_1_ADDR             0xF205
 #define REG_SERIAL_BYTE_1_1_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_1_1_IC_1_VALUE            0x2
+#define REG_SERIAL_BYTE_1_1_IC_1_VALUE            0x1A
 
 /* SERIAL_BYTE_2_0  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_2_0_IC_1_ADDR             0xF208
 #define REG_SERIAL_BYTE_2_0_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_2_0_IC_1_VALUE            0x4800
+#define REG_SERIAL_BYTE_2_0_IC_1_VALUE            0x9000
 
 /* SERIAL_BYTE_2_1  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_2_1_IC_1_ADDR             0xF209
 #define REG_SERIAL_BYTE_2_1_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_2_1_IC_1_VALUE            0x2
+#define REG_SERIAL_BYTE_2_1_IC_1_VALUE            0x1A
 
 /* SERIAL_BYTE_3_0  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_3_0_IC_1_ADDR             0xF20C
 #define REG_SERIAL_BYTE_3_0_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_3_0_IC_1_VALUE            0x6C00
+#define REG_SERIAL_BYTE_3_0_IC_1_VALUE            0x9002
 
 /* SERIAL_BYTE_3_1  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_3_1_IC_1_ADDR             0xF20D
 #define REG_SERIAL_BYTE_3_1_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_3_1_IC_1_VALUE            0x2
+#define REG_SERIAL_BYTE_3_1_IC_1_VALUE            0x1A
 
 /* SERIAL_BYTE_4_0  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_4_0_IC_1_ADDR             0xF210
 #define REG_SERIAL_BYTE_4_0_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_4_0_IC_1_VALUE            0x0
+#define REG_SERIAL_BYTE_4_0_IC_1_VALUE            0x9008
 
 /* SERIAL_BYTE_4_1  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_4_1_IC_1_ADDR             0xF211
 #define REG_SERIAL_BYTE_4_1_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_4_1_IC_1_VALUE            0x22
+#define REG_SERIAL_BYTE_4_1_IC_1_VALUE            0x1A
 
 /* SERIAL_BYTE_5_0  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_5_0_IC_1_ADDR             0xF214
 #define REG_SERIAL_BYTE_5_0_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_5_0_IC_1_VALUE            0x2400
+#define REG_SERIAL_BYTE_5_0_IC_1_VALUE            0x9000
 
 /* SERIAL_BYTE_5_1  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_5_1_IC_1_ADDR             0xF215
 #define REG_SERIAL_BYTE_5_1_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_5_1_IC_1_VALUE            0x22
+#define REG_SERIAL_BYTE_5_1_IC_1_VALUE            0x1A
 
 /* SERIAL_BYTE_6_0  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_6_0_IC_1_ADDR             0xF218
 #define REG_SERIAL_BYTE_6_0_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_6_0_IC_1_VALUE            0x4800
+#define REG_SERIAL_BYTE_6_0_IC_1_VALUE            0x91C8
 
 /* SERIAL_BYTE_6_1  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_6_1_IC_1_ADDR             0xF219
 #define REG_SERIAL_BYTE_6_1_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_6_1_IC_1_VALUE            0x22
+#define REG_SERIAL_BYTE_6_1_IC_1_VALUE            0x2
 
 /* SERIAL_BYTE_7_0  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_7_0_IC_1_ADDR             0xF21C
 #define REG_SERIAL_BYTE_7_0_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_7_0_IC_1_VALUE            0x6C00
+#define REG_SERIAL_BYTE_7_0_IC_1_VALUE            0x9000
 
 /* SERIAL_BYTE_7_1  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_7_1_IC_1_ADDR             0xF21D
 #define REG_SERIAL_BYTE_7_1_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_7_1_IC_1_VALUE            0x22
+#define REG_SERIAL_BYTE_7_1_IC_1_VALUE            0x1A
 
 /* FTDM_IN0  - Registers (IC 1) */
 #define REG_FTDM_IN0_IC_1_ADDR                    0xF300
@@ -1060,11 +1060,6 @@
 #define REG_CORE_STATUS_IC_1_BYTE                 0
 #define REG_CORE_STATUS_IC_1_VALUE                0x0
 
-/* DEBUG_MODE  - Registers (IC 1) */
-#define REG_DEBUG_MODE_IC_1_ADDR                  0xF420
-#define REG_DEBUG_MODE_IC_1_BYTE                  2
-#define REG_DEBUG_MODE_IC_1_VALUE                 0x0
-
 /* PANIC_CLEAR  - Registers (IC 1) */
 #define REG_PANIC_CLEAR_IC_1_ADDR                 0xF421
 #define REG_PANIC_CLEAR_IC_1_BYTE                 2
@@ -1105,65 +1100,10 @@
 #define REG_PANIC_CODE_IC_1_BYTE                  0
 #define REG_PANIC_CODE_IC_1_VALUE                 0x0
 
-/* DECODE_OP0  - Registers (IC 1) */
-#define REG_DECODE_OP0_IC_1_ADDR                  0xF429
-#define REG_DECODE_OP0_IC_1_BYTE                  0
-#define REG_DECODE_OP0_IC_1_VALUE                 0x0
-
-/* DECODE_OP1  - Registers (IC 1) */
-#define REG_DECODE_OP1_IC_1_ADDR                  0xF42A
-#define REG_DECODE_OP1_IC_1_BYTE                  0
-#define REG_DECODE_OP1_IC_1_VALUE                 0x0
-
-/* DECODE_OP2  - Registers (IC 1) */
-#define REG_DECODE_OP2_IC_1_ADDR                  0xF42B
-#define REG_DECODE_OP2_IC_1_BYTE                  0
-#define REG_DECODE_OP2_IC_1_VALUE                 0x0
-
-/* DECODE_OP3  - Registers (IC 1) */
-#define REG_DECODE_OP3_IC_1_ADDR                  0xF42C
-#define REG_DECODE_OP3_IC_1_BYTE                  0
-#define REG_DECODE_OP3_IC_1_VALUE                 0x0
-
-/* EXECUTE_OP0  - Registers (IC 1) */
-#define REG_EXECUTE_OP0_IC_1_ADDR                 0xF42D
-#define REG_EXECUTE_OP0_IC_1_BYTE                 0
-#define REG_EXECUTE_OP0_IC_1_VALUE                0x0
-
-/* EXECUTE_OP1  - Registers (IC 1) */
-#define REG_EXECUTE_OP1_IC_1_ADDR                 0xF42E
-#define REG_EXECUTE_OP1_IC_1_BYTE                 0
-#define REG_EXECUTE_OP1_IC_1_VALUE                0x0
-
-/* EXECUTE_OP2  - Registers (IC 1) */
-#define REG_EXECUTE_OP2_IC_1_ADDR                 0xF42F
-#define REG_EXECUTE_OP2_IC_1_BYTE                 0
-#define REG_EXECUTE_OP2_IC_1_VALUE                0x0
-
-/* EXECUTE_OP3  - Registers (IC 1) */
-#define REG_EXECUTE_OP3_IC_1_ADDR                 0xF430
-#define REG_EXECUTE_OP3_IC_1_BYTE                 0
-#define REG_EXECUTE_OP3_IC_1_VALUE                0x0
-
-/* DECODE_COUNT  - Registers (IC 1) */
-#define REG_DECODE_COUNT_IC_1_ADDR                0xF431
-#define REG_DECODE_COUNT_IC_1_BYTE                0
-#define REG_DECODE_COUNT_IC_1_VALUE               0x0
-
 /* EXECUTE_COUNT  - Registers (IC 1) */
 #define REG_EXECUTE_COUNT_IC_1_ADDR               0xF432
 #define REG_EXECUTE_COUNT_IC_1_BYTE               0
 #define REG_EXECUTE_COUNT_IC_1_VALUE              0x0
-
-/* SOFTWARE_VALUE_0  - Registers (IC 1) */
-#define REG_SOFTWARE_VALUE_0_IC_1_ADDR            0xF433
-#define REG_SOFTWARE_VALUE_0_IC_1_BYTE            0
-#define REG_SOFTWARE_VALUE_0_IC_1_VALUE           0x0
-
-/* SOFTWARE_VALUE_1  - Registers (IC 1) */
-#define REG_SOFTWARE_VALUE_1_IC_1_ADDR            0xF434
-#define REG_SOFTWARE_VALUE_1_IC_1_BYTE            0
-#define REG_SOFTWARE_VALUE_1_IC_1_VALUE           0x0
 
 /* WATCHDOG_MAXCOUNT  - Registers (IC 1) */
 #define REG_WATCHDOG_MAXCOUNT_IC_1_ADDR           0xF443
@@ -1220,6 +1160,56 @@
 #define REG_PROG_CNTR_MAXLENGTH1_IC_1_BYTE        0
 #define REG_PROG_CNTR_MAXLENGTH1_IC_1_VALUE       0x0
 
+/* PANIC_PARITY_MASK1  - Registers (IC 1) */
+#define REG_PANIC_PARITY_MASK1_IC_1_ADDR          0xF467
+#define REG_PANIC_PARITY_MASK1_IC_1_BYTE          2
+#define REG_PANIC_PARITY_MASK1_IC_1_VALUE         0x0
+
+/* PANIC_PARITY_MASK2  - Registers (IC 1) */
+#define REG_PANIC_PARITY_MASK2_IC_1_ADDR          0xF468
+#define REG_PANIC_PARITY_MASK2_IC_1_BYTE          2
+#define REG_PANIC_PARITY_MASK2_IC_1_VALUE         0x0
+
+/* PANIC_PARITY_MASK3  - Registers (IC 1) */
+#define REG_PANIC_PARITY_MASK3_IC_1_ADDR          0xF469
+#define REG_PANIC_PARITY_MASK3_IC_1_BYTE          2
+#define REG_PANIC_PARITY_MASK3_IC_1_VALUE         0x0
+
+/* PANIC_PARITY_MASK4  - Registers (IC 1) */
+#define REG_PANIC_PARITY_MASK4_IC_1_ADDR          0xF46A
+#define REG_PANIC_PARITY_MASK4_IC_1_BYTE          2
+#define REG_PANIC_PARITY_MASK4_IC_1_VALUE         0x0
+
+/* PANIC_PARITY_MASK5  - Registers (IC 1) */
+#define REG_PANIC_PARITY_MASK5_IC_1_ADDR          0xF46B
+#define REG_PANIC_PARITY_MASK5_IC_1_BYTE          2
+#define REG_PANIC_PARITY_MASK5_IC_1_VALUE         0x0
+
+/* PANIC_CODE1  - Registers (IC 1) */
+#define REG_PANIC_CODE1_IC_1_ADDR                 0xF46C
+#define REG_PANIC_CODE1_IC_1_BYTE                 0
+#define REG_PANIC_CODE1_IC_1_VALUE                0x0
+
+/* PANIC_CODE2  - Registers (IC 1) */
+#define REG_PANIC_CODE2_IC_1_ADDR                 0xF46D
+#define REG_PANIC_CODE2_IC_1_BYTE                 0
+#define REG_PANIC_CODE2_IC_1_VALUE                0x0
+
+/* PANIC_CODE3  - Registers (IC 1) */
+#define REG_PANIC_CODE3_IC_1_ADDR                 0xF46E
+#define REG_PANIC_CODE3_IC_1_BYTE                 0
+#define REG_PANIC_CODE3_IC_1_VALUE                0x0
+
+/* PANIC_CODE4  - Registers (IC 1) */
+#define REG_PANIC_CODE4_IC_1_ADDR                 0xF46F
+#define REG_PANIC_CODE4_IC_1_BYTE                 0
+#define REG_PANIC_CODE4_IC_1_VALUE                0x0
+
+/* PANIC_CODE5  - Registers (IC 1) */
+#define REG_PANIC_CODE5_IC_1_ADDR                 0xF470
+#define REG_PANIC_CODE5_IC_1_BYTE                 0
+#define REG_PANIC_CODE5_IC_1_VALUE                0x0
+
 /* MP0_MODE  - Registers (IC 1) */
 #define REG_MP0_MODE_IC_1_ADDR                    0xF510
 #define REG_MP0_MODE_IC_1_BYTE                    2
@@ -1233,7 +1223,7 @@
 /* MP2_MODE  - Registers (IC 1) */
 #define REG_MP2_MODE_IC_1_ADDR                    0xF512
 #define REG_MP2_MODE_IC_1_BYTE                    2
-#define REG_MP2_MODE_IC_1_VALUE                   0x0
+#define REG_MP2_MODE_IC_1_VALUE                   0x1
 
 /* MP3_MODE  - Registers (IC 1) */
 #define REG_MP3_MODE_IC_1_ADDR                    0xF513
@@ -1243,22 +1233,22 @@
 /* MP4_MODE  - Registers (IC 1) */
 #define REG_MP4_MODE_IC_1_ADDR                    0xF514
 #define REG_MP4_MODE_IC_1_BYTE                    2
-#define REG_MP4_MODE_IC_1_VALUE                   0x0
+#define REG_MP4_MODE_IC_1_VALUE                   0x1
 
 /* MP5_MODE  - Registers (IC 1) */
 #define REG_MP5_MODE_IC_1_ADDR                    0xF515
 #define REG_MP5_MODE_IC_1_BYTE                    2
-#define REG_MP5_MODE_IC_1_VALUE                   0x0
+#define REG_MP5_MODE_IC_1_VALUE                   0x7
 
 /* MP6_MODE  - Registers (IC 1) */
 #define REG_MP6_MODE_IC_1_ADDR                    0xF516
 #define REG_MP6_MODE_IC_1_BYTE                    2
-#define REG_MP6_MODE_IC_1_VALUE                   0x1
+#define REG_MP6_MODE_IC_1_VALUE                   0x0
 
 /* MP7_MODE  - Registers (IC 1) */
 #define REG_MP7_MODE_IC_1_ADDR                    0xF517
 #define REG_MP7_MODE_IC_1_BYTE                    2
-#define REG_MP7_MODE_IC_1_VALUE                   0x7
+#define REG_MP7_MODE_IC_1_VALUE                   0x0
 
 /* MP8_MODE  - Registers (IC 1) */
 #define REG_MP8_MODE_IC_1_ADDR                    0xF518
@@ -1283,12 +1273,12 @@
 /* MP12_MODE  - Registers (IC 1) */
 #define REG_MP12_MODE_IC_1_ADDR                   0xF51C
 #define REG_MP12_MODE_IC_1_BYTE                   2
-#define REG_MP12_MODE_IC_1_VALUE                  0x0
+#define REG_MP12_MODE_IC_1_VALUE                  0x7
 
 /* MP13_MODE  - Registers (IC 1) */
 #define REG_MP13_MODE_IC_1_ADDR                   0xF51D
 #define REG_MP13_MODE_IC_1_BYTE                   2
-#define REG_MP13_MODE_IC_1_VALUE                  0x0
+#define REG_MP13_MODE_IC_1_VALUE                  0x7
 
 /* MP0_WRITE  - Registers (IC 1) */
 #define REG_MP0_WRITE_IC_1_ADDR                   0xF520
@@ -1303,7 +1293,7 @@
 /* MP2_WRITE  - Registers (IC 1) */
 #define REG_MP2_WRITE_IC_1_ADDR                   0xF522
 #define REG_MP2_WRITE_IC_1_BYTE                   2
-#define REG_MP2_WRITE_IC_1_VALUE                  0x0
+#define REG_MP2_WRITE_IC_1_VALUE                  0x1
 
 /* MP3_WRITE  - Registers (IC 1) */
 #define REG_MP3_WRITE_IC_1_ADDR                   0xF523
@@ -1313,7 +1303,7 @@
 /* MP4_WRITE  - Registers (IC 1) */
 #define REG_MP4_WRITE_IC_1_ADDR                   0xF524
 #define REG_MP4_WRITE_IC_1_BYTE                   2
-#define REG_MP4_WRITE_IC_1_VALUE                  0x0
+#define REG_MP4_WRITE_IC_1_VALUE                  0x1
 
 /* MP5_WRITE  - Registers (IC 1) */
 #define REG_MP5_WRITE_IC_1_ADDR                   0xF525
@@ -1323,7 +1313,7 @@
 /* MP6_WRITE  - Registers (IC 1) */
 #define REG_MP6_WRITE_IC_1_ADDR                   0xF526
 #define REG_MP6_WRITE_IC_1_BYTE                   2
-#define REG_MP6_WRITE_IC_1_VALUE                  0x0
+#define REG_MP6_WRITE_IC_1_VALUE                  0x1
 
 /* MP7_WRITE  - Registers (IC 1) */
 #define REG_MP7_WRITE_IC_1_ADDR                   0xF527
@@ -1490,6 +1480,51 @@
 #define REG_ASRC7_RATIO_IC_1_BYTE                 0
 #define REG_ASRC7_RATIO_IC_1_VALUE                0x0
 
+/* ASRC_RAMPMAX_OVR  - Registers (IC 1) */
+#define REG_ASRC_RAMPMAX_OVR_IC_1_ADDR            0xF590
+#define REG_ASRC_RAMPMAX_OVR_IC_1_BYTE            2
+#define REG_ASRC_RAMPMAX_OVR_IC_1_VALUE           0x7FF
+
+/* ASRC0_RAMPMAX  - Registers (IC 1) */
+#define REG_ASRC0_RAMPMAX_IC_1_ADDR               0xF591
+#define REG_ASRC0_RAMPMAX_IC_1_BYTE               2
+#define REG_ASRC0_RAMPMAX_IC_1_VALUE              0x7FF
+
+/* ASRC1_RAMPMAX  - Registers (IC 1) */
+#define REG_ASRC1_RAMPMAX_IC_1_ADDR               0xF592
+#define REG_ASRC1_RAMPMAX_IC_1_BYTE               2
+#define REG_ASRC1_RAMPMAX_IC_1_VALUE              0x7FF
+
+/* ASRC2_RAMPMAX  - Registers (IC 1) */
+#define REG_ASRC2_RAMPMAX_IC_1_ADDR               0xF593
+#define REG_ASRC2_RAMPMAX_IC_1_BYTE               2
+#define REG_ASRC2_RAMPMAX_IC_1_VALUE              0x7FF
+
+/* ASRC3_RAMPMAX  - Registers (IC 1) */
+#define REG_ASRC3_RAMPMAX_IC_1_ADDR               0xF594
+#define REG_ASRC3_RAMPMAX_IC_1_BYTE               2
+#define REG_ASRC3_RAMPMAX_IC_1_VALUE              0x7FF
+
+/* ASRC4_RAMPMAX  - Registers (IC 1) */
+#define REG_ASRC4_RAMPMAX_IC_1_ADDR               0xF595
+#define REG_ASRC4_RAMPMAX_IC_1_BYTE               2
+#define REG_ASRC4_RAMPMAX_IC_1_VALUE              0x7FF
+
+/* ASRC5_RAMPMAX  - Registers (IC 1) */
+#define REG_ASRC5_RAMPMAX_IC_1_ADDR               0xF596
+#define REG_ASRC5_RAMPMAX_IC_1_BYTE               2
+#define REG_ASRC5_RAMPMAX_IC_1_VALUE              0x7FF
+
+/* ASRC6_RAMPMAX  - Registers (IC 1) */
+#define REG_ASRC6_RAMPMAX_IC_1_ADDR               0xF597
+#define REG_ASRC6_RAMPMAX_IC_1_BYTE               2
+#define REG_ASRC6_RAMPMAX_IC_1_VALUE              0x7FF
+
+/* ASRC7_RAMPMAX  - Registers (IC 1) */
+#define REG_ASRC7_RAMPMAX_IC_1_ADDR               0xF598
+#define REG_ASRC7_RAMPMAX_IC_1_BYTE               2
+#define REG_ASRC7_RAMPMAX_IC_1_VALUE              0x7FF
+
 /* ADC_READ0  - Registers (IC 1) */
 #define REG_ADC_READ0_IC_1_ADDR                   0xF5A0
 #define REG_ADC_READ0_IC_1_BYTE                   0
@@ -1520,6 +1555,186 @@
 #define REG_ADC_READ5_IC_1_BYTE                   0
 #define REG_ADC_READ5_IC_1_VALUE                  0x0
 
+/* MP0_MODE1  - Registers (IC 1) */
+#define REG_MP0_MODE1_IC_1_ADDR                   0xF5C0
+#define REG_MP0_MODE1_IC_1_BYTE                   2
+#define REG_MP0_MODE1_IC_1_VALUE                  0x0
+
+/* MP1_MODE1  - Registers (IC 1) */
+#define REG_MP1_MODE1_IC_1_ADDR                   0xF5C1
+#define REG_MP1_MODE1_IC_1_BYTE                   2
+#define REG_MP1_MODE1_IC_1_VALUE                  0x0
+
+/* MP2_MODE1  - Registers (IC 1) */
+#define REG_MP2_MODE1_IC_1_ADDR                   0xF5C2
+#define REG_MP2_MODE1_IC_1_BYTE                   2
+#define REG_MP2_MODE1_IC_1_VALUE                  0x0
+
+/* MP3_MODE1  - Registers (IC 1) */
+#define REG_MP3_MODE1_IC_1_ADDR                   0xF5C3
+#define REG_MP3_MODE1_IC_1_BYTE                   2
+#define REG_MP3_MODE1_IC_1_VALUE                  0x0
+
+/* MP4_MODE1  - Registers (IC 1) */
+#define REG_MP4_MODE1_IC_1_ADDR                   0xF5C4
+#define REG_MP4_MODE1_IC_1_BYTE                   2
+#define REG_MP4_MODE1_IC_1_VALUE                  0x0
+
+/* MP5_MODE1  - Registers (IC 1) */
+#define REG_MP5_MODE1_IC_1_ADDR                   0xF5C5
+#define REG_MP5_MODE1_IC_1_BYTE                   2
+#define REG_MP5_MODE1_IC_1_VALUE                  0x0
+
+/* MP6_MODE1  - Registers (IC 1) */
+#define REG_MP6_MODE1_IC_1_ADDR                   0xF5C6
+#define REG_MP6_MODE1_IC_1_BYTE                   2
+#define REG_MP6_MODE1_IC_1_VALUE                  0x0
+
+/* MP7_MODE1  - Registers (IC 1) */
+#define REG_MP7_MODE1_IC_1_ADDR                   0xF5C7
+#define REG_MP7_MODE1_IC_1_BYTE                   2
+#define REG_MP7_MODE1_IC_1_VALUE                  0x0
+
+/* MP8_MODE1  - Registers (IC 1) */
+#define REG_MP8_MODE1_IC_1_ADDR                   0xF5C8
+#define REG_MP8_MODE1_IC_1_BYTE                   2
+#define REG_MP8_MODE1_IC_1_VALUE                  0x0
+
+/* MP9_MODE1  - Registers (IC 1) */
+#define REG_MP9_MODE1_IC_1_ADDR                   0xF5C9
+#define REG_MP9_MODE1_IC_1_BYTE                   2
+#define REG_MP9_MODE1_IC_1_VALUE                  0x0
+
+/* MP10_MODE1  - Registers (IC 1) */
+#define REG_MP10_MODE1_IC_1_ADDR                  0xF5CA
+#define REG_MP10_MODE1_IC_1_BYTE                  2
+#define REG_MP10_MODE1_IC_1_VALUE                 0x0
+
+/* MP11_MODE1  - Registers (IC 1) */
+#define REG_MP11_MODE1_IC_1_ADDR                  0xF5CB
+#define REG_MP11_MODE1_IC_1_BYTE                  2
+#define REG_MP11_MODE1_IC_1_VALUE                 0x0
+
+/* MP0_WRITE1  - Registers (IC 1) */
+#define REG_MP0_WRITE1_IC_1_ADDR                  0xF5D0
+#define REG_MP0_WRITE1_IC_1_BYTE                  2
+#define REG_MP0_WRITE1_IC_1_VALUE                 0x0
+
+/* MP1_WRITE1  - Registers (IC 1) */
+#define REG_MP1_WRITE1_IC_1_ADDR                  0xF5D1
+#define REG_MP1_WRITE1_IC_1_BYTE                  2
+#define REG_MP1_WRITE1_IC_1_VALUE                 0x0
+
+/* MP2_WRITE1  - Registers (IC 1) */
+#define REG_MP2_WRITE1_IC_1_ADDR                  0xF5D2
+#define REG_MP2_WRITE1_IC_1_BYTE                  2
+#define REG_MP2_WRITE1_IC_1_VALUE                 0x0
+
+/* MP3_WRITE1  - Registers (IC 1) */
+#define REG_MP3_WRITE1_IC_1_ADDR                  0xF5D3
+#define REG_MP3_WRITE1_IC_1_BYTE                  2
+#define REG_MP3_WRITE1_IC_1_VALUE                 0x0
+
+/* MP4_WRITE1  - Registers (IC 1) */
+#define REG_MP4_WRITE1_IC_1_ADDR                  0xF5D4
+#define REG_MP4_WRITE1_IC_1_BYTE                  2
+#define REG_MP4_WRITE1_IC_1_VALUE                 0x0
+
+/* MP5_WRITE1  - Registers (IC 1) */
+#define REG_MP5_WRITE1_IC_1_ADDR                  0xF5D5
+#define REG_MP5_WRITE1_IC_1_BYTE                  2
+#define REG_MP5_WRITE1_IC_1_VALUE                 0x0
+
+/* MP6_WRITE1  - Registers (IC 1) */
+#define REG_MP6_WRITE1_IC_1_ADDR                  0xF5D6
+#define REG_MP6_WRITE1_IC_1_BYTE                  2
+#define REG_MP6_WRITE1_IC_1_VALUE                 0x0
+
+/* MP7_WRITE1  - Registers (IC 1) */
+#define REG_MP7_WRITE1_IC_1_ADDR                  0xF5D7
+#define REG_MP7_WRITE1_IC_1_BYTE                  2
+#define REG_MP7_WRITE1_IC_1_VALUE                 0x0
+
+/* MP8_WRITE1  - Registers (IC 1) */
+#define REG_MP8_WRITE1_IC_1_ADDR                  0xF5D8
+#define REG_MP8_WRITE1_IC_1_BYTE                  2
+#define REG_MP8_WRITE1_IC_1_VALUE                 0x0
+
+/* MP9_WRITE1  - Registers (IC 1) */
+#define REG_MP9_WRITE1_IC_1_ADDR                  0xF5D9
+#define REG_MP9_WRITE1_IC_1_BYTE                  2
+#define REG_MP9_WRITE1_IC_1_VALUE                 0x0
+
+/* MP10_WRITE1  - Registers (IC 1) */
+#define REG_MP10_WRITE1_IC_1_ADDR                 0xF5DA
+#define REG_MP10_WRITE1_IC_1_BYTE                 2
+#define REG_MP10_WRITE1_IC_1_VALUE                0x0
+
+/* MP11_WRITE1  - Registers (IC 1) */
+#define REG_MP11_WRITE1_IC_1_ADDR                 0xF5DB
+#define REG_MP11_WRITE1_IC_1_BYTE                 2
+#define REG_MP11_WRITE1_IC_1_VALUE                0x0
+
+/* MP0_READ1  - Registers (IC 1) */
+#define REG_MP0_READ1_IC_1_ADDR                   0xF5E0
+#define REG_MP0_READ1_IC_1_BYTE                   0
+#define REG_MP0_READ1_IC_1_VALUE                  0x0
+
+/* MP1_READ1  - Registers (IC 1) */
+#define REG_MP1_READ1_IC_1_ADDR                   0xF5E1
+#define REG_MP1_READ1_IC_1_BYTE                   0
+#define REG_MP1_READ1_IC_1_VALUE                  0x0
+
+/* MP2_READ1  - Registers (IC 1) */
+#define REG_MP2_READ1_IC_1_ADDR                   0xF5E2
+#define REG_MP2_READ1_IC_1_BYTE                   0
+#define REG_MP2_READ1_IC_1_VALUE                  0x0
+
+/* MP3_READ1  - Registers (IC 1) */
+#define REG_MP3_READ1_IC_1_ADDR                   0xF5E3
+#define REG_MP3_READ1_IC_1_BYTE                   0
+#define REG_MP3_READ1_IC_1_VALUE                  0x0
+
+/* MP4_READ1  - Registers (IC 1) */
+#define REG_MP4_READ1_IC_1_ADDR                   0xF5E4
+#define REG_MP4_READ1_IC_1_BYTE                   0
+#define REG_MP4_READ1_IC_1_VALUE                  0x0
+
+/* MP5_READ1  - Registers (IC 1) */
+#define REG_MP5_READ1_IC_1_ADDR                   0xF5E5
+#define REG_MP5_READ1_IC_1_BYTE                   0
+#define REG_MP5_READ1_IC_1_VALUE                  0x0
+
+/* MP6_READ1  - Registers (IC 1) */
+#define REG_MP6_READ1_IC_1_ADDR                   0xF5E6
+#define REG_MP6_READ1_IC_1_BYTE                   0
+#define REG_MP6_READ1_IC_1_VALUE                  0x0
+
+/* MP7_READ1  - Registers (IC 1) */
+#define REG_MP7_READ1_IC_1_ADDR                   0xF5E7
+#define REG_MP7_READ1_IC_1_BYTE                   0
+#define REG_MP7_READ1_IC_1_VALUE                  0x0
+
+/* MP8_READ1  - Registers (IC 1) */
+#define REG_MP8_READ1_IC_1_ADDR                   0xF5E8
+#define REG_MP8_READ1_IC_1_BYTE                   0
+#define REG_MP8_READ1_IC_1_VALUE                  0x0
+
+/* MP9_READ1  - Registers (IC 1) */
+#define REG_MP9_READ1_IC_1_ADDR                   0xF5E9
+#define REG_MP9_READ1_IC_1_BYTE                   0
+#define REG_MP9_READ1_IC_1_VALUE                  0x0
+
+/* MP10_READ1  - Registers (IC 1) */
+#define REG_MP10_READ1_IC_1_ADDR                  0xF5EA
+#define REG_MP10_READ1_IC_1_BYTE                  0
+#define REG_MP10_READ1_IC_1_VALUE                 0x0
+
+/* MP11_READ1  - Registers (IC 1) */
+#define REG_MP11_READ1_IC_1_ADDR                  0xF5EB
+#define REG_MP11_READ1_IC_1_BYTE                  0
+#define REG_MP11_READ1_IC_1_VALUE                 0x0
+
 /* SPDIF_LOCK_DET  - Registers (IC 1) */
 #define REG_SPDIF_LOCK_DET_IC_1_ADDR              0xF600
 #define REG_SPDIF_LOCK_DET_IC_1_BYTE              0
@@ -1549,6 +1764,16 @@
 #define REG_SPDIF_LOSS_OF_LOCK_IC_1_ADDR          0xF605
 #define REG_SPDIF_LOSS_OF_LOCK_IC_1_BYTE          0
 #define REG_SPDIF_LOSS_OF_LOCK_IC_1_VALUE         0x0
+
+/* SPDIF_RX_MCLKSPEED  - Registers (IC 1) */
+#define REG_SPDIF_RX_MCLKSPEED_IC_1_ADDR          0xF606
+#define REG_SPDIF_RX_MCLKSPEED_IC_1_BYTE          2
+#define REG_SPDIF_RX_MCLKSPEED_IC_1_VALUE         0x1
+
+/* SPDIF_TX_MCLKSPEED  - Registers (IC 1) */
+#define REG_SPDIF_TX_MCLKSPEED_IC_1_ADDR          0xF607
+#define REG_SPDIF_TX_MCLKSPEED_IC_1_BYTE          2
+#define REG_SPDIF_TX_MCLKSPEED_IC_1_VALUE         0x1
 
 /* SPDIF_AUX_EN  - Registers (IC 1) */
 #define REG_SPDIF_AUX_EN_IC_1_ADDR                0xF608
@@ -2538,7 +2763,7 @@
 /* BCLK_IN0_PIN  - Registers (IC 1) */
 #define REG_BCLK_IN0_PIN_IC_1_ADDR                0xF780
 #define REG_BCLK_IN0_PIN_IC_1_BYTE                2
-#define REG_BCLK_IN0_PIN_IC_1_VALUE               0x18
+#define REG_BCLK_IN0_PIN_IC_1_VALUE               0x1F
 
 /* BCLK_IN1_PIN  - Registers (IC 1) */
 #define REG_BCLK_IN1_PIN_IC_1_ADDR                0xF781
@@ -2558,7 +2783,7 @@
 /* BCLK_OUT0_PIN  - Registers (IC 1) */
 #define REG_BCLK_OUT0_PIN_IC_1_ADDR               0xF784
 #define REG_BCLK_OUT0_PIN_IC_1_BYTE               2
-#define REG_BCLK_OUT0_PIN_IC_1_VALUE              0x18
+#define REG_BCLK_OUT0_PIN_IC_1_VALUE              0x10
 
 /* BCLK_OUT1_PIN  - Registers (IC 1) */
 #define REG_BCLK_OUT1_PIN_IC_1_ADDR               0xF785
@@ -2578,7 +2803,7 @@
 /* LRCLK_IN0_PIN  - Registers (IC 1) */
 #define REG_LRCLK_IN0_PIN_IC_1_ADDR               0xF788
 #define REG_LRCLK_IN0_PIN_IC_1_BYTE               2
-#define REG_LRCLK_IN0_PIN_IC_1_VALUE              0x18
+#define REG_LRCLK_IN0_PIN_IC_1_VALUE              0x1F
 
 /* LRCLK_IN1_PIN  - Registers (IC 1) */
 #define REG_LRCLK_IN1_PIN_IC_1_ADDR               0xF789
@@ -2638,22 +2863,22 @@
 /* SDATA_OUT0_PIN  - Registers (IC 1) */
 #define REG_SDATA_OUT0_PIN_IC_1_ADDR              0xF794
 #define REG_SDATA_OUT0_PIN_IC_1_BYTE              2
-#define REG_SDATA_OUT0_PIN_IC_1_VALUE             0x8
+#define REG_SDATA_OUT0_PIN_IC_1_VALUE             0x18
 
 /* SDATA_OUT1_PIN  - Registers (IC 1) */
 #define REG_SDATA_OUT1_PIN_IC_1_ADDR              0xF795
 #define REG_SDATA_OUT1_PIN_IC_1_BYTE              2
-#define REG_SDATA_OUT1_PIN_IC_1_VALUE             0x8
+#define REG_SDATA_OUT1_PIN_IC_1_VALUE             0x18
 
 /* SDATA_OUT2_PIN  - Registers (IC 1) */
 #define REG_SDATA_OUT2_PIN_IC_1_ADDR              0xF796
 #define REG_SDATA_OUT2_PIN_IC_1_BYTE              2
-#define REG_SDATA_OUT2_PIN_IC_1_VALUE             0x8
+#define REG_SDATA_OUT2_PIN_IC_1_VALUE             0x1F
 
 /* SDATA_OUT3_PIN  - Registers (IC 1) */
 #define REG_SDATA_OUT3_PIN_IC_1_ADDR              0xF797
 #define REG_SDATA_OUT3_PIN_IC_1_BYTE              2
-#define REG_SDATA_OUT3_PIN_IC_1_VALUE             0x8
+#define REG_SDATA_OUT3_PIN_IC_1_VALUE             0x18
 
 /* SPDIF_TX_PIN  - Registers (IC 1) */
 #define REG_SPDIF_TX_PIN_IC_1_ADDR                0xF798
@@ -2713,12 +2938,17 @@
 /* CLKOUT_PIN  - Registers (IC 1) */
 #define REG_CLKOUT_PIN_IC_1_ADDR                  0xF7A3
 #define REG_CLKOUT_PIN_IC_1_BYTE                  2
-#define REG_CLKOUT_PIN_IC_1_VALUE                 0x8
+#define REG_CLKOUT_PIN_IC_1_VALUE                 0x1F
 
 /* SOFT_RESET  - Registers (IC 1) */
 #define REG_SOFT_RESET_IC_1_ADDR                  0xF890
 #define REG_SOFT_RESET_IC_1_BYTE                  2
 #define REG_SOFT_RESET_IC_1_VALUE                 0x1
+
+/* SECOND_PAGE_ENABLE  - Registers (IC 1) */
+#define REG_SECOND_PAGE_ENABLE_IC_1_ADDR          0xF899
+#define REG_SECOND_PAGE_ENABLE_IC_1_BYTE          2
+#define REG_SECOND_PAGE_ENABLE_IC_1_VALUE         0x0
 
 
 /*
@@ -2753,8 +2983,8 @@
 #define R4_PLL_LOCK_PLL_LOCK_IC_1_SHIFT           0
 
 /* MCLK_OUT (IC 1) */
-#define R5_MCLK_OUT_CLKOUT_ENABLE_IC_1            0x0    /* 0b	[0] */
-#define R5_MCLK_OUT_CLKOUT_RATE_IC_1              0x0    /* 00b	[2:1] */
+#define R5_MCLK_OUT_CLKOUT_ENABLE_IC_1            0x1    /* 1b	[0] */
+#define R5_MCLK_OUT_CLKOUT_RATE_IC_1              0x2    /* 10b	[2:1] */
 #define R5_MCLK_OUT_CLKOUT_ENABLE_IC_1_MASK       0x1
 #define R5_MCLK_OUT_CLKOUT_ENABLE_IC_1_SHIFT      0
 #define R5_MCLK_OUT_CLKOUT_RATE_IC_1_MASK         0x6
@@ -2809,19 +3039,19 @@
 #define R14_CLK_GEN3_LOCK_GEN3_LOCK_IC_1_SHIFT    0
 
 /* POWER_ENABLE0 (IC 1) */
-#define R15_POWER_ENABLE0_SIN0_PWR_IC_1           0x0    /* 0b	[0] */
+#define R15_POWER_ENABLE0_SIN0_PWR_IC_1           0x1    /* 1b	[0] */
 #define R15_POWER_ENABLE0_SIN1_PWR_IC_1           0x0    /* 0b	[1] */
 #define R15_POWER_ENABLE0_SIN2_PWR_IC_1           0x0    /* 0b	[2] */
 #define R15_POWER_ENABLE0_SIN3_PWR_IC_1           0x0    /* 0b	[3] */
 #define R15_POWER_ENABLE0_SOUT0_PWR_IC_1          0x0    /* 0b	[4] */
 #define R15_POWER_ENABLE0_SOUT1_PWR_IC_1          0x0    /* 0b	[5] */
-#define R15_POWER_ENABLE0_SOUT2_PWR_IC_1          0x0    /* 0b	[6] */
+#define R15_POWER_ENABLE0_SOUT2_PWR_IC_1          0x1    /* 1b	[6] */
 #define R15_POWER_ENABLE0_SOUT3_PWR_IC_1          0x0    /* 0b	[7] */
-#define R15_POWER_ENABLE0_ASRCBANK0_PWR_IC_1      0x0    /* 0b	[8] */
+#define R15_POWER_ENABLE0_ASRCBANK0_PWR_IC_1      0x1    /* 1b	[8] */
 #define R15_POWER_ENABLE0_ASRCBANK1_PWR_IC_1      0x0    /* 0b	[9] */
 #define R15_POWER_ENABLE0_CLK_GEN1_PWR_IC_1       0x1    /* 1b	[10] */
-#define R15_POWER_ENABLE0_CLK_GEN2_PWR_IC_1       0x0    /* 0b	[11] */
-#define R15_POWER_ENABLE0_CLK_GEN3_PWR_IC_1       0x0    /* 0b	[12] */
+#define R15_POWER_ENABLE0_CLK_GEN2_PWR_IC_1       0x1    /* 1b	[11] */
+#define R15_POWER_ENABLE0_CLK_GEN3_PWR_IC_1       0x1    /* 1b	[12] */
 #define R15_POWER_ENABLE0_SIN0_PWR_IC_1_MASK      0x1
 #define R15_POWER_ENABLE0_SIN0_PWR_IC_1_SHIFT     0
 #define R15_POWER_ENABLE0_SIN1_PWR_IC_1_MASK      0x2
@@ -2850,7 +3080,7 @@
 #define R15_POWER_ENABLE0_CLK_GEN3_PWR_IC_1_SHIFT 12
 
 /* POWER_ENABLE1 (IC 1) */
-#define R16_POWER_ENABLE1_ADC_PWR_IC_1            0x0    /* 0b	[0] */
+#define R16_POWER_ENABLE1_ADC_PWR_IC_1            0x1    /* 1b	[0] */
 #define R16_POWER_ENABLE1_RX_PWR_IC_1             0x0    /* 0b	[1] */
 #define R16_POWER_ENABLE1_TX_PWR_IC_1             0x0    /* 0b	[2] */
 #define R16_POWER_ENABLE1_PDM0_PWR_IC_1           0x0    /* 0b	[3] */
@@ -2867,7 +3097,7 @@
 #define R16_POWER_ENABLE1_PDM1_PWR_IC_1_SHIFT     4
 
 /* ASRC_INPUT0 (IC 1) */
-#define R17_ASRC_INPUT0_ASRC_SOURCE_IC_1          0x0    /* 000b	[2:0] */
+#define R17_ASRC_INPUT0_ASRC_SOURCE_IC_1          0x1    /* 001b	[2:0] */
 #define R17_ASRC_INPUT0_ASRC_SIN_CHANNEL_IC_1     0x0    /* 00000b	[7:3] */
 #define R17_ASRC_INPUT0_ASRC_SOURCE_IC_1_MASK     0x7
 #define R17_ASRC_INPUT0_ASRC_SOURCE_IC_1_SHIFT    0
@@ -2931,7 +3161,7 @@
 #define R24_ASRC_INPUT7_ASRC_SIN_CHANNEL_IC_1_SHIFT 3
 
 /* ASRC_OUT_RATE0 (IC 1) */
-#define R25_ASRC_OUT_RATE0_ASRC_RATE_IC_1         0x0    /* 0000b	[3:0] */
+#define R25_ASRC_OUT_RATE0_ASRC_RATE_IC_1         0x7    /* 0111b	[3:0] */
 #define R25_ASRC_OUT_RATE0_ASRC_RATE_IC_1_MASK    0xF
 #define R25_ASRC_OUT_RATE0_ASRC_RATE_IC_1_SHIFT   0
 
@@ -3169,13 +3399,13 @@
 
 /* SERIAL_BYTE_0_0 (IC 1) */
 #define R58_SERIAL_BYTE_0_0_TDM_MODE_IC_1         0x0    /* 000b	[2:0] */
-#define R58_SERIAL_BYTE_0_0_DATA_FMT_IC_1         0x0    /* 00b	[4:3] */
-#define R58_SERIAL_BYTE_0_0_WORD_LEN_IC_1         0x0    /* 00b	[6:5] */
-#define R58_SERIAL_BYTE_0_0_BCLK_POL_IC_1         0x0    /* 0b	[7] */
-#define R58_SERIAL_BYTE_0_0_LRCLK_POL_IC_1        0x0    /* 0b	[8] */
+#define R58_SERIAL_BYTE_0_0_DATA_FMT_IC_1         0x1    /* 01b	[4:3] */
+#define R58_SERIAL_BYTE_0_0_WORD_LEN_IC_1         0x2    /* 10b	[6:5] */
+#define R58_SERIAL_BYTE_0_0_BCLK_POL_IC_1         0x1    /* 1b	[7] */
+#define R58_SERIAL_BYTE_0_0_LRCLK_POL_IC_1        0x1    /* 1b	[8] */
 #define R58_SERIAL_BYTE_0_0_LRCLK_MODE_IC_1       0x0    /* 0b	[9] */
-#define R58_SERIAL_BYTE_0_0_BCLK_SRC_IC_1         0x0    /* 000b	[12:10] */
-#define R58_SERIAL_BYTE_0_0_LRCLK_SRC_IC_1        0x0    /* 000b	[15:13] */
+#define R58_SERIAL_BYTE_0_0_BCLK_SRC_IC_1         0x4    /* 100b	[12:10] */
+#define R58_SERIAL_BYTE_0_0_LRCLK_SRC_IC_1        0x4    /* 100b	[15:13] */
 #define R58_SERIAL_BYTE_0_0_TDM_MODE_IC_1_MASK    0x7
 #define R58_SERIAL_BYTE_0_0_TDM_MODE_IC_1_SHIFT   0
 #define R58_SERIAL_BYTE_0_0_DATA_FMT_IC_1_MASK    0x18
@@ -3211,8 +3441,8 @@
 #define R60_SERIAL_BYTE_1_0_BCLK_POL_IC_1         0x0    /* 0b	[7] */
 #define R60_SERIAL_BYTE_1_0_LRCLK_POL_IC_1        0x0    /* 0b	[8] */
 #define R60_SERIAL_BYTE_1_0_LRCLK_MODE_IC_1       0x0    /* 0b	[9] */
-#define R60_SERIAL_BYTE_1_0_BCLK_SRC_IC_1         0x1    /* 001b	[12:10] */
-#define R60_SERIAL_BYTE_1_0_LRCLK_SRC_IC_1        0x1    /* 001b	[15:13] */
+#define R60_SERIAL_BYTE_1_0_BCLK_SRC_IC_1         0x4    /* 100b	[12:10] */
+#define R60_SERIAL_BYTE_1_0_LRCLK_SRC_IC_1        0x4    /* 100b	[15:13] */
 #define R60_SERIAL_BYTE_1_0_TDM_MODE_IC_1_MASK    0x7
 #define R60_SERIAL_BYTE_1_0_TDM_MODE_IC_1_SHIFT   0
 #define R60_SERIAL_BYTE_1_0_DATA_FMT_IC_1_MASK    0x18
@@ -3232,7 +3462,7 @@
 
 /* SERIAL_BYTE_1_1 (IC 1) */
 #define R61_SERIAL_BYTE_1_1_FS_IC_1               0x2    /* 010b	[2:0] */
-#define R61_SERIAL_BYTE_1_1_CLK_DOMAIN_IC_1       0x0    /* 00b	[4:3] */
+#define R61_SERIAL_BYTE_1_1_CLK_DOMAIN_IC_1       0x3    /* 11b	[4:3] */
 #define R61_SERIAL_BYTE_1_1_TRISTATE_IC_1         0x0    /* 0b	[5] */
 #define R61_SERIAL_BYTE_1_1_FS_IC_1_MASK          0x7
 #define R61_SERIAL_BYTE_1_1_FS_IC_1_SHIFT         0
@@ -3248,8 +3478,8 @@
 #define R62_SERIAL_BYTE_2_0_BCLK_POL_IC_1         0x0    /* 0b	[7] */
 #define R62_SERIAL_BYTE_2_0_LRCLK_POL_IC_1        0x0    /* 0b	[8] */
 #define R62_SERIAL_BYTE_2_0_LRCLK_MODE_IC_1       0x0    /* 0b	[9] */
-#define R62_SERIAL_BYTE_2_0_BCLK_SRC_IC_1         0x2    /* 010b	[12:10] */
-#define R62_SERIAL_BYTE_2_0_LRCLK_SRC_IC_1        0x2    /* 010b	[15:13] */
+#define R62_SERIAL_BYTE_2_0_BCLK_SRC_IC_1         0x4    /* 100b	[12:10] */
+#define R62_SERIAL_BYTE_2_0_LRCLK_SRC_IC_1        0x4    /* 100b	[15:13] */
 #define R62_SERIAL_BYTE_2_0_TDM_MODE_IC_1_MASK    0x7
 #define R62_SERIAL_BYTE_2_0_TDM_MODE_IC_1_SHIFT   0
 #define R62_SERIAL_BYTE_2_0_DATA_FMT_IC_1_MASK    0x18
@@ -3269,7 +3499,7 @@
 
 /* SERIAL_BYTE_2_1 (IC 1) */
 #define R63_SERIAL_BYTE_2_1_FS_IC_1               0x2    /* 010b	[2:0] */
-#define R63_SERIAL_BYTE_2_1_CLK_DOMAIN_IC_1       0x0    /* 00b	[4:3] */
+#define R63_SERIAL_BYTE_2_1_CLK_DOMAIN_IC_1       0x3    /* 11b	[4:3] */
 #define R63_SERIAL_BYTE_2_1_TRISTATE_IC_1         0x0    /* 0b	[5] */
 #define R63_SERIAL_BYTE_2_1_FS_IC_1_MASK          0x7
 #define R63_SERIAL_BYTE_2_1_FS_IC_1_SHIFT         0
@@ -3279,14 +3509,14 @@
 #define R63_SERIAL_BYTE_2_1_TRISTATE_IC_1_SHIFT   5
 
 /* SERIAL_BYTE_3_0 (IC 1) */
-#define R64_SERIAL_BYTE_3_0_TDM_MODE_IC_1         0x0    /* 000b	[2:0] */
+#define R64_SERIAL_BYTE_3_0_TDM_MODE_IC_1         0x2    /* 010b	[2:0] */
 #define R64_SERIAL_BYTE_3_0_DATA_FMT_IC_1         0x0    /* 00b	[4:3] */
 #define R64_SERIAL_BYTE_3_0_WORD_LEN_IC_1         0x0    /* 00b	[6:5] */
 #define R64_SERIAL_BYTE_3_0_BCLK_POL_IC_1         0x0    /* 0b	[7] */
 #define R64_SERIAL_BYTE_3_0_LRCLK_POL_IC_1        0x0    /* 0b	[8] */
 #define R64_SERIAL_BYTE_3_0_LRCLK_MODE_IC_1       0x0    /* 0b	[9] */
-#define R64_SERIAL_BYTE_3_0_BCLK_SRC_IC_1         0x3    /* 011b	[12:10] */
-#define R64_SERIAL_BYTE_3_0_LRCLK_SRC_IC_1        0x3    /* 011b	[15:13] */
+#define R64_SERIAL_BYTE_3_0_BCLK_SRC_IC_1         0x4    /* 100b	[12:10] */
+#define R64_SERIAL_BYTE_3_0_LRCLK_SRC_IC_1        0x4    /* 100b	[15:13] */
 #define R64_SERIAL_BYTE_3_0_TDM_MODE_IC_1_MASK    0x7
 #define R64_SERIAL_BYTE_3_0_TDM_MODE_IC_1_SHIFT   0
 #define R64_SERIAL_BYTE_3_0_DATA_FMT_IC_1_MASK    0x18
@@ -3306,7 +3536,7 @@
 
 /* SERIAL_BYTE_3_1 (IC 1) */
 #define R65_SERIAL_BYTE_3_1_FS_IC_1               0x2    /* 010b	[2:0] */
-#define R65_SERIAL_BYTE_3_1_CLK_DOMAIN_IC_1       0x0    /* 00b	[4:3] */
+#define R65_SERIAL_BYTE_3_1_CLK_DOMAIN_IC_1       0x3    /* 11b	[4:3] */
 #define R65_SERIAL_BYTE_3_1_TRISTATE_IC_1         0x0    /* 0b	[5] */
 #define R65_SERIAL_BYTE_3_1_FS_IC_1_MASK          0x7
 #define R65_SERIAL_BYTE_3_1_FS_IC_1_SHIFT         0
@@ -3317,13 +3547,13 @@
 
 /* SERIAL_BYTE_4_0 (IC 1) */
 #define R66_SERIAL_BYTE_4_0_TDM_MODE_IC_1         0x0    /* 000b	[2:0] */
-#define R66_SERIAL_BYTE_4_0_DATA_FMT_IC_1         0x0    /* 00b	[4:3] */
+#define R66_SERIAL_BYTE_4_0_DATA_FMT_IC_1         0x1    /* 01b	[4:3] */
 #define R66_SERIAL_BYTE_4_0_WORD_LEN_IC_1         0x0    /* 00b	[6:5] */
 #define R66_SERIAL_BYTE_4_0_BCLK_POL_IC_1         0x0    /* 0b	[7] */
 #define R66_SERIAL_BYTE_4_0_LRCLK_POL_IC_1        0x0    /* 0b	[8] */
 #define R66_SERIAL_BYTE_4_0_LRCLK_MODE_IC_1       0x0    /* 0b	[9] */
-#define R66_SERIAL_BYTE_4_0_BCLK_SRC_IC_1         0x0    /* 000b	[12:10] */
-#define R66_SERIAL_BYTE_4_0_LRCLK_SRC_IC_1        0x0    /* 000b	[15:13] */
+#define R66_SERIAL_BYTE_4_0_BCLK_SRC_IC_1         0x4    /* 100b	[12:10] */
+#define R66_SERIAL_BYTE_4_0_LRCLK_SRC_IC_1        0x4    /* 100b	[15:13] */
 #define R66_SERIAL_BYTE_4_0_TDM_MODE_IC_1_MASK    0x7
 #define R66_SERIAL_BYTE_4_0_TDM_MODE_IC_1_SHIFT   0
 #define R66_SERIAL_BYTE_4_0_DATA_FMT_IC_1_MASK    0x18
@@ -3343,8 +3573,8 @@
 
 /* SERIAL_BYTE_4_1 (IC 1) */
 #define R67_SERIAL_BYTE_4_1_FS_IC_1               0x2    /* 010b	[2:0] */
-#define R67_SERIAL_BYTE_4_1_CLK_DOMAIN_IC_1       0x0    /* 00b	[4:3] */
-#define R67_SERIAL_BYTE_4_1_TRISTATE_IC_1         0x1    /* 1b	[5] */
+#define R67_SERIAL_BYTE_4_1_CLK_DOMAIN_IC_1       0x3    /* 11b	[4:3] */
+#define R67_SERIAL_BYTE_4_1_TRISTATE_IC_1         0x0    /* 0b	[5] */
 #define R67_SERIAL_BYTE_4_1_FS_IC_1_MASK          0x7
 #define R67_SERIAL_BYTE_4_1_FS_IC_1_SHIFT         0
 #define R67_SERIAL_BYTE_4_1_CLK_DOMAIN_IC_1_MASK  0x18
@@ -3359,8 +3589,8 @@
 #define R68_SERIAL_BYTE_5_0_BCLK_POL_IC_1         0x0    /* 0b	[7] */
 #define R68_SERIAL_BYTE_5_0_LRCLK_POL_IC_1        0x0    /* 0b	[8] */
 #define R68_SERIAL_BYTE_5_0_LRCLK_MODE_IC_1       0x0    /* 0b	[9] */
-#define R68_SERIAL_BYTE_5_0_BCLK_SRC_IC_1         0x1    /* 001b	[12:10] */
-#define R68_SERIAL_BYTE_5_0_LRCLK_SRC_IC_1        0x1    /* 001b	[15:13] */
+#define R68_SERIAL_BYTE_5_0_BCLK_SRC_IC_1         0x4    /* 100b	[12:10] */
+#define R68_SERIAL_BYTE_5_0_LRCLK_SRC_IC_1        0x4    /* 100b	[15:13] */
 #define R68_SERIAL_BYTE_5_0_TDM_MODE_IC_1_MASK    0x7
 #define R68_SERIAL_BYTE_5_0_TDM_MODE_IC_1_SHIFT   0
 #define R68_SERIAL_BYTE_5_0_DATA_FMT_IC_1_MASK    0x18
@@ -3380,8 +3610,8 @@
 
 /* SERIAL_BYTE_5_1 (IC 1) */
 #define R69_SERIAL_BYTE_5_1_FS_IC_1               0x2    /* 010b	[2:0] */
-#define R69_SERIAL_BYTE_5_1_CLK_DOMAIN_IC_1       0x0    /* 00b	[4:3] */
-#define R69_SERIAL_BYTE_5_1_TRISTATE_IC_1         0x1    /* 1b	[5] */
+#define R69_SERIAL_BYTE_5_1_CLK_DOMAIN_IC_1       0x3    /* 11b	[4:3] */
+#define R69_SERIAL_BYTE_5_1_TRISTATE_IC_1         0x0    /* 0b	[5] */
 #define R69_SERIAL_BYTE_5_1_FS_IC_1_MASK          0x7
 #define R69_SERIAL_BYTE_5_1_FS_IC_1_SHIFT         0
 #define R69_SERIAL_BYTE_5_1_CLK_DOMAIN_IC_1_MASK  0x18
@@ -3391,13 +3621,13 @@
 
 /* SERIAL_BYTE_6_0 (IC 1) */
 #define R70_SERIAL_BYTE_6_0_TDM_MODE_IC_1         0x0    /* 000b	[2:0] */
-#define R70_SERIAL_BYTE_6_0_DATA_FMT_IC_1         0x0    /* 00b	[4:3] */
-#define R70_SERIAL_BYTE_6_0_WORD_LEN_IC_1         0x0    /* 00b	[6:5] */
-#define R70_SERIAL_BYTE_6_0_BCLK_POL_IC_1         0x0    /* 0b	[7] */
-#define R70_SERIAL_BYTE_6_0_LRCLK_POL_IC_1        0x0    /* 0b	[8] */
+#define R70_SERIAL_BYTE_6_0_DATA_FMT_IC_1         0x1    /* 01b	[4:3] */
+#define R70_SERIAL_BYTE_6_0_WORD_LEN_IC_1         0x2    /* 10b	[6:5] */
+#define R70_SERIAL_BYTE_6_0_BCLK_POL_IC_1         0x1    /* 1b	[7] */
+#define R70_SERIAL_BYTE_6_0_LRCLK_POL_IC_1        0x1    /* 1b	[8] */
 #define R70_SERIAL_BYTE_6_0_LRCLK_MODE_IC_1       0x0    /* 0b	[9] */
-#define R70_SERIAL_BYTE_6_0_BCLK_SRC_IC_1         0x2    /* 010b	[12:10] */
-#define R70_SERIAL_BYTE_6_0_LRCLK_SRC_IC_1        0x2    /* 010b	[15:13] */
+#define R70_SERIAL_BYTE_6_0_BCLK_SRC_IC_1         0x4    /* 100b	[12:10] */
+#define R70_SERIAL_BYTE_6_0_LRCLK_SRC_IC_1        0x4    /* 100b	[15:13] */
 #define R70_SERIAL_BYTE_6_0_TDM_MODE_IC_1_MASK    0x7
 #define R70_SERIAL_BYTE_6_0_TDM_MODE_IC_1_SHIFT   0
 #define R70_SERIAL_BYTE_6_0_DATA_FMT_IC_1_MASK    0x18
@@ -3418,7 +3648,7 @@
 /* SERIAL_BYTE_6_1 (IC 1) */
 #define R71_SERIAL_BYTE_6_1_FS_IC_1               0x2    /* 010b	[2:0] */
 #define R71_SERIAL_BYTE_6_1_CLK_DOMAIN_IC_1       0x0    /* 00b	[4:3] */
-#define R71_SERIAL_BYTE_6_1_TRISTATE_IC_1         0x1    /* 1b	[5] */
+#define R71_SERIAL_BYTE_6_1_TRISTATE_IC_1         0x0    /* 0b	[5] */
 #define R71_SERIAL_BYTE_6_1_FS_IC_1_MASK          0x7
 #define R71_SERIAL_BYTE_6_1_FS_IC_1_SHIFT         0
 #define R71_SERIAL_BYTE_6_1_CLK_DOMAIN_IC_1_MASK  0x18
@@ -3433,8 +3663,8 @@
 #define R72_SERIAL_BYTE_7_0_BCLK_POL_IC_1         0x0    /* 0b	[7] */
 #define R72_SERIAL_BYTE_7_0_LRCLK_POL_IC_1        0x0    /* 0b	[8] */
 #define R72_SERIAL_BYTE_7_0_LRCLK_MODE_IC_1       0x0    /* 0b	[9] */
-#define R72_SERIAL_BYTE_7_0_BCLK_SRC_IC_1         0x3    /* 011b	[12:10] */
-#define R72_SERIAL_BYTE_7_0_LRCLK_SRC_IC_1        0x3    /* 011b	[15:13] */
+#define R72_SERIAL_BYTE_7_0_BCLK_SRC_IC_1         0x4    /* 100b	[12:10] */
+#define R72_SERIAL_BYTE_7_0_LRCLK_SRC_IC_1        0x4    /* 100b	[15:13] */
 #define R72_SERIAL_BYTE_7_0_TDM_MODE_IC_1_MASK    0x7
 #define R72_SERIAL_BYTE_7_0_TDM_MODE_IC_1_SHIFT   0
 #define R72_SERIAL_BYTE_7_0_DATA_FMT_IC_1_MASK    0x18
@@ -3454,8 +3684,8 @@
 
 /* SERIAL_BYTE_7_1 (IC 1) */
 #define R73_SERIAL_BYTE_7_1_FS_IC_1               0x2    /* 010b	[2:0] */
-#define R73_SERIAL_BYTE_7_1_CLK_DOMAIN_IC_1       0x0    /* 00b	[4:3] */
-#define R73_SERIAL_BYTE_7_1_TRISTATE_IC_1         0x1    /* 1b	[5] */
+#define R73_SERIAL_BYTE_7_1_CLK_DOMAIN_IC_1       0x3    /* 11b	[4:3] */
+#define R73_SERIAL_BYTE_7_1_TRISTATE_IC_1         0x0    /* 0b	[5] */
 #define R73_SERIAL_BYTE_7_1_FS_IC_1_MASK          0x7
 #define R73_SERIAL_BYTE_7_1_FS_IC_1_SHIFT         0
 #define R73_SERIAL_BYTE_7_1_CLK_DOMAIN_IC_1_MASK  0x18
@@ -5669,2189 +5899,2812 @@
 #define R207_CORE_STATUS_CORE_STATUS_IC_1_MASK    0x7
 #define R207_CORE_STATUS_CORE_STATUS_IC_1_SHIFT   0
 
-/* DEBUG_MODE (IC 1) */
-#define R208_DEBUG_MODE_DEBUG_MODE_IC_1           0x0    /* 0b	[0] */
-#define R208_DEBUG_MODE_DEBUG_MODE_IC_1_MASK      0x1
-#define R208_DEBUG_MODE_DEBUG_MODE_IC_1_SHIFT     0
-
 /* PANIC_CLEAR (IC 1) */
-#define R209_PANIC_CLEAR_PANIC_CLEAR_IC_1         0x0    /* 0b	[0] */
-#define R209_PANIC_CLEAR_PANIC_CLEAR_IC_1_MASK    0x1
-#define R209_PANIC_CLEAR_PANIC_CLEAR_IC_1_SHIFT   0
+#define R208_PANIC_CLEAR_PANIC_CLEAR_IC_1         0x0    /* 0b	[0] */
+#define R208_PANIC_CLEAR_PANIC_CLEAR_IC_1_MASK    0x1
+#define R208_PANIC_CLEAR_PANIC_CLEAR_IC_1_SHIFT   0
 
 /* PANIC_PARITY_MASK (IC 1) */
-#define R210_PANIC_PARITY_MASK_ASRC0_MASK_IC_1    0x1    /* 1b	[0] */
-#define R210_PANIC_PARITY_MASK_ASRC1_MASK_IC_1    0x1    /* 1b	[1] */
-#define R210_PANIC_PARITY_MASK_PM0_MASK_IC_1      0x0    /* 0b	[2] */
-#define R210_PANIC_PARITY_MASK_PM1_MASK_IC_1      0x0    /* 0b	[3] */
-#define R210_PANIC_PARITY_MASK_DM0_BANK0_MASK_IC_1 0x0   /* 0b	[4] */
-#define R210_PANIC_PARITY_MASK_DM0_BANK1_MASK_IC_1 0x0   /* 0b	[5] */
-#define R210_PANIC_PARITY_MASK_DM0_BANK2_MASK_IC_1 0x0   /* 0b	[6] */
-#define R210_PANIC_PARITY_MASK_DM0_BANK3_MASK_IC_1 0x0   /* 0b	[7] */
-#define R210_PANIC_PARITY_MASK_DM1_BANK0_MASK_IC_1 0x0   /* 0b	[8] */
-#define R210_PANIC_PARITY_MASK_DM1_BANK1_MASK_IC_1 0x0   /* 0b	[9] */
-#define R210_PANIC_PARITY_MASK_DM1_BANK2_MASK_IC_1 0x0   /* 0b	[10] */
-#define R210_PANIC_PARITY_MASK_DM1_BANK3_MASK_IC_1 0x0   /* 0b	[11] */
-#define R210_PANIC_PARITY_MASK_ASRC0_MASK_IC_1_MASK 0x1
-#define R210_PANIC_PARITY_MASK_ASRC0_MASK_IC_1_SHIFT 0
-#define R210_PANIC_PARITY_MASK_ASRC1_MASK_IC_1_MASK 0x2
-#define R210_PANIC_PARITY_MASK_ASRC1_MASK_IC_1_SHIFT 1
-#define R210_PANIC_PARITY_MASK_PM0_MASK_IC_1_MASK 0x4
-#define R210_PANIC_PARITY_MASK_PM0_MASK_IC_1_SHIFT 2
-#define R210_PANIC_PARITY_MASK_PM1_MASK_IC_1_MASK 0x8
-#define R210_PANIC_PARITY_MASK_PM1_MASK_IC_1_SHIFT 3
-#define R210_PANIC_PARITY_MASK_DM0_BANK0_MASK_IC_1_MASK 0x10
-#define R210_PANIC_PARITY_MASK_DM0_BANK0_MASK_IC_1_SHIFT 4
-#define R210_PANIC_PARITY_MASK_DM0_BANK1_MASK_IC_1_MASK 0x20
-#define R210_PANIC_PARITY_MASK_DM0_BANK1_MASK_IC_1_SHIFT 5
-#define R210_PANIC_PARITY_MASK_DM0_BANK2_MASK_IC_1_MASK 0x40
-#define R210_PANIC_PARITY_MASK_DM0_BANK2_MASK_IC_1_SHIFT 6
-#define R210_PANIC_PARITY_MASK_DM0_BANK3_MASK_IC_1_MASK 0x80
-#define R210_PANIC_PARITY_MASK_DM0_BANK3_MASK_IC_1_SHIFT 7
-#define R210_PANIC_PARITY_MASK_DM1_BANK0_MASK_IC_1_MASK 0x100
-#define R210_PANIC_PARITY_MASK_DM1_BANK0_MASK_IC_1_SHIFT 8
-#define R210_PANIC_PARITY_MASK_DM1_BANK1_MASK_IC_1_MASK 0x200
-#define R210_PANIC_PARITY_MASK_DM1_BANK1_MASK_IC_1_SHIFT 9
-#define R210_PANIC_PARITY_MASK_DM1_BANK2_MASK_IC_1_MASK 0x400
-#define R210_PANIC_PARITY_MASK_DM1_BANK2_MASK_IC_1_SHIFT 10
-#define R210_PANIC_PARITY_MASK_DM1_BANK3_MASK_IC_1_MASK 0x800
-#define R210_PANIC_PARITY_MASK_DM1_BANK3_MASK_IC_1_SHIFT 11
+#define R209_PANIC_PARITY_MASK_ASRC0_MASK_IC_1    0x1    /* 1b	[0] */
+#define R209_PANIC_PARITY_MASK_ASRC1_MASK_IC_1    0x1    /* 1b	[1] */
+#define R209_PANIC_PARITY_MASK_PM0_MASK_IC_1      0x0    /* 0b	[2] */
+#define R209_PANIC_PARITY_MASK_PM1_MASK_IC_1      0x0    /* 0b	[3] */
+#define R209_PANIC_PARITY_MASK_DM0_BANK0_MASK_IC_1 0x0   /* 0b	[4] */
+#define R209_PANIC_PARITY_MASK_DM0_BANK1_MASK_IC_1 0x0   /* 0b	[5] */
+#define R209_PANIC_PARITY_MASK_DM0_BANK2_MASK_IC_1 0x0   /* 0b	[6] */
+#define R209_PANIC_PARITY_MASK_DM0_BANK3_MASK_IC_1 0x0   /* 0b	[7] */
+#define R209_PANIC_PARITY_MASK_DM1_BANK0_MASK_IC_1 0x0   /* 0b	[8] */
+#define R209_PANIC_PARITY_MASK_DM1_BANK1_MASK_IC_1 0x0   /* 0b	[9] */
+#define R209_PANIC_PARITY_MASK_DM1_BANK2_MASK_IC_1 0x0   /* 0b	[10] */
+#define R209_PANIC_PARITY_MASK_DM1_BANK3_MASK_IC_1 0x0   /* 0b	[11] */
+#define R209_PANIC_PARITY_MASK_ASRC0_MASK_IC_1_MASK 0x1
+#define R209_PANIC_PARITY_MASK_ASRC0_MASK_IC_1_SHIFT 0
+#define R209_PANIC_PARITY_MASK_ASRC1_MASK_IC_1_MASK 0x2
+#define R209_PANIC_PARITY_MASK_ASRC1_MASK_IC_1_SHIFT 1
+#define R209_PANIC_PARITY_MASK_PM0_MASK_IC_1_MASK 0x4
+#define R209_PANIC_PARITY_MASK_PM0_MASK_IC_1_SHIFT 2
+#define R209_PANIC_PARITY_MASK_PM1_MASK_IC_1_MASK 0x8
+#define R209_PANIC_PARITY_MASK_PM1_MASK_IC_1_SHIFT 3
+#define R209_PANIC_PARITY_MASK_DM0_BANK0_MASK_IC_1_MASK 0x10
+#define R209_PANIC_PARITY_MASK_DM0_BANK0_MASK_IC_1_SHIFT 4
+#define R209_PANIC_PARITY_MASK_DM0_BANK1_MASK_IC_1_MASK 0x20
+#define R209_PANIC_PARITY_MASK_DM0_BANK1_MASK_IC_1_SHIFT 5
+#define R209_PANIC_PARITY_MASK_DM0_BANK2_MASK_IC_1_MASK 0x40
+#define R209_PANIC_PARITY_MASK_DM0_BANK2_MASK_IC_1_SHIFT 6
+#define R209_PANIC_PARITY_MASK_DM0_BANK3_MASK_IC_1_MASK 0x80
+#define R209_PANIC_PARITY_MASK_DM0_BANK3_MASK_IC_1_SHIFT 7
+#define R209_PANIC_PARITY_MASK_DM1_BANK0_MASK_IC_1_MASK 0x100
+#define R209_PANIC_PARITY_MASK_DM1_BANK0_MASK_IC_1_SHIFT 8
+#define R209_PANIC_PARITY_MASK_DM1_BANK1_MASK_IC_1_MASK 0x200
+#define R209_PANIC_PARITY_MASK_DM1_BANK1_MASK_IC_1_SHIFT 9
+#define R209_PANIC_PARITY_MASK_DM1_BANK2_MASK_IC_1_MASK 0x400
+#define R209_PANIC_PARITY_MASK_DM1_BANK2_MASK_IC_1_SHIFT 10
+#define R209_PANIC_PARITY_MASK_DM1_BANK3_MASK_IC_1_MASK 0x800
+#define R209_PANIC_PARITY_MASK_DM1_BANK3_MASK_IC_1_SHIFT 11
 
 /* PANIC_SOFTWARE_MASK (IC 1) */
-#define R211_PANIC_SOFTWARE_MASK_PANIC_SOFTWARE_IC_1 0x0 /* 0b	[0] */
-#define R211_PANIC_SOFTWARE_MASK_PANIC_SOFTWARE_IC_1_MASK 0x1
-#define R211_PANIC_SOFTWARE_MASK_PANIC_SOFTWARE_IC_1_SHIFT 0
+#define R210_PANIC_SOFTWARE_MASK_PANIC_SOFTWARE_IC_1 0x0 /* 0b	[0] */
+#define R210_PANIC_SOFTWARE_MASK_PANIC_SOFTWARE_IC_1_MASK 0x1
+#define R210_PANIC_SOFTWARE_MASK_PANIC_SOFTWARE_IC_1_SHIFT 0
 
 /* PANIC_WD_MASK (IC 1) */
-#define R212_PANIC_WD_MASK_PANIC_WD_IC_1          0x0    /* 0b	[0] */
-#define R212_PANIC_WD_MASK_PANIC_WD_IC_1_MASK     0x1
-#define R212_PANIC_WD_MASK_PANIC_WD_IC_1_SHIFT    0
+#define R211_PANIC_WD_MASK_PANIC_WD_IC_1          0x0    /* 0b	[0] */
+#define R211_PANIC_WD_MASK_PANIC_WD_IC_1_MASK     0x1
+#define R211_PANIC_WD_MASK_PANIC_WD_IC_1_SHIFT    0
 
 /* PANIC_STACK_MASK (IC 1) */
-#define R213_PANIC_STACK_MASK_PANIC_STACK_IC_1    0x0    /* 0b	[0] */
-#define R213_PANIC_STACK_MASK_PANIC_STACK_IC_1_MASK 0x1
-#define R213_PANIC_STACK_MASK_PANIC_STACK_IC_1_SHIFT 0
+#define R212_PANIC_STACK_MASK_PANIC_STACK_IC_1    0x0    /* 0b	[0] */
+#define R212_PANIC_STACK_MASK_PANIC_STACK_IC_1_MASK 0x1
+#define R212_PANIC_STACK_MASK_PANIC_STACK_IC_1_SHIFT 0
 
 /* PANIC_LOOP_MASK (IC 1) */
-#define R214_PANIC_LOOP_MASK_PANIC_LOOP_IC_1      0x0    /* 0b	[0] */
-#define R214_PANIC_LOOP_MASK_PANIC_LOOP_IC_1_MASK 0x1
-#define R214_PANIC_LOOP_MASK_PANIC_LOOP_IC_1_SHIFT 0
+#define R213_PANIC_LOOP_MASK_PANIC_LOOP_IC_1      0x0    /* 0b	[0] */
+#define R213_PANIC_LOOP_MASK_PANIC_LOOP_IC_1_MASK 0x1
+#define R213_PANIC_LOOP_MASK_PANIC_LOOP_IC_1_SHIFT 0
 
 /* PANIC_FLAG (IC 1) */
-#define R215_PANIC_FLAG_PANIC_FLAG_IC_1           0x0    /* 0b	[0] */
-#define R215_PANIC_FLAG_PANIC_FLAG_IC_1_MASK      0x1
-#define R215_PANIC_FLAG_PANIC_FLAG_IC_1_SHIFT     0
+#define R214_PANIC_FLAG_PANIC_FLAG_IC_1           0x0    /* 0b	[0] */
+#define R214_PANIC_FLAG_PANIC_FLAG_IC_1_MASK      0x1
+#define R214_PANIC_FLAG_PANIC_FLAG_IC_1_SHIFT     0
 
 /* PANIC_CODE (IC 1) */
-#define R216_PANIC_CODE_ERR_ASRC0_IC_1            0x0    /* 0b	[0] */
-#define R216_PANIC_CODE_ERR_ASRC1_IC_1            0x0    /* 0b	[1] */
-#define R216_PANIC_CODE_ERR_PM0_IC_1              0x0    /* 0b	[2] */
-#define R216_PANIC_CODE_ERR_PM1_IC_1              0x0    /* 0b	[3] */
-#define R216_PANIC_CODE_ERR_DM0B0_IC_1            0x0    /* 0b	[4] */
-#define R216_PANIC_CODE_ERR_DM0B1_IC_1            0x0    /* 0b	[5] */
-#define R216_PANIC_CODE_ERR_DM0B2_IC_1            0x0    /* 0b	[6] */
-#define R216_PANIC_CODE_ERR_DM0B3_IC_1            0x0    /* 0b	[7] */
-#define R216_PANIC_CODE_ERR_DM1B0_IC_1            0x0    /* 0b	[8] */
-#define R216_PANIC_CODE_ERR_DM1B1_IC_1            0x0    /* 0b	[9] */
-#define R216_PANIC_CODE_ERR_DM1B2_IC_1            0x0    /* 0b	[10] */
-#define R216_PANIC_CODE_ERR_DM1B3_IC_1            0x0    /* 0b	[11] */
-#define R216_PANIC_CODE_ERR_WATCHDOG_IC_1         0x0    /* 0b	[12] */
-#define R216_PANIC_CODE_ERR_STACK_IC_1            0x0    /* 0b	[13] */
-#define R216_PANIC_CODE_ERR_LOOP_IC_1             0x0    /* 0b	[14] */
-#define R216_PANIC_CODE_ERR_SOFT_IC_1             0x0    /* 0b	[15] */
-#define R216_PANIC_CODE_ERR_ASRC0_IC_1_MASK       0x1
-#define R216_PANIC_CODE_ERR_ASRC0_IC_1_SHIFT      0
-#define R216_PANIC_CODE_ERR_ASRC1_IC_1_MASK       0x2
-#define R216_PANIC_CODE_ERR_ASRC1_IC_1_SHIFT      1
-#define R216_PANIC_CODE_ERR_PM0_IC_1_MASK         0x4
-#define R216_PANIC_CODE_ERR_PM0_IC_1_SHIFT        2
-#define R216_PANIC_CODE_ERR_PM1_IC_1_MASK         0x8
-#define R216_PANIC_CODE_ERR_PM1_IC_1_SHIFT        3
-#define R216_PANIC_CODE_ERR_DM0B0_IC_1_MASK       0x10
-#define R216_PANIC_CODE_ERR_DM0B0_IC_1_SHIFT      4
-#define R216_PANIC_CODE_ERR_DM0B1_IC_1_MASK       0x20
-#define R216_PANIC_CODE_ERR_DM0B1_IC_1_SHIFT      5
-#define R216_PANIC_CODE_ERR_DM0B2_IC_1_MASK       0x40
-#define R216_PANIC_CODE_ERR_DM0B2_IC_1_SHIFT      6
-#define R216_PANIC_CODE_ERR_DM0B3_IC_1_MASK       0x80
-#define R216_PANIC_CODE_ERR_DM0B3_IC_1_SHIFT      7
-#define R216_PANIC_CODE_ERR_DM1B0_IC_1_MASK       0x100
-#define R216_PANIC_CODE_ERR_DM1B0_IC_1_SHIFT      8
-#define R216_PANIC_CODE_ERR_DM1B1_IC_1_MASK       0x200
-#define R216_PANIC_CODE_ERR_DM1B1_IC_1_SHIFT      9
-#define R216_PANIC_CODE_ERR_DM1B2_IC_1_MASK       0x400
-#define R216_PANIC_CODE_ERR_DM1B2_IC_1_SHIFT      10
-#define R216_PANIC_CODE_ERR_DM1B3_IC_1_MASK       0x800
-#define R216_PANIC_CODE_ERR_DM1B3_IC_1_SHIFT      11
-#define R216_PANIC_CODE_ERR_WATCHDOG_IC_1_MASK    0x1000
-#define R216_PANIC_CODE_ERR_WATCHDOG_IC_1_SHIFT   12
-#define R216_PANIC_CODE_ERR_STACK_IC_1_MASK       0x2000
-#define R216_PANIC_CODE_ERR_STACK_IC_1_SHIFT      13
-#define R216_PANIC_CODE_ERR_LOOP_IC_1_MASK        0x4000
-#define R216_PANIC_CODE_ERR_LOOP_IC_1_SHIFT       14
-#define R216_PANIC_CODE_ERR_SOFT_IC_1_MASK        0x8000
-#define R216_PANIC_CODE_ERR_SOFT_IC_1_SHIFT       15
-
-/* DECODE_OP0 (IC 1) */
-#define R217_DECODE_OP0_DECODE_OP0_IC_1           0x0000 /* 0000000000000000b	[15:0] */
-#define R217_DECODE_OP0_DECODE_OP0_IC_1_MASK      0xFFFF
-#define R217_DECODE_OP0_DECODE_OP0_IC_1_SHIFT     0
-
-/* DECODE_OP1 (IC 1) */
-#define R218_DECODE_OP1_DECODE_OP1_IC_1           0x0000 /* 0000000000000000b	[15:0] */
-#define R218_DECODE_OP1_DECODE_OP1_IC_1_MASK      0xFFFF
-#define R218_DECODE_OP1_DECODE_OP1_IC_1_SHIFT     0
-
-/* DECODE_OP2 (IC 1) */
-#define R219_DECODE_OP2_DECODE_OP2_IC_1           0x0000 /* 0000000000000000b	[15:0] */
-#define R219_DECODE_OP2_DECODE_OP2_IC_1_MASK      0xFFFF
-#define R219_DECODE_OP2_DECODE_OP2_IC_1_SHIFT     0
-
-/* DECODE_OP3 (IC 1) */
-#define R220_DECODE_OP3_DECODE_OP3_IC_1           0x0000 /* 0000000000000000b	[15:0] */
-#define R220_DECODE_OP3_DECODE_OP3_IC_1_MASK      0xFFFF
-#define R220_DECODE_OP3_DECODE_OP3_IC_1_SHIFT     0
-
-/* EXECUTE_OP0 (IC 1) */
-#define R221_EXECUTE_OP0_DECODE_EX0_IC_1          0x0000 /* 0000000000000000b	[15:0] */
-#define R221_EXECUTE_OP0_DECODE_EX0_IC_1_MASK     0xFFFF
-#define R221_EXECUTE_OP0_DECODE_EX0_IC_1_SHIFT    0
-
-/* EXECUTE_OP1 (IC 1) */
-#define R222_EXECUTE_OP1_DECODE_EX1_IC_1          0x0000 /* 0000000000000000b	[15:0] */
-#define R222_EXECUTE_OP1_DECODE_EX1_IC_1_MASK     0xFFFF
-#define R222_EXECUTE_OP1_DECODE_EX1_IC_1_SHIFT    0
-
-/* EXECUTE_OP2 (IC 1) */
-#define R223_EXECUTE_OP2_DECODE_EX2_IC_1          0x0000 /* 0000000000000000b	[15:0] */
-#define R223_EXECUTE_OP2_DECODE_EX2_IC_1_MASK     0xFFFF
-#define R223_EXECUTE_OP2_DECODE_EX2_IC_1_SHIFT    0
-
-/* EXECUTE_OP3 (IC 1) */
-#define R224_EXECUTE_OP3_DECODE_EX3_IC_1          0x0000 /* 0000000000000000b	[15:0] */
-#define R224_EXECUTE_OP3_DECODE_EX3_IC_1_MASK     0xFFFF
-#define R224_EXECUTE_OP3_DECODE_EX3_IC_1_SHIFT    0
-
-/* DECODE_COUNT (IC 1) */
-#define R225_DECODE_COUNT_DECODE_COUNT_IC_1       0x0000 /* 0000000000000000b	[15:0] */
-#define R225_DECODE_COUNT_DECODE_COUNT_IC_1_MASK  0xFFFF
-#define R225_DECODE_COUNT_DECODE_COUNT_IC_1_SHIFT 0
+#define R215_PANIC_CODE_ERR_ASRC0_IC_1            0x0    /* 0b	[0] */
+#define R215_PANIC_CODE_ERR_ASRC1_IC_1            0x0    /* 0b	[1] */
+#define R215_PANIC_CODE_ERR_PM0_IC_1              0x0    /* 0b	[2] */
+#define R215_PANIC_CODE_ERR_PM1_IC_1              0x0    /* 0b	[3] */
+#define R215_PANIC_CODE_ERR_DM0B0_IC_1            0x0    /* 0b	[4] */
+#define R215_PANIC_CODE_ERR_DM0B1_IC_1            0x0    /* 0b	[5] */
+#define R215_PANIC_CODE_ERR_DM0B2_IC_1            0x0    /* 0b	[6] */
+#define R215_PANIC_CODE_ERR_DM0B3_IC_1            0x0    /* 0b	[7] */
+#define R215_PANIC_CODE_ERR_DM1B0_IC_1            0x0    /* 0b	[8] */
+#define R215_PANIC_CODE_ERR_DM1B1_IC_1            0x0    /* 0b	[9] */
+#define R215_PANIC_CODE_ERR_DM1B2_IC_1            0x0    /* 0b	[10] */
+#define R215_PANIC_CODE_ERR_DM1B3_IC_1            0x0    /* 0b	[11] */
+#define R215_PANIC_CODE_ERR_WATCHDOG_IC_1         0x0    /* 0b	[12] */
+#define R215_PANIC_CODE_ERR_STACK_IC_1            0x0    /* 0b	[13] */
+#define R215_PANIC_CODE_ERR_LOOP_IC_1             0x0    /* 0b	[14] */
+#define R215_PANIC_CODE_ERR_SOFT_IC_1             0x0    /* 0b	[15] */
+#define R215_PANIC_CODE_ERR_ASRC0_IC_1_MASK       0x1
+#define R215_PANIC_CODE_ERR_ASRC0_IC_1_SHIFT      0
+#define R215_PANIC_CODE_ERR_ASRC1_IC_1_MASK       0x2
+#define R215_PANIC_CODE_ERR_ASRC1_IC_1_SHIFT      1
+#define R215_PANIC_CODE_ERR_PM0_IC_1_MASK         0x4
+#define R215_PANIC_CODE_ERR_PM0_IC_1_SHIFT        2
+#define R215_PANIC_CODE_ERR_PM1_IC_1_MASK         0x8
+#define R215_PANIC_CODE_ERR_PM1_IC_1_SHIFT        3
+#define R215_PANIC_CODE_ERR_DM0B0_IC_1_MASK       0x10
+#define R215_PANIC_CODE_ERR_DM0B0_IC_1_SHIFT      4
+#define R215_PANIC_CODE_ERR_DM0B1_IC_1_MASK       0x20
+#define R215_PANIC_CODE_ERR_DM0B1_IC_1_SHIFT      5
+#define R215_PANIC_CODE_ERR_DM0B2_IC_1_MASK       0x40
+#define R215_PANIC_CODE_ERR_DM0B2_IC_1_SHIFT      6
+#define R215_PANIC_CODE_ERR_DM0B3_IC_1_MASK       0x80
+#define R215_PANIC_CODE_ERR_DM0B3_IC_1_SHIFT      7
+#define R215_PANIC_CODE_ERR_DM1B0_IC_1_MASK       0x100
+#define R215_PANIC_CODE_ERR_DM1B0_IC_1_SHIFT      8
+#define R215_PANIC_CODE_ERR_DM1B1_IC_1_MASK       0x200
+#define R215_PANIC_CODE_ERR_DM1B1_IC_1_SHIFT      9
+#define R215_PANIC_CODE_ERR_DM1B2_IC_1_MASK       0x400
+#define R215_PANIC_CODE_ERR_DM1B2_IC_1_SHIFT      10
+#define R215_PANIC_CODE_ERR_DM1B3_IC_1_MASK       0x800
+#define R215_PANIC_CODE_ERR_DM1B3_IC_1_SHIFT      11
+#define R215_PANIC_CODE_ERR_WATCHDOG_IC_1_MASK    0x1000
+#define R215_PANIC_CODE_ERR_WATCHDOG_IC_1_SHIFT   12
+#define R215_PANIC_CODE_ERR_STACK_IC_1_MASK       0x2000
+#define R215_PANIC_CODE_ERR_STACK_IC_1_SHIFT      13
+#define R215_PANIC_CODE_ERR_LOOP_IC_1_MASK        0x4000
+#define R215_PANIC_CODE_ERR_LOOP_IC_1_SHIFT       14
+#define R215_PANIC_CODE_ERR_SOFT_IC_1_MASK        0x8000
+#define R215_PANIC_CODE_ERR_SOFT_IC_1_SHIFT       15
 
 /* EXECUTE_COUNT (IC 1) */
-#define R226_EXECUTE_COUNT_EXECUTE_COUNT_IC_1     0x0000 /* 0000000000000000b	[15:0] */
-#define R226_EXECUTE_COUNT_EXECUTE_COUNT_IC_1_MASK 0xFFFF
-#define R226_EXECUTE_COUNT_EXECUTE_COUNT_IC_1_SHIFT 0
-
-/* SOFTWARE_VALUE_0 (IC 1) */
-#define R227_SOFTWARE_VALUE_0_SOFTWARE_VALUE_0_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R227_SOFTWARE_VALUE_0_SOFTWARE_VALUE_0_IC_1_MASK 0xFFFF
-#define R227_SOFTWARE_VALUE_0_SOFTWARE_VALUE_0_IC_1_SHIFT 0
-
-/* SOFTWARE_VALUE_1 (IC 1) */
-#define R228_SOFTWARE_VALUE_1_SOFTWARE_VALUE_1_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R228_SOFTWARE_VALUE_1_SOFTWARE_VALUE_1_IC_1_MASK 0xFFFF
-#define R228_SOFTWARE_VALUE_1_SOFTWARE_VALUE_1_IC_1_SHIFT 0
+#define R216_EXECUTE_COUNT_EXECUTE_COUNT_IC_1     0x0000 /* 0000000000000000b	[15:0] */
+#define R216_EXECUTE_COUNT_EXECUTE_COUNT_IC_1_MASK 0xFFFF
+#define R216_EXECUTE_COUNT_EXECUTE_COUNT_IC_1_SHIFT 0
 
 /* WATCHDOG_MAXCOUNT (IC 1) */
-#define R229_WATCHDOG_MAXCOUNT_WD_MAXCOUNT_IC_1   0x000  /* 0000000000000b	[12:0] */
-#define R229_WATCHDOG_MAXCOUNT_WD_MAXCOUNT_IC_1_MASK 0x1FFF
-#define R229_WATCHDOG_MAXCOUNT_WD_MAXCOUNT_IC_1_SHIFT 0
+#define R217_WATCHDOG_MAXCOUNT_WD_MAXCOUNT_IC_1   0x000  /* 0000000000000b	[12:0] */
+#define R217_WATCHDOG_MAXCOUNT_WD_MAXCOUNT_IC_1_MASK 0x1FFF
+#define R217_WATCHDOG_MAXCOUNT_WD_MAXCOUNT_IC_1_SHIFT 0
 
 /* WATCHDOG_PRESCALE (IC 1) */
-#define R230_WATCHDOG_PRESCALE_WD_PRESCALE_IC_1   0x0    /* 0000b	[3:0] */
-#define R230_WATCHDOG_PRESCALE_WD_PRESCALE_IC_1_MASK 0xF
-#define R230_WATCHDOG_PRESCALE_WD_PRESCALE_IC_1_SHIFT 0
+#define R218_WATCHDOG_PRESCALE_WD_PRESCALE_IC_1   0x0    /* 0000b	[3:0] */
+#define R218_WATCHDOG_PRESCALE_WD_PRESCALE_IC_1_MASK 0xF
+#define R218_WATCHDOG_PRESCALE_WD_PRESCALE_IC_1_SHIFT 0
 
 /* BLOCKINT_EN (IC 1) */
-#define R231_BLOCKINT_EN_BLOCKINT_EN_IC_1         0x0    /* 0b	[0] */
-#define R231_BLOCKINT_EN_BLOCKINT_EN_IC_1_MASK    0x1
-#define R231_BLOCKINT_EN_BLOCKINT_EN_IC_1_SHIFT   0
+#define R219_BLOCKINT_EN_BLOCKINT_EN_IC_1         0x0    /* 0b	[0] */
+#define R219_BLOCKINT_EN_BLOCKINT_EN_IC_1_MASK    0x1
+#define R219_BLOCKINT_EN_BLOCKINT_EN_IC_1_SHIFT   0
 
 /* BLOCKINT_VALUE (IC 1) */
-#define R232_BLOCKINT_VALUE_BLOCKINT_VALUE_IC_1   0x0000 /* 0000000000000000b	[15:0] */
-#define R232_BLOCKINT_VALUE_BLOCKINT_VALUE_IC_1_MASK 0xFFFF
-#define R232_BLOCKINT_VALUE_BLOCKINT_VALUE_IC_1_SHIFT 0
+#define R220_BLOCKINT_VALUE_BLOCKINT_VALUE_IC_1   0x0000 /* 0000000000000000b	[15:0] */
+#define R220_BLOCKINT_VALUE_BLOCKINT_VALUE_IC_1_MASK 0xFFFF
+#define R220_BLOCKINT_VALUE_BLOCKINT_VALUE_IC_1_SHIFT 0
 
 /* PROG_CNTR0 (IC 1) */
-#define R233_PROG_CNTR0_PROG_CNTR_MSB_IC_1        0x00   /* 00000000b	[7:0] */
-#define R233_PROG_CNTR0_PROG_CNTR_MSB_IC_1_MASK   0xFF
-#define R233_PROG_CNTR0_PROG_CNTR_MSB_IC_1_SHIFT  0
+#define R221_PROG_CNTR0_PROG_CNTR_MSB_IC_1        0x00   /* 00000000b	[7:0] */
+#define R221_PROG_CNTR0_PROG_CNTR_MSB_IC_1_MASK   0xFF
+#define R221_PROG_CNTR0_PROG_CNTR_MSB_IC_1_SHIFT  0
 
 /* PROG_CNTR1 (IC 1) */
-#define R234_PROG_CNTR1_PROG_CNTR_LSB_IC_1        0x0000 /* 0000000000000000b	[15:0] */
-#define R234_PROG_CNTR1_PROG_CNTR_LSB_IC_1_MASK   0xFFFF
-#define R234_PROG_CNTR1_PROG_CNTR_LSB_IC_1_SHIFT  0
+#define R222_PROG_CNTR1_PROG_CNTR_LSB_IC_1        0x0000 /* 0000000000000000b	[15:0] */
+#define R222_PROG_CNTR1_PROG_CNTR_LSB_IC_1_MASK   0xFFFF
+#define R222_PROG_CNTR1_PROG_CNTR_LSB_IC_1_SHIFT  0
 
 /* PROG_CNTR_CLEAR (IC 1) */
-#define R235_PROG_CNTR_CLEAR_PROG_CNTR_CLEAR_IC_1 0x0    /* 0b	[0] */
-#define R235_PROG_CNTR_CLEAR_PROG_CNTR_CLEAR_IC_1_MASK 0x1
-#define R235_PROG_CNTR_CLEAR_PROG_CNTR_CLEAR_IC_1_SHIFT 0
+#define R223_PROG_CNTR_CLEAR_PROG_CNTR_CLEAR_IC_1 0x0    /* 0b	[0] */
+#define R223_PROG_CNTR_CLEAR_PROG_CNTR_CLEAR_IC_1_MASK 0x1
+#define R223_PROG_CNTR_CLEAR_PROG_CNTR_CLEAR_IC_1_SHIFT 0
 
 /* PROG_CNTR_LENGTH0 (IC 1) */
-#define R236_PROG_CNTR_LENGTH0_PROG_LENGTH_MSB_IC_1 0x00 /* 00000000b	[7:0] */
-#define R236_PROG_CNTR_LENGTH0_PROG_LENGTH_MSB_IC_1_MASK 0xFF
-#define R236_PROG_CNTR_LENGTH0_PROG_LENGTH_MSB_IC_1_SHIFT 0
+#define R224_PROG_CNTR_LENGTH0_PROG_LENGTH_MSB_IC_1 0x00 /* 00000000b	[7:0] */
+#define R224_PROG_CNTR_LENGTH0_PROG_LENGTH_MSB_IC_1_MASK 0xFF
+#define R224_PROG_CNTR_LENGTH0_PROG_LENGTH_MSB_IC_1_SHIFT 0
 
 /* PROG_CNTR_LENGTH1 (IC 1) */
-#define R237_PROG_CNTR_LENGTH1_PROG_LENGTH_LSB_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R237_PROG_CNTR_LENGTH1_PROG_LENGTH_LSB_IC_1_MASK 0xFFFF
-#define R237_PROG_CNTR_LENGTH1_PROG_LENGTH_LSB_IC_1_SHIFT 0
+#define R225_PROG_CNTR_LENGTH1_PROG_LENGTH_LSB_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R225_PROG_CNTR_LENGTH1_PROG_LENGTH_LSB_IC_1_MASK 0xFFFF
+#define R225_PROG_CNTR_LENGTH1_PROG_LENGTH_LSB_IC_1_SHIFT 0
 
 /* PROG_CNTR_MAXLENGTH0 (IC 1) */
-#define R238_PROG_CNTR_MAXLENGTH0_PROG_MAXLENGTH_MSB_IC_1 0x00 /* 00000000b	[7:0] */
-#define R238_PROG_CNTR_MAXLENGTH0_PROG_MAXLENGTH_MSB_IC_1_MASK 0xFF
-#define R238_PROG_CNTR_MAXLENGTH0_PROG_MAXLENGTH_MSB_IC_1_SHIFT 0
+#define R226_PROG_CNTR_MAXLENGTH0_PROG_MAXLENGTH_MSB_IC_1 0x00 /* 00000000b	[7:0] */
+#define R226_PROG_CNTR_MAXLENGTH0_PROG_MAXLENGTH_MSB_IC_1_MASK 0xFF
+#define R226_PROG_CNTR_MAXLENGTH0_PROG_MAXLENGTH_MSB_IC_1_SHIFT 0
 
 /* PROG_CNTR_MAXLENGTH1 (IC 1) */
-#define R239_PROG_CNTR_MAXLENGTH1_PROG_MAXLENGTH_LSB_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R239_PROG_CNTR_MAXLENGTH1_PROG_MAXLENGTH_LSB_IC_1_MASK 0xFFFF
-#define R239_PROG_CNTR_MAXLENGTH1_PROG_MAXLENGTH_LSB_IC_1_SHIFT 0
+#define R227_PROG_CNTR_MAXLENGTH1_PROG_MAXLENGTH_LSB_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R227_PROG_CNTR_MAXLENGTH1_PROG_MAXLENGTH_LSB_IC_1_MASK 0xFFFF
+#define R227_PROG_CNTR_MAXLENGTH1_PROG_MAXLENGTH_LSB_IC_1_SHIFT 0
+
+/* PANIC_PARITY_MASK1 (IC 1) */
+#define R228_PANIC_PARITY_MASK1_DM0_BANK0_SUBBANK0_MASK_IC_1 0x0 /* 0b	[0] */
+#define R228_PANIC_PARITY_MASK1_DM0_BANK0_SUBBANK1_MASK_IC_1 0x0 /* 0b	[1] */
+#define R228_PANIC_PARITY_MASK1_DM0_BANK0_SUBBANK2_MASK_IC_1 0x0 /* 0b	[2] */
+#define R228_PANIC_PARITY_MASK1_DM0_BANK0_SUBBANK3_MASK_IC_1 0x0 /* 0b	[3] */
+#define R228_PANIC_PARITY_MASK1_DM0_BANK0_SUBBANK4_MASK_IC_1 0x0 /* 0b	[4] */
+#define R228_PANIC_PARITY_MASK1_DM0_BANK1_SUBBANK0_MASK_IC_1 0x0 /* 0b	[8] */
+#define R228_PANIC_PARITY_MASK1_DM0_BANK1_SUBBANK1_MASK_IC_1 0x0 /* 0b	[9] */
+#define R228_PANIC_PARITY_MASK1_DM0_BANK1_SUBBANK2_MASK_IC_1 0x0 /* 0b	[10] */
+#define R228_PANIC_PARITY_MASK1_DM0_BANK1_SUBBANK3_MASK_IC_1 0x0 /* 0b	[11] */
+#define R228_PANIC_PARITY_MASK1_DM0_BANK1_SUBBANK4_MASK_IC_1 0x0 /* 0b	[12] */
+#define R228_PANIC_PARITY_MASK1_DM0_BANK0_SUBBANK0_MASK_IC_1_MASK 0x1
+#define R228_PANIC_PARITY_MASK1_DM0_BANK0_SUBBANK0_MASK_IC_1_SHIFT 0
+#define R228_PANIC_PARITY_MASK1_DM0_BANK0_SUBBANK1_MASK_IC_1_MASK 0x2
+#define R228_PANIC_PARITY_MASK1_DM0_BANK0_SUBBANK1_MASK_IC_1_SHIFT 1
+#define R228_PANIC_PARITY_MASK1_DM0_BANK0_SUBBANK2_MASK_IC_1_MASK 0x4
+#define R228_PANIC_PARITY_MASK1_DM0_BANK0_SUBBANK2_MASK_IC_1_SHIFT 2
+#define R228_PANIC_PARITY_MASK1_DM0_BANK0_SUBBANK3_MASK_IC_1_MASK 0x8
+#define R228_PANIC_PARITY_MASK1_DM0_BANK0_SUBBANK3_MASK_IC_1_SHIFT 3
+#define R228_PANIC_PARITY_MASK1_DM0_BANK0_SUBBANK4_MASK_IC_1_MASK 0x10
+#define R228_PANIC_PARITY_MASK1_DM0_BANK0_SUBBANK4_MASK_IC_1_SHIFT 4
+#define R228_PANIC_PARITY_MASK1_DM0_BANK1_SUBBANK0_MASK_IC_1_MASK 0x100
+#define R228_PANIC_PARITY_MASK1_DM0_BANK1_SUBBANK0_MASK_IC_1_SHIFT 8
+#define R228_PANIC_PARITY_MASK1_DM0_BANK1_SUBBANK1_MASK_IC_1_MASK 0x200
+#define R228_PANIC_PARITY_MASK1_DM0_BANK1_SUBBANK1_MASK_IC_1_SHIFT 9
+#define R228_PANIC_PARITY_MASK1_DM0_BANK1_SUBBANK2_MASK_IC_1_MASK 0x400
+#define R228_PANIC_PARITY_MASK1_DM0_BANK1_SUBBANK2_MASK_IC_1_SHIFT 10
+#define R228_PANIC_PARITY_MASK1_DM0_BANK1_SUBBANK3_MASK_IC_1_MASK 0x800
+#define R228_PANIC_PARITY_MASK1_DM0_BANK1_SUBBANK3_MASK_IC_1_SHIFT 11
+#define R228_PANIC_PARITY_MASK1_DM0_BANK1_SUBBANK4_MASK_IC_1_MASK 0x1000
+#define R228_PANIC_PARITY_MASK1_DM0_BANK1_SUBBANK4_MASK_IC_1_SHIFT 12
+
+/* PANIC_PARITY_MASK2 (IC 1) */
+#define R229_PANIC_PARITY_MASK2_DM0_BANK2_SUBBANK0_MASK_IC_1 0x0 /* 0b	[0] */
+#define R229_PANIC_PARITY_MASK2_DM0_BANK2_SUBBANK1_MASK_IC_1 0x0 /* 0b	[1] */
+#define R229_PANIC_PARITY_MASK2_DM0_BANK2_SUBBANK2_MASK_IC_1 0x0 /* 0b	[2] */
+#define R229_PANIC_PARITY_MASK2_DM0_BANK2_SUBBANK3_MASK_IC_1 0x0 /* 0b	[3] */
+#define R229_PANIC_PARITY_MASK2_DM0_BANK2_SUBBANK4_MASK_IC_1 0x0 /* 0b	[4] */
+#define R229_PANIC_PARITY_MASK2_DM0_BANK3_SUBBANK0_MASK_IC_1 0x0 /* 0b	[8] */
+#define R229_PANIC_PARITY_MASK2_DM0_BANK3_SUBBANK1_MASK_IC_1 0x0 /* 0b	[9] */
+#define R229_PANIC_PARITY_MASK2_DM0_BANK3_SUBBANK2_MASK_IC_1 0x0 /* 0b	[10] */
+#define R229_PANIC_PARITY_MASK2_DM0_BANK3_SUBBANK3_MASK_IC_1 0x0 /* 0b	[11] */
+#define R229_PANIC_PARITY_MASK2_DM0_BANK3_SUBBANK4_MASK_IC_1 0x0 /* 0b	[12] */
+#define R229_PANIC_PARITY_MASK2_DM0_BANK2_SUBBANK0_MASK_IC_1_MASK 0x1
+#define R229_PANIC_PARITY_MASK2_DM0_BANK2_SUBBANK0_MASK_IC_1_SHIFT 0
+#define R229_PANIC_PARITY_MASK2_DM0_BANK2_SUBBANK1_MASK_IC_1_MASK 0x2
+#define R229_PANIC_PARITY_MASK2_DM0_BANK2_SUBBANK1_MASK_IC_1_SHIFT 1
+#define R229_PANIC_PARITY_MASK2_DM0_BANK2_SUBBANK2_MASK_IC_1_MASK 0x4
+#define R229_PANIC_PARITY_MASK2_DM0_BANK2_SUBBANK2_MASK_IC_1_SHIFT 2
+#define R229_PANIC_PARITY_MASK2_DM0_BANK2_SUBBANK3_MASK_IC_1_MASK 0x8
+#define R229_PANIC_PARITY_MASK2_DM0_BANK2_SUBBANK3_MASK_IC_1_SHIFT 3
+#define R229_PANIC_PARITY_MASK2_DM0_BANK2_SUBBANK4_MASK_IC_1_MASK 0x10
+#define R229_PANIC_PARITY_MASK2_DM0_BANK2_SUBBANK4_MASK_IC_1_SHIFT 4
+#define R229_PANIC_PARITY_MASK2_DM0_BANK3_SUBBANK0_MASK_IC_1_MASK 0x100
+#define R229_PANIC_PARITY_MASK2_DM0_BANK3_SUBBANK0_MASK_IC_1_SHIFT 8
+#define R229_PANIC_PARITY_MASK2_DM0_BANK3_SUBBANK1_MASK_IC_1_MASK 0x200
+#define R229_PANIC_PARITY_MASK2_DM0_BANK3_SUBBANK1_MASK_IC_1_SHIFT 9
+#define R229_PANIC_PARITY_MASK2_DM0_BANK3_SUBBANK2_MASK_IC_1_MASK 0x400
+#define R229_PANIC_PARITY_MASK2_DM0_BANK3_SUBBANK2_MASK_IC_1_SHIFT 10
+#define R229_PANIC_PARITY_MASK2_DM0_BANK3_SUBBANK3_MASK_IC_1_MASK 0x800
+#define R229_PANIC_PARITY_MASK2_DM0_BANK3_SUBBANK3_MASK_IC_1_SHIFT 11
+#define R229_PANIC_PARITY_MASK2_DM0_BANK3_SUBBANK4_MASK_IC_1_MASK 0x1000
+#define R229_PANIC_PARITY_MASK2_DM0_BANK3_SUBBANK4_MASK_IC_1_SHIFT 12
+
+/* PANIC_PARITY_MASK3 (IC 1) */
+#define R230_PANIC_PARITY_MASK3_DM1_BANK0_SUBBANK0_MASK_IC_1 0x0 /* 0b	[0] */
+#define R230_PANIC_PARITY_MASK3_DM1_BANK0_SUBBANK1_MASK_IC_1 0x0 /* 0b	[1] */
+#define R230_PANIC_PARITY_MASK3_DM1_BANK0_SUBBANK2_MASK_IC_1 0x0 /* 0b	[2] */
+#define R230_PANIC_PARITY_MASK3_DM1_BANK0_SUBBANK3_MASK_IC_1 0x0 /* 0b	[3] */
+#define R230_PANIC_PARITY_MASK3_DM1_BANK0_SUBBANK4_MASK_IC_1 0x0 /* 0b	[4] */
+#define R230_PANIC_PARITY_MASK3_DM1_BANK1_SUBBANK0_MASK_IC_1 0x0 /* 0b	[8] */
+#define R230_PANIC_PARITY_MASK3_DM1_BANK1_SUBBANK1_MASK_IC_1 0x0 /* 0b	[9] */
+#define R230_PANIC_PARITY_MASK3_DM1_BANK1_SUBBANK2_MASK_IC_1 0x0 /* 0b	[10] */
+#define R230_PANIC_PARITY_MASK3_DM1_BANK1_SUBBANK3_MASK_IC_1 0x0 /* 0b	[11] */
+#define R230_PANIC_PARITY_MASK3_DM1_BANK1_SUBBANK4_MASK_IC_1 0x0 /* 0b	[12] */
+#define R230_PANIC_PARITY_MASK3_DM1_BANK0_SUBBANK0_MASK_IC_1_MASK 0x1
+#define R230_PANIC_PARITY_MASK3_DM1_BANK0_SUBBANK0_MASK_IC_1_SHIFT 0
+#define R230_PANIC_PARITY_MASK3_DM1_BANK0_SUBBANK1_MASK_IC_1_MASK 0x2
+#define R230_PANIC_PARITY_MASK3_DM1_BANK0_SUBBANK1_MASK_IC_1_SHIFT 1
+#define R230_PANIC_PARITY_MASK3_DM1_BANK0_SUBBANK2_MASK_IC_1_MASK 0x4
+#define R230_PANIC_PARITY_MASK3_DM1_BANK0_SUBBANK2_MASK_IC_1_SHIFT 2
+#define R230_PANIC_PARITY_MASK3_DM1_BANK0_SUBBANK3_MASK_IC_1_MASK 0x8
+#define R230_PANIC_PARITY_MASK3_DM1_BANK0_SUBBANK3_MASK_IC_1_SHIFT 3
+#define R230_PANIC_PARITY_MASK3_DM1_BANK0_SUBBANK4_MASK_IC_1_MASK 0x10
+#define R230_PANIC_PARITY_MASK3_DM1_BANK0_SUBBANK4_MASK_IC_1_SHIFT 4
+#define R230_PANIC_PARITY_MASK3_DM1_BANK1_SUBBANK0_MASK_IC_1_MASK 0x100
+#define R230_PANIC_PARITY_MASK3_DM1_BANK1_SUBBANK0_MASK_IC_1_SHIFT 8
+#define R230_PANIC_PARITY_MASK3_DM1_BANK1_SUBBANK1_MASK_IC_1_MASK 0x200
+#define R230_PANIC_PARITY_MASK3_DM1_BANK1_SUBBANK1_MASK_IC_1_SHIFT 9
+#define R230_PANIC_PARITY_MASK3_DM1_BANK1_SUBBANK2_MASK_IC_1_MASK 0x400
+#define R230_PANIC_PARITY_MASK3_DM1_BANK1_SUBBANK2_MASK_IC_1_SHIFT 10
+#define R230_PANIC_PARITY_MASK3_DM1_BANK1_SUBBANK3_MASK_IC_1_MASK 0x800
+#define R230_PANIC_PARITY_MASK3_DM1_BANK1_SUBBANK3_MASK_IC_1_SHIFT 11
+#define R230_PANIC_PARITY_MASK3_DM1_BANK1_SUBBANK4_MASK_IC_1_MASK 0x1000
+#define R230_PANIC_PARITY_MASK3_DM1_BANK1_SUBBANK4_MASK_IC_1_SHIFT 12
+
+/* PANIC_PARITY_MASK4 (IC 1) */
+#define R231_PANIC_PARITY_MASK4_DM1_BANK2_SUBBANK0_MASK_IC_1 0x0 /* 0b	[0] */
+#define R231_PANIC_PARITY_MASK4_DM1_BANK2_SUBBANK1_MASK_IC_1 0x0 /* 0b	[1] */
+#define R231_PANIC_PARITY_MASK4_DM1_BANK2_SUBBANK2_MASK_IC_1 0x0 /* 0b	[2] */
+#define R231_PANIC_PARITY_MASK4_DM1_BANK2_SUBBANK3_MASK_IC_1 0x0 /* 0b	[3] */
+#define R231_PANIC_PARITY_MASK4_DM1_BANK2_SUBBANK4_MASK_IC_1 0x0 /* 0b	[4] */
+#define R231_PANIC_PARITY_MASK4_DM1_BANK3_SUBBANK0_MASK_IC_1 0x0 /* 0b	[8] */
+#define R231_PANIC_PARITY_MASK4_DM1_BANK3_SUBBANK1_MASK_IC_1 0x0 /* 0b	[9] */
+#define R231_PANIC_PARITY_MASK4_DM1_BANK3_SUBBANK2_MASK_IC_1 0x0 /* 0b	[10] */
+#define R231_PANIC_PARITY_MASK4_DM1_BANK3_SUBBANK3_MASK_IC_1 0x0 /* 0b	[11] */
+#define R231_PANIC_PARITY_MASK4_DM1_BANK3_SUBBANK4_MASK_IC_1 0x0 /* 0b	[12] */
+#define R231_PANIC_PARITY_MASK4_DM1_BANK2_SUBBANK0_MASK_IC_1_MASK 0x1
+#define R231_PANIC_PARITY_MASK4_DM1_BANK2_SUBBANK0_MASK_IC_1_SHIFT 0
+#define R231_PANIC_PARITY_MASK4_DM1_BANK2_SUBBANK1_MASK_IC_1_MASK 0x2
+#define R231_PANIC_PARITY_MASK4_DM1_BANK2_SUBBANK1_MASK_IC_1_SHIFT 1
+#define R231_PANIC_PARITY_MASK4_DM1_BANK2_SUBBANK2_MASK_IC_1_MASK 0x4
+#define R231_PANIC_PARITY_MASK4_DM1_BANK2_SUBBANK2_MASK_IC_1_SHIFT 2
+#define R231_PANIC_PARITY_MASK4_DM1_BANK2_SUBBANK3_MASK_IC_1_MASK 0x8
+#define R231_PANIC_PARITY_MASK4_DM1_BANK2_SUBBANK3_MASK_IC_1_SHIFT 3
+#define R231_PANIC_PARITY_MASK4_DM1_BANK2_SUBBANK4_MASK_IC_1_MASK 0x10
+#define R231_PANIC_PARITY_MASK4_DM1_BANK2_SUBBANK4_MASK_IC_1_SHIFT 4
+#define R231_PANIC_PARITY_MASK4_DM1_BANK3_SUBBANK0_MASK_IC_1_MASK 0x100
+#define R231_PANIC_PARITY_MASK4_DM1_BANK3_SUBBANK0_MASK_IC_1_SHIFT 8
+#define R231_PANIC_PARITY_MASK4_DM1_BANK3_SUBBANK1_MASK_IC_1_MASK 0x200
+#define R231_PANIC_PARITY_MASK4_DM1_BANK3_SUBBANK1_MASK_IC_1_SHIFT 9
+#define R231_PANIC_PARITY_MASK4_DM1_BANK3_SUBBANK2_MASK_IC_1_MASK 0x400
+#define R231_PANIC_PARITY_MASK4_DM1_BANK3_SUBBANK2_MASK_IC_1_SHIFT 10
+#define R231_PANIC_PARITY_MASK4_DM1_BANK3_SUBBANK3_MASK_IC_1_MASK 0x800
+#define R231_PANIC_PARITY_MASK4_DM1_BANK3_SUBBANK3_MASK_IC_1_SHIFT 11
+#define R231_PANIC_PARITY_MASK4_DM1_BANK3_SUBBANK4_MASK_IC_1_MASK 0x1000
+#define R231_PANIC_PARITY_MASK4_DM1_BANK3_SUBBANK4_MASK_IC_1_SHIFT 12
+
+/* PANIC_PARITY_MASK5 (IC 1) */
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK0_MASK_IC_1 0x0 /* 0b	[0] */
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK1_MASK_IC_1 0x0 /* 0b	[1] */
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK2_MASK_IC_1 0x0 /* 0b	[2] */
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK3_MASK_IC_1 0x0 /* 0b	[3] */
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK4_MASK_IC_1 0x0 /* 0b	[4] */
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK5_MASK_IC_1 0x0 /* 0b	[5] */
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK0_MASK_IC_1 0x0 /* 0b	[8] */
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK1_MASK_IC_1 0x0 /* 0b	[9] */
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK2_MASK_IC_1 0x0 /* 0b	[10] */
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK3_MASK_IC_1 0x0 /* 0b	[11] */
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK4_MASK_IC_1 0x0 /* 0b	[12] */
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK5_MASK_IC_1 0x0 /* 0b	[13] */
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK0_MASK_IC_1_MASK 0x1
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK0_MASK_IC_1_SHIFT 0
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK1_MASK_IC_1_MASK 0x2
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK1_MASK_IC_1_SHIFT 1
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK2_MASK_IC_1_MASK 0x4
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK2_MASK_IC_1_SHIFT 2
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK3_MASK_IC_1_MASK 0x8
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK3_MASK_IC_1_SHIFT 3
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK4_MASK_IC_1_MASK 0x10
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK4_MASK_IC_1_SHIFT 4
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK5_MASK_IC_1_MASK 0x20
+#define R232_PANIC_PARITY_MASK5_PM_BANK0_SUBBANK5_MASK_IC_1_SHIFT 5
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK0_MASK_IC_1_MASK 0x100
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK0_MASK_IC_1_SHIFT 8
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK1_MASK_IC_1_MASK 0x200
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK1_MASK_IC_1_SHIFT 9
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK2_MASK_IC_1_MASK 0x400
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK2_MASK_IC_1_SHIFT 10
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK3_MASK_IC_1_MASK 0x800
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK3_MASK_IC_1_SHIFT 11
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK4_MASK_IC_1_MASK 0x1000
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK4_MASK_IC_1_SHIFT 12
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK5_MASK_IC_1_MASK 0x2000
+#define R232_PANIC_PARITY_MASK5_PM_BANK1_SUBBANK5_MASK_IC_1_SHIFT 13
+
+/* PANIC_CODE1 (IC 1) */
+#define R233_PANIC_CODE1_ERR_DM0B0SB0_IC_1        0x0    /* 0b	[0] */
+#define R233_PANIC_CODE1_ERR_DM0B0SB1_IC_1        0x0    /* 0b	[1] */
+#define R233_PANIC_CODE1_ERR_DM0B0SB2_IC_1        0x0    /* 0b	[2] */
+#define R233_PANIC_CODE1_ERR_DM0B0SB3_IC_1        0x0    /* 0b	[3] */
+#define R233_PANIC_CODE1_ERR_DM0B0SB4_IC_1        0x0    /* 0b	[4] */
+#define R233_PANIC_CODE1_ERR_DM0B1SB0_IC_1        0x0    /* 0b	[8] */
+#define R233_PANIC_CODE1_ERR_DM0B1SB1_IC_1        0x0    /* 0b	[9] */
+#define R233_PANIC_CODE1_ERR_DM0B1SB2_IC_1        0x0    /* 0b	[10] */
+#define R233_PANIC_CODE1_ERR_DM0B1SB3_IC_1        0x0    /* 0b	[11] */
+#define R233_PANIC_CODE1_ERR_DM0B1SB4_IC_1        0x0    /* 0b	[12] */
+#define R233_PANIC_CODE1_ERR_DM0B0SB0_IC_1_MASK   0x1
+#define R233_PANIC_CODE1_ERR_DM0B0SB0_IC_1_SHIFT  0
+#define R233_PANIC_CODE1_ERR_DM0B0SB1_IC_1_MASK   0x2
+#define R233_PANIC_CODE1_ERR_DM0B0SB1_IC_1_SHIFT  1
+#define R233_PANIC_CODE1_ERR_DM0B0SB2_IC_1_MASK   0x4
+#define R233_PANIC_CODE1_ERR_DM0B0SB2_IC_1_SHIFT  2
+#define R233_PANIC_CODE1_ERR_DM0B0SB3_IC_1_MASK   0x8
+#define R233_PANIC_CODE1_ERR_DM0B0SB3_IC_1_SHIFT  3
+#define R233_PANIC_CODE1_ERR_DM0B0SB4_IC_1_MASK   0x10
+#define R233_PANIC_CODE1_ERR_DM0B0SB4_IC_1_SHIFT  4
+#define R233_PANIC_CODE1_ERR_DM0B1SB0_IC_1_MASK   0x100
+#define R233_PANIC_CODE1_ERR_DM0B1SB0_IC_1_SHIFT  8
+#define R233_PANIC_CODE1_ERR_DM0B1SB1_IC_1_MASK   0x200
+#define R233_PANIC_CODE1_ERR_DM0B1SB1_IC_1_SHIFT  9
+#define R233_PANIC_CODE1_ERR_DM0B1SB2_IC_1_MASK   0x400
+#define R233_PANIC_CODE1_ERR_DM0B1SB2_IC_1_SHIFT  10
+#define R233_PANIC_CODE1_ERR_DM0B1SB3_IC_1_MASK   0x800
+#define R233_PANIC_CODE1_ERR_DM0B1SB3_IC_1_SHIFT  11
+#define R233_PANIC_CODE1_ERR_DM0B1SB4_IC_1_MASK   0x1000
+#define R233_PANIC_CODE1_ERR_DM0B1SB4_IC_1_SHIFT  12
+
+/* PANIC_CODE2 (IC 1) */
+#define R234_PANIC_CODE2_ERR_DM0B2SB0_IC_1        0x0    /* 0b	[0] */
+#define R234_PANIC_CODE2_ERR_DM0B2SB1_IC_1        0x0    /* 0b	[1] */
+#define R234_PANIC_CODE2_ERR_DM0B2SB2_IC_1        0x0    /* 0b	[2] */
+#define R234_PANIC_CODE2_ERR_DM0B2SB3_IC_1        0x0    /* 0b	[3] */
+#define R234_PANIC_CODE2_ERR_DM0B2SB4_IC_1        0x0    /* 0b	[4] */
+#define R234_PANIC_CODE2_ERR_DM0B3SB0_IC_1        0x0    /* 0b	[8] */
+#define R234_PANIC_CODE2_ERR_DM0B3SB1_IC_1        0x0    /* 0b	[9] */
+#define R234_PANIC_CODE2_ERR_DM0B3SB2_IC_1        0x0    /* 0b	[10] */
+#define R234_PANIC_CODE2_ERR_DM0B3SB3_IC_1        0x0    /* 0b	[11] */
+#define R234_PANIC_CODE2_ERR_DM0B3SB4_IC_1        0x0    /* 0b	[12] */
+#define R234_PANIC_CODE2_ERR_DM0B2SB0_IC_1_MASK   0x1
+#define R234_PANIC_CODE2_ERR_DM0B2SB0_IC_1_SHIFT  0
+#define R234_PANIC_CODE2_ERR_DM0B2SB1_IC_1_MASK   0x2
+#define R234_PANIC_CODE2_ERR_DM0B2SB1_IC_1_SHIFT  1
+#define R234_PANIC_CODE2_ERR_DM0B2SB2_IC_1_MASK   0x4
+#define R234_PANIC_CODE2_ERR_DM0B2SB2_IC_1_SHIFT  2
+#define R234_PANIC_CODE2_ERR_DM0B2SB3_IC_1_MASK   0x8
+#define R234_PANIC_CODE2_ERR_DM0B2SB3_IC_1_SHIFT  3
+#define R234_PANIC_CODE2_ERR_DM0B2SB4_IC_1_MASK   0x10
+#define R234_PANIC_CODE2_ERR_DM0B2SB4_IC_1_SHIFT  4
+#define R234_PANIC_CODE2_ERR_DM0B3SB0_IC_1_MASK   0x100
+#define R234_PANIC_CODE2_ERR_DM0B3SB0_IC_1_SHIFT  8
+#define R234_PANIC_CODE2_ERR_DM0B3SB1_IC_1_MASK   0x200
+#define R234_PANIC_CODE2_ERR_DM0B3SB1_IC_1_SHIFT  9
+#define R234_PANIC_CODE2_ERR_DM0B3SB2_IC_1_MASK   0x400
+#define R234_PANIC_CODE2_ERR_DM0B3SB2_IC_1_SHIFT  10
+#define R234_PANIC_CODE2_ERR_DM0B3SB3_IC_1_MASK   0x800
+#define R234_PANIC_CODE2_ERR_DM0B3SB3_IC_1_SHIFT  11
+#define R234_PANIC_CODE2_ERR_DM0B3SB4_IC_1_MASK   0x1000
+#define R234_PANIC_CODE2_ERR_DM0B3SB4_IC_1_SHIFT  12
+
+/* PANIC_CODE3 (IC 1) */
+#define R235_PANIC_CODE3_ERR_DM1B0SB0_IC_1        0x0    /* 0b	[0] */
+#define R235_PANIC_CODE3_ERR_DM1B0SB1_IC_1        0x0    /* 0b	[1] */
+#define R235_PANIC_CODE3_ERR_DM1B0SB2_IC_1        0x0    /* 0b	[2] */
+#define R235_PANIC_CODE3_ERR_DM1B0SB3_IC_1        0x0    /* 0b	[3] */
+#define R235_PANIC_CODE3_ERR_DM1B0SB4_IC_1        0x0    /* 0b	[4] */
+#define R235_PANIC_CODE3_ERR_DM1B1SB0_IC_1        0x0    /* 0b	[8] */
+#define R235_PANIC_CODE3_ERR_DM1B1SB1_IC_1        0x0    /* 0b	[9] */
+#define R235_PANIC_CODE3_ERR_DM1B1SB2_IC_1        0x0    /* 0b	[10] */
+#define R235_PANIC_CODE3_ERR_DM1B1SB3_IC_1        0x0    /* 0b	[11] */
+#define R235_PANIC_CODE3_ERR_DM1B1SB4_IC_1        0x0    /* 0b	[12] */
+#define R235_PANIC_CODE3_ERR_DM1B0SB0_IC_1_MASK   0x1
+#define R235_PANIC_CODE3_ERR_DM1B0SB0_IC_1_SHIFT  0
+#define R235_PANIC_CODE3_ERR_DM1B0SB1_IC_1_MASK   0x2
+#define R235_PANIC_CODE3_ERR_DM1B0SB1_IC_1_SHIFT  1
+#define R235_PANIC_CODE3_ERR_DM1B0SB2_IC_1_MASK   0x4
+#define R235_PANIC_CODE3_ERR_DM1B0SB2_IC_1_SHIFT  2
+#define R235_PANIC_CODE3_ERR_DM1B0SB3_IC_1_MASK   0x8
+#define R235_PANIC_CODE3_ERR_DM1B0SB3_IC_1_SHIFT  3
+#define R235_PANIC_CODE3_ERR_DM1B0SB4_IC_1_MASK   0x10
+#define R235_PANIC_CODE3_ERR_DM1B0SB4_IC_1_SHIFT  4
+#define R235_PANIC_CODE3_ERR_DM1B1SB0_IC_1_MASK   0x100
+#define R235_PANIC_CODE3_ERR_DM1B1SB0_IC_1_SHIFT  8
+#define R235_PANIC_CODE3_ERR_DM1B1SB1_IC_1_MASK   0x200
+#define R235_PANIC_CODE3_ERR_DM1B1SB1_IC_1_SHIFT  9
+#define R235_PANIC_CODE3_ERR_DM1B1SB2_IC_1_MASK   0x400
+#define R235_PANIC_CODE3_ERR_DM1B1SB2_IC_1_SHIFT  10
+#define R235_PANIC_CODE3_ERR_DM1B1SB3_IC_1_MASK   0x800
+#define R235_PANIC_CODE3_ERR_DM1B1SB3_IC_1_SHIFT  11
+#define R235_PANIC_CODE3_ERR_DM1B1SB4_IC_1_MASK   0x1000
+#define R235_PANIC_CODE3_ERR_DM1B1SB4_IC_1_SHIFT  12
+
+/* PANIC_CODE4 (IC 1) */
+#define R236_PANIC_CODE4_ERR_DM1B2SB0_IC_1        0x0    /* 0b	[0] */
+#define R236_PANIC_CODE4_ERR_DM1B2SB1_IC_1        0x0    /* 0b	[1] */
+#define R236_PANIC_CODE4_ERR_DM1B2SB2_IC_1        0x0    /* 0b	[2] */
+#define R236_PANIC_CODE4_ERR_DM1B2SB3_IC_1        0x0    /* 0b	[3] */
+#define R236_PANIC_CODE4_ERR_DM1B2SB4_IC_1        0x0    /* 0b	[4] */
+#define R236_PANIC_CODE4_ERR_DM1B3SB0_IC_1        0x0    /* 0b	[8] */
+#define R236_PANIC_CODE4_ERR_DM1B3SB1_IC_1        0x0    /* 0b	[9] */
+#define R236_PANIC_CODE4_ERR_DM1B3SB2_IC_1        0x0    /* 0b	[10] */
+#define R236_PANIC_CODE4_ERR_DM1B3SB3_IC_1        0x0    /* 0b	[11] */
+#define R236_PANIC_CODE4_ERR_DM1B3SB4_IC_1        0x0    /* 0b	[12] */
+#define R236_PANIC_CODE4_ERR_DM1B2SB0_IC_1_MASK   0x1
+#define R236_PANIC_CODE4_ERR_DM1B2SB0_IC_1_SHIFT  0
+#define R236_PANIC_CODE4_ERR_DM1B2SB1_IC_1_MASK   0x2
+#define R236_PANIC_CODE4_ERR_DM1B2SB1_IC_1_SHIFT  1
+#define R236_PANIC_CODE4_ERR_DM1B2SB2_IC_1_MASK   0x4
+#define R236_PANIC_CODE4_ERR_DM1B2SB2_IC_1_SHIFT  2
+#define R236_PANIC_CODE4_ERR_DM1B2SB3_IC_1_MASK   0x8
+#define R236_PANIC_CODE4_ERR_DM1B2SB3_IC_1_SHIFT  3
+#define R236_PANIC_CODE4_ERR_DM1B2SB4_IC_1_MASK   0x10
+#define R236_PANIC_CODE4_ERR_DM1B2SB4_IC_1_SHIFT  4
+#define R236_PANIC_CODE4_ERR_DM1B3SB0_IC_1_MASK   0x100
+#define R236_PANIC_CODE4_ERR_DM1B3SB0_IC_1_SHIFT  8
+#define R236_PANIC_CODE4_ERR_DM1B3SB1_IC_1_MASK   0x200
+#define R236_PANIC_CODE4_ERR_DM1B3SB1_IC_1_SHIFT  9
+#define R236_PANIC_CODE4_ERR_DM1B3SB2_IC_1_MASK   0x400
+#define R236_PANIC_CODE4_ERR_DM1B3SB2_IC_1_SHIFT  10
+#define R236_PANIC_CODE4_ERR_DM1B3SB3_IC_1_MASK   0x800
+#define R236_PANIC_CODE4_ERR_DM1B3SB3_IC_1_SHIFT  11
+#define R236_PANIC_CODE4_ERR_DM1B3SB4_IC_1_MASK   0x1000
+#define R236_PANIC_CODE4_ERR_DM1B3SB4_IC_1_SHIFT  12
+
+/* PANIC_CODE5 (IC 1) */
+#define R237_PANIC_CODE5_ERR_PM_B0SB0_IC_1        0x0    /* 0b	[0] */
+#define R237_PANIC_CODE5_ERR_PM_B0SB1_IC_1        0x0    /* 0b	[1] */
+#define R237_PANIC_CODE5_ERR_PM_B0SB2_IC_1        0x0    /* 0b	[2] */
+#define R237_PANIC_CODE5_ERR_PM_B0SB3_IC_1        0x0    /* 0b	[3] */
+#define R237_PANIC_CODE5_ERR_PM_B0SB4_IC_1        0x0    /* 0b	[4] */
+#define R237_PANIC_CODE5_ERR_PM_B0SB5_IC_1        0x0    /* 0b	[5] */
+#define R237_PANIC_CODE5_ERR_PM_B1SB0_IC_1        0x0    /* 0b	[8] */
+#define R237_PANIC_CODE5_ERR_PM_B1SB1_IC_1        0x0    /* 0b	[9] */
+#define R237_PANIC_CODE5_ERR_PM_B1SB2_IC_1        0x0    /* 0b	[10] */
+#define R237_PANIC_CODE5_ERR_PM_B1SB3_IC_1        0x0    /* 0b	[11] */
+#define R237_PANIC_CODE5_ERR_PM_B1SB4_IC_1        0x0    /* 0b	[12] */
+#define R237_PANIC_CODE5_ERR_PM_B1SB5_IC_1        0x0    /* 0b	[13] */
+#define R237_PANIC_CODE5_ERR_PM_B0SB0_IC_1_MASK   0x1
+#define R237_PANIC_CODE5_ERR_PM_B0SB0_IC_1_SHIFT  0
+#define R237_PANIC_CODE5_ERR_PM_B0SB1_IC_1_MASK   0x2
+#define R237_PANIC_CODE5_ERR_PM_B0SB1_IC_1_SHIFT  1
+#define R237_PANIC_CODE5_ERR_PM_B0SB2_IC_1_MASK   0x4
+#define R237_PANIC_CODE5_ERR_PM_B0SB2_IC_1_SHIFT  2
+#define R237_PANIC_CODE5_ERR_PM_B0SB3_IC_1_MASK   0x8
+#define R237_PANIC_CODE5_ERR_PM_B0SB3_IC_1_SHIFT  3
+#define R237_PANIC_CODE5_ERR_PM_B0SB4_IC_1_MASK   0x10
+#define R237_PANIC_CODE5_ERR_PM_B0SB4_IC_1_SHIFT  4
+#define R237_PANIC_CODE5_ERR_PM_B0SB5_IC_1_MASK   0x20
+#define R237_PANIC_CODE5_ERR_PM_B0SB5_IC_1_SHIFT  5
+#define R237_PANIC_CODE5_ERR_PM_B1SB0_IC_1_MASK   0x100
+#define R237_PANIC_CODE5_ERR_PM_B1SB0_IC_1_SHIFT  8
+#define R237_PANIC_CODE5_ERR_PM_B1SB1_IC_1_MASK   0x200
+#define R237_PANIC_CODE5_ERR_PM_B1SB1_IC_1_SHIFT  9
+#define R237_PANIC_CODE5_ERR_PM_B1SB2_IC_1_MASK   0x400
+#define R237_PANIC_CODE5_ERR_PM_B1SB2_IC_1_SHIFT  10
+#define R237_PANIC_CODE5_ERR_PM_B1SB3_IC_1_MASK   0x800
+#define R237_PANIC_CODE5_ERR_PM_B1SB3_IC_1_SHIFT  11
+#define R237_PANIC_CODE5_ERR_PM_B1SB4_IC_1_MASK   0x1000
+#define R237_PANIC_CODE5_ERR_PM_B1SB4_IC_1_SHIFT  12
+#define R237_PANIC_CODE5_ERR_PM_B1SB5_IC_1_MASK   0x2000
+#define R237_PANIC_CODE5_ERR_PM_B1SB5_IC_1_SHIFT  13
 
 /* MP0_MODE (IC 1) */
-#define R240_MP0_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
-#define R240_MP0_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
-#define R240_MP0_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
-#define R240_MP0_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
-#define R240_MP0_MODE_MP_ENABLE_IC_1_MASK         0x1
-#define R240_MP0_MODE_MP_ENABLE_IC_1_SHIFT        0
-#define R240_MP0_MODE_MP_MODE_IC_1_MASK           0xE
-#define R240_MP0_MODE_MP_MODE_IC_1_SHIFT          1
-#define R240_MP0_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
-#define R240_MP0_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
-#define R240_MP0_MODE_SS_SELECT_IC_1_MASK         0x700
-#define R240_MP0_MODE_SS_SELECT_IC_1_SHIFT        8
+#define R238_MP0_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
+#define R238_MP0_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R238_MP0_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
+#define R238_MP0_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
+#define R238_MP0_MODE_MP_ENABLE_IC_1_MASK         0x1
+#define R238_MP0_MODE_MP_ENABLE_IC_1_SHIFT        0
+#define R238_MP0_MODE_MP_MODE_IC_1_MASK           0xE
+#define R238_MP0_MODE_MP_MODE_IC_1_SHIFT          1
+#define R238_MP0_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
+#define R238_MP0_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
+#define R238_MP0_MODE_SS_SELECT_IC_1_MASK         0x700
+#define R238_MP0_MODE_SS_SELECT_IC_1_SHIFT        8
 
 /* MP1_MODE (IC 1) */
-#define R241_MP1_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
-#define R241_MP1_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
-#define R241_MP1_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
-#define R241_MP1_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
-#define R241_MP1_MODE_MP_ENABLE_IC_1_MASK         0x1
-#define R241_MP1_MODE_MP_ENABLE_IC_1_SHIFT        0
-#define R241_MP1_MODE_MP_MODE_IC_1_MASK           0xE
-#define R241_MP1_MODE_MP_MODE_IC_1_SHIFT          1
-#define R241_MP1_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
-#define R241_MP1_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
-#define R241_MP1_MODE_SS_SELECT_IC_1_MASK         0x700
-#define R241_MP1_MODE_SS_SELECT_IC_1_SHIFT        8
+#define R239_MP1_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
+#define R239_MP1_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R239_MP1_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
+#define R239_MP1_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
+#define R239_MP1_MODE_MP_ENABLE_IC_1_MASK         0x1
+#define R239_MP1_MODE_MP_ENABLE_IC_1_SHIFT        0
+#define R239_MP1_MODE_MP_MODE_IC_1_MASK           0xE
+#define R239_MP1_MODE_MP_MODE_IC_1_SHIFT          1
+#define R239_MP1_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
+#define R239_MP1_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
+#define R239_MP1_MODE_SS_SELECT_IC_1_MASK         0x700
+#define R239_MP1_MODE_SS_SELECT_IC_1_SHIFT        8
 
 /* MP2_MODE (IC 1) */
-#define R242_MP2_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
-#define R242_MP2_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
-#define R242_MP2_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
-#define R242_MP2_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
-#define R242_MP2_MODE_MP_ENABLE_IC_1_MASK         0x1
-#define R242_MP2_MODE_MP_ENABLE_IC_1_SHIFT        0
-#define R242_MP2_MODE_MP_MODE_IC_1_MASK           0xE
-#define R242_MP2_MODE_MP_MODE_IC_1_SHIFT          1
-#define R242_MP2_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
-#define R242_MP2_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
-#define R242_MP2_MODE_SS_SELECT_IC_1_MASK         0x700
-#define R242_MP2_MODE_SS_SELECT_IC_1_SHIFT        8
+#define R240_MP2_MODE_MP_ENABLE_IC_1              0x1    /* 1b	[0] */
+#define R240_MP2_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R240_MP2_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
+#define R240_MP2_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
+#define R240_MP2_MODE_MP_ENABLE_IC_1_MASK         0x1
+#define R240_MP2_MODE_MP_ENABLE_IC_1_SHIFT        0
+#define R240_MP2_MODE_MP_MODE_IC_1_MASK           0xE
+#define R240_MP2_MODE_MP_MODE_IC_1_SHIFT          1
+#define R240_MP2_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
+#define R240_MP2_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
+#define R240_MP2_MODE_SS_SELECT_IC_1_MASK         0x700
+#define R240_MP2_MODE_SS_SELECT_IC_1_SHIFT        8
 
 /* MP3_MODE (IC 1) */
-#define R243_MP3_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
-#define R243_MP3_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
-#define R243_MP3_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
-#define R243_MP3_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
-#define R243_MP3_MODE_MP_ENABLE_IC_1_MASK         0x1
-#define R243_MP3_MODE_MP_ENABLE_IC_1_SHIFT        0
-#define R243_MP3_MODE_MP_MODE_IC_1_MASK           0xE
-#define R243_MP3_MODE_MP_MODE_IC_1_SHIFT          1
-#define R243_MP3_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
-#define R243_MP3_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
-#define R243_MP3_MODE_SS_SELECT_IC_1_MASK         0x700
-#define R243_MP3_MODE_SS_SELECT_IC_1_SHIFT        8
+#define R241_MP3_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
+#define R241_MP3_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R241_MP3_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
+#define R241_MP3_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
+#define R241_MP3_MODE_MP_ENABLE_IC_1_MASK         0x1
+#define R241_MP3_MODE_MP_ENABLE_IC_1_SHIFT        0
+#define R241_MP3_MODE_MP_MODE_IC_1_MASK           0xE
+#define R241_MP3_MODE_MP_MODE_IC_1_SHIFT          1
+#define R241_MP3_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
+#define R241_MP3_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
+#define R241_MP3_MODE_SS_SELECT_IC_1_MASK         0x700
+#define R241_MP3_MODE_SS_SELECT_IC_1_SHIFT        8
 
 /* MP4_MODE (IC 1) */
-#define R244_MP4_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
-#define R244_MP4_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
-#define R244_MP4_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
-#define R244_MP4_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
-#define R244_MP4_MODE_MP_ENABLE_IC_1_MASK         0x1
-#define R244_MP4_MODE_MP_ENABLE_IC_1_SHIFT        0
-#define R244_MP4_MODE_MP_MODE_IC_1_MASK           0xE
-#define R244_MP4_MODE_MP_MODE_IC_1_SHIFT          1
-#define R244_MP4_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
-#define R244_MP4_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
-#define R244_MP4_MODE_SS_SELECT_IC_1_MASK         0x700
-#define R244_MP4_MODE_SS_SELECT_IC_1_SHIFT        8
+#define R242_MP4_MODE_MP_ENABLE_IC_1              0x1    /* 1b	[0] */
+#define R242_MP4_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R242_MP4_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
+#define R242_MP4_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
+#define R242_MP4_MODE_MP_ENABLE_IC_1_MASK         0x1
+#define R242_MP4_MODE_MP_ENABLE_IC_1_SHIFT        0
+#define R242_MP4_MODE_MP_MODE_IC_1_MASK           0xE
+#define R242_MP4_MODE_MP_MODE_IC_1_SHIFT          1
+#define R242_MP4_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
+#define R242_MP4_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
+#define R242_MP4_MODE_SS_SELECT_IC_1_MASK         0x700
+#define R242_MP4_MODE_SS_SELECT_IC_1_SHIFT        8
 
 /* MP5_MODE (IC 1) */
-#define R245_MP5_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
-#define R245_MP5_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
-#define R245_MP5_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
-#define R245_MP5_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
-#define R245_MP5_MODE_MP_ENABLE_IC_1_MASK         0x1
-#define R245_MP5_MODE_MP_ENABLE_IC_1_SHIFT        0
-#define R245_MP5_MODE_MP_MODE_IC_1_MASK           0xE
-#define R245_MP5_MODE_MP_MODE_IC_1_SHIFT          1
-#define R245_MP5_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
-#define R245_MP5_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
-#define R245_MP5_MODE_SS_SELECT_IC_1_MASK         0x700
-#define R245_MP5_MODE_SS_SELECT_IC_1_SHIFT        8
+#define R243_MP5_MODE_MP_ENABLE_IC_1              0x1    /* 1b	[0] */
+#define R243_MP5_MODE_MP_MODE_IC_1                0x3    /* 011b	[3:1] */
+#define R243_MP5_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
+#define R243_MP5_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
+#define R243_MP5_MODE_MP_ENABLE_IC_1_MASK         0x1
+#define R243_MP5_MODE_MP_ENABLE_IC_1_SHIFT        0
+#define R243_MP5_MODE_MP_MODE_IC_1_MASK           0xE
+#define R243_MP5_MODE_MP_MODE_IC_1_SHIFT          1
+#define R243_MP5_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
+#define R243_MP5_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
+#define R243_MP5_MODE_SS_SELECT_IC_1_MASK         0x700
+#define R243_MP5_MODE_SS_SELECT_IC_1_SHIFT        8
 
 /* MP6_MODE (IC 1) */
-#define R246_MP6_MODE_MP_ENABLE_IC_1              0x1    /* 1b	[0] */
-#define R246_MP6_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
-#define R246_MP6_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
-#define R246_MP6_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
-#define R246_MP6_MODE_MP_ENABLE_IC_1_MASK         0x1
-#define R246_MP6_MODE_MP_ENABLE_IC_1_SHIFT        0
-#define R246_MP6_MODE_MP_MODE_IC_1_MASK           0xE
-#define R246_MP6_MODE_MP_MODE_IC_1_SHIFT          1
-#define R246_MP6_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
-#define R246_MP6_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
-#define R246_MP6_MODE_SS_SELECT_IC_1_MASK         0x700
-#define R246_MP6_MODE_SS_SELECT_IC_1_SHIFT        8
+#define R244_MP6_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
+#define R244_MP6_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R244_MP6_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
+#define R244_MP6_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
+#define R244_MP6_MODE_MP_ENABLE_IC_1_MASK         0x1
+#define R244_MP6_MODE_MP_ENABLE_IC_1_SHIFT        0
+#define R244_MP6_MODE_MP_MODE_IC_1_MASK           0xE
+#define R244_MP6_MODE_MP_MODE_IC_1_SHIFT          1
+#define R244_MP6_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
+#define R244_MP6_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
+#define R244_MP6_MODE_SS_SELECT_IC_1_MASK         0x700
+#define R244_MP6_MODE_SS_SELECT_IC_1_SHIFT        8
 
 /* MP7_MODE (IC 1) */
-#define R247_MP7_MODE_MP_ENABLE_IC_1              0x1    /* 1b	[0] */
-#define R247_MP7_MODE_MP_MODE_IC_1                0x3    /* 011b	[3:1] */
-#define R247_MP7_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
-#define R247_MP7_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
-#define R247_MP7_MODE_MP_ENABLE_IC_1_MASK         0x1
-#define R247_MP7_MODE_MP_ENABLE_IC_1_SHIFT        0
-#define R247_MP7_MODE_MP_MODE_IC_1_MASK           0xE
-#define R247_MP7_MODE_MP_MODE_IC_1_SHIFT          1
-#define R247_MP7_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
-#define R247_MP7_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
-#define R247_MP7_MODE_SS_SELECT_IC_1_MASK         0x700
-#define R247_MP7_MODE_SS_SELECT_IC_1_SHIFT        8
+#define R245_MP7_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
+#define R245_MP7_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R245_MP7_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
+#define R245_MP7_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
+#define R245_MP7_MODE_MP_ENABLE_IC_1_MASK         0x1
+#define R245_MP7_MODE_MP_ENABLE_IC_1_SHIFT        0
+#define R245_MP7_MODE_MP_MODE_IC_1_MASK           0xE
+#define R245_MP7_MODE_MP_MODE_IC_1_SHIFT          1
+#define R245_MP7_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
+#define R245_MP7_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
+#define R245_MP7_MODE_SS_SELECT_IC_1_MASK         0x700
+#define R245_MP7_MODE_SS_SELECT_IC_1_SHIFT        8
 
 /* MP8_MODE (IC 1) */
-#define R248_MP8_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
-#define R248_MP8_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
-#define R248_MP8_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
-#define R248_MP8_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
-#define R248_MP8_MODE_MP_ENABLE_IC_1_MASK         0x1
-#define R248_MP8_MODE_MP_ENABLE_IC_1_SHIFT        0
-#define R248_MP8_MODE_MP_MODE_IC_1_MASK           0xE
-#define R248_MP8_MODE_MP_MODE_IC_1_SHIFT          1
-#define R248_MP8_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
-#define R248_MP8_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
-#define R248_MP8_MODE_SS_SELECT_IC_1_MASK         0x700
-#define R248_MP8_MODE_SS_SELECT_IC_1_SHIFT        8
+#define R246_MP8_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
+#define R246_MP8_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R246_MP8_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
+#define R246_MP8_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
+#define R246_MP8_MODE_MP_ENABLE_IC_1_MASK         0x1
+#define R246_MP8_MODE_MP_ENABLE_IC_1_SHIFT        0
+#define R246_MP8_MODE_MP_MODE_IC_1_MASK           0xE
+#define R246_MP8_MODE_MP_MODE_IC_1_SHIFT          1
+#define R246_MP8_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
+#define R246_MP8_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
+#define R246_MP8_MODE_SS_SELECT_IC_1_MASK         0x700
+#define R246_MP8_MODE_SS_SELECT_IC_1_SHIFT        8
 
 /* MP9_MODE (IC 1) */
-#define R249_MP9_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
-#define R249_MP9_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
-#define R249_MP9_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
-#define R249_MP9_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
-#define R249_MP9_MODE_MP_ENABLE_IC_1_MASK         0x1
-#define R249_MP9_MODE_MP_ENABLE_IC_1_SHIFT        0
-#define R249_MP9_MODE_MP_MODE_IC_1_MASK           0xE
-#define R249_MP9_MODE_MP_MODE_IC_1_SHIFT          1
-#define R249_MP9_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
-#define R249_MP9_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
-#define R249_MP9_MODE_SS_SELECT_IC_1_MASK         0x700
-#define R249_MP9_MODE_SS_SELECT_IC_1_SHIFT        8
+#define R247_MP9_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
+#define R247_MP9_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R247_MP9_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
+#define R247_MP9_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
+#define R247_MP9_MODE_MP_ENABLE_IC_1_MASK         0x1
+#define R247_MP9_MODE_MP_ENABLE_IC_1_SHIFT        0
+#define R247_MP9_MODE_MP_MODE_IC_1_MASK           0xE
+#define R247_MP9_MODE_MP_MODE_IC_1_SHIFT          1
+#define R247_MP9_MODE_DEBOUNCE_VALUE_IC_1_MASK    0xF0
+#define R247_MP9_MODE_DEBOUNCE_VALUE_IC_1_SHIFT   4
+#define R247_MP9_MODE_SS_SELECT_IC_1_MASK         0x700
+#define R247_MP9_MODE_SS_SELECT_IC_1_SHIFT        8
 
 /* MP10_MODE (IC 1) */
-#define R250_MP10_MODE_MP_ENABLE_IC_1             0x0    /* 0b	[0] */
-#define R250_MP10_MODE_MP_MODE_IC_1               0x0    /* 000b	[3:1] */
-#define R250_MP10_MODE_DEBOUNCE_VALUE_IC_1        0x0    /* 0000b	[7:4] */
-#define R250_MP10_MODE_SS_SELECT_IC_1             0x0    /* 000b	[10:8] */
-#define R250_MP10_MODE_MP_ENABLE_IC_1_MASK        0x1
-#define R250_MP10_MODE_MP_ENABLE_IC_1_SHIFT       0
-#define R250_MP10_MODE_MP_MODE_IC_1_MASK          0xE
-#define R250_MP10_MODE_MP_MODE_IC_1_SHIFT         1
-#define R250_MP10_MODE_DEBOUNCE_VALUE_IC_1_MASK   0xF0
-#define R250_MP10_MODE_DEBOUNCE_VALUE_IC_1_SHIFT  4
-#define R250_MP10_MODE_SS_SELECT_IC_1_MASK        0x700
-#define R250_MP10_MODE_SS_SELECT_IC_1_SHIFT       8
+#define R248_MP10_MODE_MP_ENABLE_IC_1             0x0    /* 0b	[0] */
+#define R248_MP10_MODE_MP_MODE_IC_1               0x0    /* 000b	[3:1] */
+#define R248_MP10_MODE_DEBOUNCE_VALUE_IC_1        0x0    /* 0000b	[7:4] */
+#define R248_MP10_MODE_SS_SELECT_IC_1             0x0    /* 000b	[10:8] */
+#define R248_MP10_MODE_MP_ENABLE_IC_1_MASK        0x1
+#define R248_MP10_MODE_MP_ENABLE_IC_1_SHIFT       0
+#define R248_MP10_MODE_MP_MODE_IC_1_MASK          0xE
+#define R248_MP10_MODE_MP_MODE_IC_1_SHIFT         1
+#define R248_MP10_MODE_DEBOUNCE_VALUE_IC_1_MASK   0xF0
+#define R248_MP10_MODE_DEBOUNCE_VALUE_IC_1_SHIFT  4
+#define R248_MP10_MODE_SS_SELECT_IC_1_MASK        0x700
+#define R248_MP10_MODE_SS_SELECT_IC_1_SHIFT       8
 
 /* MP11_MODE (IC 1) */
-#define R251_MP11_MODE_MP_ENABLE_IC_1             0x0    /* 0b	[0] */
-#define R251_MP11_MODE_MP_MODE_IC_1               0x0    /* 000b	[3:1] */
-#define R251_MP11_MODE_DEBOUNCE_VALUE_IC_1        0x0    /* 0000b	[7:4] */
-#define R251_MP11_MODE_SS_SELECT_IC_1             0x0    /* 000b	[10:8] */
-#define R251_MP11_MODE_MP_ENABLE_IC_1_MASK        0x1
-#define R251_MP11_MODE_MP_ENABLE_IC_1_SHIFT       0
-#define R251_MP11_MODE_MP_MODE_IC_1_MASK          0xE
-#define R251_MP11_MODE_MP_MODE_IC_1_SHIFT         1
-#define R251_MP11_MODE_DEBOUNCE_VALUE_IC_1_MASK   0xF0
-#define R251_MP11_MODE_DEBOUNCE_VALUE_IC_1_SHIFT  4
-#define R251_MP11_MODE_SS_SELECT_IC_1_MASK        0x700
-#define R251_MP11_MODE_SS_SELECT_IC_1_SHIFT       8
+#define R249_MP11_MODE_MP_ENABLE_IC_1             0x0    /* 0b	[0] */
+#define R249_MP11_MODE_MP_MODE_IC_1               0x0    /* 000b	[3:1] */
+#define R249_MP11_MODE_DEBOUNCE_VALUE_IC_1        0x0    /* 0000b	[7:4] */
+#define R249_MP11_MODE_SS_SELECT_IC_1             0x0    /* 000b	[10:8] */
+#define R249_MP11_MODE_MP_ENABLE_IC_1_MASK        0x1
+#define R249_MP11_MODE_MP_ENABLE_IC_1_SHIFT       0
+#define R249_MP11_MODE_MP_MODE_IC_1_MASK          0xE
+#define R249_MP11_MODE_MP_MODE_IC_1_SHIFT         1
+#define R249_MP11_MODE_DEBOUNCE_VALUE_IC_1_MASK   0xF0
+#define R249_MP11_MODE_DEBOUNCE_VALUE_IC_1_SHIFT  4
+#define R249_MP11_MODE_SS_SELECT_IC_1_MASK        0x700
+#define R249_MP11_MODE_SS_SELECT_IC_1_SHIFT       8
 
 /* MP12_MODE (IC 1) */
-#define R252_MP12_MODE_MP_ENABLE_IC_1             0x0    /* 0b	[0] */
-#define R252_MP12_MODE_MP_MODE_IC_1               0x0    /* 000b	[3:1] */
-#define R252_MP12_MODE_DEBOUNCE_VALUE_IC_1        0x0    /* 0000b	[7:4] */
-#define R252_MP12_MODE_SS_SELECT_IC_1             0x0    /* 000b	[10:8] */
-#define R252_MP12_MODE_MP_ENABLE_IC_1_MASK        0x1
-#define R252_MP12_MODE_MP_ENABLE_IC_1_SHIFT       0
-#define R252_MP12_MODE_MP_MODE_IC_1_MASK          0xE
-#define R252_MP12_MODE_MP_MODE_IC_1_SHIFT         1
-#define R252_MP12_MODE_DEBOUNCE_VALUE_IC_1_MASK   0xF0
-#define R252_MP12_MODE_DEBOUNCE_VALUE_IC_1_SHIFT  4
-#define R252_MP12_MODE_SS_SELECT_IC_1_MASK        0x700
-#define R252_MP12_MODE_SS_SELECT_IC_1_SHIFT       8
+#define R250_MP12_MODE_MP_ENABLE_IC_1             0x1    /* 1b	[0] */
+#define R250_MP12_MODE_MP_MODE_IC_1               0x3    /* 011b	[3:1] */
+#define R250_MP12_MODE_DEBOUNCE_VALUE_IC_1        0x0    /* 0000b	[7:4] */
+#define R250_MP12_MODE_SS_SELECT_IC_1             0x0    /* 000b	[10:8] */
+#define R250_MP12_MODE_MP_ENABLE_IC_1_MASK        0x1
+#define R250_MP12_MODE_MP_ENABLE_IC_1_SHIFT       0
+#define R250_MP12_MODE_MP_MODE_IC_1_MASK          0xE
+#define R250_MP12_MODE_MP_MODE_IC_1_SHIFT         1
+#define R250_MP12_MODE_DEBOUNCE_VALUE_IC_1_MASK   0xF0
+#define R250_MP12_MODE_DEBOUNCE_VALUE_IC_1_SHIFT  4
+#define R250_MP12_MODE_SS_SELECT_IC_1_MASK        0x700
+#define R250_MP12_MODE_SS_SELECT_IC_1_SHIFT       8
 
 /* MP13_MODE (IC 1) */
-#define R253_MP13_MODE_MP_ENABLE_IC_1             0x0    /* 0b	[0] */
-#define R253_MP13_MODE_MP_MODE_IC_1               0x0    /* 000b	[3:1] */
-#define R253_MP13_MODE_DEBOUNCE_VALUE_IC_1        0x0    /* 0000b	[7:4] */
-#define R253_MP13_MODE_SS_SELECT_IC_1             0x0    /* 000b	[10:8] */
-#define R253_MP13_MODE_MP_ENABLE_IC_1_MASK        0x1
-#define R253_MP13_MODE_MP_ENABLE_IC_1_SHIFT       0
-#define R253_MP13_MODE_MP_MODE_IC_1_MASK          0xE
-#define R253_MP13_MODE_MP_MODE_IC_1_SHIFT         1
-#define R253_MP13_MODE_DEBOUNCE_VALUE_IC_1_MASK   0xF0
-#define R253_MP13_MODE_DEBOUNCE_VALUE_IC_1_SHIFT  4
-#define R253_MP13_MODE_SS_SELECT_IC_1_MASK        0x700
-#define R253_MP13_MODE_SS_SELECT_IC_1_SHIFT       8
+#define R251_MP13_MODE_MP_ENABLE_IC_1             0x1    /* 1b	[0] */
+#define R251_MP13_MODE_MP_MODE_IC_1               0x3    /* 011b	[3:1] */
+#define R251_MP13_MODE_DEBOUNCE_VALUE_IC_1        0x0    /* 0000b	[7:4] */
+#define R251_MP13_MODE_SS_SELECT_IC_1             0x0    /* 000b	[10:8] */
+#define R251_MP13_MODE_MP_ENABLE_IC_1_MASK        0x1
+#define R251_MP13_MODE_MP_ENABLE_IC_1_SHIFT       0
+#define R251_MP13_MODE_MP_MODE_IC_1_MASK          0xE
+#define R251_MP13_MODE_MP_MODE_IC_1_SHIFT         1
+#define R251_MP13_MODE_DEBOUNCE_VALUE_IC_1_MASK   0xF0
+#define R251_MP13_MODE_DEBOUNCE_VALUE_IC_1_SHIFT  4
+#define R251_MP13_MODE_SS_SELECT_IC_1_MASK        0x700
+#define R251_MP13_MODE_SS_SELECT_IC_1_SHIFT       8
 
 /* MP0_WRITE (IC 1) */
-#define R254_MP0_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
-#define R254_MP0_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
-#define R254_MP0_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
+#define R252_MP0_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
+#define R252_MP0_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
+#define R252_MP0_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
 
 /* MP1_WRITE (IC 1) */
-#define R255_MP1_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
-#define R255_MP1_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
-#define R255_MP1_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
+#define R253_MP1_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
+#define R253_MP1_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
+#define R253_MP1_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
 
 /* MP2_WRITE (IC 1) */
-#define R256_MP2_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
-#define R256_MP2_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
-#define R256_MP2_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
+#define R254_MP2_WRITE_MP_REG_WRITE_IC_1          0x1    /* 1b	[0] */
+#define R254_MP2_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
+#define R254_MP2_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
 
 /* MP3_WRITE (IC 1) */
-#define R257_MP3_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
-#define R257_MP3_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
-#define R257_MP3_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
+#define R255_MP3_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
+#define R255_MP3_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
+#define R255_MP3_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
 
 /* MP4_WRITE (IC 1) */
-#define R258_MP4_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
-#define R258_MP4_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
-#define R258_MP4_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
+#define R256_MP4_WRITE_MP_REG_WRITE_IC_1          0x1    /* 1b	[0] */
+#define R256_MP4_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
+#define R256_MP4_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
 
 /* MP5_WRITE (IC 1) */
-#define R259_MP5_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
-#define R259_MP5_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
-#define R259_MP5_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
+#define R257_MP5_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
+#define R257_MP5_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
+#define R257_MP5_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
 
 /* MP6_WRITE (IC 1) */
-#define R260_MP6_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
-#define R260_MP6_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
-#define R260_MP6_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
+#define R258_MP6_WRITE_MP_REG_WRITE_IC_1          0x1    /* 1b	[0] */
+#define R258_MP6_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
+#define R258_MP6_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
 
 /* MP7_WRITE (IC 1) */
-#define R261_MP7_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
-#define R261_MP7_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
-#define R261_MP7_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
+#define R259_MP7_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
+#define R259_MP7_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
+#define R259_MP7_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
 
 /* MP8_WRITE (IC 1) */
-#define R262_MP8_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
-#define R262_MP8_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
-#define R262_MP8_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
+#define R260_MP8_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
+#define R260_MP8_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
+#define R260_MP8_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
 
 /* MP9_WRITE (IC 1) */
-#define R263_MP9_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
-#define R263_MP9_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
-#define R263_MP9_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
+#define R261_MP9_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
+#define R261_MP9_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
+#define R261_MP9_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
 
 /* MP10_WRITE (IC 1) */
-#define R264_MP10_WRITE_MP_REG_WRITE_IC_1         0x0    /* 0b	[0] */
-#define R264_MP10_WRITE_MP_REG_WRITE_IC_1_MASK    0x1
-#define R264_MP10_WRITE_MP_REG_WRITE_IC_1_SHIFT   0
+#define R262_MP10_WRITE_MP_REG_WRITE_IC_1         0x0    /* 0b	[0] */
+#define R262_MP10_WRITE_MP_REG_WRITE_IC_1_MASK    0x1
+#define R262_MP10_WRITE_MP_REG_WRITE_IC_1_SHIFT   0
 
 /* MP11_WRITE (IC 1) */
-#define R265_MP11_WRITE_MP_REG_WRITE_IC_1         0x0    /* 0b	[0] */
-#define R265_MP11_WRITE_MP_REG_WRITE_IC_1_MASK    0x1
-#define R265_MP11_WRITE_MP_REG_WRITE_IC_1_SHIFT   0
+#define R263_MP11_WRITE_MP_REG_WRITE_IC_1         0x0    /* 0b	[0] */
+#define R263_MP11_WRITE_MP_REG_WRITE_IC_1_MASK    0x1
+#define R263_MP11_WRITE_MP_REG_WRITE_IC_1_SHIFT   0
 
 /* MP12_WRITE (IC 1) */
-#define R266_MP12_WRITE_MP_REG_WRITE_IC_1         0x0    /* 0b	[0] */
-#define R266_MP12_WRITE_MP_REG_WRITE_IC_1_MASK    0x1
-#define R266_MP12_WRITE_MP_REG_WRITE_IC_1_SHIFT   0
+#define R264_MP12_WRITE_MP_REG_WRITE_IC_1         0x0    /* 0b	[0] */
+#define R264_MP12_WRITE_MP_REG_WRITE_IC_1_MASK    0x1
+#define R264_MP12_WRITE_MP_REG_WRITE_IC_1_SHIFT   0
 
 /* MP13_WRITE (IC 1) */
-#define R267_MP13_WRITE_MP_REG_WRITE_IC_1         0x0    /* 0b	[0] */
-#define R267_MP13_WRITE_MP_REG_WRITE_IC_1_MASK    0x1
-#define R267_MP13_WRITE_MP_REG_WRITE_IC_1_SHIFT   0
+#define R265_MP13_WRITE_MP_REG_WRITE_IC_1         0x0    /* 0b	[0] */
+#define R265_MP13_WRITE_MP_REG_WRITE_IC_1_MASK    0x1
+#define R265_MP13_WRITE_MP_REG_WRITE_IC_1_SHIFT   0
 
 /* MP0_READ (IC 1) */
-#define R268_MP0_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
-#define R268_MP0_READ_MP_REG_READ_IC_1_MASK       0x1
-#define R268_MP0_READ_MP_REG_READ_IC_1_SHIFT      0
+#define R266_MP0_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
+#define R266_MP0_READ_MP_REG_READ_IC_1_MASK       0x1
+#define R266_MP0_READ_MP_REG_READ_IC_1_SHIFT      0
 
 /* MP1_READ (IC 1) */
-#define R269_MP1_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
-#define R269_MP1_READ_MP_REG_READ_IC_1_MASK       0x1
-#define R269_MP1_READ_MP_REG_READ_IC_1_SHIFT      0
+#define R267_MP1_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
+#define R267_MP1_READ_MP_REG_READ_IC_1_MASK       0x1
+#define R267_MP1_READ_MP_REG_READ_IC_1_SHIFT      0
 
 /* MP2_READ (IC 1) */
-#define R270_MP2_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
-#define R270_MP2_READ_MP_REG_READ_IC_1_MASK       0x1
-#define R270_MP2_READ_MP_REG_READ_IC_1_SHIFT      0
+#define R268_MP2_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
+#define R268_MP2_READ_MP_REG_READ_IC_1_MASK       0x1
+#define R268_MP2_READ_MP_REG_READ_IC_1_SHIFT      0
 
 /* MP3_READ (IC 1) */
-#define R271_MP3_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
-#define R271_MP3_READ_MP_REG_READ_IC_1_MASK       0x1
-#define R271_MP3_READ_MP_REG_READ_IC_1_SHIFT      0
+#define R269_MP3_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
+#define R269_MP3_READ_MP_REG_READ_IC_1_MASK       0x1
+#define R269_MP3_READ_MP_REG_READ_IC_1_SHIFT      0
 
 /* MP4_READ (IC 1) */
-#define R272_MP4_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
-#define R272_MP4_READ_MP_REG_READ_IC_1_MASK       0x1
-#define R272_MP4_READ_MP_REG_READ_IC_1_SHIFT      0
+#define R270_MP4_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
+#define R270_MP4_READ_MP_REG_READ_IC_1_MASK       0x1
+#define R270_MP4_READ_MP_REG_READ_IC_1_SHIFT      0
 
 /* MP5_READ (IC 1) */
-#define R273_MP5_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
-#define R273_MP5_READ_MP_REG_READ_IC_1_MASK       0x1
-#define R273_MP5_READ_MP_REG_READ_IC_1_SHIFT      0
+#define R271_MP5_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
+#define R271_MP5_READ_MP_REG_READ_IC_1_MASK       0x1
+#define R271_MP5_READ_MP_REG_READ_IC_1_SHIFT      0
 
 /* MP6_READ (IC 1) */
-#define R274_MP6_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
-#define R274_MP6_READ_MP_REG_READ_IC_1_MASK       0x1
-#define R274_MP6_READ_MP_REG_READ_IC_1_SHIFT      0
+#define R272_MP6_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
+#define R272_MP6_READ_MP_REG_READ_IC_1_MASK       0x1
+#define R272_MP6_READ_MP_REG_READ_IC_1_SHIFT      0
 
 /* MP7_READ (IC 1) */
-#define R275_MP7_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
-#define R275_MP7_READ_MP_REG_READ_IC_1_MASK       0x1
-#define R275_MP7_READ_MP_REG_READ_IC_1_SHIFT      0
+#define R273_MP7_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
+#define R273_MP7_READ_MP_REG_READ_IC_1_MASK       0x1
+#define R273_MP7_READ_MP_REG_READ_IC_1_SHIFT      0
 
 /* MP8_READ (IC 1) */
-#define R276_MP8_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
-#define R276_MP8_READ_MP_REG_READ_IC_1_MASK       0x1
-#define R276_MP8_READ_MP_REG_READ_IC_1_SHIFT      0
+#define R274_MP8_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
+#define R274_MP8_READ_MP_REG_READ_IC_1_MASK       0x1
+#define R274_MP8_READ_MP_REG_READ_IC_1_SHIFT      0
 
 /* MP9_READ (IC 1) */
-#define R277_MP9_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
-#define R277_MP9_READ_MP_REG_READ_IC_1_MASK       0x1
-#define R277_MP9_READ_MP_REG_READ_IC_1_SHIFT      0
+#define R275_MP9_READ_MP_REG_READ_IC_1            0x0    /* 0b	[0] */
+#define R275_MP9_READ_MP_REG_READ_IC_1_MASK       0x1
+#define R275_MP9_READ_MP_REG_READ_IC_1_SHIFT      0
 
 /* MP10_READ (IC 1) */
-#define R278_MP10_READ_MP_REG_READ_IC_1           0x0    /* 0b	[0] */
-#define R278_MP10_READ_MP_REG_READ_IC_1_MASK      0x1
-#define R278_MP10_READ_MP_REG_READ_IC_1_SHIFT     0
+#define R276_MP10_READ_MP_REG_READ_IC_1           0x0    /* 0b	[0] */
+#define R276_MP10_READ_MP_REG_READ_IC_1_MASK      0x1
+#define R276_MP10_READ_MP_REG_READ_IC_1_SHIFT     0
 
 /* MP11_READ (IC 1) */
-#define R279_MP11_READ_MP_REG_READ_IC_1           0x0    /* 0b	[0] */
-#define R279_MP11_READ_MP_REG_READ_IC_1_MASK      0x1
-#define R279_MP11_READ_MP_REG_READ_IC_1_SHIFT     0
+#define R277_MP11_READ_MP_REG_READ_IC_1           0x0    /* 0b	[0] */
+#define R277_MP11_READ_MP_REG_READ_IC_1_MASK      0x1
+#define R277_MP11_READ_MP_REG_READ_IC_1_SHIFT     0
 
 /* MP12_READ (IC 1) */
-#define R280_MP12_READ_MP_REG_READ_IC_1           0x0    /* 0b	[0] */
-#define R280_MP12_READ_MP_REG_READ_IC_1_MASK      0x1
-#define R280_MP12_READ_MP_REG_READ_IC_1_SHIFT     0
+#define R278_MP12_READ_MP_REG_READ_IC_1           0x0    /* 0b	[0] */
+#define R278_MP12_READ_MP_REG_READ_IC_1_MASK      0x1
+#define R278_MP12_READ_MP_REG_READ_IC_1_SHIFT     0
 
 /* MP13_READ (IC 1) */
-#define R281_MP13_READ_MP_REG_READ_IC_1           0x0    /* 0b	[0] */
-#define R281_MP13_READ_MP_REG_READ_IC_1_MASK      0x1
-#define R281_MP13_READ_MP_REG_READ_IC_1_SHIFT     0
+#define R279_MP13_READ_MP_REG_READ_IC_1           0x0    /* 0b	[0] */
+#define R279_MP13_READ_MP_REG_READ_IC_1_MASK      0x1
+#define R279_MP13_READ_MP_REG_READ_IC_1_SHIFT     0
 
 /* DMIC_CTRL0 (IC 1) */
-#define R282_DMIC_CTRL0_DMIC_EN_IC_1              0x0    /* 0b	[0] */
-#define R282_DMIC_CTRL0_DMSW_IC_1                 0x0    /* 0b	[1] */
-#define R282_DMIC_CTRL0_DMPOL_IC_1                0x0    /* 0b	[2] */
-#define R282_DMIC_CTRL0_HPF_IC_1                  0x0    /* 0b	[3] */
-#define R282_DMIC_CTRL0_DMIC_CLK_IC_1             0x0    /* 000b	[6:4] */
-#define R282_DMIC_CTRL0_MIC_DATA_SRC_IC_1         0x0    /* 0000b	[11:8] */
-#define R282_DMIC_CTRL0_CUTOFF_IC_1               0x4    /* 100b	[14:12] */
-#define R282_DMIC_CTRL0_DMIC_EN_IC_1_MASK         0x1
-#define R282_DMIC_CTRL0_DMIC_EN_IC_1_SHIFT        0
-#define R282_DMIC_CTRL0_DMSW_IC_1_MASK            0x2
-#define R282_DMIC_CTRL0_DMSW_IC_1_SHIFT           1
-#define R282_DMIC_CTRL0_DMPOL_IC_1_MASK           0x4
-#define R282_DMIC_CTRL0_DMPOL_IC_1_SHIFT          2
-#define R282_DMIC_CTRL0_HPF_IC_1_MASK             0x8
-#define R282_DMIC_CTRL0_HPF_IC_1_SHIFT            3
-#define R282_DMIC_CTRL0_DMIC_CLK_IC_1_MASK        0x70
-#define R282_DMIC_CTRL0_DMIC_CLK_IC_1_SHIFT       4
-#define R282_DMIC_CTRL0_MIC_DATA_SRC_IC_1_MASK    0xF00
-#define R282_DMIC_CTRL0_MIC_DATA_SRC_IC_1_SHIFT   8
-#define R282_DMIC_CTRL0_CUTOFF_IC_1_MASK          0x7000
-#define R282_DMIC_CTRL0_CUTOFF_IC_1_SHIFT         12
+#define R280_DMIC_CTRL0_DMIC_EN_IC_1              0x0    /* 0b	[0] */
+#define R280_DMIC_CTRL0_DMSW_IC_1                 0x0    /* 0b	[1] */
+#define R280_DMIC_CTRL0_DMPOL_IC_1                0x0    /* 0b	[2] */
+#define R280_DMIC_CTRL0_HPF_IC_1                  0x0    /* 0b	[3] */
+#define R280_DMIC_CTRL0_DMIC_CLK_IC_1             0x0    /* 000b	[6:4] */
+#define R280_DMIC_CTRL0_MIC_DATA_SRC_IC_1         0x0    /* 0000b	[11:8] */
+#define R280_DMIC_CTRL0_CUTOFF_IC_1               0x4    /* 100b	[14:12] */
+#define R280_DMIC_CTRL0_DMIC_EN_IC_1_MASK         0x1
+#define R280_DMIC_CTRL0_DMIC_EN_IC_1_SHIFT        0
+#define R280_DMIC_CTRL0_DMSW_IC_1_MASK            0x2
+#define R280_DMIC_CTRL0_DMSW_IC_1_SHIFT           1
+#define R280_DMIC_CTRL0_DMPOL_IC_1_MASK           0x4
+#define R280_DMIC_CTRL0_DMPOL_IC_1_SHIFT          2
+#define R280_DMIC_CTRL0_HPF_IC_1_MASK             0x8
+#define R280_DMIC_CTRL0_HPF_IC_1_SHIFT            3
+#define R280_DMIC_CTRL0_DMIC_CLK_IC_1_MASK        0x70
+#define R280_DMIC_CTRL0_DMIC_CLK_IC_1_SHIFT       4
+#define R280_DMIC_CTRL0_MIC_DATA_SRC_IC_1_MASK    0xF00
+#define R280_DMIC_CTRL0_MIC_DATA_SRC_IC_1_SHIFT   8
+#define R280_DMIC_CTRL0_CUTOFF_IC_1_MASK          0x7000
+#define R280_DMIC_CTRL0_CUTOFF_IC_1_SHIFT         12
 
 /* DMIC_CTRL1 (IC 1) */
-#define R283_DMIC_CTRL1_DMIC_EN_IC_1              0x0    /* 0b	[0] */
-#define R283_DMIC_CTRL1_DMSW_IC_1                 0x0    /* 0b	[1] */
-#define R283_DMIC_CTRL1_DMPOL_IC_1                0x0    /* 0b	[2] */
-#define R283_DMIC_CTRL1_HPF_IC_1                  0x0    /* 0b	[3] */
-#define R283_DMIC_CTRL1_DMIC_CLK_IC_1             0x0    /* 000b	[6:4] */
-#define R283_DMIC_CTRL1_MIC_DATA_SRC_IC_1         0x0    /* 0000b	[11:8] */
-#define R283_DMIC_CTRL1_CUTOFF_IC_1               0x4    /* 100b	[14:12] */
-#define R283_DMIC_CTRL1_DMIC_EN_IC_1_MASK         0x1
-#define R283_DMIC_CTRL1_DMIC_EN_IC_1_SHIFT        0
-#define R283_DMIC_CTRL1_DMSW_IC_1_MASK            0x2
-#define R283_DMIC_CTRL1_DMSW_IC_1_SHIFT           1
-#define R283_DMIC_CTRL1_DMPOL_IC_1_MASK           0x4
-#define R283_DMIC_CTRL1_DMPOL_IC_1_SHIFT          2
-#define R283_DMIC_CTRL1_HPF_IC_1_MASK             0x8
-#define R283_DMIC_CTRL1_HPF_IC_1_SHIFT            3
-#define R283_DMIC_CTRL1_DMIC_CLK_IC_1_MASK        0x70
-#define R283_DMIC_CTRL1_DMIC_CLK_IC_1_SHIFT       4
-#define R283_DMIC_CTRL1_MIC_DATA_SRC_IC_1_MASK    0xF00
-#define R283_DMIC_CTRL1_MIC_DATA_SRC_IC_1_SHIFT   8
-#define R283_DMIC_CTRL1_CUTOFF_IC_1_MASK          0x7000
-#define R283_DMIC_CTRL1_CUTOFF_IC_1_SHIFT         12
+#define R281_DMIC_CTRL1_DMIC_EN_IC_1              0x0    /* 0b	[0] */
+#define R281_DMIC_CTRL1_DMSW_IC_1                 0x0    /* 0b	[1] */
+#define R281_DMIC_CTRL1_DMPOL_IC_1                0x0    /* 0b	[2] */
+#define R281_DMIC_CTRL1_HPF_IC_1                  0x0    /* 0b	[3] */
+#define R281_DMIC_CTRL1_DMIC_CLK_IC_1             0x0    /* 000b	[6:4] */
+#define R281_DMIC_CTRL1_MIC_DATA_SRC_IC_1         0x0    /* 0000b	[11:8] */
+#define R281_DMIC_CTRL1_CUTOFF_IC_1               0x4    /* 100b	[14:12] */
+#define R281_DMIC_CTRL1_DMIC_EN_IC_1_MASK         0x1
+#define R281_DMIC_CTRL1_DMIC_EN_IC_1_SHIFT        0
+#define R281_DMIC_CTRL1_DMSW_IC_1_MASK            0x2
+#define R281_DMIC_CTRL1_DMSW_IC_1_SHIFT           1
+#define R281_DMIC_CTRL1_DMPOL_IC_1_MASK           0x4
+#define R281_DMIC_CTRL1_DMPOL_IC_1_SHIFT          2
+#define R281_DMIC_CTRL1_HPF_IC_1_MASK             0x8
+#define R281_DMIC_CTRL1_HPF_IC_1_SHIFT            3
+#define R281_DMIC_CTRL1_DMIC_CLK_IC_1_MASK        0x70
+#define R281_DMIC_CTRL1_DMIC_CLK_IC_1_SHIFT       4
+#define R281_DMIC_CTRL1_MIC_DATA_SRC_IC_1_MASK    0xF00
+#define R281_DMIC_CTRL1_MIC_DATA_SRC_IC_1_SHIFT   8
+#define R281_DMIC_CTRL1_CUTOFF_IC_1_MASK          0x7000
+#define R281_DMIC_CTRL1_CUTOFF_IC_1_SHIFT         12
 
 /* ASRC_LOCK (IC 1) */
-#define R284_ASRC_LOCK_ASRC0L_IC_1                0x0    /* 0b	[0] */
-#define R284_ASRC_LOCK_ASRC1L_IC_1                0x0    /* 0b	[1] */
-#define R284_ASRC_LOCK_ASRC2L_IC_1                0x0    /* 0b	[2] */
-#define R284_ASRC_LOCK_ASRC3L_IC_1                0x0    /* 0b	[3] */
-#define R284_ASRC_LOCK_ASRC4L_IC_1                0x0    /* 0b	[4] */
-#define R284_ASRC_LOCK_ASRC5L_IC_1                0x0    /* 0b	[5] */
-#define R284_ASRC_LOCK_ASRC6L_IC_1                0x0    /* 0b	[6] */
-#define R284_ASRC_LOCK_ASRC7L_IC_1                0x0    /* 0b	[7] */
-#define R284_ASRC_LOCK_ASRC0L_IC_1_MASK           0x1
-#define R284_ASRC_LOCK_ASRC0L_IC_1_SHIFT          0
-#define R284_ASRC_LOCK_ASRC1L_IC_1_MASK           0x2
-#define R284_ASRC_LOCK_ASRC1L_IC_1_SHIFT          1
-#define R284_ASRC_LOCK_ASRC2L_IC_1_MASK           0x4
-#define R284_ASRC_LOCK_ASRC2L_IC_1_SHIFT          2
-#define R284_ASRC_LOCK_ASRC3L_IC_1_MASK           0x8
-#define R284_ASRC_LOCK_ASRC3L_IC_1_SHIFT          3
-#define R284_ASRC_LOCK_ASRC4L_IC_1_MASK           0x10
-#define R284_ASRC_LOCK_ASRC4L_IC_1_SHIFT          4
-#define R284_ASRC_LOCK_ASRC5L_IC_1_MASK           0x20
-#define R284_ASRC_LOCK_ASRC5L_IC_1_SHIFT          5
-#define R284_ASRC_LOCK_ASRC6L_IC_1_MASK           0x40
-#define R284_ASRC_LOCK_ASRC6L_IC_1_SHIFT          6
-#define R284_ASRC_LOCK_ASRC7L_IC_1_MASK           0x80
-#define R284_ASRC_LOCK_ASRC7L_IC_1_SHIFT          7
+#define R282_ASRC_LOCK_ASRC0L_IC_1                0x0    /* 0b	[0] */
+#define R282_ASRC_LOCK_ASRC1L_IC_1                0x0    /* 0b	[1] */
+#define R282_ASRC_LOCK_ASRC2L_IC_1                0x0    /* 0b	[2] */
+#define R282_ASRC_LOCK_ASRC3L_IC_1                0x0    /* 0b	[3] */
+#define R282_ASRC_LOCK_ASRC4L_IC_1                0x0    /* 0b	[4] */
+#define R282_ASRC_LOCK_ASRC5L_IC_1                0x0    /* 0b	[5] */
+#define R282_ASRC_LOCK_ASRC6L_IC_1                0x0    /* 0b	[6] */
+#define R282_ASRC_LOCK_ASRC7L_IC_1                0x0    /* 0b	[7] */
+#define R282_ASRC_LOCK_ASRC0L_IC_1_MASK           0x1
+#define R282_ASRC_LOCK_ASRC0L_IC_1_SHIFT          0
+#define R282_ASRC_LOCK_ASRC1L_IC_1_MASK           0x2
+#define R282_ASRC_LOCK_ASRC1L_IC_1_SHIFT          1
+#define R282_ASRC_LOCK_ASRC2L_IC_1_MASK           0x4
+#define R282_ASRC_LOCK_ASRC2L_IC_1_SHIFT          2
+#define R282_ASRC_LOCK_ASRC3L_IC_1_MASK           0x8
+#define R282_ASRC_LOCK_ASRC3L_IC_1_SHIFT          3
+#define R282_ASRC_LOCK_ASRC4L_IC_1_MASK           0x10
+#define R282_ASRC_LOCK_ASRC4L_IC_1_SHIFT          4
+#define R282_ASRC_LOCK_ASRC5L_IC_1_MASK           0x20
+#define R282_ASRC_LOCK_ASRC5L_IC_1_SHIFT          5
+#define R282_ASRC_LOCK_ASRC6L_IC_1_MASK           0x40
+#define R282_ASRC_LOCK_ASRC6L_IC_1_SHIFT          6
+#define R282_ASRC_LOCK_ASRC7L_IC_1_MASK           0x80
+#define R282_ASRC_LOCK_ASRC7L_IC_1_SHIFT          7
 
 /* ASRC_MUTE (IC 1) */
-#define R285_ASRC_MUTE_ASRC0M_IC_1                0x0    /* 0b	[0] */
-#define R285_ASRC_MUTE_ASRC1M_IC_1                0x0    /* 0b	[1] */
-#define R285_ASRC_MUTE_ASRC2M_IC_1                0x0    /* 0b	[2] */
-#define R285_ASRC_MUTE_ASRC3M_IC_1                0x0    /* 0b	[3] */
-#define R285_ASRC_MUTE_ASRC4M_IC_1                0x0    /* 0b	[4] */
-#define R285_ASRC_MUTE_ASRC5M_IC_1                0x0    /* 0b	[5] */
-#define R285_ASRC_MUTE_ASRC6M_IC_1                0x0    /* 0b	[6] */
-#define R285_ASRC_MUTE_ASRC7M_IC_1                0x0    /* 0b	[7] */
-#define R285_ASRC_MUTE_ASRC_RAMP0_IC_1            0x0    /* 0b	[8] */
-#define R285_ASRC_MUTE_ASRC_RAMP1_IC_1            0x0    /* 0b	[9] */
-#define R285_ASRC_MUTE_LOCKMUTE_IC_1              0x0    /* 0b	[10] */
-#define R285_ASRC_MUTE_ASRC0M_IC_1_MASK           0x1
-#define R285_ASRC_MUTE_ASRC0M_IC_1_SHIFT          0
-#define R285_ASRC_MUTE_ASRC1M_IC_1_MASK           0x2
-#define R285_ASRC_MUTE_ASRC1M_IC_1_SHIFT          1
-#define R285_ASRC_MUTE_ASRC2M_IC_1_MASK           0x4
-#define R285_ASRC_MUTE_ASRC2M_IC_1_SHIFT          2
-#define R285_ASRC_MUTE_ASRC3M_IC_1_MASK           0x8
-#define R285_ASRC_MUTE_ASRC3M_IC_1_SHIFT          3
-#define R285_ASRC_MUTE_ASRC4M_IC_1_MASK           0x10
-#define R285_ASRC_MUTE_ASRC4M_IC_1_SHIFT          4
-#define R285_ASRC_MUTE_ASRC5M_IC_1_MASK           0x20
-#define R285_ASRC_MUTE_ASRC5M_IC_1_SHIFT          5
-#define R285_ASRC_MUTE_ASRC6M_IC_1_MASK           0x40
-#define R285_ASRC_MUTE_ASRC6M_IC_1_SHIFT          6
-#define R285_ASRC_MUTE_ASRC7M_IC_1_MASK           0x80
-#define R285_ASRC_MUTE_ASRC7M_IC_1_SHIFT          7
-#define R285_ASRC_MUTE_ASRC_RAMP0_IC_1_MASK       0x100
-#define R285_ASRC_MUTE_ASRC_RAMP0_IC_1_SHIFT      8
-#define R285_ASRC_MUTE_ASRC_RAMP1_IC_1_MASK       0x200
-#define R285_ASRC_MUTE_ASRC_RAMP1_IC_1_SHIFT      9
-#define R285_ASRC_MUTE_LOCKMUTE_IC_1_MASK         0x400
-#define R285_ASRC_MUTE_LOCKMUTE_IC_1_SHIFT        10
+#define R283_ASRC_MUTE_ASRC0M_IC_1                0x0    /* 0b	[0] */
+#define R283_ASRC_MUTE_ASRC1M_IC_1                0x0    /* 0b	[1] */
+#define R283_ASRC_MUTE_ASRC2M_IC_1                0x0    /* 0b	[2] */
+#define R283_ASRC_MUTE_ASRC3M_IC_1                0x0    /* 0b	[3] */
+#define R283_ASRC_MUTE_ASRC4M_IC_1                0x0    /* 0b	[4] */
+#define R283_ASRC_MUTE_ASRC5M_IC_1                0x0    /* 0b	[5] */
+#define R283_ASRC_MUTE_ASRC6M_IC_1                0x0    /* 0b	[6] */
+#define R283_ASRC_MUTE_ASRC7M_IC_1                0x0    /* 0b	[7] */
+#define R283_ASRC_MUTE_ASRC_RAMP0_IC_1            0x0    /* 0b	[8] */
+#define R283_ASRC_MUTE_ASRC_RAMP1_IC_1            0x0    /* 0b	[9] */
+#define R283_ASRC_MUTE_LOCKMUTE_IC_1              0x0    /* 0b	[10] */
+#define R283_ASRC_MUTE_ASRC0M_IC_1_MASK           0x1
+#define R283_ASRC_MUTE_ASRC0M_IC_1_SHIFT          0
+#define R283_ASRC_MUTE_ASRC1M_IC_1_MASK           0x2
+#define R283_ASRC_MUTE_ASRC1M_IC_1_SHIFT          1
+#define R283_ASRC_MUTE_ASRC2M_IC_1_MASK           0x4
+#define R283_ASRC_MUTE_ASRC2M_IC_1_SHIFT          2
+#define R283_ASRC_MUTE_ASRC3M_IC_1_MASK           0x8
+#define R283_ASRC_MUTE_ASRC3M_IC_1_SHIFT          3
+#define R283_ASRC_MUTE_ASRC4M_IC_1_MASK           0x10
+#define R283_ASRC_MUTE_ASRC4M_IC_1_SHIFT          4
+#define R283_ASRC_MUTE_ASRC5M_IC_1_MASK           0x20
+#define R283_ASRC_MUTE_ASRC5M_IC_1_SHIFT          5
+#define R283_ASRC_MUTE_ASRC6M_IC_1_MASK           0x40
+#define R283_ASRC_MUTE_ASRC6M_IC_1_SHIFT          6
+#define R283_ASRC_MUTE_ASRC7M_IC_1_MASK           0x80
+#define R283_ASRC_MUTE_ASRC7M_IC_1_SHIFT          7
+#define R283_ASRC_MUTE_ASRC_RAMP0_IC_1_MASK       0x100
+#define R283_ASRC_MUTE_ASRC_RAMP0_IC_1_SHIFT      8
+#define R283_ASRC_MUTE_ASRC_RAMP1_IC_1_MASK       0x200
+#define R283_ASRC_MUTE_ASRC_RAMP1_IC_1_SHIFT      9
+#define R283_ASRC_MUTE_LOCKMUTE_IC_1_MASK         0x400
+#define R283_ASRC_MUTE_LOCKMUTE_IC_1_SHIFT        10
 
 /* ASRC0_RATIO (IC 1) */
-#define R286_ASRC0_RATIO_ASRC_RATIO_IC_1          0x0000 /* 0000000000000000b	[15:0] */
-#define R286_ASRC0_RATIO_ASRC_RATIO_IC_1_MASK     0xFFFF
-#define R286_ASRC0_RATIO_ASRC_RATIO_IC_1_SHIFT    0
+#define R284_ASRC0_RATIO_ASRC_RATIO_IC_1          0x0000 /* 0000000000000000b	[15:0] */
+#define R284_ASRC0_RATIO_ASRC_RATIO_IC_1_MASK     0xFFFF
+#define R284_ASRC0_RATIO_ASRC_RATIO_IC_1_SHIFT    0
 
 /* ASRC1_RATIO (IC 1) */
-#define R287_ASRC1_RATIO_ASRC_RATIO_IC_1          0x0000 /* 0000000000000000b	[15:0] */
-#define R287_ASRC1_RATIO_ASRC_RATIO_IC_1_MASK     0xFFFF
-#define R287_ASRC1_RATIO_ASRC_RATIO_IC_1_SHIFT    0
+#define R285_ASRC1_RATIO_ASRC_RATIO_IC_1          0x0000 /* 0000000000000000b	[15:0] */
+#define R285_ASRC1_RATIO_ASRC_RATIO_IC_1_MASK     0xFFFF
+#define R285_ASRC1_RATIO_ASRC_RATIO_IC_1_SHIFT    0
 
 /* ASRC2_RATIO (IC 1) */
-#define R288_ASRC2_RATIO_ASRC_RATIO_IC_1          0x0000 /* 0000000000000000b	[15:0] */
-#define R288_ASRC2_RATIO_ASRC_RATIO_IC_1_MASK     0xFFFF
-#define R288_ASRC2_RATIO_ASRC_RATIO_IC_1_SHIFT    0
+#define R286_ASRC2_RATIO_ASRC_RATIO_IC_1          0x0000 /* 0000000000000000b	[15:0] */
+#define R286_ASRC2_RATIO_ASRC_RATIO_IC_1_MASK     0xFFFF
+#define R286_ASRC2_RATIO_ASRC_RATIO_IC_1_SHIFT    0
 
 /* ASRC3_RATIO (IC 1) */
-#define R289_ASRC3_RATIO_ASRC_RATIO_IC_1          0x0000 /* 0000000000000000b	[15:0] */
-#define R289_ASRC3_RATIO_ASRC_RATIO_IC_1_MASK     0xFFFF
-#define R289_ASRC3_RATIO_ASRC_RATIO_IC_1_SHIFT    0
+#define R287_ASRC3_RATIO_ASRC_RATIO_IC_1          0x0000 /* 0000000000000000b	[15:0] */
+#define R287_ASRC3_RATIO_ASRC_RATIO_IC_1_MASK     0xFFFF
+#define R287_ASRC3_RATIO_ASRC_RATIO_IC_1_SHIFT    0
 
 /* ASRC4_RATIO (IC 1) */
-#define R290_ASRC4_RATIO_ASRC_RATIO_IC_1          0x0000 /* 0000000000000000b	[15:0] */
-#define R290_ASRC4_RATIO_ASRC_RATIO_IC_1_MASK     0xFFFF
-#define R290_ASRC4_RATIO_ASRC_RATIO_IC_1_SHIFT    0
+#define R288_ASRC4_RATIO_ASRC_RATIO_IC_1          0x0000 /* 0000000000000000b	[15:0] */
+#define R288_ASRC4_RATIO_ASRC_RATIO_IC_1_MASK     0xFFFF
+#define R288_ASRC4_RATIO_ASRC_RATIO_IC_1_SHIFT    0
 
 /* ASRC5_RATIO (IC 1) */
-#define R291_ASRC5_RATIO_ASRC_RATIO_IC_1          0x0000 /* 0000000000000000b	[15:0] */
-#define R291_ASRC5_RATIO_ASRC_RATIO_IC_1_MASK     0xFFFF
-#define R291_ASRC5_RATIO_ASRC_RATIO_IC_1_SHIFT    0
+#define R289_ASRC5_RATIO_ASRC_RATIO_IC_1          0x0000 /* 0000000000000000b	[15:0] */
+#define R289_ASRC5_RATIO_ASRC_RATIO_IC_1_MASK     0xFFFF
+#define R289_ASRC5_RATIO_ASRC_RATIO_IC_1_SHIFT    0
 
 /* ASRC6_RATIO (IC 1) */
-#define R292_ASRC6_RATIO_ASRC_RATIO_IC_1          0x0000 /* 0000000000000000b	[15:0] */
-#define R292_ASRC6_RATIO_ASRC_RATIO_IC_1_MASK     0xFFFF
-#define R292_ASRC6_RATIO_ASRC_RATIO_IC_1_SHIFT    0
+#define R290_ASRC6_RATIO_ASRC_RATIO_IC_1          0x0000 /* 0000000000000000b	[15:0] */
+#define R290_ASRC6_RATIO_ASRC_RATIO_IC_1_MASK     0xFFFF
+#define R290_ASRC6_RATIO_ASRC_RATIO_IC_1_SHIFT    0
 
 /* ASRC7_RATIO (IC 1) */
-#define R293_ASRC7_RATIO_ASRC_RATIO_IC_1          0x0000 /* 0000000000000000b	[15:0] */
-#define R293_ASRC7_RATIO_ASRC_RATIO_IC_1_MASK     0xFFFF
-#define R293_ASRC7_RATIO_ASRC_RATIO_IC_1_SHIFT    0
+#define R291_ASRC7_RATIO_ASRC_RATIO_IC_1          0x0000 /* 0000000000000000b	[15:0] */
+#define R291_ASRC7_RATIO_ASRC_RATIO_IC_1_MASK     0xFFFF
+#define R291_ASRC7_RATIO_ASRC_RATIO_IC_1_SHIFT    0
+
+/* ASRC_RAMPMAX_OVR (IC 1) */
+#define R292_ASRC_RAMPMAX_OVR_OVR_RAMPMAX_VALUE_IC_1 0x7FF /* 11111111111b	[10:0] */
+#define R292_ASRC_RAMPMAX_OVR_OVERRIDE_IC_1       0x0    /* 0b	[11] */
+#define R292_ASRC_RAMPMAX_OVR_OVR_RAMPMAX_VALUE_IC_1_MASK 0x7FF
+#define R292_ASRC_RAMPMAX_OVR_OVR_RAMPMAX_VALUE_IC_1_SHIFT 0
+#define R292_ASRC_RAMPMAX_OVR_OVERRIDE_IC_1_MASK  0x800
+#define R292_ASRC_RAMPMAX_OVR_OVERRIDE_IC_1_SHIFT 11
+
+/* ASRC0_RAMPMAX (IC 1) */
+#define R293_ASRC0_RAMPMAX_RAMPMAX_VALUE_IC_1     0x7FF  /* 11111111111b	[10:0] */
+#define R293_ASRC0_RAMPMAX_RAMPMAX_VALUE_IC_1_MASK 0x7FF
+#define R293_ASRC0_RAMPMAX_RAMPMAX_VALUE_IC_1_SHIFT 0
+
+/* ASRC1_RAMPMAX (IC 1) */
+#define R294_ASRC1_RAMPMAX_RAMPMAX_VALUE_IC_1     0x7FF  /* 11111111111b	[10:0] */
+#define R294_ASRC1_RAMPMAX_RAMPMAX_VALUE_IC_1_MASK 0x7FF
+#define R294_ASRC1_RAMPMAX_RAMPMAX_VALUE_IC_1_SHIFT 0
+
+/* ASRC2_RAMPMAX (IC 1) */
+#define R295_ASRC2_RAMPMAX_RAMPMAX_VALUE_IC_1     0x7FF  /* 11111111111b	[10:0] */
+#define R295_ASRC2_RAMPMAX_RAMPMAX_VALUE_IC_1_MASK 0x7FF
+#define R295_ASRC2_RAMPMAX_RAMPMAX_VALUE_IC_1_SHIFT 0
+
+/* ASRC3_RAMPMAX (IC 1) */
+#define R296_ASRC3_RAMPMAX_RAMPMAX_VALUE_IC_1     0x7FF  /* 11111111111b	[10:0] */
+#define R296_ASRC3_RAMPMAX_RAMPMAX_VALUE_IC_1_MASK 0x7FF
+#define R296_ASRC3_RAMPMAX_RAMPMAX_VALUE_IC_1_SHIFT 0
+
+/* ASRC4_RAMPMAX (IC 1) */
+#define R297_ASRC4_RAMPMAX_RAMPMAX_VALUE_IC_1     0x7FF  /* 11111111111b	[10:0] */
+#define R297_ASRC4_RAMPMAX_RAMPMAX_VALUE_IC_1_MASK 0x7FF
+#define R297_ASRC4_RAMPMAX_RAMPMAX_VALUE_IC_1_SHIFT 0
+
+/* ASRC5_RAMPMAX (IC 1) */
+#define R298_ASRC5_RAMPMAX_RAMPMAX_VALUE_IC_1     0x7FF  /* 11111111111b	[10:0] */
+#define R298_ASRC5_RAMPMAX_RAMPMAX_VALUE_IC_1_MASK 0x7FF
+#define R298_ASRC5_RAMPMAX_RAMPMAX_VALUE_IC_1_SHIFT 0
+
+/* ASRC6_RAMPMAX (IC 1) */
+#define R299_ASRC6_RAMPMAX_RAMPMAX_VALUE_IC_1     0x7FF  /* 11111111111b	[10:0] */
+#define R299_ASRC6_RAMPMAX_RAMPMAX_VALUE_IC_1_MASK 0x7FF
+#define R299_ASRC6_RAMPMAX_RAMPMAX_VALUE_IC_1_SHIFT 0
+
+/* ASRC7_RAMPMAX (IC 1) */
+#define R300_ASRC7_RAMPMAX_RAMPMAX_VALUE_IC_1     0x7FF  /* 11111111111b	[10:0] */
+#define R300_ASRC7_RAMPMAX_RAMPMAX_VALUE_IC_1_MASK 0x7FF
+#define R300_ASRC7_RAMPMAX_RAMPMAX_VALUE_IC_1_SHIFT 0
 
 /* ADC_READ0 (IC 1) */
-#define R294_ADC_READ0_ADC_VALUE_IC_1             0x0000 /* 0000000000000000b	[15:0] */
-#define R294_ADC_READ0_ADC_VALUE_IC_1_MASK        0xFFFF
-#define R294_ADC_READ0_ADC_VALUE_IC_1_SHIFT       0
+#define R301_ADC_READ0_ADC_VALUE_IC_1             0x0000 /* 0000000000000000b	[15:0] */
+#define R301_ADC_READ0_ADC_VALUE_IC_1_MASK        0xFFFF
+#define R301_ADC_READ0_ADC_VALUE_IC_1_SHIFT       0
 
 /* ADC_READ1 (IC 1) */
-#define R295_ADC_READ1_ADC_VALUE_IC_1             0x0000 /* 0000000000000000b	[15:0] */
-#define R295_ADC_READ1_ADC_VALUE_IC_1_MASK        0xFFFF
-#define R295_ADC_READ1_ADC_VALUE_IC_1_SHIFT       0
+#define R302_ADC_READ1_ADC_VALUE_IC_1             0x0000 /* 0000000000000000b	[15:0] */
+#define R302_ADC_READ1_ADC_VALUE_IC_1_MASK        0xFFFF
+#define R302_ADC_READ1_ADC_VALUE_IC_1_SHIFT       0
 
 /* ADC_READ2 (IC 1) */
-#define R296_ADC_READ2_ADC_VALUE_IC_1             0x0000 /* 0000000000000000b	[15:0] */
-#define R296_ADC_READ2_ADC_VALUE_IC_1_MASK        0xFFFF
-#define R296_ADC_READ2_ADC_VALUE_IC_1_SHIFT       0
+#define R303_ADC_READ2_ADC_VALUE_IC_1             0x0000 /* 0000000000000000b	[15:0] */
+#define R303_ADC_READ2_ADC_VALUE_IC_1_MASK        0xFFFF
+#define R303_ADC_READ2_ADC_VALUE_IC_1_SHIFT       0
 
 /* ADC_READ3 (IC 1) */
-#define R297_ADC_READ3_ADC_VALUE_IC_1             0x0000 /* 0000000000000000b	[15:0] */
-#define R297_ADC_READ3_ADC_VALUE_IC_1_MASK        0xFFFF
-#define R297_ADC_READ3_ADC_VALUE_IC_1_SHIFT       0
+#define R304_ADC_READ3_ADC_VALUE_IC_1             0x0000 /* 0000000000000000b	[15:0] */
+#define R304_ADC_READ3_ADC_VALUE_IC_1_MASK        0xFFFF
+#define R304_ADC_READ3_ADC_VALUE_IC_1_SHIFT       0
 
 /* ADC_READ4 (IC 1) */
-#define R298_ADC_READ4_ADC_VALUE_IC_1             0x0000 /* 0000000000000000b	[15:0] */
-#define R298_ADC_READ4_ADC_VALUE_IC_1_MASK        0xFFFF
-#define R298_ADC_READ4_ADC_VALUE_IC_1_SHIFT       0
+#define R305_ADC_READ4_ADC_VALUE_IC_1             0x0000 /* 0000000000000000b	[15:0] */
+#define R305_ADC_READ4_ADC_VALUE_IC_1_MASK        0xFFFF
+#define R305_ADC_READ4_ADC_VALUE_IC_1_SHIFT       0
 
 /* ADC_READ5 (IC 1) */
-#define R299_ADC_READ5_ADC_VALUE_IC_1             0x0000 /* 0000000000000000b	[15:0] */
-#define R299_ADC_READ5_ADC_VALUE_IC_1_MASK        0xFFFF
-#define R299_ADC_READ5_ADC_VALUE_IC_1_SHIFT       0
+#define R306_ADC_READ5_ADC_VALUE_IC_1             0x0000 /* 0000000000000000b	[15:0] */
+#define R306_ADC_READ5_ADC_VALUE_IC_1_MASK        0xFFFF
+#define R306_ADC_READ5_ADC_VALUE_IC_1_SHIFT       0
+
+/* MP0_MODE1 (IC 1) */
+#define R307_MP0_MODE1_MP_ENABLE1_IC_1            0x0    /* 0b	[0] */
+#define R307_MP0_MODE1_MP_MODE1_IC_1              0x0    /* 000b	[3:1] */
+#define R307_MP0_MODE1_DEBOUNCE_VALUE1_IC_1       0x0    /* 0000b	[7:4] */
+#define R307_MP0_MODE1_SS_SELECT1_IC_1            0x0    /* 000b	[10:8] */
+#define R307_MP0_MODE1_MP_ENABLE1_IC_1_MASK       0x1
+#define R307_MP0_MODE1_MP_ENABLE1_IC_1_SHIFT      0
+#define R307_MP0_MODE1_MP_MODE1_IC_1_MASK         0xE
+#define R307_MP0_MODE1_MP_MODE1_IC_1_SHIFT        1
+#define R307_MP0_MODE1_DEBOUNCE_VALUE1_IC_1_MASK  0xF0
+#define R307_MP0_MODE1_DEBOUNCE_VALUE1_IC_1_SHIFT 4
+#define R307_MP0_MODE1_SS_SELECT1_IC_1_MASK       0x700
+#define R307_MP0_MODE1_SS_SELECT1_IC_1_SHIFT      8
+
+/* MP1_MODE1 (IC 1) */
+#define R308_MP1_MODE1_MP_ENABLE1_IC_1            0x0    /* 0b	[0] */
+#define R308_MP1_MODE1_MP_MODE1_IC_1              0x0    /* 000b	[3:1] */
+#define R308_MP1_MODE1_DEBOUNCE_VALUE1_IC_1       0x0    /* 0000b	[7:4] */
+#define R308_MP1_MODE1_SS_SELECT1_IC_1            0x0    /* 000b	[10:8] */
+#define R308_MP1_MODE1_MP_ENABLE1_IC_1_MASK       0x1
+#define R308_MP1_MODE1_MP_ENABLE1_IC_1_SHIFT      0
+#define R308_MP1_MODE1_MP_MODE1_IC_1_MASK         0xE
+#define R308_MP1_MODE1_MP_MODE1_IC_1_SHIFT        1
+#define R308_MP1_MODE1_DEBOUNCE_VALUE1_IC_1_MASK  0xF0
+#define R308_MP1_MODE1_DEBOUNCE_VALUE1_IC_1_SHIFT 4
+#define R308_MP1_MODE1_SS_SELECT1_IC_1_MASK       0x700
+#define R308_MP1_MODE1_SS_SELECT1_IC_1_SHIFT      8
+
+/* MP2_MODE1 (IC 1) */
+#define R309_MP2_MODE1_MP_ENABLE1_IC_1            0x0    /* 0b	[0] */
+#define R309_MP2_MODE1_MP_MODE1_IC_1              0x0    /* 000b	[3:1] */
+#define R309_MP2_MODE1_DEBOUNCE_VALUE1_IC_1       0x0    /* 0000b	[7:4] */
+#define R309_MP2_MODE1_SS_SELECT1_IC_1            0x0    /* 000b	[10:8] */
+#define R309_MP2_MODE1_MP_ENABLE1_IC_1_MASK       0x1
+#define R309_MP2_MODE1_MP_ENABLE1_IC_1_SHIFT      0
+#define R309_MP2_MODE1_MP_MODE1_IC_1_MASK         0xE
+#define R309_MP2_MODE1_MP_MODE1_IC_1_SHIFT        1
+#define R309_MP2_MODE1_DEBOUNCE_VALUE1_IC_1_MASK  0xF0
+#define R309_MP2_MODE1_DEBOUNCE_VALUE1_IC_1_SHIFT 4
+#define R309_MP2_MODE1_SS_SELECT1_IC_1_MASK       0x700
+#define R309_MP2_MODE1_SS_SELECT1_IC_1_SHIFT      8
+
+/* MP3_MODE1 (IC 1) */
+#define R310_MP3_MODE1_MP_ENABLE1_IC_1            0x0    /* 0b	[0] */
+#define R310_MP3_MODE1_MP_MODE1_IC_1              0x0    /* 000b	[3:1] */
+#define R310_MP3_MODE1_DEBOUNCE_VALUE1_IC_1       0x0    /* 0000b	[7:4] */
+#define R310_MP3_MODE1_SS_SELECT1_IC_1            0x0    /* 000b	[10:8] */
+#define R310_MP3_MODE1_MP_ENABLE1_IC_1_MASK       0x1
+#define R310_MP3_MODE1_MP_ENABLE1_IC_1_SHIFT      0
+#define R310_MP3_MODE1_MP_MODE1_IC_1_MASK         0xE
+#define R310_MP3_MODE1_MP_MODE1_IC_1_SHIFT        1
+#define R310_MP3_MODE1_DEBOUNCE_VALUE1_IC_1_MASK  0xF0
+#define R310_MP3_MODE1_DEBOUNCE_VALUE1_IC_1_SHIFT 4
+#define R310_MP3_MODE1_SS_SELECT1_IC_1_MASK       0x700
+#define R310_MP3_MODE1_SS_SELECT1_IC_1_SHIFT      8
+
+/* MP4_MODE1 (IC 1) */
+#define R311_MP4_MODE1_MP_ENABLE1_IC_1            0x0    /* 0b	[0] */
+#define R311_MP4_MODE1_MP_MODE1_IC_1              0x0    /* 000b	[3:1] */
+#define R311_MP4_MODE1_DEBOUNCE_VALUE1_IC_1       0x0    /* 0000b	[7:4] */
+#define R311_MP4_MODE1_SS_SELECT1_IC_1            0x0    /* 000b	[10:8] */
+#define R311_MP4_MODE1_MP_ENABLE1_IC_1_MASK       0x1
+#define R311_MP4_MODE1_MP_ENABLE1_IC_1_SHIFT      0
+#define R311_MP4_MODE1_MP_MODE1_IC_1_MASK         0xE
+#define R311_MP4_MODE1_MP_MODE1_IC_1_SHIFT        1
+#define R311_MP4_MODE1_DEBOUNCE_VALUE1_IC_1_MASK  0xF0
+#define R311_MP4_MODE1_DEBOUNCE_VALUE1_IC_1_SHIFT 4
+#define R311_MP4_MODE1_SS_SELECT1_IC_1_MASK       0x700
+#define R311_MP4_MODE1_SS_SELECT1_IC_1_SHIFT      8
+
+/* MP5_MODE1 (IC 1) */
+#define R312_MP5_MODE1_MP_ENABLE1_IC_1            0x0    /* 0b	[0] */
+#define R312_MP5_MODE1_MP_MODE1_IC_1              0x0    /* 000b	[3:1] */
+#define R312_MP5_MODE1_DEBOUNCE_VALUE1_IC_1       0x0    /* 0000b	[7:4] */
+#define R312_MP5_MODE1_SS_SELECT1_IC_1            0x0    /* 000b	[10:8] */
+#define R312_MP5_MODE1_MP_ENABLE1_IC_1_MASK       0x1
+#define R312_MP5_MODE1_MP_ENABLE1_IC_1_SHIFT      0
+#define R312_MP5_MODE1_MP_MODE1_IC_1_MASK         0xE
+#define R312_MP5_MODE1_MP_MODE1_IC_1_SHIFT        1
+#define R312_MP5_MODE1_DEBOUNCE_VALUE1_IC_1_MASK  0xF0
+#define R312_MP5_MODE1_DEBOUNCE_VALUE1_IC_1_SHIFT 4
+#define R312_MP5_MODE1_SS_SELECT1_IC_1_MASK       0x700
+#define R312_MP5_MODE1_SS_SELECT1_IC_1_SHIFT      8
+
+/* MP6_MODE1 (IC 1) */
+#define R313_MP6_MODE1_MP_ENABLE1_IC_1            0x0    /* 0b	[0] */
+#define R313_MP6_MODE1_MP_MODE1_IC_1              0x0    /* 000b	[3:1] */
+#define R313_MP6_MODE1_DEBOUNCE_VALUE1_IC_1       0x0    /* 0000b	[7:4] */
+#define R313_MP6_MODE1_SS_SELECT1_IC_1            0x0    /* 000b	[10:8] */
+#define R313_MP6_MODE1_MP_ENABLE1_IC_1_MASK       0x1
+#define R313_MP6_MODE1_MP_ENABLE1_IC_1_SHIFT      0
+#define R313_MP6_MODE1_MP_MODE1_IC_1_MASK         0xE
+#define R313_MP6_MODE1_MP_MODE1_IC_1_SHIFT        1
+#define R313_MP6_MODE1_DEBOUNCE_VALUE1_IC_1_MASK  0xF0
+#define R313_MP6_MODE1_DEBOUNCE_VALUE1_IC_1_SHIFT 4
+#define R313_MP6_MODE1_SS_SELECT1_IC_1_MASK       0x700
+#define R313_MP6_MODE1_SS_SELECT1_IC_1_SHIFT      8
+
+/* MP7_MODE1 (IC 1) */
+#define R314_MP7_MODE1_MP_ENABLE1_IC_1            0x0    /* 0b	[0] */
+#define R314_MP7_MODE1_MP_MODE1_IC_1              0x0    /* 000b	[3:1] */
+#define R314_MP7_MODE1_DEBOUNCE_VALUE1_IC_1       0x0    /* 0000b	[7:4] */
+#define R314_MP7_MODE1_SS_SELECT1_IC_1            0x0    /* 000b	[10:8] */
+#define R314_MP7_MODE1_MP_ENABLE1_IC_1_MASK       0x1
+#define R314_MP7_MODE1_MP_ENABLE1_IC_1_SHIFT      0
+#define R314_MP7_MODE1_MP_MODE1_IC_1_MASK         0xE
+#define R314_MP7_MODE1_MP_MODE1_IC_1_SHIFT        1
+#define R314_MP7_MODE1_DEBOUNCE_VALUE1_IC_1_MASK  0xF0
+#define R314_MP7_MODE1_DEBOUNCE_VALUE1_IC_1_SHIFT 4
+#define R314_MP7_MODE1_SS_SELECT1_IC_1_MASK       0x700
+#define R314_MP7_MODE1_SS_SELECT1_IC_1_SHIFT      8
+
+/* MP8_MODE1 (IC 1) */
+#define R315_MP8_MODE1_MP_ENABLE1_IC_1            0x0    /* 0b	[0] */
+#define R315_MP8_MODE1_MP_MODE1_IC_1              0x0    /* 000b	[3:1] */
+#define R315_MP8_MODE1_DEBOUNCE_VALUE1_IC_1       0x0    /* 0000b	[7:4] */
+#define R315_MP8_MODE1_SS_SELECT1_IC_1            0x0    /* 000b	[10:8] */
+#define R315_MP8_MODE1_MP_ENABLE1_IC_1_MASK       0x1
+#define R315_MP8_MODE1_MP_ENABLE1_IC_1_SHIFT      0
+#define R315_MP8_MODE1_MP_MODE1_IC_1_MASK         0xE
+#define R315_MP8_MODE1_MP_MODE1_IC_1_SHIFT        1
+#define R315_MP8_MODE1_DEBOUNCE_VALUE1_IC_1_MASK  0xF0
+#define R315_MP8_MODE1_DEBOUNCE_VALUE1_IC_1_SHIFT 4
+#define R315_MP8_MODE1_SS_SELECT1_IC_1_MASK       0x700
+#define R315_MP8_MODE1_SS_SELECT1_IC_1_SHIFT      8
+
+/* MP9_MODE1 (IC 1) */
+#define R316_MP9_MODE1_MP_ENABLE1_IC_1            0x0    /* 0b	[0] */
+#define R316_MP9_MODE1_MP_MODE1_IC_1              0x0    /* 000b	[3:1] */
+#define R316_MP9_MODE1_DEBOUNCE_VALUE1_IC_1       0x0    /* 0000b	[7:4] */
+#define R316_MP9_MODE1_SS_SELECT1_IC_1            0x0    /* 000b	[10:8] */
+#define R316_MP9_MODE1_MP_ENABLE1_IC_1_MASK       0x1
+#define R316_MP9_MODE1_MP_ENABLE1_IC_1_SHIFT      0
+#define R316_MP9_MODE1_MP_MODE1_IC_1_MASK         0xE
+#define R316_MP9_MODE1_MP_MODE1_IC_1_SHIFT        1
+#define R316_MP9_MODE1_DEBOUNCE_VALUE1_IC_1_MASK  0xF0
+#define R316_MP9_MODE1_DEBOUNCE_VALUE1_IC_1_SHIFT 4
+#define R316_MP9_MODE1_SS_SELECT1_IC_1_MASK       0x700
+#define R316_MP9_MODE1_SS_SELECT1_IC_1_SHIFT      8
+
+/* MP10_MODE1 (IC 1) */
+#define R317_MP10_MODE1_MP_ENABLE1_IC_1           0x0    /* 0b	[0] */
+#define R317_MP10_MODE1_MP_MODE1_IC_1             0x0    /* 000b	[3:1] */
+#define R317_MP10_MODE1_DEBOUNCE_VALUE1_IC_1      0x0    /* 0000b	[7:4] */
+#define R317_MP10_MODE1_SS_SELECT1_IC_1           0x0    /* 000b	[10:8] */
+#define R317_MP10_MODE1_MP_ENABLE1_IC_1_MASK      0x1
+#define R317_MP10_MODE1_MP_ENABLE1_IC_1_SHIFT     0
+#define R317_MP10_MODE1_MP_MODE1_IC_1_MASK        0xE
+#define R317_MP10_MODE1_MP_MODE1_IC_1_SHIFT       1
+#define R317_MP10_MODE1_DEBOUNCE_VALUE1_IC_1_MASK 0xF0
+#define R317_MP10_MODE1_DEBOUNCE_VALUE1_IC_1_SHIFT 4
+#define R317_MP10_MODE1_SS_SELECT1_IC_1_MASK      0x700
+#define R317_MP10_MODE1_SS_SELECT1_IC_1_SHIFT     8
+
+/* MP11_MODE1 (IC 1) */
+#define R318_MP11_MODE1_MP_ENABLE1_IC_1           0x0    /* 0b	[0] */
+#define R318_MP11_MODE1_MP_MODE1_IC_1             0x0    /* 000b	[3:1] */
+#define R318_MP11_MODE1_DEBOUNCE_VALUE1_IC_1      0x0    /* 0000b	[7:4] */
+#define R318_MP11_MODE1_SS_SELECT1_IC_1           0x0    /* 000b	[10:8] */
+#define R318_MP11_MODE1_MP_ENABLE1_IC_1_MASK      0x1
+#define R318_MP11_MODE1_MP_ENABLE1_IC_1_SHIFT     0
+#define R318_MP11_MODE1_MP_MODE1_IC_1_MASK        0xE
+#define R318_MP11_MODE1_MP_MODE1_IC_1_SHIFT       1
+#define R318_MP11_MODE1_DEBOUNCE_VALUE1_IC_1_MASK 0xF0
+#define R318_MP11_MODE1_DEBOUNCE_VALUE1_IC_1_SHIFT 4
+#define R318_MP11_MODE1_SS_SELECT1_IC_1_MASK      0x700
+#define R318_MP11_MODE1_SS_SELECT1_IC_1_SHIFT     8
+
+/* MP0_WRITE1 (IC 1) */
+#define R319_MP0_WRITE1_MP_REG_WRITE1_IC_1        0x0    /* 0b	[0] */
+#define R319_MP0_WRITE1_MP_REG_WRITE1_IC_1_MASK   0x1
+#define R319_MP0_WRITE1_MP_REG_WRITE1_IC_1_SHIFT  0
+
+/* MP1_WRITE1 (IC 1) */
+#define R320_MP1_WRITE1_MP_REG_WRITE1_IC_1        0x0    /* 0b	[0] */
+#define R320_MP1_WRITE1_MP_REG_WRITE1_IC_1_MASK   0x1
+#define R320_MP1_WRITE1_MP_REG_WRITE1_IC_1_SHIFT  0
+
+/* MP2_WRITE1 (IC 1) */
+#define R321_MP2_WRITE1_MP_REG_WRITE1_IC_1        0x0    /* 0b	[0] */
+#define R321_MP2_WRITE1_MP_REG_WRITE1_IC_1_MASK   0x1
+#define R321_MP2_WRITE1_MP_REG_WRITE1_IC_1_SHIFT  0
+
+/* MP3_WRITE1 (IC 1) */
+#define R322_MP3_WRITE1_MP_REG_WRITE1_IC_1        0x0    /* 0b	[0] */
+#define R322_MP3_WRITE1_MP_REG_WRITE1_IC_1_MASK   0x1
+#define R322_MP3_WRITE1_MP_REG_WRITE1_IC_1_SHIFT  0
+
+/* MP4_WRITE1 (IC 1) */
+#define R323_MP4_WRITE1_MP_REG_WRITE1_IC_1        0x0    /* 0b	[0] */
+#define R323_MP4_WRITE1_MP_REG_WRITE1_IC_1_MASK   0x1
+#define R323_MP4_WRITE1_MP_REG_WRITE1_IC_1_SHIFT  0
+
+/* MP5_WRITE1 (IC 1) */
+#define R324_MP5_WRITE1_MP_REG_WRITE1_IC_1        0x0    /* 0b	[0] */
+#define R324_MP5_WRITE1_MP_REG_WRITE1_IC_1_MASK   0x1
+#define R324_MP5_WRITE1_MP_REG_WRITE1_IC_1_SHIFT  0
+
+/* MP6_WRITE1 (IC 1) */
+#define R325_MP6_WRITE1_MP_REG_WRITE1_IC_1        0x0    /* 0b	[0] */
+#define R325_MP6_WRITE1_MP_REG_WRITE1_IC_1_MASK   0x1
+#define R325_MP6_WRITE1_MP_REG_WRITE1_IC_1_SHIFT  0
+
+/* MP7_WRITE1 (IC 1) */
+#define R326_MP7_WRITE1_MP_REG_WRITE1_IC_1        0x0    /* 0b	[0] */
+#define R326_MP7_WRITE1_MP_REG_WRITE1_IC_1_MASK   0x1
+#define R326_MP7_WRITE1_MP_REG_WRITE1_IC_1_SHIFT  0
+
+/* MP8_WRITE1 (IC 1) */
+#define R327_MP8_WRITE1_MP_REG_WRITE1_IC_1        0x0    /* 0b	[0] */
+#define R327_MP8_WRITE1_MP_REG_WRITE1_IC_1_MASK   0x1
+#define R327_MP8_WRITE1_MP_REG_WRITE1_IC_1_SHIFT  0
+
+/* MP9_WRITE1 (IC 1) */
+#define R328_MP9_WRITE1_MP_REG_WRITE1_IC_1        0x0    /* 0b	[0] */
+#define R328_MP9_WRITE1_MP_REG_WRITE1_IC_1_MASK   0x1
+#define R328_MP9_WRITE1_MP_REG_WRITE1_IC_1_SHIFT  0
+
+/* MP10_WRITE1 (IC 1) */
+#define R329_MP10_WRITE1_MP_REG_WRITE1_IC_1       0x0    /* 0b	[0] */
+#define R329_MP10_WRITE1_MP_REG_WRITE1_IC_1_MASK  0x1
+#define R329_MP10_WRITE1_MP_REG_WRITE1_IC_1_SHIFT 0
+
+/* MP11_WRITE1 (IC 1) */
+#define R330_MP11_WRITE1_MP_REG_WRITE1_IC_1       0x0    /* 0b	[0] */
+#define R330_MP11_WRITE1_MP_REG_WRITE1_IC_1_MASK  0x1
+#define R330_MP11_WRITE1_MP_REG_WRITE1_IC_1_SHIFT 0
+
+/* MP0_READ1 (IC 1) */
+#define R331_MP0_READ1_MP_REG_READ1_IC_1          0x0    /* 0b	[0] */
+#define R331_MP0_READ1_MP_REG_READ1_IC_1_MASK     0x1
+#define R331_MP0_READ1_MP_REG_READ1_IC_1_SHIFT    0
+
+/* MP1_READ1 (IC 1) */
+#define R332_MP1_READ1_MP_REG_READ1_IC_1          0x0    /* 0b	[0] */
+#define R332_MP1_READ1_MP_REG_READ1_IC_1_MASK     0x1
+#define R332_MP1_READ1_MP_REG_READ1_IC_1_SHIFT    0
+
+/* MP2_READ1 (IC 1) */
+#define R333_MP2_READ1_MP_REG_READ1_IC_1          0x0    /* 0b	[0] */
+#define R333_MP2_READ1_MP_REG_READ1_IC_1_MASK     0x1
+#define R333_MP2_READ1_MP_REG_READ1_IC_1_SHIFT    0
+
+/* MP3_READ1 (IC 1) */
+#define R334_MP3_READ1_MP_REG_READ1_IC_1          0x0    /* 0b	[0] */
+#define R334_MP3_READ1_MP_REG_READ1_IC_1_MASK     0x1
+#define R334_MP3_READ1_MP_REG_READ1_IC_1_SHIFT    0
+
+/* MP4_READ1 (IC 1) */
+#define R335_MP4_READ1_MP_REG_READ1_IC_1          0x0    /* 0b	[0] */
+#define R335_MP4_READ1_MP_REG_READ1_IC_1_MASK     0x1
+#define R335_MP4_READ1_MP_REG_READ1_IC_1_SHIFT    0
+
+/* MP5_READ1 (IC 1) */
+#define R336_MP5_READ1_MP_REG_READ1_IC_1          0x0    /* 0b	[0] */
+#define R336_MP5_READ1_MP_REG_READ1_IC_1_MASK     0x1
+#define R336_MP5_READ1_MP_REG_READ1_IC_1_SHIFT    0
+
+/* MP6_READ1 (IC 1) */
+#define R337_MP6_READ1_MP_REG_READ1_IC_1          0x0    /* 0b	[0] */
+#define R337_MP6_READ1_MP_REG_READ1_IC_1_MASK     0x1
+#define R337_MP6_READ1_MP_REG_READ1_IC_1_SHIFT    0
+
+/* MP7_READ1 (IC 1) */
+#define R338_MP7_READ1_MP_REG_READ1_IC_1          0x0    /* 0b	[0] */
+#define R338_MP7_READ1_MP_REG_READ1_IC_1_MASK     0x1
+#define R338_MP7_READ1_MP_REG_READ1_IC_1_SHIFT    0
+
+/* MP8_READ1 (IC 1) */
+#define R339_MP8_READ1_MP_REG_READ1_IC_1          0x0    /* 0b	[0] */
+#define R339_MP8_READ1_MP_REG_READ1_IC_1_MASK     0x1
+#define R339_MP8_READ1_MP_REG_READ1_IC_1_SHIFT    0
+
+/* MP9_READ1 (IC 1) */
+#define R340_MP9_READ1_MP_REG_READ1_IC_1          0x0    /* 0b	[0] */
+#define R340_MP9_READ1_MP_REG_READ1_IC_1_MASK     0x1
+#define R340_MP9_READ1_MP_REG_READ1_IC_1_SHIFT    0
+
+/* MP10_READ1 (IC 1) */
+#define R341_MP10_READ1_MP_REG_READ1_IC_1         0x0    /* 0b	[0] */
+#define R341_MP10_READ1_MP_REG_READ1_IC_1_MASK    0x1
+#define R341_MP10_READ1_MP_REG_READ1_IC_1_SHIFT   0
+
+/* MP11_READ1 (IC 1) */
+#define R342_MP11_READ1_MP_REG_READ1_IC_1         0x0    /* 0b	[0] */
+#define R342_MP11_READ1_MP_REG_READ1_IC_1_MASK    0x1
+#define R342_MP11_READ1_MP_REG_READ1_IC_1_SHIFT   0
 
 /* SPDIF_LOCK_DET (IC 1) */
-#define R300_SPDIF_LOCK_DET_LOCK_IC_1             0x0    /* 0b	[0] */
-#define R300_SPDIF_LOCK_DET_LOCK_IC_1_MASK        0x1
-#define R300_SPDIF_LOCK_DET_LOCK_IC_1_SHIFT       0
+#define R343_SPDIF_LOCK_DET_LOCK_IC_1             0x0    /* 0b	[0] */
+#define R343_SPDIF_LOCK_DET_LOCK_IC_1_MASK        0x1
+#define R343_SPDIF_LOCK_DET_LOCK_IC_1_SHIFT       0
 
 /* SPDIF_RX_CTRL (IC 1) */
-#define R301_SPDIF_RX_CTRL_RX_LENGTHCTRL_IC_1     0x0    /* 00b	[1:0] */
-#define R301_SPDIF_RX_CTRL_FSOUTSTRENGTH_IC_1     0x0    /* 0b	[2] */
-#define R301_SPDIF_RX_CTRL_FASTLOCK_IC_1          0x0    /* 0b	[3] */
-#define R301_SPDIF_RX_CTRL_RX_LENGTHCTRL_IC_1_MASK 0x3
-#define R301_SPDIF_RX_CTRL_RX_LENGTHCTRL_IC_1_SHIFT 0
-#define R301_SPDIF_RX_CTRL_FSOUTSTRENGTH_IC_1_MASK 0x4
-#define R301_SPDIF_RX_CTRL_FSOUTSTRENGTH_IC_1_SHIFT 2
-#define R301_SPDIF_RX_CTRL_FASTLOCK_IC_1_MASK     0x8
-#define R301_SPDIF_RX_CTRL_FASTLOCK_IC_1_SHIFT    3
+#define R344_SPDIF_RX_CTRL_RX_LENGTHCTRL_IC_1     0x0    /* 00b	[1:0] */
+#define R344_SPDIF_RX_CTRL_FSOUTSTRENGTH_IC_1     0x0    /* 0b	[2] */
+#define R344_SPDIF_RX_CTRL_FASTLOCK_IC_1          0x0    /* 0b	[3] */
+#define R344_SPDIF_RX_CTRL_RX_LENGTHCTRL_IC_1_MASK 0x3
+#define R344_SPDIF_RX_CTRL_RX_LENGTHCTRL_IC_1_SHIFT 0
+#define R344_SPDIF_RX_CTRL_FSOUTSTRENGTH_IC_1_MASK 0x4
+#define R344_SPDIF_RX_CTRL_FSOUTSTRENGTH_IC_1_SHIFT 2
+#define R344_SPDIF_RX_CTRL_FASTLOCK_IC_1_MASK     0x8
+#define R344_SPDIF_RX_CTRL_FASTLOCK_IC_1_SHIFT    3
 
 /* SPDIF_RX_DECODE (IC 1) */
-#define R302_SPDIF_RX_DECODE_AUDIO_TYPE_IC_1      0x0    /* 0b	[0] */
-#define R302_SPDIF_RX_DECODE_COMPR_TYPE_IC_1      0x0    /* 0b	[1] */
-#define R302_SPDIF_RX_DECODE_RX_WORDLENGTH_L_IC_1 0x2    /* 0010b	[5:2] */
-#define R302_SPDIF_RX_DECODE_RX_WORDLENGTH_R_IC_1 0x2    /* 0010b	[9:6] */
-#define R302_SPDIF_RX_DECODE_AUDIO_TYPE_IC_1_MASK 0x1
-#define R302_SPDIF_RX_DECODE_AUDIO_TYPE_IC_1_SHIFT 0
-#define R302_SPDIF_RX_DECODE_COMPR_TYPE_IC_1_MASK 0x2
-#define R302_SPDIF_RX_DECODE_COMPR_TYPE_IC_1_SHIFT 1
-#define R302_SPDIF_RX_DECODE_RX_WORDLENGTH_L_IC_1_MASK 0x3C
-#define R302_SPDIF_RX_DECODE_RX_WORDLENGTH_L_IC_1_SHIFT 2
-#define R302_SPDIF_RX_DECODE_RX_WORDLENGTH_R_IC_1_MASK 0x3C0
-#define R302_SPDIF_RX_DECODE_RX_WORDLENGTH_R_IC_1_SHIFT 6
+#define R345_SPDIF_RX_DECODE_AUDIO_TYPE_IC_1      0x0    /* 0b	[0] */
+#define R345_SPDIF_RX_DECODE_COMPR_TYPE_IC_1      0x0    /* 0b	[1] */
+#define R345_SPDIF_RX_DECODE_RX_WORDLENGTH_L_IC_1 0x2    /* 0010b	[5:2] */
+#define R345_SPDIF_RX_DECODE_RX_WORDLENGTH_R_IC_1 0x2    /* 0010b	[9:6] */
+#define R345_SPDIF_RX_DECODE_AUDIO_TYPE_IC_1_MASK 0x1
+#define R345_SPDIF_RX_DECODE_AUDIO_TYPE_IC_1_SHIFT 0
+#define R345_SPDIF_RX_DECODE_COMPR_TYPE_IC_1_MASK 0x2
+#define R345_SPDIF_RX_DECODE_COMPR_TYPE_IC_1_SHIFT 1
+#define R345_SPDIF_RX_DECODE_RX_WORDLENGTH_L_IC_1_MASK 0x3C
+#define R345_SPDIF_RX_DECODE_RX_WORDLENGTH_L_IC_1_SHIFT 2
+#define R345_SPDIF_RX_DECODE_RX_WORDLENGTH_R_IC_1_MASK 0x3C0
+#define R345_SPDIF_RX_DECODE_RX_WORDLENGTH_R_IC_1_SHIFT 6
 
 /* SPDIF_RX_COMPRMODE (IC 1) */
-#define R303_SPDIF_RX_COMPRMODE_COMPR_MODE_IC_1   0x0000 /* 0000000000000000b	[15:0] */
-#define R303_SPDIF_RX_COMPRMODE_COMPR_MODE_IC_1_MASK 0xFFFF
-#define R303_SPDIF_RX_COMPRMODE_COMPR_MODE_IC_1_SHIFT 0
+#define R346_SPDIF_RX_COMPRMODE_COMPR_MODE_IC_1   0x0000 /* 0000000000000000b	[15:0] */
+#define R346_SPDIF_RX_COMPRMODE_COMPR_MODE_IC_1_MASK 0xFFFF
+#define R346_SPDIF_RX_COMPRMODE_COMPR_MODE_IC_1_SHIFT 0
 
 /* SPDIF_RESTART (IC 1) */
-#define R304_SPDIF_RESTART_RESTART_AUDIO_IC_1     0x0    /* 0b	[0] */
-#define R304_SPDIF_RESTART_RESTART_AUDIO_IC_1_MASK 0x1
-#define R304_SPDIF_RESTART_RESTART_AUDIO_IC_1_SHIFT 0
+#define R347_SPDIF_RESTART_RESTART_AUDIO_IC_1     0x0    /* 0b	[0] */
+#define R347_SPDIF_RESTART_RESTART_AUDIO_IC_1_MASK 0x1
+#define R347_SPDIF_RESTART_RESTART_AUDIO_IC_1_SHIFT 0
 
 /* SPDIF_LOSS_OF_LOCK (IC 1) */
-#define R305_SPDIF_LOSS_OF_LOCK_LOSS_OF_LOCK_IC_1 0x0    /* 0b	[0] */
-#define R305_SPDIF_LOSS_OF_LOCK_LOSS_OF_LOCK_IC_1_MASK 0x1
-#define R305_SPDIF_LOSS_OF_LOCK_LOSS_OF_LOCK_IC_1_SHIFT 0
+#define R348_SPDIF_LOSS_OF_LOCK_LOSS_OF_LOCK_IC_1 0x0    /* 0b	[0] */
+#define R348_SPDIF_LOSS_OF_LOCK_LOSS_OF_LOCK_IC_1_MASK 0x1
+#define R348_SPDIF_LOSS_OF_LOCK_LOSS_OF_LOCK_IC_1_SHIFT 0
+
+/* SPDIF_RX_MCLKSPEED (IC 1) */
+#define R349_SPDIF_RX_MCLKSPEED_RX_MCLKSPEED_IC_1 0x1    /* 1b	[0] */
+#define R349_SPDIF_RX_MCLKSPEED_RX_MCLKSPEED_IC_1_MASK 0x1
+#define R349_SPDIF_RX_MCLKSPEED_RX_MCLKSPEED_IC_1_SHIFT 0
+
+/* SPDIF_TX_MCLKSPEED (IC 1) */
+#define R350_SPDIF_TX_MCLKSPEED_TX_MCLKSPEED_IC_1 0x1    /* 1b	[0] */
+#define R350_SPDIF_TX_MCLKSPEED_TX_MCLKSPEED_IC_1_MASK 0x1
+#define R350_SPDIF_TX_MCLKSPEED_TX_MCLKSPEED_IC_1_SHIFT 0
 
 /* SPDIF_AUX_EN (IC 1) */
-#define R306_SPDIF_AUX_EN_TDMOUT_IC_1             0x0    /* 0000b	[3:0] */
-#define R306_SPDIF_AUX_EN_TDMOUT_CLK_IC_1         0x0    /* 0b	[4] */
-#define R306_SPDIF_AUX_EN_TDMOUT_IC_1_MASK        0xF
-#define R306_SPDIF_AUX_EN_TDMOUT_IC_1_SHIFT       0
-#define R306_SPDIF_AUX_EN_TDMOUT_CLK_IC_1_MASK    0x10
-#define R306_SPDIF_AUX_EN_TDMOUT_CLK_IC_1_SHIFT   4
+#define R351_SPDIF_AUX_EN_TDMOUT_IC_1             0x0    /* 0000b	[3:0] */
+#define R351_SPDIF_AUX_EN_TDMOUT_CLK_IC_1         0x0    /* 0b	[4] */
+#define R351_SPDIF_AUX_EN_TDMOUT_IC_1_MASK        0xF
+#define R351_SPDIF_AUX_EN_TDMOUT_IC_1_SHIFT       0
+#define R351_SPDIF_AUX_EN_TDMOUT_CLK_IC_1_MASK    0x10
+#define R351_SPDIF_AUX_EN_TDMOUT_CLK_IC_1_SHIFT   4
 
 /* SPDIF_RX_AUXBIT_READY (IC 1) */
-#define R307_SPDIF_RX_AUXBIT_READY_AUXBITS_READY_IC_1 0x0 /* 0b	[0] */
-#define R307_SPDIF_RX_AUXBIT_READY_AUXBITS_READY_IC_1_MASK 0x1
-#define R307_SPDIF_RX_AUXBIT_READY_AUXBITS_READY_IC_1_SHIFT 0
+#define R352_SPDIF_RX_AUXBIT_READY_AUXBITS_READY_IC_1 0x0 /* 0b	[0] */
+#define R352_SPDIF_RX_AUXBIT_READY_AUXBITS_READY_IC_1_MASK 0x1
+#define R352_SPDIF_RX_AUXBIT_READY_AUXBITS_READY_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_LEFT_0 (IC 1) */
-#define R308_SPDIF_RX_CS_LEFT_0_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R308_SPDIF_RX_CS_LEFT_0_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R308_SPDIF_RX_CS_LEFT_0_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
+#define R353_SPDIF_RX_CS_LEFT_0_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R353_SPDIF_RX_CS_LEFT_0_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R353_SPDIF_RX_CS_LEFT_0_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_LEFT_1 (IC 1) */
-#define R309_SPDIF_RX_CS_LEFT_1_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R309_SPDIF_RX_CS_LEFT_1_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R309_SPDIF_RX_CS_LEFT_1_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
+#define R354_SPDIF_RX_CS_LEFT_1_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R354_SPDIF_RX_CS_LEFT_1_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R354_SPDIF_RX_CS_LEFT_1_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_LEFT_2 (IC 1) */
-#define R310_SPDIF_RX_CS_LEFT_2_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R310_SPDIF_RX_CS_LEFT_2_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R310_SPDIF_RX_CS_LEFT_2_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
+#define R355_SPDIF_RX_CS_LEFT_2_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R355_SPDIF_RX_CS_LEFT_2_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R355_SPDIF_RX_CS_LEFT_2_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_LEFT_3 (IC 1) */
-#define R311_SPDIF_RX_CS_LEFT_3_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R311_SPDIF_RX_CS_LEFT_3_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R311_SPDIF_RX_CS_LEFT_3_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
+#define R356_SPDIF_RX_CS_LEFT_3_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R356_SPDIF_RX_CS_LEFT_3_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R356_SPDIF_RX_CS_LEFT_3_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_LEFT_4 (IC 1) */
-#define R312_SPDIF_RX_CS_LEFT_4_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R312_SPDIF_RX_CS_LEFT_4_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R312_SPDIF_RX_CS_LEFT_4_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
+#define R357_SPDIF_RX_CS_LEFT_4_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R357_SPDIF_RX_CS_LEFT_4_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R357_SPDIF_RX_CS_LEFT_4_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_LEFT_5 (IC 1) */
-#define R313_SPDIF_RX_CS_LEFT_5_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R313_SPDIF_RX_CS_LEFT_5_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R313_SPDIF_RX_CS_LEFT_5_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
+#define R358_SPDIF_RX_CS_LEFT_5_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R358_SPDIF_RX_CS_LEFT_5_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R358_SPDIF_RX_CS_LEFT_5_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_LEFT_6 (IC 1) */
-#define R314_SPDIF_RX_CS_LEFT_6_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R314_SPDIF_RX_CS_LEFT_6_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R314_SPDIF_RX_CS_LEFT_6_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
+#define R359_SPDIF_RX_CS_LEFT_6_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R359_SPDIF_RX_CS_LEFT_6_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R359_SPDIF_RX_CS_LEFT_6_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_LEFT_7 (IC 1) */
-#define R315_SPDIF_RX_CS_LEFT_7_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R315_SPDIF_RX_CS_LEFT_7_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R315_SPDIF_RX_CS_LEFT_7_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
+#define R360_SPDIF_RX_CS_LEFT_7_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R360_SPDIF_RX_CS_LEFT_7_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R360_SPDIF_RX_CS_LEFT_7_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_LEFT_8 (IC 1) */
-#define R316_SPDIF_RX_CS_LEFT_8_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R316_SPDIF_RX_CS_LEFT_8_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R316_SPDIF_RX_CS_LEFT_8_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
+#define R361_SPDIF_RX_CS_LEFT_8_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R361_SPDIF_RX_CS_LEFT_8_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R361_SPDIF_RX_CS_LEFT_8_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_LEFT_9 (IC 1) */
-#define R317_SPDIF_RX_CS_LEFT_9_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R317_SPDIF_RX_CS_LEFT_9_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R317_SPDIF_RX_CS_LEFT_9_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
+#define R362_SPDIF_RX_CS_LEFT_9_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R362_SPDIF_RX_CS_LEFT_9_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R362_SPDIF_RX_CS_LEFT_9_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_LEFT_10 (IC 1) */
-#define R318_SPDIF_RX_CS_LEFT_10_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R318_SPDIF_RX_CS_LEFT_10_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R318_SPDIF_RX_CS_LEFT_10_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
+#define R363_SPDIF_RX_CS_LEFT_10_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R363_SPDIF_RX_CS_LEFT_10_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R363_SPDIF_RX_CS_LEFT_10_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_LEFT_11 (IC 1) */
-#define R319_SPDIF_RX_CS_LEFT_11_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R319_SPDIF_RX_CS_LEFT_11_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R319_SPDIF_RX_CS_LEFT_11_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
+#define R364_SPDIF_RX_CS_LEFT_11_SPDIF_RX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R364_SPDIF_RX_CS_LEFT_11_SPDIF_RX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R364_SPDIF_RX_CS_LEFT_11_SPDIF_RX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_RIGHT_0 (IC 1) */
-#define R320_SPDIF_RX_CS_RIGHT_0_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R320_SPDIF_RX_CS_RIGHT_0_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R320_SPDIF_RX_CS_RIGHT_0_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
+#define R365_SPDIF_RX_CS_RIGHT_0_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R365_SPDIF_RX_CS_RIGHT_0_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R365_SPDIF_RX_CS_RIGHT_0_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_RIGHT_1 (IC 1) */
-#define R321_SPDIF_RX_CS_RIGHT_1_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R321_SPDIF_RX_CS_RIGHT_1_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R321_SPDIF_RX_CS_RIGHT_1_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
+#define R366_SPDIF_RX_CS_RIGHT_1_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R366_SPDIF_RX_CS_RIGHT_1_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R366_SPDIF_RX_CS_RIGHT_1_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_RIGHT_2 (IC 1) */
-#define R322_SPDIF_RX_CS_RIGHT_2_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R322_SPDIF_RX_CS_RIGHT_2_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R322_SPDIF_RX_CS_RIGHT_2_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
+#define R367_SPDIF_RX_CS_RIGHT_2_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R367_SPDIF_RX_CS_RIGHT_2_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R367_SPDIF_RX_CS_RIGHT_2_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_RIGHT_3 (IC 1) */
-#define R323_SPDIF_RX_CS_RIGHT_3_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R323_SPDIF_RX_CS_RIGHT_3_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R323_SPDIF_RX_CS_RIGHT_3_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
+#define R368_SPDIF_RX_CS_RIGHT_3_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R368_SPDIF_RX_CS_RIGHT_3_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R368_SPDIF_RX_CS_RIGHT_3_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_RIGHT_4 (IC 1) */
-#define R324_SPDIF_RX_CS_RIGHT_4_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R324_SPDIF_RX_CS_RIGHT_4_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R324_SPDIF_RX_CS_RIGHT_4_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
+#define R369_SPDIF_RX_CS_RIGHT_4_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R369_SPDIF_RX_CS_RIGHT_4_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R369_SPDIF_RX_CS_RIGHT_4_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_RIGHT_5 (IC 1) */
-#define R325_SPDIF_RX_CS_RIGHT_5_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R325_SPDIF_RX_CS_RIGHT_5_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R325_SPDIF_RX_CS_RIGHT_5_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
+#define R370_SPDIF_RX_CS_RIGHT_5_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R370_SPDIF_RX_CS_RIGHT_5_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R370_SPDIF_RX_CS_RIGHT_5_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_RIGHT_6 (IC 1) */
-#define R326_SPDIF_RX_CS_RIGHT_6_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R326_SPDIF_RX_CS_RIGHT_6_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R326_SPDIF_RX_CS_RIGHT_6_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
+#define R371_SPDIF_RX_CS_RIGHT_6_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R371_SPDIF_RX_CS_RIGHT_6_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R371_SPDIF_RX_CS_RIGHT_6_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_RIGHT_7 (IC 1) */
-#define R327_SPDIF_RX_CS_RIGHT_7_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R327_SPDIF_RX_CS_RIGHT_7_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R327_SPDIF_RX_CS_RIGHT_7_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
+#define R372_SPDIF_RX_CS_RIGHT_7_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R372_SPDIF_RX_CS_RIGHT_7_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R372_SPDIF_RX_CS_RIGHT_7_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_RIGHT_8 (IC 1) */
-#define R328_SPDIF_RX_CS_RIGHT_8_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R328_SPDIF_RX_CS_RIGHT_8_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R328_SPDIF_RX_CS_RIGHT_8_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
+#define R373_SPDIF_RX_CS_RIGHT_8_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R373_SPDIF_RX_CS_RIGHT_8_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R373_SPDIF_RX_CS_RIGHT_8_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_RIGHT_9 (IC 1) */
-#define R329_SPDIF_RX_CS_RIGHT_9_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R329_SPDIF_RX_CS_RIGHT_9_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R329_SPDIF_RX_CS_RIGHT_9_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
+#define R374_SPDIF_RX_CS_RIGHT_9_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R374_SPDIF_RX_CS_RIGHT_9_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R374_SPDIF_RX_CS_RIGHT_9_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_RIGHT_10 (IC 1) */
-#define R330_SPDIF_RX_CS_RIGHT_10_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R330_SPDIF_RX_CS_RIGHT_10_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R330_SPDIF_RX_CS_RIGHT_10_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
+#define R375_SPDIF_RX_CS_RIGHT_10_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R375_SPDIF_RX_CS_RIGHT_10_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R375_SPDIF_RX_CS_RIGHT_10_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_CS_RIGHT_11 (IC 1) */
-#define R331_SPDIF_RX_CS_RIGHT_11_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R331_SPDIF_RX_CS_RIGHT_11_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R331_SPDIF_RX_CS_RIGHT_11_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
+#define R376_SPDIF_RX_CS_RIGHT_11_SPDIF_RX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R376_SPDIF_RX_CS_RIGHT_11_SPDIF_RX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R376_SPDIF_RX_CS_RIGHT_11_SPDIF_RX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_LEFT_0 (IC 1) */
-#define R332_SPDIF_RX_UD_LEFT_0_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R332_SPDIF_RX_UD_LEFT_0_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R332_SPDIF_RX_UD_LEFT_0_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
+#define R377_SPDIF_RX_UD_LEFT_0_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R377_SPDIF_RX_UD_LEFT_0_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R377_SPDIF_RX_UD_LEFT_0_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_LEFT_1 (IC 1) */
-#define R333_SPDIF_RX_UD_LEFT_1_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R333_SPDIF_RX_UD_LEFT_1_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R333_SPDIF_RX_UD_LEFT_1_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
+#define R378_SPDIF_RX_UD_LEFT_1_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R378_SPDIF_RX_UD_LEFT_1_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R378_SPDIF_RX_UD_LEFT_1_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_LEFT_2 (IC 1) */
-#define R334_SPDIF_RX_UD_LEFT_2_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R334_SPDIF_RX_UD_LEFT_2_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R334_SPDIF_RX_UD_LEFT_2_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
+#define R379_SPDIF_RX_UD_LEFT_2_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R379_SPDIF_RX_UD_LEFT_2_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R379_SPDIF_RX_UD_LEFT_2_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_LEFT_3 (IC 1) */
-#define R335_SPDIF_RX_UD_LEFT_3_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R335_SPDIF_RX_UD_LEFT_3_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R335_SPDIF_RX_UD_LEFT_3_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
+#define R380_SPDIF_RX_UD_LEFT_3_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R380_SPDIF_RX_UD_LEFT_3_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R380_SPDIF_RX_UD_LEFT_3_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_LEFT_4 (IC 1) */
-#define R336_SPDIF_RX_UD_LEFT_4_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R336_SPDIF_RX_UD_LEFT_4_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R336_SPDIF_RX_UD_LEFT_4_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
+#define R381_SPDIF_RX_UD_LEFT_4_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R381_SPDIF_RX_UD_LEFT_4_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R381_SPDIF_RX_UD_LEFT_4_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_LEFT_5 (IC 1) */
-#define R337_SPDIF_RX_UD_LEFT_5_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R337_SPDIF_RX_UD_LEFT_5_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R337_SPDIF_RX_UD_LEFT_5_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
+#define R382_SPDIF_RX_UD_LEFT_5_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R382_SPDIF_RX_UD_LEFT_5_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R382_SPDIF_RX_UD_LEFT_5_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_LEFT_6 (IC 1) */
-#define R338_SPDIF_RX_UD_LEFT_6_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R338_SPDIF_RX_UD_LEFT_6_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R338_SPDIF_RX_UD_LEFT_6_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
+#define R383_SPDIF_RX_UD_LEFT_6_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R383_SPDIF_RX_UD_LEFT_6_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R383_SPDIF_RX_UD_LEFT_6_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_LEFT_7 (IC 1) */
-#define R339_SPDIF_RX_UD_LEFT_7_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R339_SPDIF_RX_UD_LEFT_7_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R339_SPDIF_RX_UD_LEFT_7_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
+#define R384_SPDIF_RX_UD_LEFT_7_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R384_SPDIF_RX_UD_LEFT_7_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R384_SPDIF_RX_UD_LEFT_7_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_LEFT_8 (IC 1) */
-#define R340_SPDIF_RX_UD_LEFT_8_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R340_SPDIF_RX_UD_LEFT_8_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R340_SPDIF_RX_UD_LEFT_8_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
+#define R385_SPDIF_RX_UD_LEFT_8_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R385_SPDIF_RX_UD_LEFT_8_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R385_SPDIF_RX_UD_LEFT_8_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_LEFT_9 (IC 1) */
-#define R341_SPDIF_RX_UD_LEFT_9_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R341_SPDIF_RX_UD_LEFT_9_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R341_SPDIF_RX_UD_LEFT_9_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
+#define R386_SPDIF_RX_UD_LEFT_9_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R386_SPDIF_RX_UD_LEFT_9_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R386_SPDIF_RX_UD_LEFT_9_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_LEFT_10 (IC 1) */
-#define R342_SPDIF_RX_UD_LEFT_10_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R342_SPDIF_RX_UD_LEFT_10_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R342_SPDIF_RX_UD_LEFT_10_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
+#define R387_SPDIF_RX_UD_LEFT_10_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R387_SPDIF_RX_UD_LEFT_10_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R387_SPDIF_RX_UD_LEFT_10_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_LEFT_11 (IC 1) */
-#define R343_SPDIF_RX_UD_LEFT_11_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R343_SPDIF_RX_UD_LEFT_11_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R343_SPDIF_RX_UD_LEFT_11_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
+#define R388_SPDIF_RX_UD_LEFT_11_SPDIF_RX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R388_SPDIF_RX_UD_LEFT_11_SPDIF_RX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R388_SPDIF_RX_UD_LEFT_11_SPDIF_RX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_RIGHT_0 (IC 1) */
-#define R344_SPDIF_RX_UD_RIGHT_0_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R344_SPDIF_RX_UD_RIGHT_0_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R344_SPDIF_RX_UD_RIGHT_0_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
+#define R389_SPDIF_RX_UD_RIGHT_0_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R389_SPDIF_RX_UD_RIGHT_0_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R389_SPDIF_RX_UD_RIGHT_0_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_RIGHT_1 (IC 1) */
-#define R345_SPDIF_RX_UD_RIGHT_1_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R345_SPDIF_RX_UD_RIGHT_1_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R345_SPDIF_RX_UD_RIGHT_1_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
+#define R390_SPDIF_RX_UD_RIGHT_1_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R390_SPDIF_RX_UD_RIGHT_1_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R390_SPDIF_RX_UD_RIGHT_1_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_RIGHT_2 (IC 1) */
-#define R346_SPDIF_RX_UD_RIGHT_2_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R346_SPDIF_RX_UD_RIGHT_2_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R346_SPDIF_RX_UD_RIGHT_2_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
+#define R391_SPDIF_RX_UD_RIGHT_2_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R391_SPDIF_RX_UD_RIGHT_2_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R391_SPDIF_RX_UD_RIGHT_2_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_RIGHT_3 (IC 1) */
-#define R347_SPDIF_RX_UD_RIGHT_3_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R347_SPDIF_RX_UD_RIGHT_3_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R347_SPDIF_RX_UD_RIGHT_3_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
+#define R392_SPDIF_RX_UD_RIGHT_3_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R392_SPDIF_RX_UD_RIGHT_3_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R392_SPDIF_RX_UD_RIGHT_3_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_RIGHT_4 (IC 1) */
-#define R348_SPDIF_RX_UD_RIGHT_4_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R348_SPDIF_RX_UD_RIGHT_4_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R348_SPDIF_RX_UD_RIGHT_4_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
+#define R393_SPDIF_RX_UD_RIGHT_4_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R393_SPDIF_RX_UD_RIGHT_4_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R393_SPDIF_RX_UD_RIGHT_4_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_RIGHT_5 (IC 1) */
-#define R349_SPDIF_RX_UD_RIGHT_5_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R349_SPDIF_RX_UD_RIGHT_5_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R349_SPDIF_RX_UD_RIGHT_5_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
+#define R394_SPDIF_RX_UD_RIGHT_5_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R394_SPDIF_RX_UD_RIGHT_5_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R394_SPDIF_RX_UD_RIGHT_5_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_RIGHT_6 (IC 1) */
-#define R350_SPDIF_RX_UD_RIGHT_6_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R350_SPDIF_RX_UD_RIGHT_6_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R350_SPDIF_RX_UD_RIGHT_6_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
+#define R395_SPDIF_RX_UD_RIGHT_6_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R395_SPDIF_RX_UD_RIGHT_6_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R395_SPDIF_RX_UD_RIGHT_6_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_RIGHT_7 (IC 1) */
-#define R351_SPDIF_RX_UD_RIGHT_7_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R351_SPDIF_RX_UD_RIGHT_7_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R351_SPDIF_RX_UD_RIGHT_7_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
+#define R396_SPDIF_RX_UD_RIGHT_7_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R396_SPDIF_RX_UD_RIGHT_7_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R396_SPDIF_RX_UD_RIGHT_7_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_RIGHT_8 (IC 1) */
-#define R352_SPDIF_RX_UD_RIGHT_8_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R352_SPDIF_RX_UD_RIGHT_8_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R352_SPDIF_RX_UD_RIGHT_8_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
+#define R397_SPDIF_RX_UD_RIGHT_8_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R397_SPDIF_RX_UD_RIGHT_8_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R397_SPDIF_RX_UD_RIGHT_8_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_RIGHT_9 (IC 1) */
-#define R353_SPDIF_RX_UD_RIGHT_9_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R353_SPDIF_RX_UD_RIGHT_9_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R353_SPDIF_RX_UD_RIGHT_9_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
+#define R398_SPDIF_RX_UD_RIGHT_9_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R398_SPDIF_RX_UD_RIGHT_9_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R398_SPDIF_RX_UD_RIGHT_9_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_RIGHT_10 (IC 1) */
-#define R354_SPDIF_RX_UD_RIGHT_10_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R354_SPDIF_RX_UD_RIGHT_10_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R354_SPDIF_RX_UD_RIGHT_10_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
+#define R399_SPDIF_RX_UD_RIGHT_10_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R399_SPDIF_RX_UD_RIGHT_10_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R399_SPDIF_RX_UD_RIGHT_10_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_UD_RIGHT_11 (IC 1) */
-#define R355_SPDIF_RX_UD_RIGHT_11_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R355_SPDIF_RX_UD_RIGHT_11_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R355_SPDIF_RX_UD_RIGHT_11_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
+#define R400_SPDIF_RX_UD_RIGHT_11_SPDIF_RX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R400_SPDIF_RX_UD_RIGHT_11_SPDIF_RX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R400_SPDIF_RX_UD_RIGHT_11_SPDIF_RX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_LEFT_0 (IC 1) */
-#define R356_SPDIF_RX_VB_LEFT_0_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R356_SPDIF_RX_VB_LEFT_0_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R356_SPDIF_RX_VB_LEFT_0_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
+#define R401_SPDIF_RX_VB_LEFT_0_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R401_SPDIF_RX_VB_LEFT_0_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R401_SPDIF_RX_VB_LEFT_0_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_LEFT_1 (IC 1) */
-#define R357_SPDIF_RX_VB_LEFT_1_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R357_SPDIF_RX_VB_LEFT_1_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R357_SPDIF_RX_VB_LEFT_1_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
+#define R402_SPDIF_RX_VB_LEFT_1_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R402_SPDIF_RX_VB_LEFT_1_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R402_SPDIF_RX_VB_LEFT_1_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_LEFT_2 (IC 1) */
-#define R358_SPDIF_RX_VB_LEFT_2_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R358_SPDIF_RX_VB_LEFT_2_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R358_SPDIF_RX_VB_LEFT_2_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
+#define R403_SPDIF_RX_VB_LEFT_2_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R403_SPDIF_RX_VB_LEFT_2_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R403_SPDIF_RX_VB_LEFT_2_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_LEFT_3 (IC 1) */
-#define R359_SPDIF_RX_VB_LEFT_3_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R359_SPDIF_RX_VB_LEFT_3_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R359_SPDIF_RX_VB_LEFT_3_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
+#define R404_SPDIF_RX_VB_LEFT_3_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R404_SPDIF_RX_VB_LEFT_3_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R404_SPDIF_RX_VB_LEFT_3_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_LEFT_4 (IC 1) */
-#define R360_SPDIF_RX_VB_LEFT_4_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R360_SPDIF_RX_VB_LEFT_4_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R360_SPDIF_RX_VB_LEFT_4_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
+#define R405_SPDIF_RX_VB_LEFT_4_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R405_SPDIF_RX_VB_LEFT_4_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R405_SPDIF_RX_VB_LEFT_4_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_LEFT_5 (IC 1) */
-#define R361_SPDIF_RX_VB_LEFT_5_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R361_SPDIF_RX_VB_LEFT_5_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R361_SPDIF_RX_VB_LEFT_5_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
+#define R406_SPDIF_RX_VB_LEFT_5_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R406_SPDIF_RX_VB_LEFT_5_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R406_SPDIF_RX_VB_LEFT_5_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_LEFT_6 (IC 1) */
-#define R362_SPDIF_RX_VB_LEFT_6_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R362_SPDIF_RX_VB_LEFT_6_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R362_SPDIF_RX_VB_LEFT_6_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
+#define R407_SPDIF_RX_VB_LEFT_6_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R407_SPDIF_RX_VB_LEFT_6_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R407_SPDIF_RX_VB_LEFT_6_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_LEFT_7 (IC 1) */
-#define R363_SPDIF_RX_VB_LEFT_7_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R363_SPDIF_RX_VB_LEFT_7_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R363_SPDIF_RX_VB_LEFT_7_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
+#define R408_SPDIF_RX_VB_LEFT_7_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R408_SPDIF_RX_VB_LEFT_7_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R408_SPDIF_RX_VB_LEFT_7_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_LEFT_8 (IC 1) */
-#define R364_SPDIF_RX_VB_LEFT_8_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R364_SPDIF_RX_VB_LEFT_8_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R364_SPDIF_RX_VB_LEFT_8_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
+#define R409_SPDIF_RX_VB_LEFT_8_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R409_SPDIF_RX_VB_LEFT_8_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R409_SPDIF_RX_VB_LEFT_8_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_LEFT_9 (IC 1) */
-#define R365_SPDIF_RX_VB_LEFT_9_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R365_SPDIF_RX_VB_LEFT_9_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R365_SPDIF_RX_VB_LEFT_9_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
+#define R410_SPDIF_RX_VB_LEFT_9_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R410_SPDIF_RX_VB_LEFT_9_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R410_SPDIF_RX_VB_LEFT_9_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_LEFT_10 (IC 1) */
-#define R366_SPDIF_RX_VB_LEFT_10_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R366_SPDIF_RX_VB_LEFT_10_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R366_SPDIF_RX_VB_LEFT_10_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
+#define R411_SPDIF_RX_VB_LEFT_10_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R411_SPDIF_RX_VB_LEFT_10_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R411_SPDIF_RX_VB_LEFT_10_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_LEFT_11 (IC 1) */
-#define R367_SPDIF_RX_VB_LEFT_11_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R367_SPDIF_RX_VB_LEFT_11_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R367_SPDIF_RX_VB_LEFT_11_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
+#define R412_SPDIF_RX_VB_LEFT_11_SPDIF_RX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R412_SPDIF_RX_VB_LEFT_11_SPDIF_RX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R412_SPDIF_RX_VB_LEFT_11_SPDIF_RX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_RIGHT_0 (IC 1) */
-#define R368_SPDIF_RX_VB_RIGHT_0_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R368_SPDIF_RX_VB_RIGHT_0_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R368_SPDIF_RX_VB_RIGHT_0_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
+#define R413_SPDIF_RX_VB_RIGHT_0_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R413_SPDIF_RX_VB_RIGHT_0_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R413_SPDIF_RX_VB_RIGHT_0_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_RIGHT_1 (IC 1) */
-#define R369_SPDIF_RX_VB_RIGHT_1_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R369_SPDIF_RX_VB_RIGHT_1_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R369_SPDIF_RX_VB_RIGHT_1_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
+#define R414_SPDIF_RX_VB_RIGHT_1_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R414_SPDIF_RX_VB_RIGHT_1_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R414_SPDIF_RX_VB_RIGHT_1_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_RIGHT_2 (IC 1) */
-#define R370_SPDIF_RX_VB_RIGHT_2_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R370_SPDIF_RX_VB_RIGHT_2_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R370_SPDIF_RX_VB_RIGHT_2_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
+#define R415_SPDIF_RX_VB_RIGHT_2_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R415_SPDIF_RX_VB_RIGHT_2_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R415_SPDIF_RX_VB_RIGHT_2_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_RIGHT_3 (IC 1) */
-#define R371_SPDIF_RX_VB_RIGHT_3_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R371_SPDIF_RX_VB_RIGHT_3_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R371_SPDIF_RX_VB_RIGHT_3_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
+#define R416_SPDIF_RX_VB_RIGHT_3_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R416_SPDIF_RX_VB_RIGHT_3_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R416_SPDIF_RX_VB_RIGHT_3_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_RIGHT_4 (IC 1) */
-#define R372_SPDIF_RX_VB_RIGHT_4_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R372_SPDIF_RX_VB_RIGHT_4_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R372_SPDIF_RX_VB_RIGHT_4_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
+#define R417_SPDIF_RX_VB_RIGHT_4_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R417_SPDIF_RX_VB_RIGHT_4_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R417_SPDIF_RX_VB_RIGHT_4_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_RIGHT_5 (IC 1) */
-#define R373_SPDIF_RX_VB_RIGHT_5_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R373_SPDIF_RX_VB_RIGHT_5_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R373_SPDIF_RX_VB_RIGHT_5_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
+#define R418_SPDIF_RX_VB_RIGHT_5_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R418_SPDIF_RX_VB_RIGHT_5_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R418_SPDIF_RX_VB_RIGHT_5_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_RIGHT_6 (IC 1) */
-#define R374_SPDIF_RX_VB_RIGHT_6_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R374_SPDIF_RX_VB_RIGHT_6_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R374_SPDIF_RX_VB_RIGHT_6_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
+#define R419_SPDIF_RX_VB_RIGHT_6_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R419_SPDIF_RX_VB_RIGHT_6_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R419_SPDIF_RX_VB_RIGHT_6_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_RIGHT_7 (IC 1) */
-#define R375_SPDIF_RX_VB_RIGHT_7_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R375_SPDIF_RX_VB_RIGHT_7_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R375_SPDIF_RX_VB_RIGHT_7_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
+#define R420_SPDIF_RX_VB_RIGHT_7_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R420_SPDIF_RX_VB_RIGHT_7_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R420_SPDIF_RX_VB_RIGHT_7_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_RIGHT_8 (IC 1) */
-#define R376_SPDIF_RX_VB_RIGHT_8_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R376_SPDIF_RX_VB_RIGHT_8_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R376_SPDIF_RX_VB_RIGHT_8_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
+#define R421_SPDIF_RX_VB_RIGHT_8_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R421_SPDIF_RX_VB_RIGHT_8_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R421_SPDIF_RX_VB_RIGHT_8_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_RIGHT_9 (IC 1) */
-#define R377_SPDIF_RX_VB_RIGHT_9_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R377_SPDIF_RX_VB_RIGHT_9_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R377_SPDIF_RX_VB_RIGHT_9_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
+#define R422_SPDIF_RX_VB_RIGHT_9_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R422_SPDIF_RX_VB_RIGHT_9_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R422_SPDIF_RX_VB_RIGHT_9_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_RIGHT_10 (IC 1) */
-#define R378_SPDIF_RX_VB_RIGHT_10_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R378_SPDIF_RX_VB_RIGHT_10_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R378_SPDIF_RX_VB_RIGHT_10_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
+#define R423_SPDIF_RX_VB_RIGHT_10_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R423_SPDIF_RX_VB_RIGHT_10_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R423_SPDIF_RX_VB_RIGHT_10_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_VB_RIGHT_11 (IC 1) */
-#define R379_SPDIF_RX_VB_RIGHT_11_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R379_SPDIF_RX_VB_RIGHT_11_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R379_SPDIF_RX_VB_RIGHT_11_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
+#define R424_SPDIF_RX_VB_RIGHT_11_SPDIF_RX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R424_SPDIF_RX_VB_RIGHT_11_SPDIF_RX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R424_SPDIF_RX_VB_RIGHT_11_SPDIF_RX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_LEFT_0 (IC 1) */
-#define R380_SPDIF_RX_PB_LEFT_0_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R380_SPDIF_RX_PB_LEFT_0_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R380_SPDIF_RX_PB_LEFT_0_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
+#define R425_SPDIF_RX_PB_LEFT_0_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R425_SPDIF_RX_PB_LEFT_0_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R425_SPDIF_RX_PB_LEFT_0_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_LEFT_1 (IC 1) */
-#define R381_SPDIF_RX_PB_LEFT_1_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R381_SPDIF_RX_PB_LEFT_1_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R381_SPDIF_RX_PB_LEFT_1_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
+#define R426_SPDIF_RX_PB_LEFT_1_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R426_SPDIF_RX_PB_LEFT_1_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R426_SPDIF_RX_PB_LEFT_1_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_LEFT_2 (IC 1) */
-#define R382_SPDIF_RX_PB_LEFT_2_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R382_SPDIF_RX_PB_LEFT_2_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R382_SPDIF_RX_PB_LEFT_2_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
+#define R427_SPDIF_RX_PB_LEFT_2_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R427_SPDIF_RX_PB_LEFT_2_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R427_SPDIF_RX_PB_LEFT_2_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_LEFT_3 (IC 1) */
-#define R383_SPDIF_RX_PB_LEFT_3_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R383_SPDIF_RX_PB_LEFT_3_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R383_SPDIF_RX_PB_LEFT_3_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
+#define R428_SPDIF_RX_PB_LEFT_3_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R428_SPDIF_RX_PB_LEFT_3_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R428_SPDIF_RX_PB_LEFT_3_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_LEFT_4 (IC 1) */
-#define R384_SPDIF_RX_PB_LEFT_4_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R384_SPDIF_RX_PB_LEFT_4_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R384_SPDIF_RX_PB_LEFT_4_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
+#define R429_SPDIF_RX_PB_LEFT_4_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R429_SPDIF_RX_PB_LEFT_4_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R429_SPDIF_RX_PB_LEFT_4_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_LEFT_5 (IC 1) */
-#define R385_SPDIF_RX_PB_LEFT_5_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R385_SPDIF_RX_PB_LEFT_5_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R385_SPDIF_RX_PB_LEFT_5_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
+#define R430_SPDIF_RX_PB_LEFT_5_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R430_SPDIF_RX_PB_LEFT_5_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R430_SPDIF_RX_PB_LEFT_5_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_LEFT_6 (IC 1) */
-#define R386_SPDIF_RX_PB_LEFT_6_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R386_SPDIF_RX_PB_LEFT_6_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R386_SPDIF_RX_PB_LEFT_6_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
+#define R431_SPDIF_RX_PB_LEFT_6_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R431_SPDIF_RX_PB_LEFT_6_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R431_SPDIF_RX_PB_LEFT_6_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_LEFT_7 (IC 1) */
-#define R387_SPDIF_RX_PB_LEFT_7_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R387_SPDIF_RX_PB_LEFT_7_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R387_SPDIF_RX_PB_LEFT_7_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
+#define R432_SPDIF_RX_PB_LEFT_7_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R432_SPDIF_RX_PB_LEFT_7_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R432_SPDIF_RX_PB_LEFT_7_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_LEFT_8 (IC 1) */
-#define R388_SPDIF_RX_PB_LEFT_8_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R388_SPDIF_RX_PB_LEFT_8_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R388_SPDIF_RX_PB_LEFT_8_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
+#define R433_SPDIF_RX_PB_LEFT_8_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R433_SPDIF_RX_PB_LEFT_8_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R433_SPDIF_RX_PB_LEFT_8_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_LEFT_9 (IC 1) */
-#define R389_SPDIF_RX_PB_LEFT_9_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R389_SPDIF_RX_PB_LEFT_9_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R389_SPDIF_RX_PB_LEFT_9_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
+#define R434_SPDIF_RX_PB_LEFT_9_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R434_SPDIF_RX_PB_LEFT_9_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R434_SPDIF_RX_PB_LEFT_9_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_LEFT_10 (IC 1) */
-#define R390_SPDIF_RX_PB_LEFT_10_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R390_SPDIF_RX_PB_LEFT_10_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R390_SPDIF_RX_PB_LEFT_10_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
+#define R435_SPDIF_RX_PB_LEFT_10_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R435_SPDIF_RX_PB_LEFT_10_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R435_SPDIF_RX_PB_LEFT_10_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_LEFT_11 (IC 1) */
-#define R391_SPDIF_RX_PB_LEFT_11_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R391_SPDIF_RX_PB_LEFT_11_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R391_SPDIF_RX_PB_LEFT_11_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
+#define R436_SPDIF_RX_PB_LEFT_11_SPDIF_RX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R436_SPDIF_RX_PB_LEFT_11_SPDIF_RX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R436_SPDIF_RX_PB_LEFT_11_SPDIF_RX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_RIGHT_0 (IC 1) */
-#define R392_SPDIF_RX_PB_RIGHT_0_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R392_SPDIF_RX_PB_RIGHT_0_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R392_SPDIF_RX_PB_RIGHT_0_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
+#define R437_SPDIF_RX_PB_RIGHT_0_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R437_SPDIF_RX_PB_RIGHT_0_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R437_SPDIF_RX_PB_RIGHT_0_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_RIGHT_1 (IC 1) */
-#define R393_SPDIF_RX_PB_RIGHT_1_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R393_SPDIF_RX_PB_RIGHT_1_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R393_SPDIF_RX_PB_RIGHT_1_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
+#define R438_SPDIF_RX_PB_RIGHT_1_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R438_SPDIF_RX_PB_RIGHT_1_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R438_SPDIF_RX_PB_RIGHT_1_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_RIGHT_2 (IC 1) */
-#define R394_SPDIF_RX_PB_RIGHT_2_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R394_SPDIF_RX_PB_RIGHT_2_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R394_SPDIF_RX_PB_RIGHT_2_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
+#define R439_SPDIF_RX_PB_RIGHT_2_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R439_SPDIF_RX_PB_RIGHT_2_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R439_SPDIF_RX_PB_RIGHT_2_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_RIGHT_3 (IC 1) */
-#define R395_SPDIF_RX_PB_RIGHT_3_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R395_SPDIF_RX_PB_RIGHT_3_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R395_SPDIF_RX_PB_RIGHT_3_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
+#define R440_SPDIF_RX_PB_RIGHT_3_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R440_SPDIF_RX_PB_RIGHT_3_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R440_SPDIF_RX_PB_RIGHT_3_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_RIGHT_4 (IC 1) */
-#define R396_SPDIF_RX_PB_RIGHT_4_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R396_SPDIF_RX_PB_RIGHT_4_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R396_SPDIF_RX_PB_RIGHT_4_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
+#define R441_SPDIF_RX_PB_RIGHT_4_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R441_SPDIF_RX_PB_RIGHT_4_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R441_SPDIF_RX_PB_RIGHT_4_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_RIGHT_5 (IC 1) */
-#define R397_SPDIF_RX_PB_RIGHT_5_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R397_SPDIF_RX_PB_RIGHT_5_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R397_SPDIF_RX_PB_RIGHT_5_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
+#define R442_SPDIF_RX_PB_RIGHT_5_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R442_SPDIF_RX_PB_RIGHT_5_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R442_SPDIF_RX_PB_RIGHT_5_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_RIGHT_6 (IC 1) */
-#define R398_SPDIF_RX_PB_RIGHT_6_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R398_SPDIF_RX_PB_RIGHT_6_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R398_SPDIF_RX_PB_RIGHT_6_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
+#define R443_SPDIF_RX_PB_RIGHT_6_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R443_SPDIF_RX_PB_RIGHT_6_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R443_SPDIF_RX_PB_RIGHT_6_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_RIGHT_7 (IC 1) */
-#define R399_SPDIF_RX_PB_RIGHT_7_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R399_SPDIF_RX_PB_RIGHT_7_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R399_SPDIF_RX_PB_RIGHT_7_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
+#define R444_SPDIF_RX_PB_RIGHT_7_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R444_SPDIF_RX_PB_RIGHT_7_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R444_SPDIF_RX_PB_RIGHT_7_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_RIGHT_8 (IC 1) */
-#define R400_SPDIF_RX_PB_RIGHT_8_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R400_SPDIF_RX_PB_RIGHT_8_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R400_SPDIF_RX_PB_RIGHT_8_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
+#define R445_SPDIF_RX_PB_RIGHT_8_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R445_SPDIF_RX_PB_RIGHT_8_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R445_SPDIF_RX_PB_RIGHT_8_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_RIGHT_9 (IC 1) */
-#define R401_SPDIF_RX_PB_RIGHT_9_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R401_SPDIF_RX_PB_RIGHT_9_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R401_SPDIF_RX_PB_RIGHT_9_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
+#define R446_SPDIF_RX_PB_RIGHT_9_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R446_SPDIF_RX_PB_RIGHT_9_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R446_SPDIF_RX_PB_RIGHT_9_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_RIGHT_10 (IC 1) */
-#define R402_SPDIF_RX_PB_RIGHT_10_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R402_SPDIF_RX_PB_RIGHT_10_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R402_SPDIF_RX_PB_RIGHT_10_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
+#define R447_SPDIF_RX_PB_RIGHT_10_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R447_SPDIF_RX_PB_RIGHT_10_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R447_SPDIF_RX_PB_RIGHT_10_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_RX_PB_RIGHT_11 (IC 1) */
-#define R403_SPDIF_RX_PB_RIGHT_11_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R403_SPDIF_RX_PB_RIGHT_11_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R403_SPDIF_RX_PB_RIGHT_11_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
+#define R448_SPDIF_RX_PB_RIGHT_11_SPDIF_RX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R448_SPDIF_RX_PB_RIGHT_11_SPDIF_RX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R448_SPDIF_RX_PB_RIGHT_11_SPDIF_RX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_EN (IC 1) */
-#define R404_SPDIF_TX_EN_TXEN_IC_1                0x0    /* 0b	[0] */
-#define R404_SPDIF_TX_EN_TXEN_IC_1_MASK           0x1
-#define R404_SPDIF_TX_EN_TXEN_IC_1_SHIFT          0
+#define R449_SPDIF_TX_EN_TXEN_IC_1                0x0    /* 0b	[0] */
+#define R449_SPDIF_TX_EN_TXEN_IC_1_MASK           0x1
+#define R449_SPDIF_TX_EN_TXEN_IC_1_SHIFT          0
 
 /* SPDIF_TX_CTRL (IC 1) */
-#define R405_SPDIF_TX_CTRL_TX_LENGTHCTRL_IC_1     0x0    /* 00b	[1:0] */
-#define R405_SPDIF_TX_CTRL_TX_LENGTHCTRL_IC_1_MASK 0x3
-#define R405_SPDIF_TX_CTRL_TX_LENGTHCTRL_IC_1_SHIFT 0
+#define R450_SPDIF_TX_CTRL_TX_LENGTHCTRL_IC_1     0x0    /* 00b	[1:0] */
+#define R450_SPDIF_TX_CTRL_TX_LENGTHCTRL_IC_1_MASK 0x3
+#define R450_SPDIF_TX_CTRL_TX_LENGTHCTRL_IC_1_SHIFT 0
 
 /* SPDIF_TX_AUXBIT_SOURCE (IC 1) */
-#define R406_SPDIF_TX_AUXBIT_SOURCE_TX_AUXBITS_SOURCE_IC_1 0x0 /* 0b	[0] */
-#define R406_SPDIF_TX_AUXBIT_SOURCE_TX_AUXBITS_SOURCE_IC_1_MASK 0x1
-#define R406_SPDIF_TX_AUXBIT_SOURCE_TX_AUXBITS_SOURCE_IC_1_SHIFT 0
+#define R451_SPDIF_TX_AUXBIT_SOURCE_TX_AUXBITS_SOURCE_IC_1 0x0 /* 0b	[0] */
+#define R451_SPDIF_TX_AUXBIT_SOURCE_TX_AUXBITS_SOURCE_IC_1_MASK 0x1
+#define R451_SPDIF_TX_AUXBIT_SOURCE_TX_AUXBITS_SOURCE_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_LEFT_0 (IC 1) */
-#define R407_SPDIF_TX_CS_LEFT_0_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R407_SPDIF_TX_CS_LEFT_0_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R407_SPDIF_TX_CS_LEFT_0_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
+#define R452_SPDIF_TX_CS_LEFT_0_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R452_SPDIF_TX_CS_LEFT_0_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R452_SPDIF_TX_CS_LEFT_0_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_LEFT_1 (IC 1) */
-#define R408_SPDIF_TX_CS_LEFT_1_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R408_SPDIF_TX_CS_LEFT_1_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R408_SPDIF_TX_CS_LEFT_1_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
+#define R453_SPDIF_TX_CS_LEFT_1_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R453_SPDIF_TX_CS_LEFT_1_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R453_SPDIF_TX_CS_LEFT_1_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_LEFT_2 (IC 1) */
-#define R409_SPDIF_TX_CS_LEFT_2_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R409_SPDIF_TX_CS_LEFT_2_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R409_SPDIF_TX_CS_LEFT_2_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
+#define R454_SPDIF_TX_CS_LEFT_2_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R454_SPDIF_TX_CS_LEFT_2_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R454_SPDIF_TX_CS_LEFT_2_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_LEFT_3 (IC 1) */
-#define R410_SPDIF_TX_CS_LEFT_3_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R410_SPDIF_TX_CS_LEFT_3_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R410_SPDIF_TX_CS_LEFT_3_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
+#define R455_SPDIF_TX_CS_LEFT_3_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R455_SPDIF_TX_CS_LEFT_3_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R455_SPDIF_TX_CS_LEFT_3_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_LEFT_4 (IC 1) */
-#define R411_SPDIF_TX_CS_LEFT_4_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R411_SPDIF_TX_CS_LEFT_4_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R411_SPDIF_TX_CS_LEFT_4_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
+#define R456_SPDIF_TX_CS_LEFT_4_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R456_SPDIF_TX_CS_LEFT_4_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R456_SPDIF_TX_CS_LEFT_4_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_LEFT_5 (IC 1) */
-#define R412_SPDIF_TX_CS_LEFT_5_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R412_SPDIF_TX_CS_LEFT_5_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R412_SPDIF_TX_CS_LEFT_5_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
+#define R457_SPDIF_TX_CS_LEFT_5_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R457_SPDIF_TX_CS_LEFT_5_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R457_SPDIF_TX_CS_LEFT_5_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_LEFT_6 (IC 1) */
-#define R413_SPDIF_TX_CS_LEFT_6_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R413_SPDIF_TX_CS_LEFT_6_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R413_SPDIF_TX_CS_LEFT_6_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
+#define R458_SPDIF_TX_CS_LEFT_6_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R458_SPDIF_TX_CS_LEFT_6_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R458_SPDIF_TX_CS_LEFT_6_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_LEFT_7 (IC 1) */
-#define R414_SPDIF_TX_CS_LEFT_7_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R414_SPDIF_TX_CS_LEFT_7_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R414_SPDIF_TX_CS_LEFT_7_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
+#define R459_SPDIF_TX_CS_LEFT_7_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R459_SPDIF_TX_CS_LEFT_7_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R459_SPDIF_TX_CS_LEFT_7_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_LEFT_8 (IC 1) */
-#define R415_SPDIF_TX_CS_LEFT_8_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R415_SPDIF_TX_CS_LEFT_8_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R415_SPDIF_TX_CS_LEFT_8_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
+#define R460_SPDIF_TX_CS_LEFT_8_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R460_SPDIF_TX_CS_LEFT_8_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R460_SPDIF_TX_CS_LEFT_8_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_LEFT_9 (IC 1) */
-#define R416_SPDIF_TX_CS_LEFT_9_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R416_SPDIF_TX_CS_LEFT_9_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R416_SPDIF_TX_CS_LEFT_9_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
+#define R461_SPDIF_TX_CS_LEFT_9_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R461_SPDIF_TX_CS_LEFT_9_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R461_SPDIF_TX_CS_LEFT_9_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_LEFT_10 (IC 1) */
-#define R417_SPDIF_TX_CS_LEFT_10_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R417_SPDIF_TX_CS_LEFT_10_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R417_SPDIF_TX_CS_LEFT_10_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
+#define R462_SPDIF_TX_CS_LEFT_10_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R462_SPDIF_TX_CS_LEFT_10_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R462_SPDIF_TX_CS_LEFT_10_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_LEFT_11 (IC 1) */
-#define R418_SPDIF_TX_CS_LEFT_11_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R418_SPDIF_TX_CS_LEFT_11_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
-#define R418_SPDIF_TX_CS_LEFT_11_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
+#define R463_SPDIF_TX_CS_LEFT_11_SPDIF_TX_CS_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R463_SPDIF_TX_CS_LEFT_11_SPDIF_TX_CS_LEFT_IC_1_MASK 0xFFFF
+#define R463_SPDIF_TX_CS_LEFT_11_SPDIF_TX_CS_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_RIGHT_0 (IC 1) */
-#define R419_SPDIF_TX_CS_RIGHT_0_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R419_SPDIF_TX_CS_RIGHT_0_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R419_SPDIF_TX_CS_RIGHT_0_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
+#define R464_SPDIF_TX_CS_RIGHT_0_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R464_SPDIF_TX_CS_RIGHT_0_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R464_SPDIF_TX_CS_RIGHT_0_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_RIGHT_1 (IC 1) */
-#define R420_SPDIF_TX_CS_RIGHT_1_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R420_SPDIF_TX_CS_RIGHT_1_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R420_SPDIF_TX_CS_RIGHT_1_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
+#define R465_SPDIF_TX_CS_RIGHT_1_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R465_SPDIF_TX_CS_RIGHT_1_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R465_SPDIF_TX_CS_RIGHT_1_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_RIGHT_2 (IC 1) */
-#define R421_SPDIF_TX_CS_RIGHT_2_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R421_SPDIF_TX_CS_RIGHT_2_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R421_SPDIF_TX_CS_RIGHT_2_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
+#define R466_SPDIF_TX_CS_RIGHT_2_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R466_SPDIF_TX_CS_RIGHT_2_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R466_SPDIF_TX_CS_RIGHT_2_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_RIGHT_3 (IC 1) */
-#define R422_SPDIF_TX_CS_RIGHT_3_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R422_SPDIF_TX_CS_RIGHT_3_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R422_SPDIF_TX_CS_RIGHT_3_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
+#define R467_SPDIF_TX_CS_RIGHT_3_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R467_SPDIF_TX_CS_RIGHT_3_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R467_SPDIF_TX_CS_RIGHT_3_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_RIGHT_4 (IC 1) */
-#define R423_SPDIF_TX_CS_RIGHT_4_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R423_SPDIF_TX_CS_RIGHT_4_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R423_SPDIF_TX_CS_RIGHT_4_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
+#define R468_SPDIF_TX_CS_RIGHT_4_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R468_SPDIF_TX_CS_RIGHT_4_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R468_SPDIF_TX_CS_RIGHT_4_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_RIGHT_5 (IC 1) */
-#define R424_SPDIF_TX_CS_RIGHT_5_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R424_SPDIF_TX_CS_RIGHT_5_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R424_SPDIF_TX_CS_RIGHT_5_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
+#define R469_SPDIF_TX_CS_RIGHT_5_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R469_SPDIF_TX_CS_RIGHT_5_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R469_SPDIF_TX_CS_RIGHT_5_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_RIGHT_6 (IC 1) */
-#define R425_SPDIF_TX_CS_RIGHT_6_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R425_SPDIF_TX_CS_RIGHT_6_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R425_SPDIF_TX_CS_RIGHT_6_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
+#define R470_SPDIF_TX_CS_RIGHT_6_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R470_SPDIF_TX_CS_RIGHT_6_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R470_SPDIF_TX_CS_RIGHT_6_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_RIGHT_7 (IC 1) */
-#define R426_SPDIF_TX_CS_RIGHT_7_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R426_SPDIF_TX_CS_RIGHT_7_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R426_SPDIF_TX_CS_RIGHT_7_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
+#define R471_SPDIF_TX_CS_RIGHT_7_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R471_SPDIF_TX_CS_RIGHT_7_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R471_SPDIF_TX_CS_RIGHT_7_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_RIGHT_8 (IC 1) */
-#define R427_SPDIF_TX_CS_RIGHT_8_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R427_SPDIF_TX_CS_RIGHT_8_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R427_SPDIF_TX_CS_RIGHT_8_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
+#define R472_SPDIF_TX_CS_RIGHT_8_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R472_SPDIF_TX_CS_RIGHT_8_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R472_SPDIF_TX_CS_RIGHT_8_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_RIGHT_9 (IC 1) */
-#define R428_SPDIF_TX_CS_RIGHT_9_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R428_SPDIF_TX_CS_RIGHT_9_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R428_SPDIF_TX_CS_RIGHT_9_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
+#define R473_SPDIF_TX_CS_RIGHT_9_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R473_SPDIF_TX_CS_RIGHT_9_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R473_SPDIF_TX_CS_RIGHT_9_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_RIGHT_10 (IC 1) */
-#define R429_SPDIF_TX_CS_RIGHT_10_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R429_SPDIF_TX_CS_RIGHT_10_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R429_SPDIF_TX_CS_RIGHT_10_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
+#define R474_SPDIF_TX_CS_RIGHT_10_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R474_SPDIF_TX_CS_RIGHT_10_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R474_SPDIF_TX_CS_RIGHT_10_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_CS_RIGHT_11 (IC 1) */
-#define R430_SPDIF_TX_CS_RIGHT_11_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R430_SPDIF_TX_CS_RIGHT_11_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
-#define R430_SPDIF_TX_CS_RIGHT_11_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
+#define R475_SPDIF_TX_CS_RIGHT_11_SPDIF_TX_CS_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R475_SPDIF_TX_CS_RIGHT_11_SPDIF_TX_CS_RIGHT_IC_1_MASK 0xFFFF
+#define R475_SPDIF_TX_CS_RIGHT_11_SPDIF_TX_CS_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_LEFT_0 (IC 1) */
-#define R431_SPDIF_TX_UD_LEFT_0_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R431_SPDIF_TX_UD_LEFT_0_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R431_SPDIF_TX_UD_LEFT_0_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
+#define R476_SPDIF_TX_UD_LEFT_0_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R476_SPDIF_TX_UD_LEFT_0_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R476_SPDIF_TX_UD_LEFT_0_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_LEFT_1 (IC 1) */
-#define R432_SPDIF_TX_UD_LEFT_1_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R432_SPDIF_TX_UD_LEFT_1_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R432_SPDIF_TX_UD_LEFT_1_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
+#define R477_SPDIF_TX_UD_LEFT_1_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R477_SPDIF_TX_UD_LEFT_1_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R477_SPDIF_TX_UD_LEFT_1_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_LEFT_2 (IC 1) */
-#define R433_SPDIF_TX_UD_LEFT_2_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R433_SPDIF_TX_UD_LEFT_2_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R433_SPDIF_TX_UD_LEFT_2_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
+#define R478_SPDIF_TX_UD_LEFT_2_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R478_SPDIF_TX_UD_LEFT_2_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R478_SPDIF_TX_UD_LEFT_2_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_LEFT_3 (IC 1) */
-#define R434_SPDIF_TX_UD_LEFT_3_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R434_SPDIF_TX_UD_LEFT_3_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R434_SPDIF_TX_UD_LEFT_3_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
+#define R479_SPDIF_TX_UD_LEFT_3_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R479_SPDIF_TX_UD_LEFT_3_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R479_SPDIF_TX_UD_LEFT_3_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_LEFT_4 (IC 1) */
-#define R435_SPDIF_TX_UD_LEFT_4_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R435_SPDIF_TX_UD_LEFT_4_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R435_SPDIF_TX_UD_LEFT_4_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
+#define R480_SPDIF_TX_UD_LEFT_4_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R480_SPDIF_TX_UD_LEFT_4_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R480_SPDIF_TX_UD_LEFT_4_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_LEFT_5 (IC 1) */
-#define R436_SPDIF_TX_UD_LEFT_5_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R436_SPDIF_TX_UD_LEFT_5_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R436_SPDIF_TX_UD_LEFT_5_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
+#define R481_SPDIF_TX_UD_LEFT_5_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R481_SPDIF_TX_UD_LEFT_5_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R481_SPDIF_TX_UD_LEFT_5_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_LEFT_6 (IC 1) */
-#define R437_SPDIF_TX_UD_LEFT_6_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R437_SPDIF_TX_UD_LEFT_6_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R437_SPDIF_TX_UD_LEFT_6_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
+#define R482_SPDIF_TX_UD_LEFT_6_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R482_SPDIF_TX_UD_LEFT_6_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R482_SPDIF_TX_UD_LEFT_6_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_LEFT_7 (IC 1) */
-#define R438_SPDIF_TX_UD_LEFT_7_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R438_SPDIF_TX_UD_LEFT_7_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R438_SPDIF_TX_UD_LEFT_7_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
+#define R483_SPDIF_TX_UD_LEFT_7_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R483_SPDIF_TX_UD_LEFT_7_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R483_SPDIF_TX_UD_LEFT_7_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_LEFT_8 (IC 1) */
-#define R439_SPDIF_TX_UD_LEFT_8_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R439_SPDIF_TX_UD_LEFT_8_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R439_SPDIF_TX_UD_LEFT_8_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
+#define R484_SPDIF_TX_UD_LEFT_8_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R484_SPDIF_TX_UD_LEFT_8_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R484_SPDIF_TX_UD_LEFT_8_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_LEFT_9 (IC 1) */
-#define R440_SPDIF_TX_UD_LEFT_9_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R440_SPDIF_TX_UD_LEFT_9_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R440_SPDIF_TX_UD_LEFT_9_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
+#define R485_SPDIF_TX_UD_LEFT_9_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R485_SPDIF_TX_UD_LEFT_9_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R485_SPDIF_TX_UD_LEFT_9_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_LEFT_10 (IC 1) */
-#define R441_SPDIF_TX_UD_LEFT_10_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R441_SPDIF_TX_UD_LEFT_10_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R441_SPDIF_TX_UD_LEFT_10_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
+#define R486_SPDIF_TX_UD_LEFT_10_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R486_SPDIF_TX_UD_LEFT_10_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R486_SPDIF_TX_UD_LEFT_10_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_LEFT_11 (IC 1) */
-#define R442_SPDIF_TX_UD_LEFT_11_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R442_SPDIF_TX_UD_LEFT_11_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
-#define R442_SPDIF_TX_UD_LEFT_11_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
+#define R487_SPDIF_TX_UD_LEFT_11_SPDIF_TX_UD_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R487_SPDIF_TX_UD_LEFT_11_SPDIF_TX_UD_LEFT_IC_1_MASK 0xFFFF
+#define R487_SPDIF_TX_UD_LEFT_11_SPDIF_TX_UD_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_RIGHT_0 (IC 1) */
-#define R443_SPDIF_TX_UD_RIGHT_0_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R443_SPDIF_TX_UD_RIGHT_0_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R443_SPDIF_TX_UD_RIGHT_0_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
+#define R488_SPDIF_TX_UD_RIGHT_0_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R488_SPDIF_TX_UD_RIGHT_0_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R488_SPDIF_TX_UD_RIGHT_0_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_RIGHT_1 (IC 1) */
-#define R444_SPDIF_TX_UD_RIGHT_1_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R444_SPDIF_TX_UD_RIGHT_1_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R444_SPDIF_TX_UD_RIGHT_1_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
+#define R489_SPDIF_TX_UD_RIGHT_1_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R489_SPDIF_TX_UD_RIGHT_1_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R489_SPDIF_TX_UD_RIGHT_1_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_RIGHT_2 (IC 1) */
-#define R445_SPDIF_TX_UD_RIGHT_2_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R445_SPDIF_TX_UD_RIGHT_2_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R445_SPDIF_TX_UD_RIGHT_2_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
+#define R490_SPDIF_TX_UD_RIGHT_2_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R490_SPDIF_TX_UD_RIGHT_2_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R490_SPDIF_TX_UD_RIGHT_2_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_RIGHT_3 (IC 1) */
-#define R446_SPDIF_TX_UD_RIGHT_3_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R446_SPDIF_TX_UD_RIGHT_3_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R446_SPDIF_TX_UD_RIGHT_3_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
+#define R491_SPDIF_TX_UD_RIGHT_3_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R491_SPDIF_TX_UD_RIGHT_3_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R491_SPDIF_TX_UD_RIGHT_3_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_RIGHT_4 (IC 1) */
-#define R447_SPDIF_TX_UD_RIGHT_4_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R447_SPDIF_TX_UD_RIGHT_4_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R447_SPDIF_TX_UD_RIGHT_4_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
+#define R492_SPDIF_TX_UD_RIGHT_4_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R492_SPDIF_TX_UD_RIGHT_4_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R492_SPDIF_TX_UD_RIGHT_4_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_RIGHT_5 (IC 1) */
-#define R448_SPDIF_TX_UD_RIGHT_5_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R448_SPDIF_TX_UD_RIGHT_5_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R448_SPDIF_TX_UD_RIGHT_5_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
+#define R493_SPDIF_TX_UD_RIGHT_5_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R493_SPDIF_TX_UD_RIGHT_5_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R493_SPDIF_TX_UD_RIGHT_5_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_RIGHT_6 (IC 1) */
-#define R449_SPDIF_TX_UD_RIGHT_6_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R449_SPDIF_TX_UD_RIGHT_6_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R449_SPDIF_TX_UD_RIGHT_6_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
+#define R494_SPDIF_TX_UD_RIGHT_6_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R494_SPDIF_TX_UD_RIGHT_6_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R494_SPDIF_TX_UD_RIGHT_6_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_RIGHT_7 (IC 1) */
-#define R450_SPDIF_TX_UD_RIGHT_7_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R450_SPDIF_TX_UD_RIGHT_7_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R450_SPDIF_TX_UD_RIGHT_7_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
+#define R495_SPDIF_TX_UD_RIGHT_7_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R495_SPDIF_TX_UD_RIGHT_7_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R495_SPDIF_TX_UD_RIGHT_7_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_RIGHT_8 (IC 1) */
-#define R451_SPDIF_TX_UD_RIGHT_8_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R451_SPDIF_TX_UD_RIGHT_8_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R451_SPDIF_TX_UD_RIGHT_8_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
+#define R496_SPDIF_TX_UD_RIGHT_8_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R496_SPDIF_TX_UD_RIGHT_8_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R496_SPDIF_TX_UD_RIGHT_8_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_RIGHT_9 (IC 1) */
-#define R452_SPDIF_TX_UD_RIGHT_9_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R452_SPDIF_TX_UD_RIGHT_9_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R452_SPDIF_TX_UD_RIGHT_9_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
+#define R497_SPDIF_TX_UD_RIGHT_9_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R497_SPDIF_TX_UD_RIGHT_9_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R497_SPDIF_TX_UD_RIGHT_9_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_RIGHT_10 (IC 1) */
-#define R453_SPDIF_TX_UD_RIGHT_10_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R453_SPDIF_TX_UD_RIGHT_10_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R453_SPDIF_TX_UD_RIGHT_10_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
+#define R498_SPDIF_TX_UD_RIGHT_10_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R498_SPDIF_TX_UD_RIGHT_10_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R498_SPDIF_TX_UD_RIGHT_10_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_UD_RIGHT_11 (IC 1) */
-#define R454_SPDIF_TX_UD_RIGHT_11_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R454_SPDIF_TX_UD_RIGHT_11_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
-#define R454_SPDIF_TX_UD_RIGHT_11_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
+#define R499_SPDIF_TX_UD_RIGHT_11_SPDIF_TX_UD_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R499_SPDIF_TX_UD_RIGHT_11_SPDIF_TX_UD_RIGHT_IC_1_MASK 0xFFFF
+#define R499_SPDIF_TX_UD_RIGHT_11_SPDIF_TX_UD_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_LEFT_0 (IC 1) */
-#define R455_SPDIF_TX_VB_LEFT_0_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R455_SPDIF_TX_VB_LEFT_0_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R455_SPDIF_TX_VB_LEFT_0_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
+#define R500_SPDIF_TX_VB_LEFT_0_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R500_SPDIF_TX_VB_LEFT_0_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R500_SPDIF_TX_VB_LEFT_0_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_LEFT_1 (IC 1) */
-#define R456_SPDIF_TX_VB_LEFT_1_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R456_SPDIF_TX_VB_LEFT_1_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R456_SPDIF_TX_VB_LEFT_1_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
+#define R501_SPDIF_TX_VB_LEFT_1_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R501_SPDIF_TX_VB_LEFT_1_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R501_SPDIF_TX_VB_LEFT_1_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_LEFT_2 (IC 1) */
-#define R457_SPDIF_TX_VB_LEFT_2_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R457_SPDIF_TX_VB_LEFT_2_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R457_SPDIF_TX_VB_LEFT_2_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
+#define R502_SPDIF_TX_VB_LEFT_2_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R502_SPDIF_TX_VB_LEFT_2_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R502_SPDIF_TX_VB_LEFT_2_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_LEFT_3 (IC 1) */
-#define R458_SPDIF_TX_VB_LEFT_3_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R458_SPDIF_TX_VB_LEFT_3_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R458_SPDIF_TX_VB_LEFT_3_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
+#define R503_SPDIF_TX_VB_LEFT_3_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R503_SPDIF_TX_VB_LEFT_3_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R503_SPDIF_TX_VB_LEFT_3_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_LEFT_4 (IC 1) */
-#define R459_SPDIF_TX_VB_LEFT_4_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R459_SPDIF_TX_VB_LEFT_4_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R459_SPDIF_TX_VB_LEFT_4_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
+#define R504_SPDIF_TX_VB_LEFT_4_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R504_SPDIF_TX_VB_LEFT_4_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R504_SPDIF_TX_VB_LEFT_4_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_LEFT_5 (IC 1) */
-#define R460_SPDIF_TX_VB_LEFT_5_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R460_SPDIF_TX_VB_LEFT_5_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R460_SPDIF_TX_VB_LEFT_5_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
+#define R505_SPDIF_TX_VB_LEFT_5_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R505_SPDIF_TX_VB_LEFT_5_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R505_SPDIF_TX_VB_LEFT_5_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_LEFT_6 (IC 1) */
-#define R461_SPDIF_TX_VB_LEFT_6_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R461_SPDIF_TX_VB_LEFT_6_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R461_SPDIF_TX_VB_LEFT_6_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
+#define R506_SPDIF_TX_VB_LEFT_6_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R506_SPDIF_TX_VB_LEFT_6_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R506_SPDIF_TX_VB_LEFT_6_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_LEFT_7 (IC 1) */
-#define R462_SPDIF_TX_VB_LEFT_7_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R462_SPDIF_TX_VB_LEFT_7_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R462_SPDIF_TX_VB_LEFT_7_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
+#define R507_SPDIF_TX_VB_LEFT_7_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R507_SPDIF_TX_VB_LEFT_7_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R507_SPDIF_TX_VB_LEFT_7_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_LEFT_8 (IC 1) */
-#define R463_SPDIF_TX_VB_LEFT_8_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R463_SPDIF_TX_VB_LEFT_8_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R463_SPDIF_TX_VB_LEFT_8_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
+#define R508_SPDIF_TX_VB_LEFT_8_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R508_SPDIF_TX_VB_LEFT_8_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R508_SPDIF_TX_VB_LEFT_8_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_LEFT_9 (IC 1) */
-#define R464_SPDIF_TX_VB_LEFT_9_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R464_SPDIF_TX_VB_LEFT_9_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R464_SPDIF_TX_VB_LEFT_9_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
+#define R509_SPDIF_TX_VB_LEFT_9_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R509_SPDIF_TX_VB_LEFT_9_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R509_SPDIF_TX_VB_LEFT_9_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_LEFT_10 (IC 1) */
-#define R465_SPDIF_TX_VB_LEFT_10_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R465_SPDIF_TX_VB_LEFT_10_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R465_SPDIF_TX_VB_LEFT_10_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
+#define R510_SPDIF_TX_VB_LEFT_10_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R510_SPDIF_TX_VB_LEFT_10_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R510_SPDIF_TX_VB_LEFT_10_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_LEFT_11 (IC 1) */
-#define R466_SPDIF_TX_VB_LEFT_11_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R466_SPDIF_TX_VB_LEFT_11_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
-#define R466_SPDIF_TX_VB_LEFT_11_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
+#define R511_SPDIF_TX_VB_LEFT_11_SPDIF_TX_VB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R511_SPDIF_TX_VB_LEFT_11_SPDIF_TX_VB_LEFT_IC_1_MASK 0xFFFF
+#define R511_SPDIF_TX_VB_LEFT_11_SPDIF_TX_VB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_RIGHT_0 (IC 1) */
-#define R467_SPDIF_TX_VB_RIGHT_0_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R467_SPDIF_TX_VB_RIGHT_0_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R467_SPDIF_TX_VB_RIGHT_0_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
+#define R512_SPDIF_TX_VB_RIGHT_0_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R512_SPDIF_TX_VB_RIGHT_0_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R512_SPDIF_TX_VB_RIGHT_0_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_RIGHT_1 (IC 1) */
-#define R468_SPDIF_TX_VB_RIGHT_1_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R468_SPDIF_TX_VB_RIGHT_1_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R468_SPDIF_TX_VB_RIGHT_1_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
+#define R513_SPDIF_TX_VB_RIGHT_1_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R513_SPDIF_TX_VB_RIGHT_1_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R513_SPDIF_TX_VB_RIGHT_1_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_RIGHT_2 (IC 1) */
-#define R469_SPDIF_TX_VB_RIGHT_2_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R469_SPDIF_TX_VB_RIGHT_2_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R469_SPDIF_TX_VB_RIGHT_2_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
+#define R514_SPDIF_TX_VB_RIGHT_2_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R514_SPDIF_TX_VB_RIGHT_2_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R514_SPDIF_TX_VB_RIGHT_2_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_RIGHT_3 (IC 1) */
-#define R470_SPDIF_TX_VB_RIGHT_3_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R470_SPDIF_TX_VB_RIGHT_3_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R470_SPDIF_TX_VB_RIGHT_3_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
+#define R515_SPDIF_TX_VB_RIGHT_3_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R515_SPDIF_TX_VB_RIGHT_3_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R515_SPDIF_TX_VB_RIGHT_3_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_RIGHT_4 (IC 1) */
-#define R471_SPDIF_TX_VB_RIGHT_4_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R471_SPDIF_TX_VB_RIGHT_4_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R471_SPDIF_TX_VB_RIGHT_4_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
+#define R516_SPDIF_TX_VB_RIGHT_4_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R516_SPDIF_TX_VB_RIGHT_4_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R516_SPDIF_TX_VB_RIGHT_4_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_RIGHT_5 (IC 1) */
-#define R472_SPDIF_TX_VB_RIGHT_5_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R472_SPDIF_TX_VB_RIGHT_5_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R472_SPDIF_TX_VB_RIGHT_5_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
+#define R517_SPDIF_TX_VB_RIGHT_5_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R517_SPDIF_TX_VB_RIGHT_5_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R517_SPDIF_TX_VB_RIGHT_5_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_RIGHT_6 (IC 1) */
-#define R473_SPDIF_TX_VB_RIGHT_6_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R473_SPDIF_TX_VB_RIGHT_6_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R473_SPDIF_TX_VB_RIGHT_6_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
+#define R518_SPDIF_TX_VB_RIGHT_6_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R518_SPDIF_TX_VB_RIGHT_6_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R518_SPDIF_TX_VB_RIGHT_6_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_RIGHT_7 (IC 1) */
-#define R474_SPDIF_TX_VB_RIGHT_7_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R474_SPDIF_TX_VB_RIGHT_7_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R474_SPDIF_TX_VB_RIGHT_7_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
+#define R519_SPDIF_TX_VB_RIGHT_7_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R519_SPDIF_TX_VB_RIGHT_7_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R519_SPDIF_TX_VB_RIGHT_7_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_RIGHT_8 (IC 1) */
-#define R475_SPDIF_TX_VB_RIGHT_8_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R475_SPDIF_TX_VB_RIGHT_8_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R475_SPDIF_TX_VB_RIGHT_8_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
+#define R520_SPDIF_TX_VB_RIGHT_8_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R520_SPDIF_TX_VB_RIGHT_8_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R520_SPDIF_TX_VB_RIGHT_8_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_RIGHT_9 (IC 1) */
-#define R476_SPDIF_TX_VB_RIGHT_9_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R476_SPDIF_TX_VB_RIGHT_9_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R476_SPDIF_TX_VB_RIGHT_9_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
+#define R521_SPDIF_TX_VB_RIGHT_9_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R521_SPDIF_TX_VB_RIGHT_9_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R521_SPDIF_TX_VB_RIGHT_9_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_RIGHT_10 (IC 1) */
-#define R477_SPDIF_TX_VB_RIGHT_10_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R477_SPDIF_TX_VB_RIGHT_10_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R477_SPDIF_TX_VB_RIGHT_10_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
+#define R522_SPDIF_TX_VB_RIGHT_10_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R522_SPDIF_TX_VB_RIGHT_10_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R522_SPDIF_TX_VB_RIGHT_10_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_VB_RIGHT_11 (IC 1) */
-#define R478_SPDIF_TX_VB_RIGHT_11_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R478_SPDIF_TX_VB_RIGHT_11_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
-#define R478_SPDIF_TX_VB_RIGHT_11_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
+#define R523_SPDIF_TX_VB_RIGHT_11_SPDIF_TX_VB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R523_SPDIF_TX_VB_RIGHT_11_SPDIF_TX_VB_RIGHT_IC_1_MASK 0xFFFF
+#define R523_SPDIF_TX_VB_RIGHT_11_SPDIF_TX_VB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_LEFT_0 (IC 1) */
-#define R479_SPDIF_TX_PB_LEFT_0_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R479_SPDIF_TX_PB_LEFT_0_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R479_SPDIF_TX_PB_LEFT_0_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
+#define R524_SPDIF_TX_PB_LEFT_0_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R524_SPDIF_TX_PB_LEFT_0_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R524_SPDIF_TX_PB_LEFT_0_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_LEFT_1 (IC 1) */
-#define R480_SPDIF_TX_PB_LEFT_1_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R480_SPDIF_TX_PB_LEFT_1_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R480_SPDIF_TX_PB_LEFT_1_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
+#define R525_SPDIF_TX_PB_LEFT_1_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R525_SPDIF_TX_PB_LEFT_1_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R525_SPDIF_TX_PB_LEFT_1_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_LEFT_2 (IC 1) */
-#define R481_SPDIF_TX_PB_LEFT_2_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R481_SPDIF_TX_PB_LEFT_2_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R481_SPDIF_TX_PB_LEFT_2_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
+#define R526_SPDIF_TX_PB_LEFT_2_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R526_SPDIF_TX_PB_LEFT_2_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R526_SPDIF_TX_PB_LEFT_2_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_LEFT_3 (IC 1) */
-#define R482_SPDIF_TX_PB_LEFT_3_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R482_SPDIF_TX_PB_LEFT_3_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R482_SPDIF_TX_PB_LEFT_3_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
+#define R527_SPDIF_TX_PB_LEFT_3_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R527_SPDIF_TX_PB_LEFT_3_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R527_SPDIF_TX_PB_LEFT_3_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_LEFT_4 (IC 1) */
-#define R483_SPDIF_TX_PB_LEFT_4_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R483_SPDIF_TX_PB_LEFT_4_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R483_SPDIF_TX_PB_LEFT_4_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
+#define R528_SPDIF_TX_PB_LEFT_4_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R528_SPDIF_TX_PB_LEFT_4_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R528_SPDIF_TX_PB_LEFT_4_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_LEFT_5 (IC 1) */
-#define R484_SPDIF_TX_PB_LEFT_5_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R484_SPDIF_TX_PB_LEFT_5_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R484_SPDIF_TX_PB_LEFT_5_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
+#define R529_SPDIF_TX_PB_LEFT_5_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R529_SPDIF_TX_PB_LEFT_5_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R529_SPDIF_TX_PB_LEFT_5_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_LEFT_6 (IC 1) */
-#define R485_SPDIF_TX_PB_LEFT_6_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R485_SPDIF_TX_PB_LEFT_6_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R485_SPDIF_TX_PB_LEFT_6_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
+#define R530_SPDIF_TX_PB_LEFT_6_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R530_SPDIF_TX_PB_LEFT_6_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R530_SPDIF_TX_PB_LEFT_6_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_LEFT_7 (IC 1) */
-#define R486_SPDIF_TX_PB_LEFT_7_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R486_SPDIF_TX_PB_LEFT_7_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R486_SPDIF_TX_PB_LEFT_7_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
+#define R531_SPDIF_TX_PB_LEFT_7_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R531_SPDIF_TX_PB_LEFT_7_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R531_SPDIF_TX_PB_LEFT_7_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_LEFT_8 (IC 1) */
-#define R487_SPDIF_TX_PB_LEFT_8_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R487_SPDIF_TX_PB_LEFT_8_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R487_SPDIF_TX_PB_LEFT_8_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
+#define R532_SPDIF_TX_PB_LEFT_8_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R532_SPDIF_TX_PB_LEFT_8_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R532_SPDIF_TX_PB_LEFT_8_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_LEFT_9 (IC 1) */
-#define R488_SPDIF_TX_PB_LEFT_9_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R488_SPDIF_TX_PB_LEFT_9_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R488_SPDIF_TX_PB_LEFT_9_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
+#define R533_SPDIF_TX_PB_LEFT_9_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R533_SPDIF_TX_PB_LEFT_9_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R533_SPDIF_TX_PB_LEFT_9_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_LEFT_10 (IC 1) */
-#define R489_SPDIF_TX_PB_LEFT_10_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R489_SPDIF_TX_PB_LEFT_10_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R489_SPDIF_TX_PB_LEFT_10_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
+#define R534_SPDIF_TX_PB_LEFT_10_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R534_SPDIF_TX_PB_LEFT_10_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R534_SPDIF_TX_PB_LEFT_10_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_LEFT_11 (IC 1) */
-#define R490_SPDIF_TX_PB_LEFT_11_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R490_SPDIF_TX_PB_LEFT_11_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
-#define R490_SPDIF_TX_PB_LEFT_11_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
+#define R535_SPDIF_TX_PB_LEFT_11_SPDIF_TX_PB_LEFT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R535_SPDIF_TX_PB_LEFT_11_SPDIF_TX_PB_LEFT_IC_1_MASK 0xFFFF
+#define R535_SPDIF_TX_PB_LEFT_11_SPDIF_TX_PB_LEFT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_RIGHT_0 (IC 1) */
-#define R491_SPDIF_TX_PB_RIGHT_0_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R491_SPDIF_TX_PB_RIGHT_0_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R491_SPDIF_TX_PB_RIGHT_0_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
+#define R536_SPDIF_TX_PB_RIGHT_0_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R536_SPDIF_TX_PB_RIGHT_0_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R536_SPDIF_TX_PB_RIGHT_0_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_RIGHT_1 (IC 1) */
-#define R492_SPDIF_TX_PB_RIGHT_1_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R492_SPDIF_TX_PB_RIGHT_1_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R492_SPDIF_TX_PB_RIGHT_1_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
+#define R537_SPDIF_TX_PB_RIGHT_1_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R537_SPDIF_TX_PB_RIGHT_1_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R537_SPDIF_TX_PB_RIGHT_1_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_RIGHT_2 (IC 1) */
-#define R493_SPDIF_TX_PB_RIGHT_2_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R493_SPDIF_TX_PB_RIGHT_2_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R493_SPDIF_TX_PB_RIGHT_2_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
+#define R538_SPDIF_TX_PB_RIGHT_2_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R538_SPDIF_TX_PB_RIGHT_2_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R538_SPDIF_TX_PB_RIGHT_2_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_RIGHT_3 (IC 1) */
-#define R494_SPDIF_TX_PB_RIGHT_3_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R494_SPDIF_TX_PB_RIGHT_3_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R494_SPDIF_TX_PB_RIGHT_3_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
+#define R539_SPDIF_TX_PB_RIGHT_3_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R539_SPDIF_TX_PB_RIGHT_3_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R539_SPDIF_TX_PB_RIGHT_3_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_RIGHT_4 (IC 1) */
-#define R495_SPDIF_TX_PB_RIGHT_4_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R495_SPDIF_TX_PB_RIGHT_4_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R495_SPDIF_TX_PB_RIGHT_4_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
+#define R540_SPDIF_TX_PB_RIGHT_4_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R540_SPDIF_TX_PB_RIGHT_4_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R540_SPDIF_TX_PB_RIGHT_4_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_RIGHT_5 (IC 1) */
-#define R496_SPDIF_TX_PB_RIGHT_5_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R496_SPDIF_TX_PB_RIGHT_5_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R496_SPDIF_TX_PB_RIGHT_5_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
+#define R541_SPDIF_TX_PB_RIGHT_5_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R541_SPDIF_TX_PB_RIGHT_5_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R541_SPDIF_TX_PB_RIGHT_5_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_RIGHT_6 (IC 1) */
-#define R497_SPDIF_TX_PB_RIGHT_6_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R497_SPDIF_TX_PB_RIGHT_6_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R497_SPDIF_TX_PB_RIGHT_6_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
+#define R542_SPDIF_TX_PB_RIGHT_6_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R542_SPDIF_TX_PB_RIGHT_6_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R542_SPDIF_TX_PB_RIGHT_6_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_RIGHT_7 (IC 1) */
-#define R498_SPDIF_TX_PB_RIGHT_7_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R498_SPDIF_TX_PB_RIGHT_7_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R498_SPDIF_TX_PB_RIGHT_7_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
+#define R543_SPDIF_TX_PB_RIGHT_7_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R543_SPDIF_TX_PB_RIGHT_7_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R543_SPDIF_TX_PB_RIGHT_7_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_RIGHT_8 (IC 1) */
-#define R499_SPDIF_TX_PB_RIGHT_8_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R499_SPDIF_TX_PB_RIGHT_8_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R499_SPDIF_TX_PB_RIGHT_8_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
+#define R544_SPDIF_TX_PB_RIGHT_8_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R544_SPDIF_TX_PB_RIGHT_8_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R544_SPDIF_TX_PB_RIGHT_8_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_RIGHT_9 (IC 1) */
-#define R500_SPDIF_TX_PB_RIGHT_9_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R500_SPDIF_TX_PB_RIGHT_9_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R500_SPDIF_TX_PB_RIGHT_9_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
+#define R545_SPDIF_TX_PB_RIGHT_9_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R545_SPDIF_TX_PB_RIGHT_9_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R545_SPDIF_TX_PB_RIGHT_9_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_RIGHT_10 (IC 1) */
-#define R501_SPDIF_TX_PB_RIGHT_10_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R501_SPDIF_TX_PB_RIGHT_10_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R501_SPDIF_TX_PB_RIGHT_10_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
+#define R546_SPDIF_TX_PB_RIGHT_10_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R546_SPDIF_TX_PB_RIGHT_10_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R546_SPDIF_TX_PB_RIGHT_10_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
 
 /* SPDIF_TX_PB_RIGHT_11 (IC 1) */
-#define R502_SPDIF_TX_PB_RIGHT_11_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
-#define R502_SPDIF_TX_PB_RIGHT_11_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
-#define R502_SPDIF_TX_PB_RIGHT_11_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
+#define R547_SPDIF_TX_PB_RIGHT_11_SPDIF_TX_PB_RIGHT_IC_1 0x0000 /* 0000000000000000b	[15:0] */
+#define R547_SPDIF_TX_PB_RIGHT_11_SPDIF_TX_PB_RIGHT_IC_1_MASK 0xFFFF
+#define R547_SPDIF_TX_PB_RIGHT_11_SPDIF_TX_PB_RIGHT_IC_1_SHIFT 0
 
 /* BCLK_IN0_PIN (IC 1) */
-#define R503_BCLK_IN0_PIN_BCLK_IN_DRIVE_IC_1      0x0    /* 00b	[1:0] */
-#define R503_BCLK_IN0_PIN_BCLK_IN_SLEW_IC_1       0x2    /* 10b	[3:2] */
-#define R503_BCLK_IN0_PIN_BCLK_IN_PULL_IC_1       0x1    /* 1b	[4] */
-#define R503_BCLK_IN0_PIN_BCLK_IN_DRIVE_IC_1_MASK 0x3
-#define R503_BCLK_IN0_PIN_BCLK_IN_DRIVE_IC_1_SHIFT 0
-#define R503_BCLK_IN0_PIN_BCLK_IN_SLEW_IC_1_MASK  0xC
-#define R503_BCLK_IN0_PIN_BCLK_IN_SLEW_IC_1_SHIFT 2
-#define R503_BCLK_IN0_PIN_BCLK_IN_PULL_IC_1_MASK  0x10
-#define R503_BCLK_IN0_PIN_BCLK_IN_PULL_IC_1_SHIFT 4
+#define R548_BCLK_IN0_PIN_BCLK_IN_DRIVE_IC_1      0x3    /* 11b	[1:0] */
+#define R548_BCLK_IN0_PIN_BCLK_IN_SLEW_IC_1       0x3    /* 11b	[3:2] */
+#define R548_BCLK_IN0_PIN_BCLK_IN_PULL_IC_1       0x1    /* 1b	[4] */
+#define R548_BCLK_IN0_PIN_BCLK_IN_DRIVE_IC_1_MASK 0x3
+#define R548_BCLK_IN0_PIN_BCLK_IN_DRIVE_IC_1_SHIFT 0
+#define R548_BCLK_IN0_PIN_BCLK_IN_SLEW_IC_1_MASK  0xC
+#define R548_BCLK_IN0_PIN_BCLK_IN_SLEW_IC_1_SHIFT 2
+#define R548_BCLK_IN0_PIN_BCLK_IN_PULL_IC_1_MASK  0x10
+#define R548_BCLK_IN0_PIN_BCLK_IN_PULL_IC_1_SHIFT 4
 
 /* BCLK_IN1_PIN (IC 1) */
-#define R504_BCLK_IN1_PIN_BCLK_IN_DRIVE_IC_1      0x0    /* 00b	[1:0] */
-#define R504_BCLK_IN1_PIN_BCLK_IN_SLEW_IC_1       0x2    /* 10b	[3:2] */
-#define R504_BCLK_IN1_PIN_BCLK_IN_PULL_IC_1       0x1    /* 1b	[4] */
-#define R504_BCLK_IN1_PIN_BCLK_IN_DRIVE_IC_1_MASK 0x3
-#define R504_BCLK_IN1_PIN_BCLK_IN_DRIVE_IC_1_SHIFT 0
-#define R504_BCLK_IN1_PIN_BCLK_IN_SLEW_IC_1_MASK  0xC
-#define R504_BCLK_IN1_PIN_BCLK_IN_SLEW_IC_1_SHIFT 2
-#define R504_BCLK_IN1_PIN_BCLK_IN_PULL_IC_1_MASK  0x10
-#define R504_BCLK_IN1_PIN_BCLK_IN_PULL_IC_1_SHIFT 4
+#define R549_BCLK_IN1_PIN_BCLK_IN_DRIVE_IC_1      0x0    /* 00b	[1:0] */
+#define R549_BCLK_IN1_PIN_BCLK_IN_SLEW_IC_1       0x2    /* 10b	[3:2] */
+#define R549_BCLK_IN1_PIN_BCLK_IN_PULL_IC_1       0x1    /* 1b	[4] */
+#define R549_BCLK_IN1_PIN_BCLK_IN_DRIVE_IC_1_MASK 0x3
+#define R549_BCLK_IN1_PIN_BCLK_IN_DRIVE_IC_1_SHIFT 0
+#define R549_BCLK_IN1_PIN_BCLK_IN_SLEW_IC_1_MASK  0xC
+#define R549_BCLK_IN1_PIN_BCLK_IN_SLEW_IC_1_SHIFT 2
+#define R549_BCLK_IN1_PIN_BCLK_IN_PULL_IC_1_MASK  0x10
+#define R549_BCLK_IN1_PIN_BCLK_IN_PULL_IC_1_SHIFT 4
 
 /* BCLK_IN2_PIN (IC 1) */
-#define R505_BCLK_IN2_PIN_BCLK_IN_DRIVE_IC_1      0x0    /* 00b	[1:0] */
-#define R505_BCLK_IN2_PIN_BCLK_IN_SLEW_IC_1       0x2    /* 10b	[3:2] */
-#define R505_BCLK_IN2_PIN_BCLK_IN_PULL_IC_1       0x1    /* 1b	[4] */
-#define R505_BCLK_IN2_PIN_BCLK_IN_DRIVE_IC_1_MASK 0x3
-#define R505_BCLK_IN2_PIN_BCLK_IN_DRIVE_IC_1_SHIFT 0
-#define R505_BCLK_IN2_PIN_BCLK_IN_SLEW_IC_1_MASK  0xC
-#define R505_BCLK_IN2_PIN_BCLK_IN_SLEW_IC_1_SHIFT 2
-#define R505_BCLK_IN2_PIN_BCLK_IN_PULL_IC_1_MASK  0x10
-#define R505_BCLK_IN2_PIN_BCLK_IN_PULL_IC_1_SHIFT 4
+#define R550_BCLK_IN2_PIN_BCLK_IN_DRIVE_IC_1      0x0    /* 00b	[1:0] */
+#define R550_BCLK_IN2_PIN_BCLK_IN_SLEW_IC_1       0x2    /* 10b	[3:2] */
+#define R550_BCLK_IN2_PIN_BCLK_IN_PULL_IC_1       0x1    /* 1b	[4] */
+#define R550_BCLK_IN2_PIN_BCLK_IN_DRIVE_IC_1_MASK 0x3
+#define R550_BCLK_IN2_PIN_BCLK_IN_DRIVE_IC_1_SHIFT 0
+#define R550_BCLK_IN2_PIN_BCLK_IN_SLEW_IC_1_MASK  0xC
+#define R550_BCLK_IN2_PIN_BCLK_IN_SLEW_IC_1_SHIFT 2
+#define R550_BCLK_IN2_PIN_BCLK_IN_PULL_IC_1_MASK  0x10
+#define R550_BCLK_IN2_PIN_BCLK_IN_PULL_IC_1_SHIFT 4
 
 /* BCLK_IN3_PIN (IC 1) */
-#define R506_BCLK_IN3_PIN_BCLK_IN_DRIVE_IC_1      0x0    /* 00b	[1:0] */
-#define R506_BCLK_IN3_PIN_BCLK_IN_SLEW_IC_1       0x2    /* 10b	[3:2] */
-#define R506_BCLK_IN3_PIN_BCLK_IN_PULL_IC_1       0x1    /* 1b	[4] */
-#define R506_BCLK_IN3_PIN_BCLK_IN_DRIVE_IC_1_MASK 0x3
-#define R506_BCLK_IN3_PIN_BCLK_IN_DRIVE_IC_1_SHIFT 0
-#define R506_BCLK_IN3_PIN_BCLK_IN_SLEW_IC_1_MASK  0xC
-#define R506_BCLK_IN3_PIN_BCLK_IN_SLEW_IC_1_SHIFT 2
-#define R506_BCLK_IN3_PIN_BCLK_IN_PULL_IC_1_MASK  0x10
-#define R506_BCLK_IN3_PIN_BCLK_IN_PULL_IC_1_SHIFT 4
+#define R551_BCLK_IN3_PIN_BCLK_IN_DRIVE_IC_1      0x0    /* 00b	[1:0] */
+#define R551_BCLK_IN3_PIN_BCLK_IN_SLEW_IC_1       0x2    /* 10b	[3:2] */
+#define R551_BCLK_IN3_PIN_BCLK_IN_PULL_IC_1       0x1    /* 1b	[4] */
+#define R551_BCLK_IN3_PIN_BCLK_IN_DRIVE_IC_1_MASK 0x3
+#define R551_BCLK_IN3_PIN_BCLK_IN_DRIVE_IC_1_SHIFT 0
+#define R551_BCLK_IN3_PIN_BCLK_IN_SLEW_IC_1_MASK  0xC
+#define R551_BCLK_IN3_PIN_BCLK_IN_SLEW_IC_1_SHIFT 2
+#define R551_BCLK_IN3_PIN_BCLK_IN_PULL_IC_1_MASK  0x10
+#define R551_BCLK_IN3_PIN_BCLK_IN_PULL_IC_1_SHIFT 4
 
 /* BCLK_OUT0_PIN (IC 1) */
-#define R507_BCLK_OUT0_PIN_BCLK_OUT_DRIVE_IC_1    0x0    /* 00b	[1:0] */
-#define R507_BCLK_OUT0_PIN_BCLK_OUT_SLEW_IC_1     0x2    /* 10b	[3:2] */
-#define R507_BCLK_OUT0_PIN_BCLK_OUT_PULL_IC_1     0x1    /* 1b	[4] */
-#define R507_BCLK_OUT0_PIN_BCLK_OUT_DRIVE_IC_1_MASK 0x3
-#define R507_BCLK_OUT0_PIN_BCLK_OUT_DRIVE_IC_1_SHIFT 0
-#define R507_BCLK_OUT0_PIN_BCLK_OUT_SLEW_IC_1_MASK 0xC
-#define R507_BCLK_OUT0_PIN_BCLK_OUT_SLEW_IC_1_SHIFT 2
-#define R507_BCLK_OUT0_PIN_BCLK_OUT_PULL_IC_1_MASK 0x10
-#define R507_BCLK_OUT0_PIN_BCLK_OUT_PULL_IC_1_SHIFT 4
+#define R552_BCLK_OUT0_PIN_BCLK_OUT_DRIVE_IC_1    0x0    /* 00b	[1:0] */
+#define R552_BCLK_OUT0_PIN_BCLK_OUT_SLEW_IC_1     0x0    /* 00b	[3:2] */
+#define R552_BCLK_OUT0_PIN_BCLK_OUT_PULL_IC_1     0x1    /* 1b	[4] */
+#define R552_BCLK_OUT0_PIN_BCLK_OUT_DRIVE_IC_1_MASK 0x3
+#define R552_BCLK_OUT0_PIN_BCLK_OUT_DRIVE_IC_1_SHIFT 0
+#define R552_BCLK_OUT0_PIN_BCLK_OUT_SLEW_IC_1_MASK 0xC
+#define R552_BCLK_OUT0_PIN_BCLK_OUT_SLEW_IC_1_SHIFT 2
+#define R552_BCLK_OUT0_PIN_BCLK_OUT_PULL_IC_1_MASK 0x10
+#define R552_BCLK_OUT0_PIN_BCLK_OUT_PULL_IC_1_SHIFT 4
 
 /* BCLK_OUT1_PIN (IC 1) */
-#define R508_BCLK_OUT1_PIN_BCLK_OUT_DRIVE_IC_1    0x0    /* 00b	[1:0] */
-#define R508_BCLK_OUT1_PIN_BCLK_OUT_SLEW_IC_1     0x2    /* 10b	[3:2] */
-#define R508_BCLK_OUT1_PIN_BCLK_OUT_PULL_IC_1     0x1    /* 1b	[4] */
-#define R508_BCLK_OUT1_PIN_BCLK_OUT_DRIVE_IC_1_MASK 0x3
-#define R508_BCLK_OUT1_PIN_BCLK_OUT_DRIVE_IC_1_SHIFT 0
-#define R508_BCLK_OUT1_PIN_BCLK_OUT_SLEW_IC_1_MASK 0xC
-#define R508_BCLK_OUT1_PIN_BCLK_OUT_SLEW_IC_1_SHIFT 2
-#define R508_BCLK_OUT1_PIN_BCLK_OUT_PULL_IC_1_MASK 0x10
-#define R508_BCLK_OUT1_PIN_BCLK_OUT_PULL_IC_1_SHIFT 4
+#define R553_BCLK_OUT1_PIN_BCLK_OUT_DRIVE_IC_1    0x0    /* 00b	[1:0] */
+#define R553_BCLK_OUT1_PIN_BCLK_OUT_SLEW_IC_1     0x2    /* 10b	[3:2] */
+#define R553_BCLK_OUT1_PIN_BCLK_OUT_PULL_IC_1     0x1    /* 1b	[4] */
+#define R553_BCLK_OUT1_PIN_BCLK_OUT_DRIVE_IC_1_MASK 0x3
+#define R553_BCLK_OUT1_PIN_BCLK_OUT_DRIVE_IC_1_SHIFT 0
+#define R553_BCLK_OUT1_PIN_BCLK_OUT_SLEW_IC_1_MASK 0xC
+#define R553_BCLK_OUT1_PIN_BCLK_OUT_SLEW_IC_1_SHIFT 2
+#define R553_BCLK_OUT1_PIN_BCLK_OUT_PULL_IC_1_MASK 0x10
+#define R553_BCLK_OUT1_PIN_BCLK_OUT_PULL_IC_1_SHIFT 4
 
 /* BCLK_OUT2_PIN (IC 1) */
-#define R509_BCLK_OUT2_PIN_BCLK_OUT_DRIVE_IC_1    0x0    /* 00b	[1:0] */
-#define R509_BCLK_OUT2_PIN_BCLK_OUT_SLEW_IC_1     0x2    /* 10b	[3:2] */
-#define R509_BCLK_OUT2_PIN_BCLK_OUT_PULL_IC_1     0x1    /* 1b	[4] */
-#define R509_BCLK_OUT2_PIN_BCLK_OUT_DRIVE_IC_1_MASK 0x3
-#define R509_BCLK_OUT2_PIN_BCLK_OUT_DRIVE_IC_1_SHIFT 0
-#define R509_BCLK_OUT2_PIN_BCLK_OUT_SLEW_IC_1_MASK 0xC
-#define R509_BCLK_OUT2_PIN_BCLK_OUT_SLEW_IC_1_SHIFT 2
-#define R509_BCLK_OUT2_PIN_BCLK_OUT_PULL_IC_1_MASK 0x10
-#define R509_BCLK_OUT2_PIN_BCLK_OUT_PULL_IC_1_SHIFT 4
+#define R554_BCLK_OUT2_PIN_BCLK_OUT_DRIVE_IC_1    0x0    /* 00b	[1:0] */
+#define R554_BCLK_OUT2_PIN_BCLK_OUT_SLEW_IC_1     0x2    /* 10b	[3:2] */
+#define R554_BCLK_OUT2_PIN_BCLK_OUT_PULL_IC_1     0x1    /* 1b	[4] */
+#define R554_BCLK_OUT2_PIN_BCLK_OUT_DRIVE_IC_1_MASK 0x3
+#define R554_BCLK_OUT2_PIN_BCLK_OUT_DRIVE_IC_1_SHIFT 0
+#define R554_BCLK_OUT2_PIN_BCLK_OUT_SLEW_IC_1_MASK 0xC
+#define R554_BCLK_OUT2_PIN_BCLK_OUT_SLEW_IC_1_SHIFT 2
+#define R554_BCLK_OUT2_PIN_BCLK_OUT_PULL_IC_1_MASK 0x10
+#define R554_BCLK_OUT2_PIN_BCLK_OUT_PULL_IC_1_SHIFT 4
 
 /* BCLK_OUT3_PIN (IC 1) */
-#define R510_BCLK_OUT3_PIN_BCLK_OUT_DRIVE_IC_1    0x0    /* 00b	[1:0] */
-#define R510_BCLK_OUT3_PIN_BCLK_OUT_SLEW_IC_1     0x2    /* 10b	[3:2] */
-#define R510_BCLK_OUT3_PIN_BCLK_OUT_PULL_IC_1     0x1    /* 1b	[4] */
-#define R510_BCLK_OUT3_PIN_BCLK_OUT_DRIVE_IC_1_MASK 0x3
-#define R510_BCLK_OUT3_PIN_BCLK_OUT_DRIVE_IC_1_SHIFT 0
-#define R510_BCLK_OUT3_PIN_BCLK_OUT_SLEW_IC_1_MASK 0xC
-#define R510_BCLK_OUT3_PIN_BCLK_OUT_SLEW_IC_1_SHIFT 2
-#define R510_BCLK_OUT3_PIN_BCLK_OUT_PULL_IC_1_MASK 0x10
-#define R510_BCLK_OUT3_PIN_BCLK_OUT_PULL_IC_1_SHIFT 4
+#define R555_BCLK_OUT3_PIN_BCLK_OUT_DRIVE_IC_1    0x0    /* 00b	[1:0] */
+#define R555_BCLK_OUT3_PIN_BCLK_OUT_SLEW_IC_1     0x2    /* 10b	[3:2] */
+#define R555_BCLK_OUT3_PIN_BCLK_OUT_PULL_IC_1     0x1    /* 1b	[4] */
+#define R555_BCLK_OUT3_PIN_BCLK_OUT_DRIVE_IC_1_MASK 0x3
+#define R555_BCLK_OUT3_PIN_BCLK_OUT_DRIVE_IC_1_SHIFT 0
+#define R555_BCLK_OUT3_PIN_BCLK_OUT_SLEW_IC_1_MASK 0xC
+#define R555_BCLK_OUT3_PIN_BCLK_OUT_SLEW_IC_1_SHIFT 2
+#define R555_BCLK_OUT3_PIN_BCLK_OUT_PULL_IC_1_MASK 0x10
+#define R555_BCLK_OUT3_PIN_BCLK_OUT_PULL_IC_1_SHIFT 4
 
 /* LRCLK_IN0_PIN (IC 1) */
-#define R511_LRCLK_IN0_PIN_LRCLK_IN_DRIVE_IC_1    0x0    /* 00b	[1:0] */
-#define R511_LRCLK_IN0_PIN_LRCLK_IN_SLEW_IC_1     0x2    /* 10b	[3:2] */
-#define R511_LRCLK_IN0_PIN_LRCLK_IN_PULL_IC_1     0x1    /* 1b	[4] */
-#define R511_LRCLK_IN0_PIN_LRCLK_IN_DRIVE_IC_1_MASK 0x3
-#define R511_LRCLK_IN0_PIN_LRCLK_IN_DRIVE_IC_1_SHIFT 0
-#define R511_LRCLK_IN0_PIN_LRCLK_IN_SLEW_IC_1_MASK 0xC
-#define R511_LRCLK_IN0_PIN_LRCLK_IN_SLEW_IC_1_SHIFT 2
-#define R511_LRCLK_IN0_PIN_LRCLK_IN_PULL_IC_1_MASK 0x10
-#define R511_LRCLK_IN0_PIN_LRCLK_IN_PULL_IC_1_SHIFT 4
+#define R556_LRCLK_IN0_PIN_LRCLK_IN_DRIVE_IC_1    0x3    /* 11b	[1:0] */
+#define R556_LRCLK_IN0_PIN_LRCLK_IN_SLEW_IC_1     0x3    /* 11b	[3:2] */
+#define R556_LRCLK_IN0_PIN_LRCLK_IN_PULL_IC_1     0x1    /* 1b	[4] */
+#define R556_LRCLK_IN0_PIN_LRCLK_IN_DRIVE_IC_1_MASK 0x3
+#define R556_LRCLK_IN0_PIN_LRCLK_IN_DRIVE_IC_1_SHIFT 0
+#define R556_LRCLK_IN0_PIN_LRCLK_IN_SLEW_IC_1_MASK 0xC
+#define R556_LRCLK_IN0_PIN_LRCLK_IN_SLEW_IC_1_SHIFT 2
+#define R556_LRCLK_IN0_PIN_LRCLK_IN_PULL_IC_1_MASK 0x10
+#define R556_LRCLK_IN0_PIN_LRCLK_IN_PULL_IC_1_SHIFT 4
 
 /* LRCLK_IN1_PIN (IC 1) */
-#define R512_LRCLK_IN1_PIN_LRCLK_IN_DRIVE_IC_1    0x0    /* 00b	[1:0] */
-#define R512_LRCLK_IN1_PIN_LRCLK_IN_SLEW_IC_1     0x2    /* 10b	[3:2] */
-#define R512_LRCLK_IN1_PIN_LRCLK_IN_PULL_IC_1     0x1    /* 1b	[4] */
-#define R512_LRCLK_IN1_PIN_LRCLK_IN_DRIVE_IC_1_MASK 0x3
-#define R512_LRCLK_IN1_PIN_LRCLK_IN_DRIVE_IC_1_SHIFT 0
-#define R512_LRCLK_IN1_PIN_LRCLK_IN_SLEW_IC_1_MASK 0xC
-#define R512_LRCLK_IN1_PIN_LRCLK_IN_SLEW_IC_1_SHIFT 2
-#define R512_LRCLK_IN1_PIN_LRCLK_IN_PULL_IC_1_MASK 0x10
-#define R512_LRCLK_IN1_PIN_LRCLK_IN_PULL_IC_1_SHIFT 4
+#define R557_LRCLK_IN1_PIN_LRCLK_IN_DRIVE_IC_1    0x0    /* 00b	[1:0] */
+#define R557_LRCLK_IN1_PIN_LRCLK_IN_SLEW_IC_1     0x2    /* 10b	[3:2] */
+#define R557_LRCLK_IN1_PIN_LRCLK_IN_PULL_IC_1     0x1    /* 1b	[4] */
+#define R557_LRCLK_IN1_PIN_LRCLK_IN_DRIVE_IC_1_MASK 0x3
+#define R557_LRCLK_IN1_PIN_LRCLK_IN_DRIVE_IC_1_SHIFT 0
+#define R557_LRCLK_IN1_PIN_LRCLK_IN_SLEW_IC_1_MASK 0xC
+#define R557_LRCLK_IN1_PIN_LRCLK_IN_SLEW_IC_1_SHIFT 2
+#define R557_LRCLK_IN1_PIN_LRCLK_IN_PULL_IC_1_MASK 0x10
+#define R557_LRCLK_IN1_PIN_LRCLK_IN_PULL_IC_1_SHIFT 4
 
 /* LRCLK_IN2_PIN (IC 1) */
-#define R513_LRCLK_IN2_PIN_LRCLK_IN_DRIVE_IC_1    0x0    /* 00b	[1:0] */
-#define R513_LRCLK_IN2_PIN_LRCLK_IN_SLEW_IC_1     0x2    /* 10b	[3:2] */
-#define R513_LRCLK_IN2_PIN_LRCLK_IN_PULL_IC_1     0x1    /* 1b	[4] */
-#define R513_LRCLK_IN2_PIN_LRCLK_IN_DRIVE_IC_1_MASK 0x3
-#define R513_LRCLK_IN2_PIN_LRCLK_IN_DRIVE_IC_1_SHIFT 0
-#define R513_LRCLK_IN2_PIN_LRCLK_IN_SLEW_IC_1_MASK 0xC
-#define R513_LRCLK_IN2_PIN_LRCLK_IN_SLEW_IC_1_SHIFT 2
-#define R513_LRCLK_IN2_PIN_LRCLK_IN_PULL_IC_1_MASK 0x10
-#define R513_LRCLK_IN2_PIN_LRCLK_IN_PULL_IC_1_SHIFT 4
+#define R558_LRCLK_IN2_PIN_LRCLK_IN_DRIVE_IC_1    0x0    /* 00b	[1:0] */
+#define R558_LRCLK_IN2_PIN_LRCLK_IN_SLEW_IC_1     0x2    /* 10b	[3:2] */
+#define R558_LRCLK_IN2_PIN_LRCLK_IN_PULL_IC_1     0x1    /* 1b	[4] */
+#define R558_LRCLK_IN2_PIN_LRCLK_IN_DRIVE_IC_1_MASK 0x3
+#define R558_LRCLK_IN2_PIN_LRCLK_IN_DRIVE_IC_1_SHIFT 0
+#define R558_LRCLK_IN2_PIN_LRCLK_IN_SLEW_IC_1_MASK 0xC
+#define R558_LRCLK_IN2_PIN_LRCLK_IN_SLEW_IC_1_SHIFT 2
+#define R558_LRCLK_IN2_PIN_LRCLK_IN_PULL_IC_1_MASK 0x10
+#define R558_LRCLK_IN2_PIN_LRCLK_IN_PULL_IC_1_SHIFT 4
 
 /* LRCLK_IN3_PIN (IC 1) */
-#define R514_LRCLK_IN3_PIN_LRCLK_IN_DRIVE_IC_1    0x0    /* 00b	[1:0] */
-#define R514_LRCLK_IN3_PIN_LRCLK_IN_SLEW_IC_1     0x2    /* 10b	[3:2] */
-#define R514_LRCLK_IN3_PIN_LRCLK_IN_PULL_IC_1     0x1    /* 1b	[4] */
-#define R514_LRCLK_IN3_PIN_LRCLK_IN_DRIVE_IC_1_MASK 0x3
-#define R514_LRCLK_IN3_PIN_LRCLK_IN_DRIVE_IC_1_SHIFT 0
-#define R514_LRCLK_IN3_PIN_LRCLK_IN_SLEW_IC_1_MASK 0xC
-#define R514_LRCLK_IN3_PIN_LRCLK_IN_SLEW_IC_1_SHIFT 2
-#define R514_LRCLK_IN3_PIN_LRCLK_IN_PULL_IC_1_MASK 0x10
-#define R514_LRCLK_IN3_PIN_LRCLK_IN_PULL_IC_1_SHIFT 4
+#define R559_LRCLK_IN3_PIN_LRCLK_IN_DRIVE_IC_1    0x0    /* 00b	[1:0] */
+#define R559_LRCLK_IN3_PIN_LRCLK_IN_SLEW_IC_1     0x2    /* 10b	[3:2] */
+#define R559_LRCLK_IN3_PIN_LRCLK_IN_PULL_IC_1     0x1    /* 1b	[4] */
+#define R559_LRCLK_IN3_PIN_LRCLK_IN_DRIVE_IC_1_MASK 0x3
+#define R559_LRCLK_IN3_PIN_LRCLK_IN_DRIVE_IC_1_SHIFT 0
+#define R559_LRCLK_IN3_PIN_LRCLK_IN_SLEW_IC_1_MASK 0xC
+#define R559_LRCLK_IN3_PIN_LRCLK_IN_SLEW_IC_1_SHIFT 2
+#define R559_LRCLK_IN3_PIN_LRCLK_IN_PULL_IC_1_MASK 0x10
+#define R559_LRCLK_IN3_PIN_LRCLK_IN_PULL_IC_1_SHIFT 4
 
 /* LRCLK_OUT0_PIN (IC 1) */
-#define R515_LRCLK_OUT0_PIN_LRCLK_OUT_DRIVE_IC_1  0x0    /* 00b	[1:0] */
-#define R515_LRCLK_OUT0_PIN_LRCLK_OUT_SLEW_IC_1   0x2    /* 10b	[3:2] */
-#define R515_LRCLK_OUT0_PIN_LRCLK_OUT_PULL_IC_1   0x1    /* 1b	[4] */
-#define R515_LRCLK_OUT0_PIN_LRCLK_OUT_DRIVE_IC_1_MASK 0x3
-#define R515_LRCLK_OUT0_PIN_LRCLK_OUT_DRIVE_IC_1_SHIFT 0
-#define R515_LRCLK_OUT0_PIN_LRCLK_OUT_SLEW_IC_1_MASK 0xC
-#define R515_LRCLK_OUT0_PIN_LRCLK_OUT_SLEW_IC_1_SHIFT 2
-#define R515_LRCLK_OUT0_PIN_LRCLK_OUT_PULL_IC_1_MASK 0x10
-#define R515_LRCLK_OUT0_PIN_LRCLK_OUT_PULL_IC_1_SHIFT 4
+#define R560_LRCLK_OUT0_PIN_LRCLK_OUT_DRIVE_IC_1  0x0    /* 00b	[1:0] */
+#define R560_LRCLK_OUT0_PIN_LRCLK_OUT_SLEW_IC_1   0x2    /* 10b	[3:2] */
+#define R560_LRCLK_OUT0_PIN_LRCLK_OUT_PULL_IC_1   0x1    /* 1b	[4] */
+#define R560_LRCLK_OUT0_PIN_LRCLK_OUT_DRIVE_IC_1_MASK 0x3
+#define R560_LRCLK_OUT0_PIN_LRCLK_OUT_DRIVE_IC_1_SHIFT 0
+#define R560_LRCLK_OUT0_PIN_LRCLK_OUT_SLEW_IC_1_MASK 0xC
+#define R560_LRCLK_OUT0_PIN_LRCLK_OUT_SLEW_IC_1_SHIFT 2
+#define R560_LRCLK_OUT0_PIN_LRCLK_OUT_PULL_IC_1_MASK 0x10
+#define R560_LRCLK_OUT0_PIN_LRCLK_OUT_PULL_IC_1_SHIFT 4
 
 /* LRCLK_OUT1_PIN (IC 1) */
-#define R516_LRCLK_OUT1_PIN_LRCLK_OUT_DRIVE_IC_1  0x0    /* 00b	[1:0] */
-#define R516_LRCLK_OUT1_PIN_LRCLK_OUT_SLEW_IC_1   0x2    /* 10b	[3:2] */
-#define R516_LRCLK_OUT1_PIN_LRCLK_OUT_PULL_IC_1   0x1    /* 1b	[4] */
-#define R516_LRCLK_OUT1_PIN_LRCLK_OUT_DRIVE_IC_1_MASK 0x3
-#define R516_LRCLK_OUT1_PIN_LRCLK_OUT_DRIVE_IC_1_SHIFT 0
-#define R516_LRCLK_OUT1_PIN_LRCLK_OUT_SLEW_IC_1_MASK 0xC
-#define R516_LRCLK_OUT1_PIN_LRCLK_OUT_SLEW_IC_1_SHIFT 2
-#define R516_LRCLK_OUT1_PIN_LRCLK_OUT_PULL_IC_1_MASK 0x10
-#define R516_LRCLK_OUT1_PIN_LRCLK_OUT_PULL_IC_1_SHIFT 4
+#define R561_LRCLK_OUT1_PIN_LRCLK_OUT_DRIVE_IC_1  0x0    /* 00b	[1:0] */
+#define R561_LRCLK_OUT1_PIN_LRCLK_OUT_SLEW_IC_1   0x2    /* 10b	[3:2] */
+#define R561_LRCLK_OUT1_PIN_LRCLK_OUT_PULL_IC_1   0x1    /* 1b	[4] */
+#define R561_LRCLK_OUT1_PIN_LRCLK_OUT_DRIVE_IC_1_MASK 0x3
+#define R561_LRCLK_OUT1_PIN_LRCLK_OUT_DRIVE_IC_1_SHIFT 0
+#define R561_LRCLK_OUT1_PIN_LRCLK_OUT_SLEW_IC_1_MASK 0xC
+#define R561_LRCLK_OUT1_PIN_LRCLK_OUT_SLEW_IC_1_SHIFT 2
+#define R561_LRCLK_OUT1_PIN_LRCLK_OUT_PULL_IC_1_MASK 0x10
+#define R561_LRCLK_OUT1_PIN_LRCLK_OUT_PULL_IC_1_SHIFT 4
 
 /* LRCLK_OUT2_PIN (IC 1) */
-#define R517_LRCLK_OUT2_PIN_LRCLK_OUT_DRIVE_IC_1  0x0    /* 00b	[1:0] */
-#define R517_LRCLK_OUT2_PIN_LRCLK_OUT_SLEW_IC_1   0x2    /* 10b	[3:2] */
-#define R517_LRCLK_OUT2_PIN_LRCLK_OUT_PULL_IC_1   0x1    /* 1b	[4] */
-#define R517_LRCLK_OUT2_PIN_LRCLK_OUT_DRIVE_IC_1_MASK 0x3
-#define R517_LRCLK_OUT2_PIN_LRCLK_OUT_DRIVE_IC_1_SHIFT 0
-#define R517_LRCLK_OUT2_PIN_LRCLK_OUT_SLEW_IC_1_MASK 0xC
-#define R517_LRCLK_OUT2_PIN_LRCLK_OUT_SLEW_IC_1_SHIFT 2
-#define R517_LRCLK_OUT2_PIN_LRCLK_OUT_PULL_IC_1_MASK 0x10
-#define R517_LRCLK_OUT2_PIN_LRCLK_OUT_PULL_IC_1_SHIFT 4
+#define R562_LRCLK_OUT2_PIN_LRCLK_OUT_DRIVE_IC_1  0x0    /* 00b	[1:0] */
+#define R562_LRCLK_OUT2_PIN_LRCLK_OUT_SLEW_IC_1   0x2    /* 10b	[3:2] */
+#define R562_LRCLK_OUT2_PIN_LRCLK_OUT_PULL_IC_1   0x1    /* 1b	[4] */
+#define R562_LRCLK_OUT2_PIN_LRCLK_OUT_DRIVE_IC_1_MASK 0x3
+#define R562_LRCLK_OUT2_PIN_LRCLK_OUT_DRIVE_IC_1_SHIFT 0
+#define R562_LRCLK_OUT2_PIN_LRCLK_OUT_SLEW_IC_1_MASK 0xC
+#define R562_LRCLK_OUT2_PIN_LRCLK_OUT_SLEW_IC_1_SHIFT 2
+#define R562_LRCLK_OUT2_PIN_LRCLK_OUT_PULL_IC_1_MASK 0x10
+#define R562_LRCLK_OUT2_PIN_LRCLK_OUT_PULL_IC_1_SHIFT 4
 
 /* LRCLK_OUT3_PIN (IC 1) */
-#define R518_LRCLK_OUT3_PIN_LRCLK_OUT_DRIVE_IC_1  0x0    /* 00b	[1:0] */
-#define R518_LRCLK_OUT3_PIN_LRCLK_OUT_SLEW_IC_1   0x2    /* 10b	[3:2] */
-#define R518_LRCLK_OUT3_PIN_LRCLK_OUT_PULL_IC_1   0x1    /* 1b	[4] */
-#define R518_LRCLK_OUT3_PIN_LRCLK_OUT_DRIVE_IC_1_MASK 0x3
-#define R518_LRCLK_OUT3_PIN_LRCLK_OUT_DRIVE_IC_1_SHIFT 0
-#define R518_LRCLK_OUT3_PIN_LRCLK_OUT_SLEW_IC_1_MASK 0xC
-#define R518_LRCLK_OUT3_PIN_LRCLK_OUT_SLEW_IC_1_SHIFT 2
-#define R518_LRCLK_OUT3_PIN_LRCLK_OUT_PULL_IC_1_MASK 0x10
-#define R518_LRCLK_OUT3_PIN_LRCLK_OUT_PULL_IC_1_SHIFT 4
+#define R563_LRCLK_OUT3_PIN_LRCLK_OUT_DRIVE_IC_1  0x0    /* 00b	[1:0] */
+#define R563_LRCLK_OUT3_PIN_LRCLK_OUT_SLEW_IC_1   0x2    /* 10b	[3:2] */
+#define R563_LRCLK_OUT3_PIN_LRCLK_OUT_PULL_IC_1   0x1    /* 1b	[4] */
+#define R563_LRCLK_OUT3_PIN_LRCLK_OUT_DRIVE_IC_1_MASK 0x3
+#define R563_LRCLK_OUT3_PIN_LRCLK_OUT_DRIVE_IC_1_SHIFT 0
+#define R563_LRCLK_OUT3_PIN_LRCLK_OUT_SLEW_IC_1_MASK 0xC
+#define R563_LRCLK_OUT3_PIN_LRCLK_OUT_SLEW_IC_1_SHIFT 2
+#define R563_LRCLK_OUT3_PIN_LRCLK_OUT_PULL_IC_1_MASK 0x10
+#define R563_LRCLK_OUT3_PIN_LRCLK_OUT_PULL_IC_1_SHIFT 4
 
 /* SDATA_IN0_PIN (IC 1) */
-#define R519_SDATA_IN0_PIN_SDATA_IN_DRIVE_IC_1    0x0    /* 00b	[1:0] */
-#define R519_SDATA_IN0_PIN_SDATA_IN_SLEW_IC_1     0x2    /* 10b	[3:2] */
-#define R519_SDATA_IN0_PIN_SDATA_IN_PULL_IC_1     0x1    /* 1b	[4] */
-#define R519_SDATA_IN0_PIN_SDATA_IN_DRIVE_IC_1_MASK 0x3
-#define R519_SDATA_IN0_PIN_SDATA_IN_DRIVE_IC_1_SHIFT 0
-#define R519_SDATA_IN0_PIN_SDATA_IN_SLEW_IC_1_MASK 0xC
-#define R519_SDATA_IN0_PIN_SDATA_IN_SLEW_IC_1_SHIFT 2
-#define R519_SDATA_IN0_PIN_SDATA_IN_PULL_IC_1_MASK 0x10
-#define R519_SDATA_IN0_PIN_SDATA_IN_PULL_IC_1_SHIFT 4
+#define R564_SDATA_IN0_PIN_SDATA_IN_DRIVE_IC_1    0x0    /* 00b	[1:0] */
+#define R564_SDATA_IN0_PIN_SDATA_IN_SLEW_IC_1     0x2    /* 10b	[3:2] */
+#define R564_SDATA_IN0_PIN_SDATA_IN_PULL_IC_1     0x1    /* 1b	[4] */
+#define R564_SDATA_IN0_PIN_SDATA_IN_DRIVE_IC_1_MASK 0x3
+#define R564_SDATA_IN0_PIN_SDATA_IN_DRIVE_IC_1_SHIFT 0
+#define R564_SDATA_IN0_PIN_SDATA_IN_SLEW_IC_1_MASK 0xC
+#define R564_SDATA_IN0_PIN_SDATA_IN_SLEW_IC_1_SHIFT 2
+#define R564_SDATA_IN0_PIN_SDATA_IN_PULL_IC_1_MASK 0x10
+#define R564_SDATA_IN0_PIN_SDATA_IN_PULL_IC_1_SHIFT 4
 
 /* SDATA_IN1_PIN (IC 1) */
-#define R520_SDATA_IN1_PIN_SDATA_IN_DRIVE_IC_1    0x0    /* 00b	[1:0] */
-#define R520_SDATA_IN1_PIN_SDATA_IN_SLEW_IC_1     0x2    /* 10b	[3:2] */
-#define R520_SDATA_IN1_PIN_SDATA_IN_PULL_IC_1     0x1    /* 1b	[4] */
-#define R520_SDATA_IN1_PIN_SDATA_IN_DRIVE_IC_1_MASK 0x3
-#define R520_SDATA_IN1_PIN_SDATA_IN_DRIVE_IC_1_SHIFT 0
-#define R520_SDATA_IN1_PIN_SDATA_IN_SLEW_IC_1_MASK 0xC
-#define R520_SDATA_IN1_PIN_SDATA_IN_SLEW_IC_1_SHIFT 2
-#define R520_SDATA_IN1_PIN_SDATA_IN_PULL_IC_1_MASK 0x10
-#define R520_SDATA_IN1_PIN_SDATA_IN_PULL_IC_1_SHIFT 4
+#define R565_SDATA_IN1_PIN_SDATA_IN_DRIVE_IC_1    0x0    /* 00b	[1:0] */
+#define R565_SDATA_IN1_PIN_SDATA_IN_SLEW_IC_1     0x2    /* 10b	[3:2] */
+#define R565_SDATA_IN1_PIN_SDATA_IN_PULL_IC_1     0x1    /* 1b	[4] */
+#define R565_SDATA_IN1_PIN_SDATA_IN_DRIVE_IC_1_MASK 0x3
+#define R565_SDATA_IN1_PIN_SDATA_IN_DRIVE_IC_1_SHIFT 0
+#define R565_SDATA_IN1_PIN_SDATA_IN_SLEW_IC_1_MASK 0xC
+#define R565_SDATA_IN1_PIN_SDATA_IN_SLEW_IC_1_SHIFT 2
+#define R565_SDATA_IN1_PIN_SDATA_IN_PULL_IC_1_MASK 0x10
+#define R565_SDATA_IN1_PIN_SDATA_IN_PULL_IC_1_SHIFT 4
 
 /* SDATA_IN2_PIN (IC 1) */
-#define R521_SDATA_IN2_PIN_SDATA_IN_DRIVE_IC_1    0x0    /* 00b	[1:0] */
-#define R521_SDATA_IN2_PIN_SDATA_IN_SLEW_IC_1     0x2    /* 10b	[3:2] */
-#define R521_SDATA_IN2_PIN_SDATA_IN_PULL_IC_1     0x1    /* 1b	[4] */
-#define R521_SDATA_IN2_PIN_SDATA_IN_DRIVE_IC_1_MASK 0x3
-#define R521_SDATA_IN2_PIN_SDATA_IN_DRIVE_IC_1_SHIFT 0
-#define R521_SDATA_IN2_PIN_SDATA_IN_SLEW_IC_1_MASK 0xC
-#define R521_SDATA_IN2_PIN_SDATA_IN_SLEW_IC_1_SHIFT 2
-#define R521_SDATA_IN2_PIN_SDATA_IN_PULL_IC_1_MASK 0x10
-#define R521_SDATA_IN2_PIN_SDATA_IN_PULL_IC_1_SHIFT 4
+#define R566_SDATA_IN2_PIN_SDATA_IN_DRIVE_IC_1    0x0    /* 00b	[1:0] */
+#define R566_SDATA_IN2_PIN_SDATA_IN_SLEW_IC_1     0x2    /* 10b	[3:2] */
+#define R566_SDATA_IN2_PIN_SDATA_IN_PULL_IC_1     0x1    /* 1b	[4] */
+#define R566_SDATA_IN2_PIN_SDATA_IN_DRIVE_IC_1_MASK 0x3
+#define R566_SDATA_IN2_PIN_SDATA_IN_DRIVE_IC_1_SHIFT 0
+#define R566_SDATA_IN2_PIN_SDATA_IN_SLEW_IC_1_MASK 0xC
+#define R566_SDATA_IN2_PIN_SDATA_IN_SLEW_IC_1_SHIFT 2
+#define R566_SDATA_IN2_PIN_SDATA_IN_PULL_IC_1_MASK 0x10
+#define R566_SDATA_IN2_PIN_SDATA_IN_PULL_IC_1_SHIFT 4
 
 /* SDATA_IN3_PIN (IC 1) */
-#define R522_SDATA_IN3_PIN_SDATA_IN_DRIVE_IC_1    0x0    /* 00b	[1:0] */
-#define R522_SDATA_IN3_PIN_SDATA_IN_SLEW_IC_1     0x2    /* 10b	[3:2] */
-#define R522_SDATA_IN3_PIN_SDATA_IN_PULL_IC_1     0x1    /* 1b	[4] */
-#define R522_SDATA_IN3_PIN_SDATA_IN_DRIVE_IC_1_MASK 0x3
-#define R522_SDATA_IN3_PIN_SDATA_IN_DRIVE_IC_1_SHIFT 0
-#define R522_SDATA_IN3_PIN_SDATA_IN_SLEW_IC_1_MASK 0xC
-#define R522_SDATA_IN3_PIN_SDATA_IN_SLEW_IC_1_SHIFT 2
-#define R522_SDATA_IN3_PIN_SDATA_IN_PULL_IC_1_MASK 0x10
-#define R522_SDATA_IN3_PIN_SDATA_IN_PULL_IC_1_SHIFT 4
+#define R567_SDATA_IN3_PIN_SDATA_IN_DRIVE_IC_1    0x0    /* 00b	[1:0] */
+#define R567_SDATA_IN3_PIN_SDATA_IN_SLEW_IC_1     0x2    /* 10b	[3:2] */
+#define R567_SDATA_IN3_PIN_SDATA_IN_PULL_IC_1     0x1    /* 1b	[4] */
+#define R567_SDATA_IN3_PIN_SDATA_IN_DRIVE_IC_1_MASK 0x3
+#define R567_SDATA_IN3_PIN_SDATA_IN_DRIVE_IC_1_SHIFT 0
+#define R567_SDATA_IN3_PIN_SDATA_IN_SLEW_IC_1_MASK 0xC
+#define R567_SDATA_IN3_PIN_SDATA_IN_SLEW_IC_1_SHIFT 2
+#define R567_SDATA_IN3_PIN_SDATA_IN_PULL_IC_1_MASK 0x10
+#define R567_SDATA_IN3_PIN_SDATA_IN_PULL_IC_1_SHIFT 4
 
 /* SDATA_OUT0_PIN (IC 1) */
-#define R523_SDATA_OUT0_PIN_SDATA_OUT_DRIVE_IC_1  0x0    /* 00b	[1:0] */
-#define R523_SDATA_OUT0_PIN_SDATA_OUT_SLEW_IC_1   0x2    /* 10b	[3:2] */
-#define R523_SDATA_OUT0_PIN_SDATA_OUT_PULL_IC_1   0x0    /* 0b	[4] */
-#define R523_SDATA_OUT0_PIN_SDATA_OUT_DRIVE_IC_1_MASK 0x3
-#define R523_SDATA_OUT0_PIN_SDATA_OUT_DRIVE_IC_1_SHIFT 0
-#define R523_SDATA_OUT0_PIN_SDATA_OUT_SLEW_IC_1_MASK 0xC
-#define R523_SDATA_OUT0_PIN_SDATA_OUT_SLEW_IC_1_SHIFT 2
-#define R523_SDATA_OUT0_PIN_SDATA_OUT_PULL_IC_1_MASK 0x10
-#define R523_SDATA_OUT0_PIN_SDATA_OUT_PULL_IC_1_SHIFT 4
+#define R568_SDATA_OUT0_PIN_SDATA_OUT_DRIVE_IC_1  0x0    /* 00b	[1:0] */
+#define R568_SDATA_OUT0_PIN_SDATA_OUT_SLEW_IC_1   0x2    /* 10b	[3:2] */
+#define R568_SDATA_OUT0_PIN_SDATA_OUT_PULL_IC_1   0x1    /* 1b	[4] */
+#define R568_SDATA_OUT0_PIN_SDATA_OUT_DRIVE_IC_1_MASK 0x3
+#define R568_SDATA_OUT0_PIN_SDATA_OUT_DRIVE_IC_1_SHIFT 0
+#define R568_SDATA_OUT0_PIN_SDATA_OUT_SLEW_IC_1_MASK 0xC
+#define R568_SDATA_OUT0_PIN_SDATA_OUT_SLEW_IC_1_SHIFT 2
+#define R568_SDATA_OUT0_PIN_SDATA_OUT_PULL_IC_1_MASK 0x10
+#define R568_SDATA_OUT0_PIN_SDATA_OUT_PULL_IC_1_SHIFT 4
 
 /* SDATA_OUT1_PIN (IC 1) */
-#define R524_SDATA_OUT1_PIN_SDATA_OUT_DRIVE_IC_1  0x0    /* 00b	[1:0] */
-#define R524_SDATA_OUT1_PIN_SDATA_OUT_SLEW_IC_1   0x2    /* 10b	[3:2] */
-#define R524_SDATA_OUT1_PIN_SDATA_OUT_PULL_IC_1   0x0    /* 0b	[4] */
-#define R524_SDATA_OUT1_PIN_SDATA_OUT_DRIVE_IC_1_MASK 0x3
-#define R524_SDATA_OUT1_PIN_SDATA_OUT_DRIVE_IC_1_SHIFT 0
-#define R524_SDATA_OUT1_PIN_SDATA_OUT_SLEW_IC_1_MASK 0xC
-#define R524_SDATA_OUT1_PIN_SDATA_OUT_SLEW_IC_1_SHIFT 2
-#define R524_SDATA_OUT1_PIN_SDATA_OUT_PULL_IC_1_MASK 0x10
-#define R524_SDATA_OUT1_PIN_SDATA_OUT_PULL_IC_1_SHIFT 4
+#define R569_SDATA_OUT1_PIN_SDATA_OUT_DRIVE_IC_1  0x0    /* 00b	[1:0] */
+#define R569_SDATA_OUT1_PIN_SDATA_OUT_SLEW_IC_1   0x2    /* 10b	[3:2] */
+#define R569_SDATA_OUT1_PIN_SDATA_OUT_PULL_IC_1   0x1    /* 1b	[4] */
+#define R569_SDATA_OUT1_PIN_SDATA_OUT_DRIVE_IC_1_MASK 0x3
+#define R569_SDATA_OUT1_PIN_SDATA_OUT_DRIVE_IC_1_SHIFT 0
+#define R569_SDATA_OUT1_PIN_SDATA_OUT_SLEW_IC_1_MASK 0xC
+#define R569_SDATA_OUT1_PIN_SDATA_OUT_SLEW_IC_1_SHIFT 2
+#define R569_SDATA_OUT1_PIN_SDATA_OUT_PULL_IC_1_MASK 0x10
+#define R569_SDATA_OUT1_PIN_SDATA_OUT_PULL_IC_1_SHIFT 4
 
 /* SDATA_OUT2_PIN (IC 1) */
-#define R525_SDATA_OUT2_PIN_SDATA_OUT_DRIVE_IC_1  0x0    /* 00b	[1:0] */
-#define R525_SDATA_OUT2_PIN_SDATA_OUT_SLEW_IC_1   0x2    /* 10b	[3:2] */
-#define R525_SDATA_OUT2_PIN_SDATA_OUT_PULL_IC_1   0x0    /* 0b	[4] */
-#define R525_SDATA_OUT2_PIN_SDATA_OUT_DRIVE_IC_1_MASK 0x3
-#define R525_SDATA_OUT2_PIN_SDATA_OUT_DRIVE_IC_1_SHIFT 0
-#define R525_SDATA_OUT2_PIN_SDATA_OUT_SLEW_IC_1_MASK 0xC
-#define R525_SDATA_OUT2_PIN_SDATA_OUT_SLEW_IC_1_SHIFT 2
-#define R525_SDATA_OUT2_PIN_SDATA_OUT_PULL_IC_1_MASK 0x10
-#define R525_SDATA_OUT2_PIN_SDATA_OUT_PULL_IC_1_SHIFT 4
+#define R570_SDATA_OUT2_PIN_SDATA_OUT_DRIVE_IC_1  0x3    /* 11b	[1:0] */
+#define R570_SDATA_OUT2_PIN_SDATA_OUT_SLEW_IC_1   0x3    /* 11b	[3:2] */
+#define R570_SDATA_OUT2_PIN_SDATA_OUT_PULL_IC_1   0x1    /* 1b	[4] */
+#define R570_SDATA_OUT2_PIN_SDATA_OUT_DRIVE_IC_1_MASK 0x3
+#define R570_SDATA_OUT2_PIN_SDATA_OUT_DRIVE_IC_1_SHIFT 0
+#define R570_SDATA_OUT2_PIN_SDATA_OUT_SLEW_IC_1_MASK 0xC
+#define R570_SDATA_OUT2_PIN_SDATA_OUT_SLEW_IC_1_SHIFT 2
+#define R570_SDATA_OUT2_PIN_SDATA_OUT_PULL_IC_1_MASK 0x10
+#define R570_SDATA_OUT2_PIN_SDATA_OUT_PULL_IC_1_SHIFT 4
 
 /* SDATA_OUT3_PIN (IC 1) */
-#define R526_SDATA_OUT3_PIN_SDATA_OUT_DRIVE_IC_1  0x0    /* 00b	[1:0] */
-#define R526_SDATA_OUT3_PIN_SDATA_OUT_SLEW_IC_1   0x2    /* 10b	[3:2] */
-#define R526_SDATA_OUT3_PIN_SDATA_OUT_PULL_IC_1   0x0    /* 0b	[4] */
-#define R526_SDATA_OUT3_PIN_SDATA_OUT_DRIVE_IC_1_MASK 0x3
-#define R526_SDATA_OUT3_PIN_SDATA_OUT_DRIVE_IC_1_SHIFT 0
-#define R526_SDATA_OUT3_PIN_SDATA_OUT_SLEW_IC_1_MASK 0xC
-#define R526_SDATA_OUT3_PIN_SDATA_OUT_SLEW_IC_1_SHIFT 2
-#define R526_SDATA_OUT3_PIN_SDATA_OUT_PULL_IC_1_MASK 0x10
-#define R526_SDATA_OUT3_PIN_SDATA_OUT_PULL_IC_1_SHIFT 4
+#define R571_SDATA_OUT3_PIN_SDATA_OUT_DRIVE_IC_1  0x0    /* 00b	[1:0] */
+#define R571_SDATA_OUT3_PIN_SDATA_OUT_SLEW_IC_1   0x2    /* 10b	[3:2] */
+#define R571_SDATA_OUT3_PIN_SDATA_OUT_PULL_IC_1   0x1    /* 1b	[4] */
+#define R571_SDATA_OUT3_PIN_SDATA_OUT_DRIVE_IC_1_MASK 0x3
+#define R571_SDATA_OUT3_PIN_SDATA_OUT_DRIVE_IC_1_SHIFT 0
+#define R571_SDATA_OUT3_PIN_SDATA_OUT_SLEW_IC_1_MASK 0xC
+#define R571_SDATA_OUT3_PIN_SDATA_OUT_SLEW_IC_1_SHIFT 2
+#define R571_SDATA_OUT3_PIN_SDATA_OUT_PULL_IC_1_MASK 0x10
+#define R571_SDATA_OUT3_PIN_SDATA_OUT_PULL_IC_1_SHIFT 4
 
 /* SPDIF_TX_PIN (IC 1) */
-#define R527_SPDIF_TX_PIN_SPDIF_TX_DRIVE_IC_1     0x0    /* 00b	[1:0] */
-#define R527_SPDIF_TX_PIN_SPDIF_TX_SLEW_IC_1      0x2    /* 10b	[3:2] */
-#define R527_SPDIF_TX_PIN_SPDIF_TX_PULL_IC_1      0x0    /* 0b	[4] */
-#define R527_SPDIF_TX_PIN_SPDIF_TX_DRIVE_IC_1_MASK 0x3
-#define R527_SPDIF_TX_PIN_SPDIF_TX_DRIVE_IC_1_SHIFT 0
-#define R527_SPDIF_TX_PIN_SPDIF_TX_SLEW_IC_1_MASK 0xC
-#define R527_SPDIF_TX_PIN_SPDIF_TX_SLEW_IC_1_SHIFT 2
-#define R527_SPDIF_TX_PIN_SPDIF_TX_PULL_IC_1_MASK 0x10
-#define R527_SPDIF_TX_PIN_SPDIF_TX_PULL_IC_1_SHIFT 4
+#define R572_SPDIF_TX_PIN_SPDIF_TX_DRIVE_IC_1     0x0    /* 00b	[1:0] */
+#define R572_SPDIF_TX_PIN_SPDIF_TX_SLEW_IC_1      0x2    /* 10b	[3:2] */
+#define R572_SPDIF_TX_PIN_SPDIF_TX_PULL_IC_1      0x0    /* 0b	[4] */
+#define R572_SPDIF_TX_PIN_SPDIF_TX_DRIVE_IC_1_MASK 0x3
+#define R572_SPDIF_TX_PIN_SPDIF_TX_DRIVE_IC_1_SHIFT 0
+#define R572_SPDIF_TX_PIN_SPDIF_TX_SLEW_IC_1_MASK 0xC
+#define R572_SPDIF_TX_PIN_SPDIF_TX_SLEW_IC_1_SHIFT 2
+#define R572_SPDIF_TX_PIN_SPDIF_TX_PULL_IC_1_MASK 0x10
+#define R572_SPDIF_TX_PIN_SPDIF_TX_PULL_IC_1_SHIFT 4
 
 /* SCLK_SCL_PIN (IC 1) */
-#define R528_SCLK_SCL_PIN_SCLK_SCL_DRIVE_IC_1     0x0    /* 00b	[1:0] */
-#define R528_SCLK_SCL_PIN_SCLK_SCL_SLEW_IC_1      0x2    /* 10b	[3:2] */
-#define R528_SCLK_SCL_PIN_SCLK_SCL_PULL_IC_1      0x0    /* 0b	[4] */
-#define R528_SCLK_SCL_PIN_SCLK_SCL_DRIVE_IC_1_MASK 0x3
-#define R528_SCLK_SCL_PIN_SCLK_SCL_DRIVE_IC_1_SHIFT 0
-#define R528_SCLK_SCL_PIN_SCLK_SCL_SLEW_IC_1_MASK 0xC
-#define R528_SCLK_SCL_PIN_SCLK_SCL_SLEW_IC_1_SHIFT 2
-#define R528_SCLK_SCL_PIN_SCLK_SCL_PULL_IC_1_MASK 0x10
-#define R528_SCLK_SCL_PIN_SCLK_SCL_PULL_IC_1_SHIFT 4
+#define R573_SCLK_SCL_PIN_SCLK_SCL_DRIVE_IC_1     0x0    /* 00b	[1:0] */
+#define R573_SCLK_SCL_PIN_SCLK_SCL_SLEW_IC_1      0x2    /* 10b	[3:2] */
+#define R573_SCLK_SCL_PIN_SCLK_SCL_PULL_IC_1      0x0    /* 0b	[4] */
+#define R573_SCLK_SCL_PIN_SCLK_SCL_DRIVE_IC_1_MASK 0x3
+#define R573_SCLK_SCL_PIN_SCLK_SCL_DRIVE_IC_1_SHIFT 0
+#define R573_SCLK_SCL_PIN_SCLK_SCL_SLEW_IC_1_MASK 0xC
+#define R573_SCLK_SCL_PIN_SCLK_SCL_SLEW_IC_1_SHIFT 2
+#define R573_SCLK_SCL_PIN_SCLK_SCL_PULL_IC_1_MASK 0x10
+#define R573_SCLK_SCL_PIN_SCLK_SCL_PULL_IC_1_SHIFT 4
 
 /* MISO_SDA_PIN (IC 1) */
-#define R529_MISO_SDA_PIN_MISO_SDA_DRIVE_IC_1     0x0    /* 00b	[1:0] */
-#define R529_MISO_SDA_PIN_MISO_SDA_SLEW_IC_1      0x2    /* 10b	[3:2] */
-#define R529_MISO_SDA_PIN_MISO_SDA_PULL_IC_1      0x0    /* 0b	[4] */
-#define R529_MISO_SDA_PIN_MISO_SDA_DRIVE_IC_1_MASK 0x3
-#define R529_MISO_SDA_PIN_MISO_SDA_DRIVE_IC_1_SHIFT 0
-#define R529_MISO_SDA_PIN_MISO_SDA_SLEW_IC_1_MASK 0xC
-#define R529_MISO_SDA_PIN_MISO_SDA_SLEW_IC_1_SHIFT 2
-#define R529_MISO_SDA_PIN_MISO_SDA_PULL_IC_1_MASK 0x10
-#define R529_MISO_SDA_PIN_MISO_SDA_PULL_IC_1_SHIFT 4
+#define R574_MISO_SDA_PIN_MISO_SDA_DRIVE_IC_1     0x0    /* 00b	[1:0] */
+#define R574_MISO_SDA_PIN_MISO_SDA_SLEW_IC_1      0x2    /* 10b	[3:2] */
+#define R574_MISO_SDA_PIN_MISO_SDA_PULL_IC_1      0x0    /* 0b	[4] */
+#define R574_MISO_SDA_PIN_MISO_SDA_DRIVE_IC_1_MASK 0x3
+#define R574_MISO_SDA_PIN_MISO_SDA_DRIVE_IC_1_SHIFT 0
+#define R574_MISO_SDA_PIN_MISO_SDA_SLEW_IC_1_MASK 0xC
+#define R574_MISO_SDA_PIN_MISO_SDA_SLEW_IC_1_SHIFT 2
+#define R574_MISO_SDA_PIN_MISO_SDA_PULL_IC_1_MASK 0x10
+#define R574_MISO_SDA_PIN_MISO_SDA_PULL_IC_1_SHIFT 4
 
 /* SS_PIN (IC 1) */
-#define R530_SS_PIN_SS_DRIVE_IC_1                 0x0    /* 00b	[1:0] */
-#define R530_SS_PIN_SS_SLEW_IC_1                  0x2    /* 10b	[3:2] */
-#define R530_SS_PIN_SS_PULL_IC_1                  0x1    /* 1b	[4] */
-#define R530_SS_PIN_SS_DRIVE_IC_1_MASK            0x3
-#define R530_SS_PIN_SS_DRIVE_IC_1_SHIFT           0
-#define R530_SS_PIN_SS_SLEW_IC_1_MASK             0xC
-#define R530_SS_PIN_SS_SLEW_IC_1_SHIFT            2
-#define R530_SS_PIN_SS_PULL_IC_1_MASK             0x10
-#define R530_SS_PIN_SS_PULL_IC_1_SHIFT            4
+#define R575_SS_PIN_SS_DRIVE_IC_1                 0x0    /* 00b	[1:0] */
+#define R575_SS_PIN_SS_SLEW_IC_1                  0x2    /* 10b	[3:2] */
+#define R575_SS_PIN_SS_PULL_IC_1                  0x1    /* 1b	[4] */
+#define R575_SS_PIN_SS_DRIVE_IC_1_MASK            0x3
+#define R575_SS_PIN_SS_DRIVE_IC_1_SHIFT           0
+#define R575_SS_PIN_SS_SLEW_IC_1_MASK             0xC
+#define R575_SS_PIN_SS_SLEW_IC_1_SHIFT            2
+#define R575_SS_PIN_SS_PULL_IC_1_MASK             0x10
+#define R575_SS_PIN_SS_PULL_IC_1_SHIFT            4
 
 /* MOSI_ADDR1_PIN (IC 1) */
-#define R531_MOSI_ADDR1_PIN_MOSI_ADDR1_DRIVE_IC_1 0x0    /* 00b	[1:0] */
-#define R531_MOSI_ADDR1_PIN_MOSI_ADDR1_SLEW_IC_1  0x2    /* 10b	[3:2] */
-#define R531_MOSI_ADDR1_PIN_MOSI_ADDR1_PULL_IC_1  0x1    /* 1b	[4] */
-#define R531_MOSI_ADDR1_PIN_MOSI_ADDR1_DRIVE_IC_1_MASK 0x3
-#define R531_MOSI_ADDR1_PIN_MOSI_ADDR1_DRIVE_IC_1_SHIFT 0
-#define R531_MOSI_ADDR1_PIN_MOSI_ADDR1_SLEW_IC_1_MASK 0xC
-#define R531_MOSI_ADDR1_PIN_MOSI_ADDR1_SLEW_IC_1_SHIFT 2
-#define R531_MOSI_ADDR1_PIN_MOSI_ADDR1_PULL_IC_1_MASK 0x10
-#define R531_MOSI_ADDR1_PIN_MOSI_ADDR1_PULL_IC_1_SHIFT 4
+#define R576_MOSI_ADDR1_PIN_MOSI_ADDR1_DRIVE_IC_1 0x0    /* 00b	[1:0] */
+#define R576_MOSI_ADDR1_PIN_MOSI_ADDR1_SLEW_IC_1  0x2    /* 10b	[3:2] */
+#define R576_MOSI_ADDR1_PIN_MOSI_ADDR1_PULL_IC_1  0x1    /* 1b	[4] */
+#define R576_MOSI_ADDR1_PIN_MOSI_ADDR1_DRIVE_IC_1_MASK 0x3
+#define R576_MOSI_ADDR1_PIN_MOSI_ADDR1_DRIVE_IC_1_SHIFT 0
+#define R576_MOSI_ADDR1_PIN_MOSI_ADDR1_SLEW_IC_1_MASK 0xC
+#define R576_MOSI_ADDR1_PIN_MOSI_ADDR1_SLEW_IC_1_SHIFT 2
+#define R576_MOSI_ADDR1_PIN_MOSI_ADDR1_PULL_IC_1_MASK 0x10
+#define R576_MOSI_ADDR1_PIN_MOSI_ADDR1_PULL_IC_1_SHIFT 4
 
 /* SCLK_SCL_M_PIN (IC 1) */
-#define R532_SCLK_SCL_M_PIN_SCLK_SCL_M_DRIVE_IC_1 0x0    /* 00b	[1:0] */
-#define R532_SCLK_SCL_M_PIN_SCLK_SCL_M_SLEW_IC_1  0x2    /* 10b	[3:2] */
-#define R532_SCLK_SCL_M_PIN_SCLK_SCL_M_PULL_IC_1  0x0    /* 0b	[4] */
-#define R532_SCLK_SCL_M_PIN_SCLK_SCL_M_DRIVE_IC_1_MASK 0x3
-#define R532_SCLK_SCL_M_PIN_SCLK_SCL_M_DRIVE_IC_1_SHIFT 0
-#define R532_SCLK_SCL_M_PIN_SCLK_SCL_M_SLEW_IC_1_MASK 0xC
-#define R532_SCLK_SCL_M_PIN_SCLK_SCL_M_SLEW_IC_1_SHIFT 2
-#define R532_SCLK_SCL_M_PIN_SCLK_SCL_M_PULL_IC_1_MASK 0x10
-#define R532_SCLK_SCL_M_PIN_SCLK_SCL_M_PULL_IC_1_SHIFT 4
+#define R577_SCLK_SCL_M_PIN_SCLK_SCL_M_DRIVE_IC_1 0x0    /* 00b	[1:0] */
+#define R577_SCLK_SCL_M_PIN_SCLK_SCL_M_SLEW_IC_1  0x2    /* 10b	[3:2] */
+#define R577_SCLK_SCL_M_PIN_SCLK_SCL_M_PULL_IC_1  0x0    /* 0b	[4] */
+#define R577_SCLK_SCL_M_PIN_SCLK_SCL_M_DRIVE_IC_1_MASK 0x3
+#define R577_SCLK_SCL_M_PIN_SCLK_SCL_M_DRIVE_IC_1_SHIFT 0
+#define R577_SCLK_SCL_M_PIN_SCLK_SCL_M_SLEW_IC_1_MASK 0xC
+#define R577_SCLK_SCL_M_PIN_SCLK_SCL_M_SLEW_IC_1_SHIFT 2
+#define R577_SCLK_SCL_M_PIN_SCLK_SCL_M_PULL_IC_1_MASK 0x10
+#define R577_SCLK_SCL_M_PIN_SCLK_SCL_M_PULL_IC_1_SHIFT 4
 
 /* MISO_SDA_M_PIN (IC 1) */
-#define R533_MISO_SDA_M_PIN_MISO_SDA_M_DRIVE_IC_1 0x0    /* 00b	[1:0] */
-#define R533_MISO_SDA_M_PIN_MISO_SDA_M_SLEW_IC_1  0x2    /* 10b	[3:2] */
-#define R533_MISO_SDA_M_PIN_MISO_SDA_M_PULL_IC_1  0x0    /* 0b	[4] */
-#define R533_MISO_SDA_M_PIN_MISO_SDA_M_DRIVE_IC_1_MASK 0x3
-#define R533_MISO_SDA_M_PIN_MISO_SDA_M_DRIVE_IC_1_SHIFT 0
-#define R533_MISO_SDA_M_PIN_MISO_SDA_M_SLEW_IC_1_MASK 0xC
-#define R533_MISO_SDA_M_PIN_MISO_SDA_M_SLEW_IC_1_SHIFT 2
-#define R533_MISO_SDA_M_PIN_MISO_SDA_M_PULL_IC_1_MASK 0x10
-#define R533_MISO_SDA_M_PIN_MISO_SDA_M_PULL_IC_1_SHIFT 4
+#define R578_MISO_SDA_M_PIN_MISO_SDA_M_DRIVE_IC_1 0x0    /* 00b	[1:0] */
+#define R578_MISO_SDA_M_PIN_MISO_SDA_M_SLEW_IC_1  0x2    /* 10b	[3:2] */
+#define R578_MISO_SDA_M_PIN_MISO_SDA_M_PULL_IC_1  0x0    /* 0b	[4] */
+#define R578_MISO_SDA_M_PIN_MISO_SDA_M_DRIVE_IC_1_MASK 0x3
+#define R578_MISO_SDA_M_PIN_MISO_SDA_M_DRIVE_IC_1_SHIFT 0
+#define R578_MISO_SDA_M_PIN_MISO_SDA_M_SLEW_IC_1_MASK 0xC
+#define R578_MISO_SDA_M_PIN_MISO_SDA_M_SLEW_IC_1_SHIFT 2
+#define R578_MISO_SDA_M_PIN_MISO_SDA_M_PULL_IC_1_MASK 0x10
+#define R578_MISO_SDA_M_PIN_MISO_SDA_M_PULL_IC_1_SHIFT 4
 
 /* SS_M_PIN (IC 1) */
-#define R534_SS_M_PIN_SS_M_DRIVE_IC_1             0x0    /* 00b	[1:0] */
-#define R534_SS_M_PIN_SS_M_SLEW_IC_1              0x2    /* 10b	[3:2] */
-#define R534_SS_M_PIN_SS_M_PULL_IC_1              0x1    /* 1b	[4] */
-#define R534_SS_M_PIN_SS_M_DRIVE_IC_1_MASK        0x3
-#define R534_SS_M_PIN_SS_M_DRIVE_IC_1_SHIFT       0
-#define R534_SS_M_PIN_SS_M_SLEW_IC_1_MASK         0xC
-#define R534_SS_M_PIN_SS_M_SLEW_IC_1_SHIFT        2
-#define R534_SS_M_PIN_SS_M_PULL_IC_1_MASK         0x10
-#define R534_SS_M_PIN_SS_M_PULL_IC_1_SHIFT        4
+#define R579_SS_M_PIN_SS_M_DRIVE_IC_1             0x0    /* 00b	[1:0] */
+#define R579_SS_M_PIN_SS_M_SLEW_IC_1              0x2    /* 10b	[3:2] */
+#define R579_SS_M_PIN_SS_M_PULL_IC_1              0x1    /* 1b	[4] */
+#define R579_SS_M_PIN_SS_M_DRIVE_IC_1_MASK        0x3
+#define R579_SS_M_PIN_SS_M_DRIVE_IC_1_SHIFT       0
+#define R579_SS_M_PIN_SS_M_SLEW_IC_1_MASK         0xC
+#define R579_SS_M_PIN_SS_M_SLEW_IC_1_SHIFT        2
+#define R579_SS_M_PIN_SS_M_PULL_IC_1_MASK         0x10
+#define R579_SS_M_PIN_SS_M_PULL_IC_1_SHIFT        4
 
 /* MOSI_M_PIN (IC 1) */
-#define R535_MOSI_M_PIN_MOSI_M_DRIVE_IC_1         0x0    /* 00b	[1:0] */
-#define R535_MOSI_M_PIN_MOSI_M_SLEW_IC_1          0x2    /* 10b	[3:2] */
-#define R535_MOSI_M_PIN_MOSI_M_PULL_IC_1          0x1    /* 1b	[4] */
-#define R535_MOSI_M_PIN_MOSI_M_DRIVE_IC_1_MASK    0x3
-#define R535_MOSI_M_PIN_MOSI_M_DRIVE_IC_1_SHIFT   0
-#define R535_MOSI_M_PIN_MOSI_M_SLEW_IC_1_MASK     0xC
-#define R535_MOSI_M_PIN_MOSI_M_SLEW_IC_1_SHIFT    2
-#define R535_MOSI_M_PIN_MOSI_M_PULL_IC_1_MASK     0x10
-#define R535_MOSI_M_PIN_MOSI_M_PULL_IC_1_SHIFT    4
+#define R580_MOSI_M_PIN_MOSI_M_DRIVE_IC_1         0x0    /* 00b	[1:0] */
+#define R580_MOSI_M_PIN_MOSI_M_SLEW_IC_1          0x2    /* 10b	[3:2] */
+#define R580_MOSI_M_PIN_MOSI_M_PULL_IC_1          0x1    /* 1b	[4] */
+#define R580_MOSI_M_PIN_MOSI_M_DRIVE_IC_1_MASK    0x3
+#define R580_MOSI_M_PIN_MOSI_M_DRIVE_IC_1_SHIFT   0
+#define R580_MOSI_M_PIN_MOSI_M_SLEW_IC_1_MASK     0xC
+#define R580_MOSI_M_PIN_MOSI_M_SLEW_IC_1_SHIFT    2
+#define R580_MOSI_M_PIN_MOSI_M_PULL_IC_1_MASK     0x10
+#define R580_MOSI_M_PIN_MOSI_M_PULL_IC_1_SHIFT    4
 
 /* MP6_PIN (IC 1) */
-#define R536_MP6_PIN_MP6_DRIVE_IC_1               0x0    /* 00b	[1:0] */
-#define R536_MP6_PIN_MP6_SLEW_IC_1                0x2    /* 10b	[3:2] */
-#define R536_MP6_PIN_MP6_PULL_IC_1                0x1    /* 1b	[4] */
-#define R536_MP6_PIN_MP6_DRIVE_IC_1_MASK          0x3
-#define R536_MP6_PIN_MP6_DRIVE_IC_1_SHIFT         0
-#define R536_MP6_PIN_MP6_SLEW_IC_1_MASK           0xC
-#define R536_MP6_PIN_MP6_SLEW_IC_1_SHIFT          2
-#define R536_MP6_PIN_MP6_PULL_IC_1_MASK           0x10
-#define R536_MP6_PIN_MP6_PULL_IC_1_SHIFT          4
+#define R581_MP6_PIN_MP6_DRIVE_IC_1               0x0    /* 00b	[1:0] */
+#define R581_MP6_PIN_MP6_SLEW_IC_1                0x2    /* 10b	[3:2] */
+#define R581_MP6_PIN_MP6_PULL_IC_1                0x1    /* 1b	[4] */
+#define R581_MP6_PIN_MP6_DRIVE_IC_1_MASK          0x3
+#define R581_MP6_PIN_MP6_DRIVE_IC_1_SHIFT         0
+#define R581_MP6_PIN_MP6_SLEW_IC_1_MASK           0xC
+#define R581_MP6_PIN_MP6_SLEW_IC_1_SHIFT          2
+#define R581_MP6_PIN_MP6_PULL_IC_1_MASK           0x10
+#define R581_MP6_PIN_MP6_PULL_IC_1_SHIFT          4
 
 /* MP7_PIN (IC 1) */
-#define R537_MP7_PIN_MP7_DRIVE_IC_1               0x0    /* 00b	[1:0] */
-#define R537_MP7_PIN_MP7_SLEW_IC_1                0x2    /* 10b	[3:2] */
-#define R537_MP7_PIN_MP7_PULL_IC_1                0x1    /* 1b	[4] */
-#define R537_MP7_PIN_MP7_DRIVE_IC_1_MASK          0x3
-#define R537_MP7_PIN_MP7_DRIVE_IC_1_SHIFT         0
-#define R537_MP7_PIN_MP7_SLEW_IC_1_MASK           0xC
-#define R537_MP7_PIN_MP7_SLEW_IC_1_SHIFT          2
-#define R537_MP7_PIN_MP7_PULL_IC_1_MASK           0x10
-#define R537_MP7_PIN_MP7_PULL_IC_1_SHIFT          4
+#define R582_MP7_PIN_MP7_DRIVE_IC_1               0x0    /* 00b	[1:0] */
+#define R582_MP7_PIN_MP7_SLEW_IC_1                0x2    /* 10b	[3:2] */
+#define R582_MP7_PIN_MP7_PULL_IC_1                0x1    /* 1b	[4] */
+#define R582_MP7_PIN_MP7_DRIVE_IC_1_MASK          0x3
+#define R582_MP7_PIN_MP7_DRIVE_IC_1_SHIFT         0
+#define R582_MP7_PIN_MP7_SLEW_IC_1_MASK           0xC
+#define R582_MP7_PIN_MP7_SLEW_IC_1_SHIFT          2
+#define R582_MP7_PIN_MP7_PULL_IC_1_MASK           0x10
+#define R582_MP7_PIN_MP7_PULL_IC_1_SHIFT          4
 
 /* CLKOUT_PIN (IC 1) */
-#define R538_CLKOUT_PIN_CLKOUT_DRIVE_IC_1         0x0    /* 00b	[1:0] */
-#define R538_CLKOUT_PIN_CLKOUT_SLEW_IC_1          0x2    /* 10b	[3:2] */
-#define R538_CLKOUT_PIN_CLKOUT_PULL_IC_1          0x0    /* 0b	[4] */
-#define R538_CLKOUT_PIN_CLKOUT_DRIVE_IC_1_MASK    0x3
-#define R538_CLKOUT_PIN_CLKOUT_DRIVE_IC_1_SHIFT   0
-#define R538_CLKOUT_PIN_CLKOUT_SLEW_IC_1_MASK     0xC
-#define R538_CLKOUT_PIN_CLKOUT_SLEW_IC_1_SHIFT    2
-#define R538_CLKOUT_PIN_CLKOUT_PULL_IC_1_MASK     0x10
-#define R538_CLKOUT_PIN_CLKOUT_PULL_IC_1_SHIFT    4
+#define R583_CLKOUT_PIN_CLKOUT_DRIVE_IC_1         0x3    /* 11b	[1:0] */
+#define R583_CLKOUT_PIN_CLKOUT_SLEW_IC_1          0x3    /* 11b	[3:2] */
+#define R583_CLKOUT_PIN_CLKOUT_PULL_IC_1          0x1    /* 1b	[4] */
+#define R583_CLKOUT_PIN_CLKOUT_DRIVE_IC_1_MASK    0x3
+#define R583_CLKOUT_PIN_CLKOUT_DRIVE_IC_1_SHIFT   0
+#define R583_CLKOUT_PIN_CLKOUT_SLEW_IC_1_MASK     0xC
+#define R583_CLKOUT_PIN_CLKOUT_SLEW_IC_1_SHIFT    2
+#define R583_CLKOUT_PIN_CLKOUT_PULL_IC_1_MASK     0x10
+#define R583_CLKOUT_PIN_CLKOUT_PULL_IC_1_SHIFT    4
 
 /* SOFT_RESET (IC 1) */
-#define R539_SOFTWARE_RESET_IC_1                  0x1    /* 1b	[0] */
-#define R539_SOFTWARE_RESET_IC_1_MASK             0x1
-#define R539_SOFTWARE_RESET_IC_1_SHIFT            0
+#define R584_SOFTWARE_RESET_IC_1                  0x1    /* 1b	[0] */
+#define R584_SOFTWARE_RESET_IC_1_MASK             0x1
+#define R584_SOFTWARE_RESET_IC_1_SHIFT            0
+
+/* SECOND_PAGE_ENABLE (IC 1) */
+#define R585_SECOND_PAGE_ENABLE_IC_1              0x0    /* 0b	[0] */
+#define R585_SECOND_PAGE_ENABLE_IC_1_MASK         0x1
+#define R585_SECOND_PAGE_ENABLE_IC_1_SHIFT        0
 
 #endif

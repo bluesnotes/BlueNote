@@ -1,76 +1,73 @@
 #include "MCP23008.h"
+#include <Arduino.h>
 
 bool init_MCP23008(void) {
     Wire.begin();
     Wire.setClock(100000L);
-    Wire.beginTransmission(ADDR_MCP23008);
-    Wire.write(0x00); // input/output settings
-    Wire.write(0b10111111);
-    Wire.endTransmission();
 
-    Wire.beginTransmission(ADDR_MCP23008);
-    Wire.write(0x06); // pull-up resistor
-    Wire.write(0b00111111);
-    Wire.endTransmission();
+    write_1_byte_MCP23008(IODIR, 0b10011111); // input/output settings
 
-    Wire.beginTransmission(ADDR_MCP23008);
-    Wire.write(0x04); // INTCON
-    Wire.write(0b00111111);
-    Wire.endTransmission();
+    write_1_byte_MCP23008(GPPU, 0x00); // no pull-up resistor
 
-    Wire.beginTransmission(ADDR_MCP23008);
-    Wire.write(0x03); // DEFVAL
-    Wire.write(0b00111111);
-    Wire.endTransmission();
+    write_1_byte_MCP23008(INTCON, 0x00); // Pin value is compared against the previous pin value
 
-    Wire.beginTransmission(ADDR_MCP23008);
-    Wire.write(0x05); // int out at 1 or 0
-    Wire.write(0b00000010);
-    Wire.endTransmission();
+    write_1_byte_MCP23008(DEFVAL, 0b00011111); // define std value of bit for interrupt on change
 
-    Wire.beginTransmission(ADDR_MCP23008);
-    Wire.write(0x02); // pin interrupt on change enable
-    Wire.write(0b00011111);
-    Wire.endTransmission();
+    write_1_byte_MCP23008(IOCON, 0b00000010); // interrupt out active at 1 or 0 (select1)
 
-    Wire.beginTransmission(ADDR_MCP23008);
-    Wire.write(0x08); // INT CAP register
-    Wire.endTransmission();
-    Wire.requestFrom(ADDR_MCP23008, 1);
-    Wire.read();
+    write_1_byte_MCP23008(GPIO, 0b01100000); // LED BACKGROUND ON
+
+    write_1_byte_MCP23008(GPINT, 0b00011111); // in interrupt on change enable
+
+    read_1_byte_MCP23008(INTF);
 
     pinMode(INT_MCP23008_PIN, INPUT);
 
     return true;
 }
+uint8_t read_Int_MCP23008(void) {
 
-unsigned char read_MCP23008(void) {
-    char inputs = 0;
-    Wire.beginTransmission(ADDR_MCP23008);
-    Wire.write(0x07); // INT CAP register
-    Wire.endTransmission();
-    Wire.requestFrom(ADDR_MCP23008, 1);
-    inputs = Wire.read();
-    inputs &= 0b00111111;
+    delay(10);
+    char intInputs = 0, inputs = 0;
+    intInputs = read_1_byte_MCP23008(INTF);
 
-    delay(250);
+    inputs = read_1_byte_MCP23008(GPIO);
 
-    Wire.beginTransmission(ADDR_MCP23008);
-    Wire.write(0x08); // INT CAP register
-    Wire.endTransmission();
-    Wire.requestFrom(ADDR_MCP23008, 1);
+    inputs &= intInputs;
+    inputs &= 0b00011111;
+
+    read_1_byte_MCP23008(INTCAP);
 
     return inputs;
 }
 
-void write_MCP23008(bool reset_ADAU1701) {
-    char portRegister = 0;
-    char output = reset_ADAU1701 << 6;
+void write_1_bit_MCP23008(u_int8_t registerMCP23008, uint8_t bitPosition, bool value) {
+    uint8_t output = value << bitPosition;
+    uint8_t mask = ~(1 << bitPosition);
+
+    uint8_t portRegister = read_1_byte_MCP23008(registerMCP23008);
+
     Wire.beginTransmission(ADDR_MCP23008);
-    Wire.write(0x09); // PORT register
+    Wire.write(registerMCP23008);
+    if (value)
+        Wire.write(output | portRegister);
+    else
+        Wire.write(output | portRegister & mask);
+    Wire.endTransmission();
+}
+
+void write_1_byte_MCP23008(u_int8_t registerMCP23008, uint8_t byte) {
+    Wire.beginTransmission(ADDR_MCP23008);
+    Wire.write(registerMCP23008);
+    Wire.write(byte);
+    Wire.endTransmission();
+}
+
+uint8_t read_1_byte_MCP23008(uint8_t registerMCP23008) {
+    Wire.beginTransmission(ADDR_MCP23008);
+    Wire.write(registerMCP23008); // PORT register
+    Wire.endTransmission();
+
     Wire.requestFrom(ADDR_MCP23008, 1);
-    portRegister = Wire.read() & 0b00111111;
-    Wire.beginTransmission(ADDR_MCP23008);
-    Wire.write(0x09); // PORT register
-    Wire.write(output | portRegister);
+    return Wire.read();
 }

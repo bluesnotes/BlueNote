@@ -86,6 +86,8 @@ class EditMenu {
 
     int selectRow();
 
+    int backwardMenu();
+
     void draw();
 
     void MoveUp();
@@ -216,6 +218,8 @@ class ItemMenu {
     void MoveDown();
 
     int selectRow();
+
+    int backwardMenu();
 
     void setTitleColors(uint16_t TitleTextColor, uint16_t TitleFillColor);
 

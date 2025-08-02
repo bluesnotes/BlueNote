@@ -15,27 +15,39 @@ float Temp_Control::setup(void) {
     sensors.requestTemperatures();
     temperature = sensors.getTempCByIndex(0);
 
-    ledcSetup(0, 30000, 8);
-    ledcAttachPin(PWM_FAN_PIN, 0);
+    pinMode(PWM_FAN_PIN, PULLUP);
+    pinMode(PWM_FAN_PIN, OUTPUT);
+    digitalWrite(PWM_FAN_PIN, HIGH);
 
-    pinMode(TACH_FAN_PIN, INPUT);
+    ledcAttachPin(PWM_FAN_PIN, 1);
+    ledcSetup(1, 30000, 8);
+    ledcWrite(1, 128);
+
+    // pinMode(TACH_FAN_PIN, INPUT);
 
     return temperature = 0;
 }
 float Temp_Control::temperatureControl(void) {
     float temperature = 0;
-    sensors.requestTemperatures();
+
     temperature = sensors.getTempCByIndex(0);
-    if (temperature < 40)
-        ledcWrite(PWM_FAN_PIN, 0);
-    else if (temperature >= 40 && temperature < 50)
-        ledcWrite(PWM_FAN_PIN, 64);
+
+    sensors.setWaitForConversion(false); // makes it async
+    sensors.requestTemperatures();
+    sensors.setWaitForConversion(true);
+
+    uint32_t pwmTemp = roundf(temperature) * 2;
+
+    if (temperature < 30)
+        ledcWrite(1, 0);
+    else if (temperature >= 30 && temperature < 50)
+        ledcWrite(1, pwmTemp);
     else if (temperature >= 50 && temperature < 60)
-        ledcWrite(PWM_FAN_PIN, 128);
+        ledcWrite(1, 128);
     else if (temperature >= 60 && temperature < 70)
-        ledcWrite(PWM_FAN_PIN, 192);
+        ledcWrite(1, 192);
     else
-        ledcWrite(PWM_FAN_PIN, 255);
+        ledcWrite(1, 255);
 
     return temperature;
 }

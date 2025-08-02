@@ -1,0 +1,18 @@
+#ifndef COLOR_H
+#define COLOR_H
+
+// set colors Menu
+#define MENU_TEXT 0XFFFF
+#define MENU_TEXT_BCK 0X4c94 // blue clear
+#define MENU_BACKGROUND 0X0000
+#define MENU_HIGHLIGHTTEXT 0X0000
+#define MENU_HIGHLIGHT 0X4c94
+#define MENU_HIGHBORDER 0X0000
+#define MENU_SELECTTEXT 0XFFFF
+#define MENU_SELECT 0X018C // dark blue
+#define MENU_SELECTBORDER 0X0000
+#define MENU_DISABLE 0XC618
+#define TITLE_TEXT 0X0000
+#define TITLE_BACK 0X4c94
+
+#endif
