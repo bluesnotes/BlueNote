@@ -24,10 +24,10 @@ extern uint16_t DSPdownloadParam();
 
 #define SIGMA_WRITE_REGISTER_BLOCK(devAddress, address, length, pData) \
     {                                                                  \
-        if (address == PROGRAM_ADDR_IC_1) {                            \
+        if (address == PROGRAM_DATA_ADDR_IC_1) {                       \
             if (DSPdownloadProgram())                                  \
                 DSPwriteMultipleBytes(address, length, &pData[0]);     \
-        } else if (address == PARAM_ADDR_IC_1) {                       \
+        } else if (address == PROGRAM_DATA_ADDR_IC_1) {                \
             if (DSPdownloadParam())                                    \
                 DSPwriteMultipleBytes(address, length, &pData[0]);     \
         } else if (address == DM1_DATA_ADDR_IC_1) {                    \
@@ -39,9 +39,9 @@ extern uint16_t DSPdownloadParam();
 /*
  * Writes delay (in ms)
  */
-#define SIGMA_WRITE_DELAY(devAddress, length, pData) \
-    {                                                \
-        delay(25);                                   \
+#define SIGMA_WRITE_DELAY(devAddress, address, length, pData) \
+    {                                                         \
+        delay(25);                                            \
     }
 
 #endif

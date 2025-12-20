@@ -1,6 +1,7 @@
 #ifndef PRESET_H
 #define PRESET_H
 
+#include "DSP_manager.h"
 #include "Display_Preset.h"
 #include "effects.h"
 #include "pin.h"
@@ -22,6 +23,9 @@ enum presetDisplay : unsigned char {
 class Preset {
   protected:
     unsigned char identify;
+
+    dspFilter_t structdsp;
+
     String presetName;
 
     vector<Effects *>
@@ -37,14 +41,12 @@ class Preset {
     String getPresetName();
     float getValueEffectPreset(unsigned char page, unsigned char parameter);
     float getIncFactor(unsigned char page, unsigned char parameter);
+    unsigned int getLenghtPreset();
+    int getLenghtEffect(unsigned char page);
 
     // Setters
     void setPreseName(String s);
     void setValueEffectPreset(unsigned char page, unsigned char parameter, float value);
-
-    unsigned int getLenghtPreset();
-
-    int getLenghtEffect(unsigned char page);
 
     void displayMenuPreset(unsigned char page, unsigned char parameter, presetDisplay display, Adafruit_ILI9341 *d);
 };

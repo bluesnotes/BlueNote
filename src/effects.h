@@ -18,6 +18,7 @@ enum effectName {
 };
 
 enum propertyName {
+    active,
     gain,
     clip_up,
     clip_down,
@@ -47,7 +48,40 @@ enum propertyUnit {
     ms,
     hz,
     db,
-    for_one
+    for_one,
+    on_off,
+    od_type,
+    waveforms,
+    filter_type
+};
+
+enum propertyValueBypass {
+    off,
+    on,
+};
+
+enum propertyValueDrive {
+    drive,
+    od,
+    fuzz
+};
+
+enum propertyValueWaveforms {
+    sine,
+    triangular,
+    square
+};
+
+enum propertyValueFilterType {
+    peaking,
+    low_shelving,
+    high_shelving,
+    low_shelving_first,
+    high_shelving_first,
+    low_pass,
+    high_pass,
+    notch,
+    band_stop
 };
 
 class Property {
@@ -120,5 +154,6 @@ class Eq : public Effects {
 String effectNameToStr(int n);
 String propertyNameToStr(int n);
 String unitToStr(int n);
+String valueToStr(float value, int unit);
 
 #endif

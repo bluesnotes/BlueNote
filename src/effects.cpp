@@ -5,17 +5,21 @@ Effects::Effects() {}
 // Gain 0.1 to 15.99 -> -20 to 24dB
 // Clip Up 0.1 to 10
 // Clip Down 0.1 to 10
+// on - off
 Pre::Pre() {
     name = pre;
     properties.push_back(new Property(gain, 0, db, -20, 24, 0.1));
     properties.push_back(new Property(clip_up, 5, noth, 0.1, 10, 0.1));
     properties.push_back(new Property(clip_down, 5, noth, 0.1, 10, 0.1));
+    properties.push_back(new Property(active, 0, on_off, 0, 1, 1));
 }
 /*************OctaverSection**************/
 // Blend 0.001 to 1 -> -60 to 0dB
+// on - off
 Octaver::Octaver() {
     name = oct;
     properties.push_back(new Property(bld, -6, db, -60, 0, 0.1));
+    properties.push_back(new Property(active, 0, on_off, 0, 1, 1));
 }
 /*************EnvelopeFilterSection**************/
 // Strength 0.1 to 15.99 ->
@@ -23,25 +27,28 @@ Octaver::Octaver() {
 // QFactor 0.1 to 20
 // Frequency dry filter 20 to 20kHz
 // Blend 0.001 to 1 -> -60 to 0dB
+// on - off
 EnvelopeFilter::EnvelopeFilter() {
     name = env_filter;
     properties.push_back(new Property(strength, 0, noth, -20, 24, 0.1));
-    properties.push_back(new Property(decay_freq, 5, hz, 76, 1300, 0.1));
+    properties.push_back(new Property(decay_freq, 500, hz, 76, 1300, -1));
     properties.push_back(new Property(q_fact, 10, noth, 0.1, 20, 0.1));
     properties.push_back(new Property(dry_freq, 20000, hz, 20, 20000, -1));
     properties.push_back(new Property(bld, -6, db, -60, 0, 0.1));
+    properties.push_back(new Property(active, 0, on_off, 0, 1, 1));
 }
 /*************FuzzOdSection**************/
 // Gain 0.1 to 15.99 -> -20 to 24dB
-// Select Fuzz or Od
+// Select drive Od or Fuzz
 // Bias 0.1 to 10
 // Post Eq
 // Volume 0.001 to 10-> -60 to 20dB
 // Blend 0.001 to 1 -> -60 to 0dB
+// on - off
 FuzzOd::FuzzOd() {
     name = fuzz_od;
     properties.push_back(new Property(gain, 0, db, -20, 80, 0.1));
-    properties.push_back(new Property(sel, 0, noth, 0, 1, 1));
+    properties.push_back(new Property(sel, 0, od_type, 0, 2, 1));
     properties.push_back(new Property(bias, 5, noth, 0.1, 10, 0.1));
     properties.push_back(new Property(gain, 0, db, -15, 15, 0.1));
     properties.push_back(new Property(freq, 200, hz, 20, 20000, -1));
@@ -57,16 +64,19 @@ FuzzOd::FuzzOd() {
     properties.push_back(new Property(q_fact, 1.41, noth, 0, 16, 0.01));
     properties.push_back(new Property(vol, 0, db, -60, 20, 0.1));
     properties.push_back(new Property(bld, -6, db, -60, 0, 0.1));
+    properties.push_back(new Property(active, 0, on_off, 0, 1, 1));
 }
 /*************TeSmxSection**************/
 // Threshold HP comp 0.01 to 15.99 -> -40 to 24dB
 // Threshold LP comp 0.01 to 15.99 -> -40 to 24dB
 // Blend 0.001 to 1 -> -60 to 0dB
+// on - off
 CompTwoBand::CompTwoBand() {
     name = comp_2b;
     properties.push_back(new Property(threshHP, 0, db, -90, 6, 0.1));
     properties.push_back(new Property(threshLP, 0, db, -90, 6, 0.1));
     properties.push_back(new Property(bld, -6, db, -60, 0, 0.1));
+    properties.push_back(new Property(active, 0, on_off, 0, 1, 1));
 }
 /*************ChorusSection**************/
 // Select Sine Square or triangle
@@ -75,14 +85,16 @@ CompTwoBand::CompTwoBand() {
 // FC dry
 // FC Wet
 // Blend
+// on - off
 Chorus::Chorus() {
     name = chorus;
-    properties.push_back(new Property(sel, 0, noth, 0, 2, 1));
+    properties.push_back(new Property(sel, 0, waveforms, 0, 2, 1));
     properties.push_back(new Property(t_offset, 15, ms, 0, 30, 0.1));
     properties.push_back(new Property(strength, 1, noth, 0.1, 10, 0.1));
     properties.push_back(new Property(wet_freq, 20000, hz, 20, 20000, -1));
     properties.push_back(new Property(dry_freq, 20000, hz, 20, 20000, -1));
     properties.push_back(new Property(bld, -6, db, -60, 0, 0.1));
+    properties.push_back(new Property(active, 0, on_off, 0, 1, 1));
 }
 /*************CompressorSection**************/
 // -90 / +6 [dB]
@@ -90,7 +102,8 @@ Chorus::Chorus() {
 // 1 - 500 [ms]
 // 0 - 500 [ms]
 // 0 - 2000 [ms]
-// -30 / +24 [dB
+// -30 / +24 [dB]
+// on - off
 Compressor::Compressor() {
     name = comp;
     properties.push_back(new Property(thresh, 0, db, -90, 6, 0.1));
@@ -99,20 +112,25 @@ Compressor::Compressor() {
     properties.push_back(new Property(att, 10, ms, 0, 500, 1));
     properties.push_back(new Property(rel, 100, ms, 0, 2000, 1));
     properties.push_back(new Property(rms, 100, ms, 0, 500, 1));
+    properties.push_back(new Property(active, 0, on_off, 0, 1, 1));
 }
 /*************EQ**************/
 // Range +/-15 [dB]
 // Range 20-20000 [Hz]
-// Parametric, Peaking, range 0-16
+// QFactor
+// Filter type (peaking, low shelving...)
+// on - off
 Eq::Eq() {
     name = eq;
     properties.push_back(new Property(gain, 0, db, -15, 15, 0.1));
     properties.push_back(new Property(freq, 200, hz, 20, 20000, -1));
     properties.push_back(new Property(q_fact, 1.41, noth, 0, 16, 0.01));
+    properties.push_back(new Property(sel, 0, filter_type, 0, 8, 1));
+    properties.push_back(new Property(active, 0, on_off, 0, 1, 1));
 }
 
 String effectNameToStr(int n) {
-    switch (n) {
+    switch (n & 255) {
     case pre:
         return "Pre";
         break;
@@ -137,15 +155,15 @@ String effectNameToStr(int n) {
     case eq:
         return "Eq";
         break;
-
-    default:
-        break;
     }
     return "err";
 }
 
 String propertyNameToStr(int n) {
     switch (n) {
+    case active:
+        return "active";
+        break;
     case gain:
         return "gain";
         break;
@@ -212,9 +230,6 @@ String propertyNameToStr(int n) {
     case bld:
         return "blend";
         break;
-
-    default:
-        break;
     }
     return "err";
 }
@@ -236,9 +251,93 @@ String unitToStr(int n) {
     case for_one:
         return ":1";
         break;
-
-    default:
+    case on_off:
+        return "";
         break;
+    case od_type:
+        return "";
+        break;
+    case waveforms:
+        return "";
+        break;
+    case filter_type:
+        return "";
+        break;
+    }
+
+    return "err";
+}
+
+String valueToStr(float value, int unit) {
+    if (unit < on_off) {
+        return String(value);
+    } else if (unit == on_off) {
+        switch ((int)value) {
+        case off:
+            return "Off";
+            break;
+        case on:
+            return "On";
+            break;
+        }
+        return "err";
+    } else if (unit == od_type) {
+        switch ((int)value) {
+        case drive:
+            return "drive";
+            break;
+        case od:
+            return "OD";
+            break;
+        case fuzz:
+            return "fuzz";
+            break;
+        }
+        return "err";
+    } else if (unit == waveforms) {
+        switch ((int)value) {
+        case sine:
+            return "sine";
+            break;
+        case triangular:
+            return "triang.";
+            break;
+        case square:
+            return "square";
+            break;
+        }
+        return "err";
+    } else if (unit == filter_type) {
+        switch ((int)value) {
+        case peaking:
+            return "peaking";
+            break;
+        case low_shelving:
+            return "low shel.";
+            break;
+        case high_shelving:
+            return "hi shel.";
+            break;
+        case low_shelving_first:
+            return "lo sh.1st";
+            break;
+        case high_shelving_first:
+            return "hi sh.1st";
+            break;
+        case low_pass:
+            return "low pass";
+            break;
+        case high_pass:
+            return "hi pass";
+            break;
+        case notch:
+            return "notch";
+            break;
+        case band_stop:
+            return "bnd stop";
+            break;
+        }
+        return "err";
     }
     return "err";
 }

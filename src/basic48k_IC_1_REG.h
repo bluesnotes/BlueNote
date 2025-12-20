@@ -1,7 +1,7 @@
 /*
- * File:           C:\Users\damla\OneDrive\Documents\Analog Devices\SigmaStudio 4.7\Basic48k\basic48k_IC_1_REG.h
+ * File:           C:\Users\damla\OneDrive\Documents\Analog Devices\SigmaStudio 4.7\Basic48kV02\basic48k_IC_1_REG.h
  *
- * Created:        Sunday, July 27, 2025 1:41:35 PM
+ * Created:        Sunday, November 30, 2025 5:28:08 PM
  * Description:    basic48k:IC 1 control register definitions.
  *
  * This software is distributed in the hope that it will be useful,
@@ -313,7 +313,7 @@
 /* SERIAL_BYTE_0_0  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_0_0_IC_1_ADDR             0xF200
 #define REG_SERIAL_BYTE_0_0_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_0_0_IC_1_VALUE            0x91C8
+#define REG_SERIAL_BYTE_0_0_IC_1_VALUE            0x9040
 
 /* SERIAL_BYTE_0_1  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_0_1_IC_1_ADDR             0xF201
@@ -373,7 +373,7 @@
 /* SERIAL_BYTE_6_0  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_6_0_IC_1_ADDR             0xF218
 #define REG_SERIAL_BYTE_6_0_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_6_0_IC_1_VALUE            0x91C8
+#define REG_SERIAL_BYTE_6_0_IC_1_VALUE            0x9040
 
 /* SERIAL_BYTE_6_1  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_6_1_IC_1_ADDR             0xF219
@@ -383,12 +383,12 @@
 /* SERIAL_BYTE_7_0  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_7_0_IC_1_ADDR             0xF21C
 #define REG_SERIAL_BYTE_7_0_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_7_0_IC_1_VALUE            0x9000
+#define REG_SERIAL_BYTE_7_0_IC_1_VALUE            0x9040
 
 /* SERIAL_BYTE_7_1  - Registers (IC 1) */
 #define REG_SERIAL_BYTE_7_1_IC_1_ADDR             0xF21D
 #define REG_SERIAL_BYTE_7_1_IC_1_BYTE             2
-#define REG_SERIAL_BYTE_7_1_IC_1_VALUE            0x1A
+#define REG_SERIAL_BYTE_7_1_IC_1_VALUE            0x2
 
 /* FTDM_IN0  - Registers (IC 1) */
 #define REG_FTDM_IN0_IC_1_ADDR                    0xF300
@@ -1033,7 +1033,7 @@
 /* HIBERNATE  - Registers (IC 1) */
 #define REG_HIBERNATE_IC_1_ADDR                   0xF400
 #define REG_HIBERNATE_IC_1_BYTE                   2
-#define REG_HIBERNATE_IC_1_VALUE                  0x1
+#define REG_HIBERNATE_IC_1_VALUE                  0x0
 
 /* START_PULSE  - Registers (IC 1) */
 #define REG_START_PULSE_IC_1_ADDR                 0xF401
@@ -1048,7 +1048,7 @@
 /* KILL_CORE  - Registers (IC 1) */
 #define REG_KILL_CORE_IC_1_ADDR                   0xF403
 #define REG_KILL_CORE_IC_1_BYTE                   2
-#define REG_KILL_CORE_IC_1_VALUE                  0x1
+#define REG_KILL_CORE_IC_1_VALUE                  0x0
 
 /* START_ADDRESS  - Registers (IC 1) */
 #define REG_START_ADDRESS_IC_1_ADDR               0xF404
@@ -1213,72 +1213,72 @@
 /* MP0_MODE  - Registers (IC 1) */
 #define REG_MP0_MODE_IC_1_ADDR                    0xF510
 #define REG_MP0_MODE_IC_1_BYTE                    2
-#define REG_MP0_MODE_IC_1_VALUE                   0x0
+#define REG_MP0_MODE_IC_1_VALUE                   0x5
 
 /* MP1_MODE  - Registers (IC 1) */
 #define REG_MP1_MODE_IC_1_ADDR                    0xF511
 #define REG_MP1_MODE_IC_1_BYTE                    2
-#define REG_MP1_MODE_IC_1_VALUE                   0x0
+#define REG_MP1_MODE_IC_1_VALUE                   0x5
 
 /* MP2_MODE  - Registers (IC 1) */
 #define REG_MP2_MODE_IC_1_ADDR                    0xF512
 #define REG_MP2_MODE_IC_1_BYTE                    2
-#define REG_MP2_MODE_IC_1_VALUE                   0x1
+#define REG_MP2_MODE_IC_1_VALUE                   0x5
 
 /* MP3_MODE  - Registers (IC 1) */
 #define REG_MP3_MODE_IC_1_ADDR                    0xF513
 #define REG_MP3_MODE_IC_1_BYTE                    2
-#define REG_MP3_MODE_IC_1_VALUE                   0x0
+#define REG_MP3_MODE_IC_1_VALUE                   0x1
 
 /* MP4_MODE  - Registers (IC 1) */
 #define REG_MP4_MODE_IC_1_ADDR                    0xF514
 #define REG_MP4_MODE_IC_1_BYTE                    2
-#define REG_MP4_MODE_IC_1_VALUE                   0x1
+#define REG_MP4_MODE_IC_1_VALUE                   0x5
 
 /* MP5_MODE  - Registers (IC 1) */
 #define REG_MP5_MODE_IC_1_ADDR                    0xF515
 #define REG_MP5_MODE_IC_1_BYTE                    2
-#define REG_MP5_MODE_IC_1_VALUE                   0x7
+#define REG_MP5_MODE_IC_1_VALUE                   0x5
 
 /* MP6_MODE  - Registers (IC 1) */
 #define REG_MP6_MODE_IC_1_ADDR                    0xF516
 #define REG_MP6_MODE_IC_1_BYTE                    2
-#define REG_MP6_MODE_IC_1_VALUE                   0x0
+#define REG_MP6_MODE_IC_1_VALUE                   0x5
 
 /* MP7_MODE  - Registers (IC 1) */
 #define REG_MP7_MODE_IC_1_ADDR                    0xF517
 #define REG_MP7_MODE_IC_1_BYTE                    2
-#define REG_MP7_MODE_IC_1_VALUE                   0x0
+#define REG_MP7_MODE_IC_1_VALUE                   0x5
 
 /* MP8_MODE  - Registers (IC 1) */
 #define REG_MP8_MODE_IC_1_ADDR                    0xF518
 #define REG_MP8_MODE_IC_1_BYTE                    2
-#define REG_MP8_MODE_IC_1_VALUE                   0x0
+#define REG_MP8_MODE_IC_1_VALUE                   0x6
 
 /* MP9_MODE  - Registers (IC 1) */
 #define REG_MP9_MODE_IC_1_ADDR                    0xF519
 #define REG_MP9_MODE_IC_1_BYTE                    2
-#define REG_MP9_MODE_IC_1_VALUE                   0x0
+#define REG_MP9_MODE_IC_1_VALUE                   0x6
 
 /* MP10_MODE  - Registers (IC 1) */
 #define REG_MP10_MODE_IC_1_ADDR                   0xF51A
 #define REG_MP10_MODE_IC_1_BYTE                   2
-#define REG_MP10_MODE_IC_1_VALUE                  0x0
+#define REG_MP10_MODE_IC_1_VALUE                  0x6
 
 /* MP11_MODE  - Registers (IC 1) */
 #define REG_MP11_MODE_IC_1_ADDR                   0xF51B
 #define REG_MP11_MODE_IC_1_BYTE                   2
-#define REG_MP11_MODE_IC_1_VALUE                  0x0
+#define REG_MP11_MODE_IC_1_VALUE                  0x1
 
 /* MP12_MODE  - Registers (IC 1) */
 #define REG_MP12_MODE_IC_1_ADDR                   0xF51C
 #define REG_MP12_MODE_IC_1_BYTE                   2
-#define REG_MP12_MODE_IC_1_VALUE                  0x7
+#define REG_MP12_MODE_IC_1_VALUE                  0x5
 
 /* MP13_MODE  - Registers (IC 1) */
 #define REG_MP13_MODE_IC_1_ADDR                   0xF51D
 #define REG_MP13_MODE_IC_1_BYTE                   2
-#define REG_MP13_MODE_IC_1_VALUE                  0x7
+#define REG_MP13_MODE_IC_1_VALUE                  0x5
 
 /* MP0_WRITE  - Registers (IC 1) */
 #define REG_MP0_WRITE_IC_1_ADDR                   0xF520
@@ -1293,7 +1293,7 @@
 /* MP2_WRITE  - Registers (IC 1) */
 #define REG_MP2_WRITE_IC_1_ADDR                   0xF522
 #define REG_MP2_WRITE_IC_1_BYTE                   2
-#define REG_MP2_WRITE_IC_1_VALUE                  0x1
+#define REG_MP2_WRITE_IC_1_VALUE                  0x0
 
 /* MP3_WRITE  - Registers (IC 1) */
 #define REG_MP3_WRITE_IC_1_ADDR                   0xF523
@@ -1303,7 +1303,7 @@
 /* MP4_WRITE  - Registers (IC 1) */
 #define REG_MP4_WRITE_IC_1_ADDR                   0xF524
 #define REG_MP4_WRITE_IC_1_BYTE                   2
-#define REG_MP4_WRITE_IC_1_VALUE                  0x1
+#define REG_MP4_WRITE_IC_1_VALUE                  0x0
 
 /* MP5_WRITE  - Registers (IC 1) */
 #define REG_MP5_WRITE_IC_1_ADDR                   0xF525
@@ -1313,7 +1313,7 @@
 /* MP6_WRITE  - Registers (IC 1) */
 #define REG_MP6_WRITE_IC_1_ADDR                   0xF526
 #define REG_MP6_WRITE_IC_1_BYTE                   2
-#define REG_MP6_WRITE_IC_1_VALUE                  0x1
+#define REG_MP6_WRITE_IC_1_VALUE                  0x0
 
 /* MP7_WRITE  - Registers (IC 1) */
 #define REG_MP7_WRITE_IC_1_ADDR                   0xF527
@@ -3399,10 +3399,10 @@
 
 /* SERIAL_BYTE_0_0 (IC 1) */
 #define R58_SERIAL_BYTE_0_0_TDM_MODE_IC_1         0x0    /* 000b	[2:0] */
-#define R58_SERIAL_BYTE_0_0_DATA_FMT_IC_1         0x1    /* 01b	[4:3] */
+#define R58_SERIAL_BYTE_0_0_DATA_FMT_IC_1         0x0    /* 00b	[4:3] */
 #define R58_SERIAL_BYTE_0_0_WORD_LEN_IC_1         0x2    /* 10b	[6:5] */
-#define R58_SERIAL_BYTE_0_0_BCLK_POL_IC_1         0x1    /* 1b	[7] */
-#define R58_SERIAL_BYTE_0_0_LRCLK_POL_IC_1        0x1    /* 1b	[8] */
+#define R58_SERIAL_BYTE_0_0_BCLK_POL_IC_1         0x0    /* 0b	[7] */
+#define R58_SERIAL_BYTE_0_0_LRCLK_POL_IC_1        0x0    /* 0b	[8] */
 #define R58_SERIAL_BYTE_0_0_LRCLK_MODE_IC_1       0x0    /* 0b	[9] */
 #define R58_SERIAL_BYTE_0_0_BCLK_SRC_IC_1         0x4    /* 100b	[12:10] */
 #define R58_SERIAL_BYTE_0_0_LRCLK_SRC_IC_1        0x4    /* 100b	[15:13] */
@@ -3621,10 +3621,10 @@
 
 /* SERIAL_BYTE_6_0 (IC 1) */
 #define R70_SERIAL_BYTE_6_0_TDM_MODE_IC_1         0x0    /* 000b	[2:0] */
-#define R70_SERIAL_BYTE_6_0_DATA_FMT_IC_1         0x1    /* 01b	[4:3] */
+#define R70_SERIAL_BYTE_6_0_DATA_FMT_IC_1         0x0    /* 00b	[4:3] */
 #define R70_SERIAL_BYTE_6_0_WORD_LEN_IC_1         0x2    /* 10b	[6:5] */
-#define R70_SERIAL_BYTE_6_0_BCLK_POL_IC_1         0x1    /* 1b	[7] */
-#define R70_SERIAL_BYTE_6_0_LRCLK_POL_IC_1        0x1    /* 1b	[8] */
+#define R70_SERIAL_BYTE_6_0_BCLK_POL_IC_1         0x0    /* 0b	[7] */
+#define R70_SERIAL_BYTE_6_0_LRCLK_POL_IC_1        0x0    /* 0b	[8] */
 #define R70_SERIAL_BYTE_6_0_LRCLK_MODE_IC_1       0x0    /* 0b	[9] */
 #define R70_SERIAL_BYTE_6_0_BCLK_SRC_IC_1         0x4    /* 100b	[12:10] */
 #define R70_SERIAL_BYTE_6_0_LRCLK_SRC_IC_1        0x4    /* 100b	[15:13] */
@@ -3659,7 +3659,7 @@
 /* SERIAL_BYTE_7_0 (IC 1) */
 #define R72_SERIAL_BYTE_7_0_TDM_MODE_IC_1         0x0    /* 000b	[2:0] */
 #define R72_SERIAL_BYTE_7_0_DATA_FMT_IC_1         0x0    /* 00b	[4:3] */
-#define R72_SERIAL_BYTE_7_0_WORD_LEN_IC_1         0x0    /* 00b	[6:5] */
+#define R72_SERIAL_BYTE_7_0_WORD_LEN_IC_1         0x2    /* 10b	[6:5] */
 #define R72_SERIAL_BYTE_7_0_BCLK_POL_IC_1         0x0    /* 0b	[7] */
 #define R72_SERIAL_BYTE_7_0_LRCLK_POL_IC_1        0x0    /* 0b	[8] */
 #define R72_SERIAL_BYTE_7_0_LRCLK_MODE_IC_1       0x0    /* 0b	[9] */
@@ -3684,7 +3684,7 @@
 
 /* SERIAL_BYTE_7_1 (IC 1) */
 #define R73_SERIAL_BYTE_7_1_FS_IC_1               0x2    /* 010b	[2:0] */
-#define R73_SERIAL_BYTE_7_1_CLK_DOMAIN_IC_1       0x3    /* 11b	[4:3] */
+#define R73_SERIAL_BYTE_7_1_CLK_DOMAIN_IC_1       0x0    /* 00b	[4:3] */
 #define R73_SERIAL_BYTE_7_1_TRISTATE_IC_1         0x0    /* 0b	[5] */
 #define R73_SERIAL_BYTE_7_1_FS_IC_1_MASK          0x7
 #define R73_SERIAL_BYTE_7_1_FS_IC_1_SHIFT         0
@@ -5870,7 +5870,7 @@
 #define R201_FTDM_OUT63_SLOT_ENABLE_OUT_IC_1_SHIFT 7
 
 /* HIBERNATE (IC 1) */
-#define R202_HIBERNATE_HIBERNATE_IC_1             0x1    /* 1b	[0] */
+#define R202_HIBERNATE_HIBERNATE_IC_1             0x0    /* 0b	[0] */
 #define R202_HIBERNATE_HIBERNATE_IC_1_MASK        0x1
 #define R202_HIBERNATE_HIBERNATE_IC_1_SHIFT       0
 
@@ -5885,7 +5885,7 @@
 #define R204_START_CORE_START_CORE_IC_1_SHIFT     0
 
 /* KILL_CORE (IC 1) */
-#define R205_KILL_CORE_KILL_CORE_IC_1             0x1    /* 1b	[0] */
+#define R205_KILL_CORE_KILL_CORE_IC_1             0x0    /* 0b	[0] */
 #define R205_KILL_CORE_KILL_CORE_IC_1_MASK        0x1
 #define R205_KILL_CORE_KILL_CORE_IC_1_SHIFT       0
 
@@ -6410,8 +6410,8 @@
 #define R237_PANIC_CODE5_ERR_PM_B1SB5_IC_1_SHIFT  13
 
 /* MP0_MODE (IC 1) */
-#define R238_MP0_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
-#define R238_MP0_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R238_MP0_MODE_MP_ENABLE_IC_1              0x1    /* 1b	[0] */
+#define R238_MP0_MODE_MP_MODE_IC_1                0x2    /* 010b	[3:1] */
 #define R238_MP0_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
 #define R238_MP0_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
 #define R238_MP0_MODE_MP_ENABLE_IC_1_MASK         0x1
@@ -6424,8 +6424,8 @@
 #define R238_MP0_MODE_SS_SELECT_IC_1_SHIFT        8
 
 /* MP1_MODE (IC 1) */
-#define R239_MP1_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
-#define R239_MP1_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R239_MP1_MODE_MP_ENABLE_IC_1              0x1    /* 1b	[0] */
+#define R239_MP1_MODE_MP_MODE_IC_1                0x2    /* 010b	[3:1] */
 #define R239_MP1_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
 #define R239_MP1_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
 #define R239_MP1_MODE_MP_ENABLE_IC_1_MASK         0x1
@@ -6439,7 +6439,7 @@
 
 /* MP2_MODE (IC 1) */
 #define R240_MP2_MODE_MP_ENABLE_IC_1              0x1    /* 1b	[0] */
-#define R240_MP2_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R240_MP2_MODE_MP_MODE_IC_1                0x2    /* 010b	[3:1] */
 #define R240_MP2_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
 #define R240_MP2_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
 #define R240_MP2_MODE_MP_ENABLE_IC_1_MASK         0x1
@@ -6452,7 +6452,7 @@
 #define R240_MP2_MODE_SS_SELECT_IC_1_SHIFT        8
 
 /* MP3_MODE (IC 1) */
-#define R241_MP3_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
+#define R241_MP3_MODE_MP_ENABLE_IC_1              0x1    /* 1b	[0] */
 #define R241_MP3_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
 #define R241_MP3_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
 #define R241_MP3_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
@@ -6467,7 +6467,7 @@
 
 /* MP4_MODE (IC 1) */
 #define R242_MP4_MODE_MP_ENABLE_IC_1              0x1    /* 1b	[0] */
-#define R242_MP4_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R242_MP4_MODE_MP_MODE_IC_1                0x2    /* 010b	[3:1] */
 #define R242_MP4_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
 #define R242_MP4_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
 #define R242_MP4_MODE_MP_ENABLE_IC_1_MASK         0x1
@@ -6481,7 +6481,7 @@
 
 /* MP5_MODE (IC 1) */
 #define R243_MP5_MODE_MP_ENABLE_IC_1              0x1    /* 1b	[0] */
-#define R243_MP5_MODE_MP_MODE_IC_1                0x3    /* 011b	[3:1] */
+#define R243_MP5_MODE_MP_MODE_IC_1                0x2    /* 010b	[3:1] */
 #define R243_MP5_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
 #define R243_MP5_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
 #define R243_MP5_MODE_MP_ENABLE_IC_1_MASK         0x1
@@ -6494,8 +6494,8 @@
 #define R243_MP5_MODE_SS_SELECT_IC_1_SHIFT        8
 
 /* MP6_MODE (IC 1) */
-#define R244_MP6_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
-#define R244_MP6_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R244_MP6_MODE_MP_ENABLE_IC_1              0x1    /* 1b	[0] */
+#define R244_MP6_MODE_MP_MODE_IC_1                0x2    /* 010b	[3:1] */
 #define R244_MP6_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
 #define R244_MP6_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
 #define R244_MP6_MODE_MP_ENABLE_IC_1_MASK         0x1
@@ -6508,8 +6508,8 @@
 #define R244_MP6_MODE_SS_SELECT_IC_1_SHIFT        8
 
 /* MP7_MODE (IC 1) */
-#define R245_MP7_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
-#define R245_MP7_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R245_MP7_MODE_MP_ENABLE_IC_1              0x1    /* 1b	[0] */
+#define R245_MP7_MODE_MP_MODE_IC_1                0x2    /* 010b	[3:1] */
 #define R245_MP7_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
 #define R245_MP7_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
 #define R245_MP7_MODE_MP_ENABLE_IC_1_MASK         0x1
@@ -6523,7 +6523,7 @@
 
 /* MP8_MODE (IC 1) */
 #define R246_MP8_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
-#define R246_MP8_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R246_MP8_MODE_MP_MODE_IC_1                0x3    /* 011b	[3:1] */
 #define R246_MP8_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
 #define R246_MP8_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
 #define R246_MP8_MODE_MP_ENABLE_IC_1_MASK         0x1
@@ -6537,7 +6537,7 @@
 
 /* MP9_MODE (IC 1) */
 #define R247_MP9_MODE_MP_ENABLE_IC_1              0x0    /* 0b	[0] */
-#define R247_MP9_MODE_MP_MODE_IC_1                0x0    /* 000b	[3:1] */
+#define R247_MP9_MODE_MP_MODE_IC_1                0x3    /* 011b	[3:1] */
 #define R247_MP9_MODE_DEBOUNCE_VALUE_IC_1         0x0    /* 0000b	[7:4] */
 #define R247_MP9_MODE_SS_SELECT_IC_1              0x0    /* 000b	[10:8] */
 #define R247_MP9_MODE_MP_ENABLE_IC_1_MASK         0x1
@@ -6551,7 +6551,7 @@
 
 /* MP10_MODE (IC 1) */
 #define R248_MP10_MODE_MP_ENABLE_IC_1             0x0    /* 0b	[0] */
-#define R248_MP10_MODE_MP_MODE_IC_1               0x0    /* 000b	[3:1] */
+#define R248_MP10_MODE_MP_MODE_IC_1               0x3    /* 011b	[3:1] */
 #define R248_MP10_MODE_DEBOUNCE_VALUE_IC_1        0x0    /* 0000b	[7:4] */
 #define R248_MP10_MODE_SS_SELECT_IC_1             0x0    /* 000b	[10:8] */
 #define R248_MP10_MODE_MP_ENABLE_IC_1_MASK        0x1
@@ -6564,7 +6564,7 @@
 #define R248_MP10_MODE_SS_SELECT_IC_1_SHIFT       8
 
 /* MP11_MODE (IC 1) */
-#define R249_MP11_MODE_MP_ENABLE_IC_1             0x0    /* 0b	[0] */
+#define R249_MP11_MODE_MP_ENABLE_IC_1             0x1    /* 1b	[0] */
 #define R249_MP11_MODE_MP_MODE_IC_1               0x0    /* 000b	[3:1] */
 #define R249_MP11_MODE_DEBOUNCE_VALUE_IC_1        0x0    /* 0000b	[7:4] */
 #define R249_MP11_MODE_SS_SELECT_IC_1             0x0    /* 000b	[10:8] */
@@ -6579,7 +6579,7 @@
 
 /* MP12_MODE (IC 1) */
 #define R250_MP12_MODE_MP_ENABLE_IC_1             0x1    /* 1b	[0] */
-#define R250_MP12_MODE_MP_MODE_IC_1               0x3    /* 011b	[3:1] */
+#define R250_MP12_MODE_MP_MODE_IC_1               0x2    /* 010b	[3:1] */
 #define R250_MP12_MODE_DEBOUNCE_VALUE_IC_1        0x0    /* 0000b	[7:4] */
 #define R250_MP12_MODE_SS_SELECT_IC_1             0x0    /* 000b	[10:8] */
 #define R250_MP12_MODE_MP_ENABLE_IC_1_MASK        0x1
@@ -6593,7 +6593,7 @@
 
 /* MP13_MODE (IC 1) */
 #define R251_MP13_MODE_MP_ENABLE_IC_1             0x1    /* 1b	[0] */
-#define R251_MP13_MODE_MP_MODE_IC_1               0x3    /* 011b	[3:1] */
+#define R251_MP13_MODE_MP_MODE_IC_1               0x2    /* 010b	[3:1] */
 #define R251_MP13_MODE_DEBOUNCE_VALUE_IC_1        0x0    /* 0000b	[7:4] */
 #define R251_MP13_MODE_SS_SELECT_IC_1             0x0    /* 000b	[10:8] */
 #define R251_MP13_MODE_MP_ENABLE_IC_1_MASK        0x1
@@ -6616,7 +6616,7 @@
 #define R253_MP1_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
 
 /* MP2_WRITE (IC 1) */
-#define R254_MP2_WRITE_MP_REG_WRITE_IC_1          0x1    /* 1b	[0] */
+#define R254_MP2_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
 #define R254_MP2_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
 #define R254_MP2_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
 
@@ -6626,7 +6626,7 @@
 #define R255_MP3_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
 
 /* MP4_WRITE (IC 1) */
-#define R256_MP4_WRITE_MP_REG_WRITE_IC_1          0x1    /* 1b	[0] */
+#define R256_MP4_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
 #define R256_MP4_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
 #define R256_MP4_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
 
@@ -6636,7 +6636,7 @@
 #define R257_MP5_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
 
 /* MP6_WRITE (IC 1) */
-#define R258_MP6_WRITE_MP_REG_WRITE_IC_1          0x1    /* 1b	[0] */
+#define R258_MP6_WRITE_MP_REG_WRITE_IC_1          0x0    /* 0b	[0] */
 #define R258_MP6_WRITE_MP_REG_WRITE_IC_1_MASK     0x1
 #define R258_MP6_WRITE_MP_REG_WRITE_IC_1_SHIFT    0
 

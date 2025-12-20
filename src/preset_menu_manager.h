@@ -4,6 +4,7 @@
 #include "Adafruit_ILI9341_Menu.h"
 
 #include "ESP32Encoder.h" // https://github.com/madhephaestus/ESP32Encoder
+#include "global_struct.h"
 #include "pin.h"
 #include "preset.h"
 
@@ -29,6 +30,7 @@ class Menu {
   private:
     unsigned char *inputs;
     float *temp;
+    INOUTVAR *processVar;
 
     ItemMenu MainMenu = ItemMenu(&this->display);
 
@@ -47,7 +49,7 @@ class Menu {
     void incDecItemPreset(bool inc_dec, bool fastInc, unsigned char par);
 
   public:
-    Menu(unsigned char *inputs, float *temp);
+    Menu(INOUTVAR *processVar);
     //~Menu();
 
     Adafruit_ILI9341 display = Adafruit_ILI9341(Display_CS, Display_DC, Display_RST);

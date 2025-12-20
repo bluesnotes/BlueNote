@@ -1,10 +1,4 @@
-
-#include "DSP_manager.h"
-#include "MCP23008.h"
-#include "MCP3221.h"
-#include "SPI.h"
-#include "Temp_Control.h"
-#include "preset_menu_manager.h"
+#include "main.h"
 
 volatile bool flagHundredMs = false;
 volatile bool flagSecond = false;
@@ -15,19 +9,17 @@ volatile bool flagInterruptMCP23008 = false;
 
 volatile char secondCounter = 0;
 
-uint8_t MCP23008Inputs = 0;
+unsigned char volumeCmd = 0, gainCmd = 0;
 
-unsigned char volume = 0;
-
-float temperature = 0;
+INOUTVAR processVar;
 
 hw_timer_t *timer = NULL;
 
 TaskHandle_t Task0, Task1, Task2;
 
-Temp_Control tempCtrl;
+Temperature_Regulation temperatureCtrl;
 
-Menu menu(&MCP23008Inputs, &temperature);
+Menu menu(&processVar);
 
 DSP_manager dspManager;
 
@@ -37,13 +29,36 @@ void interruptsSysHp(void *parameter) {
     while (1) {
         if (flagHundredMs) {
             flagHundredMs = false;
-            volume = smoothVolume((char)volume);
+            unsigned char read = cmd_potentiometer((unsigned int)volumeCmd, ADDR_MCP3221A5_VOLUME, 8);
+            if (volumeCmd != read) {
+                volumeCmd = read;
+                read = 255 - read;
+                volumeES9033(read);
+            }
+            read = cmd_potentiometer((unsigned int)gainCmd, ADDR_MCP3221A6_GAIN, 8);
+            if (gainCmd != read) {
+                gainCmd = read;
+                read = (unsigned char)floor((float)(255 - read) / 22);
+                PGA_ES9290_instrument(read);
+            }
         }
         if (flagInterruptMCP23008) {
             flagInterruptMCP23008 = false;
-            MCP23008Inputs = read_Int_MCP23008();
+            processVar.MCP23008Inputs = read_Int_MCP23008();
         }
-        delay(10);
+        if (processVar.changeVariable) {
+            processVar.changeVariable = false;
+            delay(110); // if not delay => ES9290 nak
+            instrument_in_pad_line(processVar.padInst);
+            instrument_in_impedance_line(processVar.impedanceInst);
+
+            volume_ES9290_line(processVar.volumeLineOut);
+            Serial.println(processVar.padInst);
+            Serial.println(processVar.impedanceInst);
+            Serial.println(processVar.volumeLineOut);
+        }
+
+        delay(1);
     }
 }
 
@@ -52,7 +67,7 @@ void interruptsSysLp(void *parameter) {
         if (flagSecond) {
             flagSecond = false;
 
-            temperature = tempCtrl.temperatureControl();
+            processVar.temperature = temperatureCtrl.process();
 
             float ramUsePercent = ((float)ESP.getFreeHeap() / 327680) * 100;
             Serial.print("RAM Free: ");
@@ -90,21 +105,24 @@ void setup() {
     timerAlarmWrite(timer, 160, true);
     timerAlarmEnable(timer); // interrupt every 100ms
 
-    temperature = tempCtrl.setup();
-
-    xTaskCreatePinnedToCore(interruptsSysHp, "Task1", 15000, NULL, 6, &Task1, 1);
-    xTaskCreatePinnedToCore(interruptsSysLp, "Task2", 10000, NULL, 1, &Task2, 0);
+    processVar.temperature = temperatureCtrl.setup();
 
     init_MCP23008();
     attachInterrupt(INT_MCP23008_PIN, MCP23008Interrupt, RISING);
     write_1_bit_MCP23008(GPIO, LED_BCKL, true);
 
     write_1_bit_MCP23008(GPIO, RST_ADAU_PIN, false);
-    delay(1);
+    delay(200);
     write_1_bit_MCP23008(GPIO, RST_ADAU_PIN, true);
     delay(10);
 
     dspManager.setup();
+
+    init_ES9033();
+    init_ES9290();
+
+    xTaskCreatePinnedToCore(interruptsSysHp, "Task1", 15000, NULL, 6, &Task1, 1);
+    xTaskCreatePinnedToCore(interruptsSysLp, "Task2", 10000, NULL, 1, &Task2, 0);
 }
 
 void loop() {

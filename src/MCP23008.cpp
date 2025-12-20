@@ -3,6 +3,7 @@
 
 bool init_MCP23008(void) {
     Wire.begin();
+    Wire.setTimeOut(10);
     Wire.setClock(100000L);
 
     write_1_byte_MCP23008(IODIR, 0b10011111); // input/output settings
@@ -68,6 +69,7 @@ uint8_t read_1_byte_MCP23008(uint8_t registerMCP23008) {
     Wire.write(registerMCP23008); // PORT register
     Wire.endTransmission();
 
-    Wire.requestFrom(ADDR_MCP23008, 1);
+    Wire.requestFrom(ADDR_MCP23008, 1, 1);
+
     return Wire.read();
 }

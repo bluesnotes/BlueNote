@@ -1,15 +1,15 @@
-#include "Temp_Control.h"
+#include "temperature_regulation.h"
 
 OneWire oneWire(ONE_WIRE_PIN);
 DallasTemperature sensors(&oneWire);
 
-Temp_Control::Temp_Control() {
+Temperature_Regulation::Temperature_Regulation() {
 }
 
-Temp_Control::~Temp_Control() {
+Temperature_Regulation::~Temperature_Regulation() {
 }
 
-float Temp_Control::setup(void) {
+float Temperature_Regulation::setup(void) {
     float temperature = 0;
     sensors.begin();
     sensors.requestTemperatures();
@@ -27,7 +27,7 @@ float Temp_Control::setup(void) {
 
     return temperature = 0;
 }
-float Temp_Control::temperatureControl(void) {
+float Temperature_Regulation::process(void) {
     float temperature = 0;
 
     temperature = sensors.getTempCByIndex(0);

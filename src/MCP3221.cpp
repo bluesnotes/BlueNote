@@ -12,38 +12,38 @@
 
 #include "MCP3221.h"
 
-unsigned char read_MCP3221(void) {
+unsigned int read_MCP3221(char addr, unsigned char res) {
     unsigned char rawData = 0;
-    Wire.requestFrom(ADDR_MCP3221, DATA_BYTES);
+    unsigned char bit = 12 - res;
+
+    Wire.requestFrom(addr, DATA_BYTES);
     if (Wire.available() == DATA_BYTES)
-        rawData = (Wire.read() << 3) | (Wire.read() >> 5);
+        rawData = (Wire.read() << 8 - bit) | (Wire.read() >> bit);
     else
-        ping();
+        ping(addr);
     return rawData;
 }
 
-unsigned char ping() {
-    Wire.beginTransmission(ADDR_MCP3221);
+unsigned char ping(char addr) {
+    Wire.beginTransmission(addr);
     return Wire.endTransmission();
 }
 
-unsigned char smoothVolume(char lastSmoothedData) {
+unsigned int cmd_potentiometer(unsigned int lastRead, char addr,
+                               unsigned char bitResolution) {
     long averageData, rawData;
 
-    rawData = read_MCP3221();
+    rawData = read_MCP3221(addr, bitResolution);
 
-    if ((rawData - lastSmoothedData) < 3 && (rawData - lastSmoothedData) > -3) { // Return last smoothed data because no change
-        averageData = lastSmoothedData;
-
+    if ((rawData - lastRead) < 2 && (rawData - (int)lastRead) > -2) { // Return last read because no change
+        averageData = lastRead;
     } else { // process 4 sample of raw data for debounce potentiometer
         unsigned long sum = rawData;
 
         for (char i = 1; i < NUMSAMPLES; i++)
-            sum += read_MCP3221(); // // aggregate all samples
+            sum += read_MCP3221(addr, bitResolution); // // aggregate all samples
 
         averageData = sum / NUMSAMPLES; // calculate average
     }
-
-    rawData = (unsigned char)((ALPHA * averageData + (MAXALPHA - ALPHA) * (unsigned long)lastSmoothedData) / MAXALPHA);
-    return rawData;
+    return (unsigned int)averageData;
 }

@@ -34,8 +34,13 @@ void drawPreset(int index, bool unSelect, String &preset_name, Adafruit_ILI9341 
 
 void drawEffect(uint8_t displayIndication, int enumNameStr,
                 uint8_t pageNumber, uint8_t numberOfPage, Adafruit_ILI9341 **d) {
+    String effect;
 
-    String effect = effectNameToStr(enumNameStr) + " " + pageNumber + "/" + numberOfPage;
+    if ((enumNameStr >> 8) != 0)
+        effect = effectNameToStr(enumNameStr) + (enumNameStr >> 8) + " " + pageNumber + "/" + numberOfPage;
+    else
+        effect = effectNameToStr(enumNameStr) + " " + pageNumber + "/" + numberOfPage;
+
     switch (displayIndication) {
     case presetDisplay::allDisplay:
         (**d).fillRect(0, 50, 320, 30, TITLE_BACK);
@@ -77,6 +82,7 @@ void drawCursor(float value, int enumName, int enumUnit, int min, int max,
     int radius = 29;
     String nameStr = propertyNameToStr(enumName);
     String unitStr = unitToStr(enumUnit);
+    String valueStr = valueToStr(value, enumUnit);
 
     float percent = ((value + abs(min)) / (max - min)) * 100;
 
@@ -101,9 +107,9 @@ void drawCursor(float value, int enumName, int enumUnit, int min, int max,
     (**d).setFont(&FreeSans9pt7b);
     drawCenterStr(nameStr, center_x, center_y + 60, &d);
 
-    String str = String(value + unitStr);
+    String str = valueStr + unitStr;
     if (str.length() > 6) {
-        str = String(value);
+        str = valueStr;
         (**d).setTextColor(ILI9341_WHITE);
         (**d).setFont(&FreeSansBold9pt7b);
         drawCenterStr(str, center_x, center_y + 80, &d);

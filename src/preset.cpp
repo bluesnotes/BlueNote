@@ -15,11 +15,14 @@ Preset::Preset(unsigned char id, char *prtName) {
     effects.push_back(new Eq());
     effects.push_back(new Eq());
     effects.push_back(new Eq());
+    int j = 1;
+    for (int i = effects.size() - 4; i < effects.size(); i++) {
+        effects[i]->name += j << 8;
+        j++;
+    }
 }
 
 String Preset::getPresetName() { return presetName; }
-
-void Preset::setPreseName(String s) { this->presetName = s; }
 
 float Preset::getValueEffectPreset(unsigned char page, unsigned char parameter) {
     return effects[page]->properties[parameter]->value;
@@ -37,11 +40,28 @@ int Preset::getLenghtEffect(unsigned char page) {
     return effects[page]->properties.size();
 }
 
+void Preset::setPreseName(String s) { this->presetName = s; }
+
 void Preset::setValueEffectPreset(unsigned char page, unsigned char parameter, float value) {
-    if (value <= effects[page]->properties[parameter]->max && value >= effects[page]->properties[parameter]->min) {
+    if (value > effects[page]->properties[parameter]->max)
+        effects[page]->properties[parameter]->value = effects[page]->properties[parameter]->max;
+    else if (value < effects[page]->properties[parameter]->min)
+        effects[page]->properties[parameter]->value = effects[page]->properties[parameter]->min;
+    else
         effects[page]->properties[parameter]->value = value;
+
+    switch (effects[page]->name) {
+    case effectName::pre:
+        /* code */
+        break;
+
+    default:
+        break;
     }
+
+    DSP.setValueEffect(effects[page]->properties.);
 }
+
 void Preset::displayMenuPreset(unsigned char page, unsigned char parameter, presetDisplay display, Adafruit_ILI9341 *d) {
 
     int x_gauge = 0;
@@ -54,9 +74,9 @@ void Preset::displayMenuPreset(unsigned char page, unsigned char parameter, pres
 
     Property *ptr = effects[page]->properties[0];
 
-    if (display >= effectDisplay) { // display all gauge & effect title
+    unsigned int numParamEffect = effects[page]->properties.size();
 
-        unsigned int numParamEffect = effects[page]->properties.size();
+    if (display >= effectDisplay) { // display all gauge & effect title
         unsigned int pageEffect = parameter / 3 + 1;
         unsigned int numPageEffect = ((numParamEffect - 1) / 3) + 1;
         unsigned int presetLenght = getLenghtPreset();
@@ -92,10 +112,20 @@ void Preset::displayMenuPreset(unsigned char page, unsigned char parameter, pres
         }
 
     } else { // display 1 gauge
-        if (parameter % 3 == 0)
-            x_gauge = 54; // first gauge for display 1 gauge
-        if (parameter % 3 == 1)
-            x_gauge = 152; // second gauge for display 1 gauge
+        if (parameter % 3 == 0) {
+            if (numParamEffect - parameter == 1 && parameter + 3 >= numParamEffect)
+                x_gauge = 152; // first gauge for display 1 gauge
+            else if (numParamEffect - parameter == 2 && parameter + 3 >= numParamEffect)
+                x_gauge = 103;
+            else
+                x_gauge = 54;
+        }
+        if (parameter % 3 == 1) {
+            if (numParamEffect - (parameter - 1) == 2 && parameter + 3 >= numParamEffect)
+                x_gauge = 201; // second gauge for display 1 gauge
+            else
+                x_gauge = 152;
+        }
         if (parameter % 3 == 2)
             x_gauge = 250; // third gauge for display 1 gauge
         ptr = effects[page]->properties[parameter];
