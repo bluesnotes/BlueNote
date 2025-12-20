@@ -7,8 +7,8 @@
 #include "main.h"
 #include "pin.h"
 #include "sigmadspSPI.h"
-#include "sigmadspfilters.h"
 #include <Arduino.h>
+#include <math.h>
 
 class DSP_manager {
   private:

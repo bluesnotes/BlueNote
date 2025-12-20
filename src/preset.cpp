@@ -59,7 +59,7 @@ void Preset::setValueEffectPreset(unsigned char page, unsigned char parameter, f
         break;
     }
 
-    DSP.setValueEffect(effects[page]->properties.);
+    // DSP.setValueEffect(effects[page]->properties.);
 }
 
 void Preset::displayMenuPreset(unsigned char page, unsigned char parameter, presetDisplay display, Adafruit_ILI9341 *d) {

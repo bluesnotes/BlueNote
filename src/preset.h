@@ -24,8 +24,6 @@ class Preset {
   protected:
     unsigned char identify;
 
-    dspFilter_t structdsp;
-
     String presetName;
 
     vector<Effects *>
