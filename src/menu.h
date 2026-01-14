@@ -1,5 +1,5 @@
-#ifndef PRESET_MENU_MANAGER_H
-#define PRESET_MENU_MANAGER_H
+#ifndef MENU_H
+#define MENU_H
 
 #include "Adafruit_ILI9341_Menu.h"
 

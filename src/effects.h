@@ -81,7 +81,8 @@ enum propertyValueFilterType {
     low_pass,
     high_pass,
     notch,
-    band_stop
+    band_stop,
+    none
 };
 
 class Property {

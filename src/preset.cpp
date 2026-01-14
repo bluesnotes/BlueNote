@@ -1,5 +1,7 @@
 #include "preset.h"
 
+DSP_manager dsp;
+
 Preset::Preset(unsigned char id, char *prtName) {
     identify = id;
     presetName = prtName;
@@ -50,16 +52,7 @@ void Preset::setValueEffectPreset(unsigned char page, unsigned char parameter, f
     else
         effects[page]->properties[parameter]->value = value;
 
-    switch (effects[page]->name) {
-    case effectName::pre:
-        /* code */
-        break;
-
-    default:
-        break;
-    }
-
-    // DSP.setValueEffect(effects[page]->properties.);
+    dsp.setValueEffect(effects[page]);
 }
 
 void Preset::displayMenuPreset(unsigned char page, unsigned char parameter, presetDisplay display, Adafruit_ILI9341 *d) {
