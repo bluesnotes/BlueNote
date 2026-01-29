@@ -72,7 +72,7 @@ enum propertyValueWaveforms {
     square
 };
 
-enum propertyValueFilterType {
+enum propertyValueFilterType: unsigned char {
     peaking,
     low_shelving,
     high_shelving,

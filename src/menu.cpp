@@ -476,7 +476,7 @@ void Menu::processMainMenu() {
 
 void Menu::setupMenu() {
     // fire up the display
-    display.begin();
+    display.begin(5000000);
     display.setRotation(3);
 
     // menu code done, now proceed to your code

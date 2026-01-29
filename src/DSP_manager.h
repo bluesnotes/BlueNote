@@ -42,10 +42,6 @@ typedef struct {
     long a2;
 } dspBiquadCoefs824_t;
 
-#define tempBiquadMax 4
-extern dspBiquadCoefs_t tempBiquad[tempBiquadMax]; // temporary array of max 4 biquad cell
-extern long tempBiquadIndex;
-
 class DSP_manager {
   private:
     /* data */
@@ -60,12 +56,11 @@ class DSP_manager {
 
     // Setters
     void setValueEffect(Effects *effect);
-
-    // functions
-    float dB2gain(float db);
-    long dspQ8_24(float f);
-    int dsp_filter(enum propertyValueFilterType type, float freq, float Q, float gain);
-    int dspFilterConvert(dspFilter_t f);
 };
+
+// functions
+float dB2gain(float db);
+long dspQ8_24(float f);
+void dspFilter(bool bypass, long type, float freq, float Q, float gain, float *p);
 
 #endif

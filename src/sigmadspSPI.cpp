@@ -1,7 +1,7 @@
 
 #include "sigmadspSPI.h"
 
-SPISettings SIGMADSP_SPI_fast(4000000, MSBFIRST, SPI_MODE0);
+SPISettings SIGMADSP_SPI_fast(1000000, MSBFIRST, SPI_MODE0);
 SPISettings SIGMADSP_SPI_slow(250000, MSBFIRST, SPI_MODE0);
 
 void sigmadspClass::fastSPI() {

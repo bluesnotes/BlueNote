@@ -9,7 +9,7 @@ volatile bool flagInterruptMCP23008 = false;
 
 volatile char secondCounter = 0;
 
-unsigned char volumeCmd = 0, gainCmd = 0;
+volatile unsigned char volumeCmd = 0, gainCmd = 0;
 
 INOUTVAR processVar;
 
@@ -32,15 +32,17 @@ void interruptsSysHp(void *parameter) {
             unsigned char read = cmd_potentiometer((unsigned int)volumeCmd, ADDR_MCP3221A5_VOLUME, 8);
             if (volumeCmd != read) {
                 volumeCmd = read;
-                read = 255 - read;
                 volumeES9033(read);
             }
+
             read = cmd_potentiometer((unsigned int)gainCmd, ADDR_MCP3221A6_GAIN, 8);
-            if (gainCmd != read) {
+            delay(3);
+
+            /*if (gainCmd != read) {
                 gainCmd = read;
                 read = (unsigned char)floor((float)(255 - read) / 22);
                 PGA_ES9290_instrument(read);
-            }
+            }*/
         }
         if (flagInterruptMCP23008) {
             flagInterruptMCP23008 = false;
@@ -48,7 +50,7 @@ void interruptsSysHp(void *parameter) {
         }
         if (processVar.changeVariable) {
             processVar.changeVariable = false;
-            delay(110); // if not delay => ES9290 nak
+            delay(125); // if not delay => ES9290 nak
             instrument_in_pad_line(processVar.padInst);
             instrument_in_impedance_line(processVar.impedanceInst);
 
@@ -70,9 +72,9 @@ void interruptsSysLp(void *parameter) {
             processVar.temperature = temperatureCtrl.process();
 
             float ramUsePercent = ((float)ESP.getFreeHeap() / 327680) * 100;
-            Serial.print("RAM Free: ");
+            /*Serial.print("RAM Free: ");
             Serial.print(ramUsePercent);
-            Serial.println("%");
+            Serial.println("%");*/
 
             delay(700);
         }
@@ -121,7 +123,7 @@ void setup() {
     init_ES9033();
     init_ES9290();
 
-    xTaskCreatePinnedToCore(interruptsSysHp, "Task1", 15000, NULL, 6, &Task1, 1);
+    xTaskCreatePinnedToCore(interruptsSysHp, "Task1", 20000, NULL, 6, &Task1, 1);
     xTaskCreatePinnedToCore(interruptsSysLp, "Task2", 10000, NULL, 1, &Task2, 0);
 }
 

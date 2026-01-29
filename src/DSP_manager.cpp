@@ -20,6 +20,60 @@ void DSP_manager::setup(void) {
 }
 
 void DSP_manager::setValueEffect(Effects *effect) {
+
+    if (effect->name == pre) {
+        float gain = dB2gain(effect->properties[0]->value);
+        Serial.println(gain);
+        long gainConvert = dspQ8_24(-gain);
+        DSP.writeValue(MOD_GAIN_0_GAIN_ADDR, gainConvert);
+        Serial.println(effect->properties[0]->value);
+        Serial.println(gainConvert);
+    } else if ((effect->name & 0xFF) == eq) {
+        int numberEq = effect->name >> 8;
+        bool bypass = !(effect->properties[4]->value);
+        float coeffBiquads[6];
+
+        Serial.print("Eq:");
+        Serial.println(numberEq);
+        Serial.print("Bypass:");
+        Serial.println(bypass);
+        Serial.print("type:");
+        Serial.println(effect->properties[3]->value);
+        Serial.print("freq:");
+        Serial.println(effect->properties[1]->value);
+        Serial.print("Q:");
+        Serial.println(effect->properties[2]->value);
+        Serial.print("gain:");
+        Serial.println(effect->properties[0]->value);
+
+        dspFilter(bypass,
+                  (propertyValueFilterType)effect->properties[3]->value,
+                  effect->properties[1]->value,
+                  effect->properties[2]->value,
+                  effect->properties[0]->value,
+                  &coeffBiquads[0]);
+
+        Serial.print("b0:");
+        Serial.println(coeffBiquads[0], 6);
+        Serial.print("b1:");
+        Serial.println(coeffBiquads[1], 6);
+        Serial.print("b2:");
+        Serial.println(coeffBiquads[2], 6);
+        Serial.print("a1:");
+        Serial.println(coeffBiquads[3], 6);
+        Serial.print("a2:");
+        Serial.println(coeffBiquads[4], 6);
+
+        if (numberEq == 1) {
+            DSP.writeBiquads(MOD_TEXTINEQ_0_STAGE0_B2_ADDR, 1, &coeffBiquads[0]);
+        } else if (numberEq == 2) {
+            /* code */
+        } else if (numberEq == 3) {
+            /* code */
+        } else if (numberEq == 4) {
+            /* code */
+        }
+    }
 }
 
 float dB2gain(float db) {
@@ -40,15 +94,16 @@ long dspQ8_24(float f) {
     }
 }
 // calc the biquad coefficient for a given filter type
-void dspFilter(long type,
-               float freq,
-               float Q,
-               float gain,
-               float *b0,
-               float *b1,
-               float *b2,
-               float *a1,
-               float *a2) {
+void dspFilter(bool bypass, long type, float freq, float Q, float gain, float *p) {
+    float *b0 = &p[0];
+    float *b1 = &p[1];
+    float *b2 = &p[2];
+    float *a1 = &p[3];
+    float *a2 = &p[4];
+    gain = dB2gain(gain);
+
+    if (bypass)
+        type = none;
 
     if (type == none) {
         *b0 = 1.0;
@@ -115,6 +170,7 @@ void dspFilter(long type,
             break;
         }
         case peaking: {
+            Serial.println("PeakingFilter");
             float A = sqrt(gain);
             a0 = 1.0 + alpha / A;
             *a1 = 2.0 * cw0 / a0;
@@ -149,29 +205,4 @@ void dspFilter(long type,
         }
         } // switch
     }
-}
-
-int dsp_filter(enum propertyValueFilterType type, float freq, float Q, float gain) {
-    int tmp = 0;
-    dspBiquadCoefs_t coefs;
-
-    dspFilter(type, freq, Q, gain, &coefs.b0, &coefs.b1, &coefs.b2, &coefs.a1, &coefs.a2);
-
-    if (tempBiquadIndex < tempBiquadMax)
-        tempBiquad[tempBiquadIndex++] = coefs;
-
-    return tmp;
-}
-
-int dspFilterConvert(dspFilter_t filter) {
-    if (filter.bypass)
-        filter = {none, 0, 0, 0, 0, 0, 0};
-    tempBiquadIndex = 0;
-    int result = dsp_filter(filter.ftype, filter.freq, filter.Q, filter.gain);
-    if (filter.invert) {
-        tempBiquad[0].b0 = -tempBiquad[0].b0;
-        tempBiquad[0].b1 = -tempBiquad[0].b1;
-        tempBiquad[0].b2 = -tempBiquad[0].b2;
-    }
-    return result;
 }

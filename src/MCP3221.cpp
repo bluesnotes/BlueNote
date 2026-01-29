@@ -19,8 +19,8 @@ unsigned int read_MCP3221(char addr, unsigned char res) {
     Wire.requestFrom(addr, DATA_BYTES);
     if (Wire.available() == DATA_BYTES)
         rawData = (Wire.read() << 8 - bit) | (Wire.read() >> bit);
-    else
-        ping(addr);
+    /*else
+         ping(addr);*/
     return rawData;
 }
 

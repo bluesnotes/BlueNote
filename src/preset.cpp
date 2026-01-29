@@ -17,7 +17,7 @@ Preset::Preset(unsigned char id, char *prtName) {
     effects.push_back(new Eq());
     effects.push_back(new Eq());
     effects.push_back(new Eq());
-    int j = 1;
+    int j = 1; // for eq name eq1 eq2 ...
     for (int i = effects.size() - 4; i < effects.size(); i++) {
         effects[i]->name += j << 8;
         j++;
