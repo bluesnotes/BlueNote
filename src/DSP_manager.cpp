@@ -1,5 +1,5 @@
 #include "DSP_manager.h"
-#include "basic48k_IC_1.h"
+#include "MiDSPAmp48k_IC_1.h"
 
 DSP_manager::DSP_manager(/* args */) {
     long tempBiquadIndex;
@@ -20,15 +20,80 @@ void DSP_manager::setup(void) {
 }
 
 void DSP_manager::setValueEffect(Effects *effect) {
+    switch (effect->name) {
+    case pre: {
+        // gain
+        float gain = -dB2gain(effect->properties[0]->value);
+        DSP.writeValueFloat(MOD_PRE_GAIN_GAIN_ADDR, gain);
 
-    if (effect->name == pre) {
-        float gain = dB2gain(effect->properties[0]->value);
-        Serial.println(gain);
-        long gainConvert = dspQ8_24(-gain);
-        DSP.writeValue(MOD_GAIN_0_GAIN_ADDR, gainConvert);
         Serial.println(effect->properties[0]->value);
-        Serial.println(gainConvert);
-    } else if ((effect->name & 0xFF) == eq) {
+        Serial.println(gain);
+
+        // clipUp
+        float tau = effect->properties[1]->value;
+        DSP.writeValueFloat(MOD_PRE_CLIPPER_TAU1_ADDR, tau);
+        tau = 1 - tau;
+        DSP.writeValueFloat(MOD_PRE_CLIPPER_ONEMTAU1_ADDR, tau);
+        tau = 1 / tau;
+        DSP.writeValueFloat(MOD_PRE_CLIPPER_INV_ONEMTAU1_ADDR, tau);
+
+        // clipDown
+        tau = effect->properties[2]->value;
+        DSP.writeValueFloat(MOD_PRE_CLIPPER_TAU1_ADDR, tau);
+        tau = 1 - tau;
+        DSP.writeValueFloat(MOD_PRE_CLIPPER_ONEMTAU1_ADDR, tau);
+        tau = 1 / tau;
+        DSP.writeValueFloat(MOD_PRE_CLIPPER_INV_ONEMTAU1_ADDR, tau);
+
+        // bypass
+        DSP.writeValueFloat(MOD_PRE_CLIPPER_BYPASS_INDEX_ADDR, 1 - (effect->properties[3]->value));
+
+    } break;
+
+    case oct: {
+        // blend
+        DSP.writeValueFloat(MOD_OCTAVER_BLEND_DCVALUE_ADDR, dB2gain(effect->properties[0]->value));
+
+        // bypass
+        DSP.writeValueFloat(MOD_OCTAVER_BYPASS_INDEX_ADDR, 1 - effect->properties[1]->value);
+
+    } break;
+
+    case env_filter: {
+        // strength
+        float strength = dB2gain(20 + effect->properties[0]->value);
+        DSP.writeValueFloat(MOD_ENVELOPEFILTER_POSTGAIN_SIGNALENVELOPE_GAIN_ADDR, strength);
+
+        // decay
+        float decay = 2 * sin((PI * effect->properties[1]->value) / FREQUENCY_SAMPLING_DSP);
+        DSP.writeValueFloat(MOD_ENVELOPEFILTER_FREQMIN_DCVALUE_ADDR, decay);
+
+        // Q
+        float q = 1 / effect->properties[2]->value;
+        DSP.writeValueFloat(MOD_ENVELOPEFILTER_Q_DCVALUE_ADDR, q);
+
+        // dry filter
+        float coeffBiquads[6];
+        dspFilter(0, low_pass, effect->properties[3]->value,
+                  0.7, 0, &coeffBiquads[0]);
+        DSP.writeBiquads(MOD_ENVELOPFILTER_DRYFILTER_STAGE0_B2_ADDR, 1, &coeffBiquads[0]);
+
+        // blend
+        DSP.writeValueFloat(MOD_ENVELOPEFILTER_BLEND_DCVALUE_ADDR, dB2gain(effect->properties[4]->value));
+
+        // bypass
+        DSP.writeValueFloat(MOD_ENVELOPFILTER_BYPASS_INDEX_ADDR, 1 - effect->properties[1]->value);
+
+    } break;
+
+    case fuzz_od: {
+
+    } break;
+
+    case eq + 0x100:
+    case eq + 0x200:
+    case eq + 0x300:
+    case eq + 0x400: {
         int numberEq = effect->name >> 8;
         bool bypass = !(effect->properties[4]->value);
         float coeffBiquads[6];
@@ -64,15 +129,27 @@ void DSP_manager::setValueEffect(Effects *effect) {
         Serial.print("a2:");
         Serial.println(coeffBiquads[4], 6);
 
-        if (numberEq == 1) {
-            DSP.writeBiquads(MOD_TEXTINEQ_0_STAGE0_B2_ADDR, 1, &coeffBiquads[0]);
-        } else if (numberEq == 2) {
-            /* code */
-        } else if (numberEq == 3) {
-            /* code */
-        } else if (numberEq == 4) {
-            /* code */
+        switch (numberEq) {
+        case 1:
+            DSP.writeBiquads(MOD_GLOBAL_EQ_STAGE0_B2_ADDR, 1, &coeffBiquads[0]);
+            break;
+        case 2:
+            DSP.writeBiquads(MOD_GLOBAL_EQ_STAGE1_B2_ADDR, 1, &coeffBiquads[0]);
+            break;
+        case 3:
+            DSP.writeBiquads(MOD_GLOBAL_EQ_STAGE2_B2_ADDR, 1, &coeffBiquads[0]);
+            break;
+        case 4:
+            DSP.writeBiquads(MOD_GLOBAL_EQ_STAGE3_B2_ADDR, 1, &coeffBiquads[0]);
+            break;
+
+        default:
+            break;
         }
+    } break;
+
+    default:
+        break;
     }
 }
 
@@ -81,18 +158,6 @@ float dB2gain(float db) {
     return pow(10, db);
 }
 
-long dspQ8_24(float f) {
-    float maxf = (1 << 7);
-    if (f >= maxf)
-        return 0x7fffffff;
-    else if (f < (-maxf))
-        return 0xffffffff;
-    else {
-        long mul = 1 << 24;
-        f *= mul;
-        return f; // will convert to integer
-    }
-}
 // calc the biquad coefficient for a given filter type
 void dspFilter(bool bypass, long type, float freq, float Q, float gain, float *p) {
     float *b0 = &p[0];

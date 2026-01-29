@@ -4,7 +4,7 @@
 #define FREQUENCY_SAMPLING_DSP 48000
 
 // #include "basic48k_IC_1.h"       // .h import default_download_IC_1() and DEVICE_ARCHITECTURE_IC_1
-#include "basic48k_IC_1_PARAM.h" // PARAM.h used to access sigmastudio elements
+#include "MiDSPAmp48k_IC_1_PARAM.h" // PARAM.h used to access sigmastudio elements
 #include "effects.h"
 #include "main.h"
 #include "pin.h"
@@ -60,7 +60,6 @@ class DSP_manager {
 
 // functions
 float dB2gain(float db);
-long dspQ8_24(float f);
 void dspFilter(bool bypass, long type, float freq, float Q, float gain, float *p);
 
 #endif
