@@ -10,8 +10,6 @@
 
 using namespace std;
 
-
-
 enum presetDisplay : unsigned char {
     allDisplay = 254,
     selectPresetAllDisplay = 253,
@@ -42,6 +40,10 @@ class Preset {
     String getPresetName();
 
     float getValueEffectPreset(unsigned char page, unsigned char parameter);
+
+    float getMinValueEffectPreset(unsigned char page, unsigned char parameter);
+
+    float getMaxValueEffectPreset(unsigned char page, unsigned char parameter);
 
     float getIncFactor(unsigned char page, unsigned char parameter);
 

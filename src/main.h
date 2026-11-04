@@ -1,8 +1,6 @@
 #include "DSP_manager.h"
-#include "ES9033.h"
 #include "ES9290.h"
 #include "MCP23008.h"
-#include "MCP3221.h"
 #include "SPI.h"
 #include "global_struct.h"
 #include "menu.h"

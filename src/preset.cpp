@@ -30,6 +30,14 @@ float Preset::getValueEffectPreset(unsigned char page, unsigned char parameter) 
     return effects[page]->properties[parameter]->value;
 }
 
+float Preset::getMinValueEffectPreset(unsigned char page, unsigned char parameter) {
+    return effects[page]->properties[parameter]->min;
+}
+
+float Preset::getMaxValueEffectPreset(unsigned char page, unsigned char parameter) {
+    return effects[page]->properties[parameter]->max;
+}
+
 float Preset::getIncFactor(unsigned char page, unsigned char parameter) {
     return effects[page]->properties[parameter]->incCoef;
 }

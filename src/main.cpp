@@ -29,14 +29,6 @@ void interruptsSysHp(void *parameter) {
     while (1) {
         if (flagHundredMs) {
             flagHundredMs = false;
-            unsigned char read = cmd_potentiometer((unsigned int)volumeCmd, ADDR_MCP3221A5_VOLUME, 8);
-            if (volumeCmd != read) {
-                volumeCmd = read;
-                volumeES9033(read);
-            }
-
-            read = cmd_potentiometer((unsigned int)gainCmd, ADDR_MCP3221A6_GAIN, 8);
-            delay(3);
 
             /*if (gainCmd != read) {
                 gainCmd = read;
@@ -50,14 +42,14 @@ void interruptsSysHp(void *parameter) {
         }
         if (processVar.changeVariable) {
             processVar.changeVariable = false;
-            delay(125); // if not delay => ES9290 nak
-            instrument_in_pad_line(processVar.padInst);
-            instrument_in_impedance_line(processVar.impedanceInst);
+            dspManager.setMPpin(8, processVar.padInst);
+            dspManager.setMPpin(7, processVar.impedanceInst);
+            dspManager.setMPpin(11, processVar.phantom);
 
             volume_ES9290_line(processVar.volumeLineOut);
-            Serial.println(processVar.padInst);
+            /*Serial.println(processVar.padInst);
             Serial.println(processVar.impedanceInst);
-            Serial.println(processVar.volumeLineOut);
+            Serial.println(processVar.volumeLineOut);*/
         }
 
         delay(1);
@@ -120,7 +112,6 @@ void setup() {
 
     dspManager.setup();
 
-    init_ES9033();
     init_ES9290();
 
     xTaskCreatePinnedToCore(interruptsSysHp, "Task1", 20000, NULL, 6, &Task1, 1);

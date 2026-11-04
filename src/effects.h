@@ -52,7 +52,8 @@ enum propertyUnit {
     on_off,
     od_type,
     waveforms,
-    filter_type
+    filter_type,
+    knee_type
 };
 
 enum propertyValueBypass {
@@ -61,7 +62,7 @@ enum propertyValueBypass {
 };
 
 enum propertyValueDrive {
-    drive,
+    octa,
     od,
     fuzz
 };
@@ -72,7 +73,7 @@ enum propertyValueWaveforms {
     square
 };
 
-enum propertyValueFilterType: unsigned char {
+enum propertyValueFilterType : unsigned char {
     peaking,
     low_shelving,
     high_shelving,
@@ -80,9 +81,18 @@ enum propertyValueFilterType: unsigned char {
     high_shelving_first,
     low_pass,
     high_pass,
+    low_pass_first,
+    high_pass_first,
     notch,
     band_stop,
     none
+};
+
+enum popertyValueKneeType {
+    hard_knee,
+    soft_knee1,
+    soft_knee2,
+    soft_knee3
 };
 
 class Property {

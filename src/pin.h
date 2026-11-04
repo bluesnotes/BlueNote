@@ -5,34 +5,31 @@
 #define Display_CS 5   // hardware 29
 #define Display_RST 17 // hardware 28
 
-#define CS_ADAU 0 // hardware 25
-
 #define ENCM_A_PIN 36 // hardware 3
 #define ENCM_B_PIN 39 // hardware 4
 
-#define ENCA_A_PIN 33 // hardware 10 26
-#define ENCA_B_PIN 25 // hardware 11 27
+#define PIN_POT 33  // hardware 8
+#define PIN_POT1 32 // hardware 6
+#define PIN_POT2 34 // hardware 5 26
+#define PIN_POT3 35 // hardware 7 27
 
-#define ENCB_A_PIN 26 // hardware 9 25
-#define ENCB_B_PIN 27 // hardware 8 33
+#define CS_ADAU 0 // hardware 25
 
-#define ENCC_A_PIN 34 // hardware 6
-#define ENCC_B_PIN 35 // hardware 5
-
-#define ONE_WIRE_PIN 32    // hardware 7
-#define PWM_FAN_PIN 2      // hardware 24
+#define ONE_WIRE_PIN 25    // hardware 7
 #define INT_MCP23008_PIN 4 // hardware 26
 
+#define PWM_FAN_PIN 2   // hardware 24
+#define TACH_FAN_PIN 26 // hardware MCP23008 GPIO0
+
 //************MCP23008 PIN*******************//
-#define TACH_FAN_PIN 0 // hardware MCP23008 GPIO0
-#define LED_BCKL 5
-#define RST_ADAU_PIN 6
+#define LED_BCKL 6
+#define RST_ADAU_PIN 5
 
 enum pinMCP23008 {
-    rightButton = 2,
+    saveExitButton = 1,
+    menuButton = 2,
+    rightButton = 4,
     leftButton = 8,
-    saveExitButton = 4,
-    menuButton = 1,
     enterButton = 16,
 };
 

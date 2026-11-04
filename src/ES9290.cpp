@@ -38,22 +38,6 @@ bool PGA_ES9290_return(u_int8_t gain) {
         return 0;
 }
 
-void return_in_impedance_line(bool onOff) {
-    write_1_bit_ES9290(40, 0, onOff);
-}
-
-void instrument_in_impedance_line(bool onOff) {
-    write_1_bit_ES9290(40, 4, onOff);
-}
-
-void return_in_pad_line(bool onOff) {
-    write_1_bit_ES9290(39, 4, onOff);
-}
-
-void instrument_in_pad_line(bool onOff) {
-    write_1_bit_ES9290(39, 0, onOff);
-}
-
 void write_1_byte_ES9290(u_int8_t registerES9290, uint8_t byte) {
     Wire.beginTransmission(ADDR_ES9290);
     Wire.write(registerES9290);

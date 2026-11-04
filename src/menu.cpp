@@ -26,17 +26,14 @@ const char *impedanceItems[] = {"500k", "47k"};
 const char *OutLinePlaceItems[] = {"Direct", "P. Pre.", "P. Comp.", "P. Eq."};
 
 ESP32Encoder encoder;
-ESP32Encoder encoderA;
-ESP32Encoder encoderB;
-ESP32Encoder encoderC;
 
 Preset **Pusr = new Preset *[NUMB_PRESET];
 
 // encoder stuff
 bool fastInc = false;
 
-long encPos = 0, oldPos = 0, encPos_A = 0, oldPos_A = 0,
-     encPos_B = 0, oldPos_B = 0, encPos_C = 0, oldPos_C = 0;
+long encPos = 0, oldPos = 0;
+uint32_t pot1 = 0, oldPot1 = 0, pot2 = 0, oldPot2 = 0, pot3 = 0, oldPot3 = 0;
 
 uint64_t encSpeed1, encSpeed2;
 
@@ -58,25 +55,68 @@ void Menu::countEncoder(bool *fastInc, long *encP, long *encOp, ESP32Encoder *en
     }
 }
 
-void Menu::incDecItemPreset(bool inc_dec, bool fastInc, unsigned char par) {
+uint32_t Menu::readAdcOversampled(int pin) {
+    uint32_t sum = 0;
+    int samples = 64;
+
+    for (int i = 0; i < samples; i++) {
+        // analogReadMilliVolts applique automatiquement la calibration eFuse
+        sum += analogReadMilliVolts(pin);
+
+        // Un micro-délai laisse le temps au convertisseur de se stabiliser
+        delayMicroseconds(50);
+    }
+
+    return sum / samples;
+}
+
+void Menu::incDecItemPreset(uint32_t valueCmd, unsigned char par) {
     if (par < Pusr[idSel]->getLenghtEffect(pageSel)) {
-        float var = Pusr[idSel]->getValueEffectPreset(pageSel, par);
         float incFact = Pusr[idSel]->getIncFactor(pageSel, par);
-        if (incFact == -1) {
-            incFact = powf(10, (floor(log10(fabs(var))))) / 10;
-            var = (floor(var / incFact)) * incFact;
+        float min = Pusr[idSel]->getMinValueEffectPreset(pageSel, par);
+        float max = Pusr[idSel]->getMaxValueEffectPreset(pageSel, par);
+
+        float percentCmd = 0.1 + ((3000.0 - ((float)valueCmd) - 145.0) / (3000.0));
+        percentCmd = percentCmd < 0 ? 0 : percentCmd;
+        percentCmd = percentCmd > 1 ? 1 : percentCmd;
+
+        float newValue;
+
+        // --- GESTION LOGARITHMIQUE ---
+        if (incFact < 0) {
+            // Transformation de la course linéaire du potard en courbe logarithmique (base 10)
+            // percentCmd va de 0 à 1 -> logPercent va de 0 à 1
+            float baseExp = 500.0f;
+            float expPercent = (powf(baseExp, percentCmd) - 1.0f) / (baseExp - 1.0f);
+
+            float range = max - min;
+            newValue = (range * expPercent) + min;
+
+            if (newValue < 1.0f) {
+                newValue = roundf(newValue * 100.0f) / 100.0f;
+            } else if (newValue < 10.0f) {
+                newValue = roundf(newValue * 10.0f) / 10.0f;
+            } else if (newValue < 100.0f) {
+                newValue = roundf(newValue);
+            } else if (newValue < 1000.0f) {
+                newValue = roundf(newValue / 10.0f) * 10.0f;
+            } else if (newValue < 10000.0f) {
+                newValue = roundf(newValue / 100.0f) * 100.0f;
+            } else {
+                newValue = roundf(newValue / 1000.0f) * 1000.0f;
+            }
+        }
+        // --- GESTION LINÉAIRE CLASSIQUE ---
+        else {
+            float range = max - min;
+            newValue = (range * percentCmd) + min;
+            newValue = roundf(newValue / incFact) * incFact;
         }
 
-        if (inc_dec && !fastInc)
-            var += 1 * incFact;
-        else if (!inc_dec && !fastInc)
-            var -= 1 * incFact;
-        else if (inc_dec && fastInc)
-            var += 10 * incFact;
-        else if (!inc_dec && fastInc)
-            var -= 10 * incFact;
+        newValue = newValue < min ? min : newValue;
+        newValue = newValue > max ? max : newValue;
 
-        Pusr[idSel]->setValueEffectPreset(pageSel, par, var);
+        Pusr[idSel]->setValueEffectPreset(pageSel, par, newValue);
         Pusr[idSel]->displayMenuPreset(pageSel, par, presetDisplay::oneGauge, &display);
     }
 }
@@ -92,9 +132,10 @@ void Menu::openPresetMenu() {
 
     while (inMenuPreset != 0) {
         encPos = encoder.getCount();
-        encPos_A = encoderA.getCount();
-        encPos_B = encoderB.getCount();
-        encPos_C = encoderC.getCount();
+        pot1 = readAdcOversampled(PIN_POT1);
+        pot2 = readAdcOversampled(PIN_POT2);
+        pot3 = readAdcOversampled(PIN_POT3);
+        delay(50); // debounce delay
 
         // M encoder action
         if ((encPos - oldPos) > 0) {
@@ -119,33 +160,24 @@ void Menu::openPresetMenu() {
                 Pusr[idSel]->displayMenuPreset(pageSel, paramSel, presetDisplay::effectDisplay, &display);
             }
         }
-        // A encoder action
-        if ((encPos_A - oldPos_A) > 0) {
-            countEncoder(&fastInc, &encPos_A, &oldPos_A, &encoderA);
-            incDecItemPreset(1, fastInc, paramSel);
+        // pot1 action
+        if (labs(pot1 - oldPot1) > 5) {
+            oldPot1 = pot1;
+            incDecItemPreset(pot1, paramSel);
         }
-        if ((encPos_A - oldPos_A) < 0) {
-            countEncoder(&fastInc, &encPos_A, &oldPos_A, &encoderA);
-            incDecItemPreset(0, fastInc, paramSel);
+
+        // pot2 action
+        if (labs(pot2 - oldPot2) > 5) {
+            oldPot2 = pot2;
+            incDecItemPreset(pot2, 1 + paramSel);
         }
-        // B encoder action
-        if ((encPos_B - oldPos_B) > 0) {
-            countEncoder(&fastInc, &encPos_B, &oldPos_B, &encoderB);
-            incDecItemPreset(1, fastInc, 1 + paramSel);
+
+        // pot3 action
+        if (labs(pot3 - oldPot3) > 5) {
+            oldPot3 = pot3;
+            incDecItemPreset(pot3, 2 + paramSel);
         }
-        if ((encPos_B - oldPos_B) < 0) {
-            countEncoder(&fastInc, &encPos_B, &oldPos_B, &encoderB);
-            incDecItemPreset(0, fastInc, 1 + paramSel);
-        }
-        // C encoder action
-        if ((encPos_C - oldPos_C) > 0) {
-            countEncoder(&fastInc, &encPos_C, &oldPos_C, &encoderC);
-            incDecItemPreset(1, fastInc, 2 + paramSel);
-        }
-        if ((encPos_C - oldPos_C) < 0) {
-            countEncoder(&fastInc, &encPos_C, &oldPos_C, &encoderC);
-            incDecItemPreset(0, fastInc, 2 + paramSel);
-        }
+
         int lenghtEffect = 0;
         switch (processVar->MCP23008Inputs) {
         case enterButton:
@@ -293,6 +325,9 @@ void Menu::processOptionMenu() {
     processVar->impedanceInst = (char)OptionMenu.value[OptionOption2];
     processVar->phantom = (char)OptionMenu.value[OptionOption3];
     processVar->volumeLineOut = (unsigned char)(-(OptionMenu.value[OptionOption4] * 2)) + 2;
+
+    Serial.print("Line out lvl:");
+    Serial.println(processVar->volumeLineOut);
 
     // an example of how to set other menu values based on selection here
     // remember all menu values passed in or returned are floats
@@ -476,8 +511,8 @@ void Menu::processMainMenu() {
 
 void Menu::setupMenu() {
     // fire up the display
-    display.begin(5000000);
-    display.setRotation(3);
+    display.begin();
+    display.setRotation(1);
 
     // menu code done, now proceed to your code
     display.fillScreen(MENU_BACKGROUND);
@@ -547,12 +582,12 @@ void Menu::setupMenu() {
     ESP32Encoder::useInternalWeakPullResistors = NONE;
     encoder.attachHalfQuad(ENCM_A_PIN, ENCM_B_PIN);
     encoder.clearCount();
-    encoderA.attachHalfQuad(ENCA_A_PIN, ENCA_B_PIN);
-    encoderA.clearCount();
-    encoderB.attachHalfQuad(ENCB_A_PIN, ENCB_B_PIN);
-    encoderB.clearCount();
-    encoderC.attachHalfQuad(ENCC_A_PIN, ENCC_B_PIN);
-    encoderC.clearCount();
+
+    analogReadResolution(11);       // resolution (9 à 12 bits)
+    analogSetAttenuation(ADC_11db); // read until~3.3V
+    oldPot1 = readAdcOversampled(PIN_POT1);
+    oldPot2 = readAdcOversampled(PIN_POT2);
+    oldPot3 = readAdcOversampled(PIN_POT3);
 }
 
 // end

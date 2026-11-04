@@ -20,14 +20,6 @@ bool PGA_ES9290_instrument(u_int8_t gain);
 
 bool PGA_ES9290_return(u_int8_t gain);
 
-void return_in_impedance_line(bool onOff);
-
-void instrument_in_impedance_line(bool onOff);
-
-void return_in_pad_line(bool onOffon);
-
-void instrument_in_pad_line(bool onOff);
-
 void write_1_byte_ES9290(u_int8_t registerES9290, uint8_t byte);
 
 void write_1_bit_ES9290(uint8_t registerES9290, uint8_t bitPosition, bool value);

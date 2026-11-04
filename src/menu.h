@@ -46,7 +46,9 @@ class Menu {
 
     void countEncoder(bool *fastInc, long *encP, long *encOp, ESP32Encoder *encoderSelect);
 
-    void incDecItemPreset(bool inc_dec, bool fastInc, unsigned char par);
+    uint32_t readAdcOversampled(int pin);
+
+    void incDecItemPreset(uint32_t valueCmd, unsigned char par);
 
   public:
     Menu(INOUTVAR *processVar);

@@ -84,12 +84,17 @@ void drawCursor(float value, int enumName, int enumUnit, int min, int max,
     String unitStr = unitToStr(enumUnit);
     String valueStr = valueToStr(value, enumUnit);
 
-    float percent = ((value + abs(min)) / (max - min)) * 100;
+    float percent = ((value - min) / (float)(max - min)) * 100.0f;
 
     // log percent calcul
     if (log == -1) {
         percent = roundf((log10(percent + 1) / log10(101)) * 100);
     }
+
+    if (percent < 0.0f)
+        percent = 0.0f;
+    if (percent > 100.0f)
+        percent = 100.0f;
 
     (**d).fillRect(center_x - 40, center_y - 32, 80, 140, ILI9341_BLACK); // rectangle for one gauge
 

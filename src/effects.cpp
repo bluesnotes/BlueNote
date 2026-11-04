@@ -9,8 +9,8 @@ Effects::Effects() {}
 Pre::Pre() {
     name = pre;
     properties.push_back(new Property(gain, 0, db, -20, 24, 0.1));
-    properties.push_back(new Property(clip_up, 5, noth, 0.1, 10, 0.1));
-    properties.push_back(new Property(clip_down, 5, noth, 0.1, 10, 0.1));
+    properties.push_back(new Property(clip_up, 5, noth, 1, 9, 0.1));
+    properties.push_back(new Property(clip_down, 5, noth, 1, 9, 0.1));
     properties.push_back(new Property(active, 0, on_off, 0, 1, 1));
 }
 /*************OctaverSection**************/
@@ -38,9 +38,9 @@ EnvelopeFilter::EnvelopeFilter() {
     properties.push_back(new Property(active, 0, on_off, 0, 1, 1));
 }
 /*************FuzzOdSection**************/
-// Gain 0.1 to 15.99 -> -20 to 24dB
-// Select drive Od or Fuzz
-// Bias 0.1 to 10
+// Gain 0.1 to 15.99 -> -20 to 80dB
+// Select drive Od/Fuzz/Octa
+// Bias -1 to 1
 // Post Eq
 // Volume 0.001 to 10-> -60 to 20dB
 // Blend 0.001 to 1 -> -60 to 0dB
@@ -49,18 +49,18 @@ FuzzOd::FuzzOd() {
     name = fuzz_od;
     properties.push_back(new Property(gain, 0, db, -20, 80, 0.1));
     properties.push_back(new Property(sel, 0, od_type, 0, 2, 1));
-    properties.push_back(new Property(bias, 5, noth, 0.1, 10, 0.1));
+    properties.push_back(new Property(bias, 0, noth, -1, 1, 0.1));
     properties.push_back(new Property(gain, 0, db, -15, 15, 0.1));
-    properties.push_back(new Property(freq, 200, hz, 20, 20000, -1));
+    properties.push_back(new Property(freq, 60, hz, 20, 20000, -1));
     properties.push_back(new Property(q_fact, 1.41, noth, 0, 16, 0.01));
     properties.push_back(new Property(gain, 0, db, -15, 15, 0.1));
     properties.push_back(new Property(freq, 200, hz, 20, 20000, -1));
     properties.push_back(new Property(q_fact, 1.41, noth, 0, 16, 0.01));
     properties.push_back(new Property(gain, 0, db, -15, 15, 0.1));
-    properties.push_back(new Property(freq, 200, hz, 20, 20000, -1));
+    properties.push_back(new Property(freq, 400, hz, 20, 20000, -1));
     properties.push_back(new Property(q_fact, 1.41, noth, 0, 16, 0.01));
     properties.push_back(new Property(gain, 0, db, -15, 15, 0.1));
-    properties.push_back(new Property(freq, 200, hz, 20, 20000, -1));
+    properties.push_back(new Property(freq, 800, hz, 20, 20000, -1));
     properties.push_back(new Property(q_fact, 1.41, noth, 0, 16, 0.01));
     properties.push_back(new Property(vol, 0, db, -60, 20, 0.1));
     properties.push_back(new Property(bld, -6, db, -60, 0, 0.1));
@@ -73,14 +73,14 @@ FuzzOd::FuzzOd() {
 // on - off
 CompTwoBand::CompTwoBand() {
     name = comp_2b;
-    properties.push_back(new Property(threshHP, 0, db, -90, 6, 0.1));
-    properties.push_back(new Property(threshLP, 0, db, -90, 6, 0.1));
+    properties.push_back(new Property(threshHP, 0, db, -40, 24, 0.1));
+    properties.push_back(new Property(threshLP, 0, db, -40, 24, 0.1));
     properties.push_back(new Property(bld, -6, db, -60, 0, 0.1));
     properties.push_back(new Property(active, 0, on_off, 0, 1, 1));
 }
 /*************ChorusSection**************/
 // Select Sine Square or triangle
-// Offset auto or 0.1 to 10
+// Offset 0.1 to 30 ms
 // Strenght (gain of lfo)
 // FC dry
 // FC Wet
@@ -90,28 +90,29 @@ Chorus::Chorus() {
     name = chorus;
     properties.push_back(new Property(sel, 0, waveforms, 0, 2, 1));
     properties.push_back(new Property(t_offset, 15, ms, 0, 30, 0.1));
-    properties.push_back(new Property(strength, 1, noth, 0.1, 10, 0.1));
+    properties.push_back(new Property(strength, 1, ms, 0.1, 15, 0.1));
+    properties.push_back(new Property(freq, 0.2, hz, 0.1, 2, 0.1));
     properties.push_back(new Property(wet_freq, 20000, hz, 20, 20000, -1));
     properties.push_back(new Property(dry_freq, 20000, hz, 20, 20000, -1));
     properties.push_back(new Property(bld, -6, db, -60, 0, 0.1));
     properties.push_back(new Property(active, 0, on_off, 0, 1, 1));
 }
 /*************CompressorSection**************/
-// -90 / +6 [dB]
-// 1 - 100 [:1]
-// 1 - 500 [ms]
-// 0 - 500 [ms]
-// 0 - 2000 [ms]
-// -30 / +24 [dB]
+// threshold -80 / +6 [dB]
+// ratio 1 - 100 [:1]
+// make-up-30 / +24 [dB]
+// attack 0 - 500 [ms]
+// release 0 - 2000 [ms]
+// rms 0 - 2000 [ms]
 // on - off
 Compressor::Compressor() {
     name = comp;
-    properties.push_back(new Property(thresh, 0, db, -90, 6, 0.1));
-    properties.push_back(new Property(ratio, 1, for_one, 1, 100, -1));
+    properties.push_back(new Property(thresh, 0, db, -80, 6, 0.5));
+    properties.push_back(new Property(ratio, 1.1, for_one, 1.1, 100, -1));
     properties.push_back(new Property(make_up, 0, db, -30, 24, 0.1));
     properties.push_back(new Property(att, 10, ms, 0, 500, 1));
     properties.push_back(new Property(rel, 100, ms, 0, 2000, 1));
-    properties.push_back(new Property(rms, 100, ms, 0, 500, 1));
+    properties.push_back(new Property(sel, 0, knee_type, 0, 3, 1));
     properties.push_back(new Property(active, 0, on_off, 0, 1, 1));
 }
 /*************EQ**************/
@@ -125,7 +126,7 @@ Eq::Eq() {
     properties.push_back(new Property(gain, 0, db, -15, 15, 0.1));
     properties.push_back(new Property(freq, 200, hz, 20, 20000, -1));
     properties.push_back(new Property(q_fact, 1.41, noth, 0, 16, 0.01));
-    properties.push_back(new Property(sel, 0, filter_type, 0, 8, 1));
+    properties.push_back(new Property(sel, 0, filter_type, 0, 2, 1));
     properties.push_back(new Property(active, 0, on_off, 0, 1, 1));
 }
 
@@ -283,8 +284,8 @@ String valueToStr(float value, int unit) {
         return "err";
     } else if (unit == od_type) {
         switch ((int)value) {
-        case drive:
-            return "drive";
+        case octa:
+            return "octa";
             break;
         case od:
             return "OD";
@@ -330,6 +331,12 @@ String valueToStr(float value, int unit) {
         case high_pass:
             return "hi pass";
             break;
+        case low_pass_first:
+            return "lp 1st";
+            break;
+        case high_pass_first:
+            return "hp 1st";
+            break;
         case notch:
             return "notch";
             break;
@@ -338,6 +345,21 @@ String valueToStr(float value, int unit) {
             break;
         }
         return "err";
+    } else if (unit == knee_type) {
+        switch ((int)value) {
+        case hard_knee:
+            return "hard";
+            break;
+        case soft_knee1:
+            return "soft I";
+            break;
+        case soft_knee2:
+            return "soft II";
+            break;
+        case soft_knee3:
+            return "soft III";
+            break;
+        }
+        return "err";
     }
-    return "err";
 }
