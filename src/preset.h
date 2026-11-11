@@ -49,12 +49,20 @@ class Preset {
 
     unsigned int getLenghtPreset();
 
+    unsigned int getSizePreset();
+
     int getLenghtEffect(unsigned char page);
+
+    unsigned int getValueCount() const;
+
+    bool copyEffectValues(float *values, unsigned int capacity) const;
 
     // Setters
     void setPreseName(String s);
 
     void setValueEffectPreset(unsigned char page, unsigned char parameter, float value);
+
+    bool applyEffectValues(const float *values, unsigned int count);
 
     void displayMenuPreset(unsigned char page, unsigned char parameter, presetDisplay display, Adafruit_ILI9341 *d);
 };

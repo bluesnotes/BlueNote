@@ -92,6 +92,9 @@ void IRAM_ATTR MCP23008Interrupt() {
 void setup() {
     Serial.begin(115200);
 
+    init_MCP23008();
+    attachInterrupt(INT_MCP23008_PIN, MCP23008Interrupt, RISING);
+
     menu.setupMenu();
 
     timer = timerBegin(1, 0xC350, true); // timer 1, 80Mhz / 50k = 1.6kHz
@@ -100,10 +103,6 @@ void setup() {
     timerAlarmEnable(timer); // interrupt every 100ms
 
     processVar.temperature = temperatureCtrl.setup();
-
-    init_MCP23008();
-    attachInterrupt(INT_MCP23008_PIN, MCP23008Interrupt, RISING);
-    write_1_bit_MCP23008(GPIO, LED_BCKL, true);
 
     write_1_bit_MCP23008(GPIO, RST_ADAU_PIN, false);
     delay(200);

@@ -5,3 +5,5 @@
 #include "global_struct.h"
 #include "menu.h"
 #include "temperature_regulation.h"
+
+#define VERSION_STRING "0.0.1"

@@ -264,6 +264,9 @@ String unitToStr(int n) {
     case filter_type:
         return "";
         break;
+    case knee_type:
+        return "";
+        break;
     }
 
     return "err";
@@ -362,4 +365,5 @@ String valueToStr(float value, int unit) {
         }
         return "err";
     }
+    return "err";
 }

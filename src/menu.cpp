@@ -27,7 +27,127 @@ const char *OutLinePlaceItems[] = {"Direct", "P. Pre.", "P. Comp.", "P. Eq."};
 
 ESP32Encoder encoder;
 
+ExternalEEPROM myMem;
+
+#define LOCATION_SETTINGS 0
+
+#define VALID_DATA __TIME__
+
 Preset **Pusr = new Preset *[NUMB_PRESET];
+
+namespace {
+constexpr uint32_t PRESET_EEPROM_BASE = 1024;
+constexpr uint32_t PRESET_MAGIC = 0x50525354;
+constexpr uint16_t PRESET_VERSION = 2;
+constexpr unsigned int PRESET_MAX_VALUES = 80;
+constexpr size_t PRESET_NAME_LENGTH = 20;
+constexpr unsigned char FIXED_PRESET_COUNT = 6;
+constexpr const char *FIXED_PRESET_NAMES[FIXED_PRESET_COUNT] = {
+    "Rock", "Jazz", "RnB", "Metal", "Raggae", "Pop"};
+
+struct PresetRecord {
+    uint32_t magic;
+    uint16_t version;
+    uint16_t count;
+    char name[PRESET_NAME_LENGTH];
+    float values[PRESET_MAX_VALUES];
+};
+
+uint32_t presetAddress(unsigned char id) {
+    return PRESET_EEPROM_BASE + id * sizeof(PresetRecord);
+}
+
+bool savePresetToEEPROM(unsigned char id) {
+    if (id >= NUMB_PRESET || Pusr[id] == nullptr)
+        return false;
+
+    const unsigned int count = Pusr[id]->getValueCount();
+    if (count > PRESET_MAX_VALUES)
+        return false;
+
+    PresetRecord record = {};
+    record.magic = PRESET_MAGIC;
+    record.version = PRESET_VERSION;
+    record.count = count;
+    Pusr[id]->getPresetName().toCharArray(record.name, sizeof(record.name));
+
+    if (!Pusr[id]->copyEffectValues(record.values, PRESET_MAX_VALUES)) {
+        return false;
+    }
+
+    myMem.write(presetAddress(id),
+                reinterpret_cast<uint8_t *>(&record),
+                sizeof(record));
+
+    return true;
+}
+
+bool loadPresetFromEEPROM(unsigned char id) {
+    if (id >= NUMB_PRESET || Pusr[id] == nullptr)
+        return false;
+
+    PresetRecord record = {};
+
+    myMem.read(presetAddress(id),
+               reinterpret_cast<uint8_t *>(&record),
+               sizeof(record));
+
+    if (record.magic != PRESET_MAGIC ||
+        record.version != PRESET_VERSION ||
+        record.count != Pusr[id]->getValueCount() ||
+        record.count > PRESET_MAX_VALUES ||
+        !Pusr[id]->applyEffectValues(record.values, record.count)) {
+        return false;
+    }
+
+    if (id >= FIXED_PRESET_COUNT && record.name[0] != '\0')
+        Pusr[id]->setPreseName(String(record.name));
+    return true;
+}
+
+void drawSplashScreen(Adafruit_ILI9341 &screen) {
+    screen.fillScreen(ILI9341_BLACK);
+    screen.setTextWrap(false);
+
+    const int logoX = (screen.width() - BLUE_NOTE_LOGO_WIDTH) / 2;
+    const int logoY = 8;
+
+    screen.drawRGBBitmap(
+        logoX,
+        logoY,
+        reinterpret_cast<const uint16_t *>(blueNoteLogo),
+        BLUE_NOTE_LOGO_WIDTH,
+        BLUE_NOTE_LOGO_HEIGHT);
+
+    screen.drawRect(35, 182, screen.width() - 70, 18, MENU_TEXT);
+}
+
+void updateSplashProgress(Adafruit_ILI9341 &screen, uint8_t progress) {
+    if (progress > 100)
+        progress = 100;
+
+    const int barX = 35;
+    const int barY = 185;
+    const int barWidth = screen.width() - 74;
+    const int barHeight = 14;
+
+    int fillWidth = (barWidth * progress) / 100;
+    screen.fillRect(barX, barY, fillWidth, barHeight, MENU_HIGHLIGHT);
+
+    screen.fillRect(0, 205, screen.width(), 35, MENU_BACKGROUND);
+    screen.setFont(&FONT_SMALL);
+    screen.setTextColor(MENU_TEXT);
+
+    char percentage[6];
+    snprintf(percentage, sizeof(percentage), "%u%%", progress);
+
+    int16_t x1, y1;
+    uint16_t textWidth, textHeight;
+    screen.getTextBounds(percentage, 0, 0, &x1, &y1, &textWidth, &textHeight);
+    screen.setCursor((screen.width() - textWidth) / 2 - x1, 225 - y1);
+    screen.print(percentage);
+}
+} // namespace
 
 // encoder stuff
 bool fastInc = false;
@@ -82,7 +202,7 @@ void Menu::incDecItemPreset(uint32_t valueCmd, unsigned char par) {
 
         float newValue;
 
-        // --- GESTION LOGARITHMIQUE ---
+        // ---  LOG MANAGE ---
         if (incFact < 0) {
             // Transformation de la course linéaire du potard en courbe logarithmique (base 10)
             // percentCmd va de 0 à 1 -> logPercent va de 0 à 1
@@ -106,7 +226,7 @@ void Menu::incDecItemPreset(uint32_t valueCmd, unsigned char par) {
                 newValue = roundf(newValue / 1000.0f) * 1000.0f;
             }
         }
-        // --- GESTION LINÉAIRE CLASSIQUE ---
+        // --- LINEAR MANAGE ---
         else {
             float range = max - min;
             newValue = (range * percentCmd) + min;
@@ -118,6 +238,105 @@ void Menu::incDecItemPreset(uint32_t valueCmd, unsigned char par) {
 
         Pusr[idSel]->setValueEffectPreset(pageSel, par, newValue);
         Pusr[idSel]->displayMenuPreset(pageSel, par, presetDisplay::oneGauge, &display);
+    }
+}
+
+void Menu::editPresetName() {
+    static const char nameCharacters[] = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
+    constexpr size_t maxNameLength = PRESET_NAME_LENGTH - 1;
+
+    char name[PRESET_NAME_LENGTH] = {};
+    String currentName = Pusr[idSel]->getPresetName();
+    currentName.toCharArray(name, sizeof(name));
+
+    size_t cursor = strlen(name);
+    if (cursor >= maxNameLength)
+        cursor = maxNameLength - 1;
+    if (name[cursor] == '\0') {
+        name[cursor] = ' ';
+        name[cursor + 1] = '\0';
+    }
+
+    long position = encoder.getCount();
+    oldPos = position;
+    bool editing = true;
+    bool redraw = true;
+
+    while (editing) {
+        if (redraw) {
+            display.fillScreen(MENU_BACKGROUND);
+            display.setTextColor(MENU_HIGHLIGHTTEXT);
+            display.setFont(&FONT_TITLE);
+            display.setCursor(20, 42);
+            display.printf("Rename preset %u", idSel);
+
+            display.setFont(&FONT_EDITTITLE);
+            display.setTextColor(MENU_TEXT);
+            display.setCursor(20, 120);
+            display.print(name);
+
+            char prefix[PRESET_NAME_LENGTH] = {};
+            memcpy(prefix, name, cursor);
+            int16_t textX, textY;
+            uint16_t textWidth, textHeight;
+            display.getTextBounds(prefix, 20, 120, &textX, &textY, &textWidth, &textHeight);
+            display.drawFastHLine(20 + textWidth, 124, 15, MENU_HIGHLIGHT);
+
+            display.setFont(&FONT_SMALL);
+            display.setTextColor(MENU_TEXT);
+            display.setCursor(20, 190);
+            display.print("Rotate: character   Left/Right: cursor");
+            display.setCursor(20, 215);
+            display.print("Enter: save   Save/Exit: cancel");
+            redraw = false;
+        }
+
+        delay(50);
+        long newPosition = encoder.getCount();
+        long delta = newPosition - position;
+        if (delta != 0) {
+            position = newPosition;
+            oldPos = newPosition;
+            long characterCount = sizeof(nameCharacters) - 1;
+            long characterIndex = 0;
+            while (nameCharacters[characterIndex] != name[cursor] && characterIndex < characterCount)
+                characterIndex++;
+            characterIndex = (characterIndex + delta) % characterCount;
+            if (characterIndex < 0)
+                characterIndex += characterCount;
+            name[cursor] = nameCharacters[characterIndex];
+            redraw = true;
+        }
+
+        if (processVar->MCP23008Inputs == leftButton) {
+            processVar->MCP23008Inputs = 0;
+            if (cursor > 0) {
+                cursor--;
+                redraw = true;
+            }
+        } else if (processVar->MCP23008Inputs == rightButton) {
+            processVar->MCP23008Inputs = 0;
+            if (cursor < maxNameLength - 1) {
+                cursor++;
+                if (name[cursor] == '\0') {
+                    name[cursor] = ' ';
+                    name[cursor + 1] = '\0';
+                }
+                redraw = true;
+            }
+        } else if (processVar->MCP23008Inputs == enterButton) {
+            processVar->MCP23008Inputs = 0;
+            String editedName(name);
+            editedName.trim();
+            if (editedName.length() > 0) {
+                Pusr[idSel]->setPreseName(editedName);
+                savePresetToEEPROM(idSel);
+                editing = false;
+            }
+        } else if (processVar->MCP23008Inputs == saveExitButton) {
+            processVar->MCP23008Inputs = 0;
+            editing = false;
+        }
     }
 }
 
@@ -142,9 +361,9 @@ void Menu::openPresetMenu() {
             countEncoder(&fastInc, &encPos, &oldPos, &encoder);
             paramSel = 0;
             if (presetUnsel) {
-                idSel < NUMB_PRESET - 2 ? idSel++ : idSel = 0;
+                idSel < NUMB_PRESET - 1 ? idSel++ : idSel = 0;
                 Pusr[idSel]->displayMenuPreset(pageSel, paramSel, presetDisplay::allDisplay, &display); // change preset sel
-            } else if (pageSel < Pusr[idSel]->getLenghtPreset()) {
+            } else if (pageSel < Pusr[idSel]->getSizePreset()) {
                 pageSel++;
                 Pusr[idSel]->displayMenuPreset(pageSel, paramSel, presetDisplay::effectDisplay, &display); // change effect sel
             }
@@ -153,7 +372,7 @@ void Menu::openPresetMenu() {
             countEncoder(&fastInc, &encPos, &oldPos, &encoder);
             paramSel = 0;
             if (presetUnsel) {
-                idSel > 0 ? idSel-- : idSel = NUMB_PRESET - 2;
+                idSel > 0 ? idSel-- : idSel = NUMB_PRESET - 1;
                 Pusr[idSel]->displayMenuPreset(pageSel, paramSel, presetDisplay::allDisplay, &display);
             } else if (pageSel > 0) {
                 pageSel--;
@@ -180,6 +399,14 @@ void Menu::openPresetMenu() {
 
         int lenghtEffect = 0;
         switch (processVar->MCP23008Inputs) {
+        case saveExitButton:
+            processVar->MCP23008Inputs = 0;
+            if (savePresetToEEPROM(idSel))
+                Serial.printf("Preset %u saved to EEPROM\n", idSel);
+            else
+                Serial.printf("Failed to save preset %u\n", idSel);
+
+            break;
         case enterButton:
             processVar->MCP23008Inputs = 0;
             presetUnsel = !presetUnsel;
@@ -191,7 +418,11 @@ void Menu::openPresetMenu() {
             break;
         case menuButton:
             processVar->MCP23008Inputs = 0;
-            processMainMenu();
+            if (presetUnsel) {
+                processMainMenu();
+            } else {
+                editPresetName();
+            }
             Pusr[idSel]->displayMenuPreset(pageSel, paramSel, presetDisplay::selectPresetAllDisplay, &display);
             break;
         case rightButton:
@@ -426,9 +657,9 @@ void Menu::displayAboutScreen() {
             display.setTextColor(MENU_TEXT);
             display.setFont(&FONT_SMALL);
             display.println("Blue Note Amplifier");
-            display.println("2022-2023");
+            display.println("2022-2026");
             display.print("Version : ");
-            display.println("Alpha");
+            display.println(VERSION_STRING);
             display.print("Temp : ");
             display.print(displayTemp);
             display.println(" degC");
@@ -514,14 +745,47 @@ void Menu::setupMenu() {
     display.begin();
     display.setRotation(1);
 
-    // menu code done, now proceed to your code
-    display.fillScreen(MENU_BACKGROUND);
+    // splashscreen
+    drawSplashScreen(display);
+    updateSplashProgress(display, 0);
+    write_1_bit_MCP23008(GPIO, LED_BCKL, true);
+
+    Wire.begin();
+    myMem.setMemorySize(262144);
+    myMem.setPageSize(256);
+
+    // Initialize the EEPROM
+    if (myMem.begin() == false) {
+        Serial.println(F("No memory detected. Freezing."));
+        while (true)
+            ;
+    }
+    Serial.println(F("Memory detected!"));
+    updateSplashProgress(display, 10);
 
     char strName[18];
-    for (unsigned char i = 0; i < NUMB_PRESET - 1; i++) {
-        sprintf(strName, "Usr Preset %d", i);
+    for (unsigned char i = 0; i < NUMB_PRESET; i++) {
+        if (i < FIXED_PRESET_COUNT)
+            snprintf(strName, sizeof(strName), "%s", FIXED_PRESET_NAMES[i]);
+        else
+            snprintf(strName, sizeof(strName), "Usr Preset %d", i);
         Pusr[i] = new Preset(i, strName);
     }
+
+    for (unsigned char i = 0; i < NUMB_PRESET; i++) {
+        if (!loadPresetFromEEPROM(i)) {
+            Serial.printf("No or invalid preset %u in EEPROM\n", i);
+        }
+        updateSplashProgress(display, 40 + (55 * (i + 1)) / NUMB_PRESET);
+    }
+    updateSplashProgress(display, 100);
+
+    // Print out the size of the user settings struct
+    Serial.print("Size of user settings in bytes: ");
+    Serial.println(Pusr[0]->getLenghtPreset());
+
+    Serial.print("Size of user settings in byteS: ");
+    Serial.println(Pusr[0]->getSizePreset());
 
     MainMenu.init(MENU_TEXT, MENU_BACKGROUND, MENU_HIGHLIGHTTEXT, MENU_HIGHLIGHT, 64, 3, "Main Menu", FONT_TITLE, FONT_TITLE);
 

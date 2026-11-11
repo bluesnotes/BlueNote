@@ -2,11 +2,14 @@
 #define MENU_H
 
 #include "Adafruit_ILI9341_Menu.h"
+#include "SparkFun_External_EEPROM.h"
 
 #include "ESP32Encoder.h" // https://github.com/madhephaestus/ESP32Encoder
 #include "global_struct.h"
 #include "pin.h"
 #include "preset.h"
+
+#include "BlueNoteLogo.h"
 
 #include "FreeSans12pt7b.h"
 #include "FreeSans18pt7b.h"
@@ -43,6 +46,7 @@ class Menu {
     void processBluetoothMenu();
     void processWirelessMenu();
     void displayAboutScreen();
+    void editPresetName();
 
     void countEncoder(bool *fastInc, long *encP, long *encOp, ESP32Encoder *encoderSelect);
 

@@ -46,6 +46,38 @@ unsigned int Preset::getLenghtPreset() {
     return sizeof(effects) - 2;
 }
 
+unsigned int Preset::getSizePreset() {
+    return effects.size() - 1;
+}
+
+unsigned int Preset::getValueCount() const {
+    unsigned int count = 0;
+
+    for (const auto *effect : effects) {
+        count += effect->properties.size();
+    }
+
+    return count;
+}
+
+bool Preset::copyEffectValues(float *values, unsigned int capacity) const {
+    const unsigned int count = getValueCount();
+
+    if (values == nullptr || capacity < count) {
+        return false;
+    }
+
+    unsigned int index = 0;
+
+    for (const auto *effect : effects) {
+        for (const auto *property : effect->properties) {
+            values[index++] = property->value;
+        }
+    }
+
+    return true;
+}
+
 int Preset::getLenghtEffect(unsigned char page) {
     return effects[page]->properties.size();
 }
@@ -61,6 +93,32 @@ void Preset::setValueEffectPreset(unsigned char page, unsigned char parameter, f
         effects[page]->properties[parameter]->value = value;
 
     l_dsp.setValueEffect(effects[page]);
+}
+
+bool Preset::applyEffectValues(const float *values, unsigned int count) {
+    if (values == nullptr || count != getValueCount()) {
+        return false;
+    }
+
+    unsigned int index = 0;
+
+    for (auto *effect : effects) {
+        for (auto *property : effect->properties) {
+            float value = values[index++];
+
+            if (value < property->min)
+                value = property->min;
+            if (value > property->max)
+                value = property->max;
+
+            property->value = value;
+        }
+
+        // Applique à nouveau les paramètres de cet effet au DSP.
+        l_dsp.setValueEffect(effect);
+    }
+
+    return true;
 }
 
 void Preset::displayMenuPreset(unsigned char page, unsigned char parameter, presetDisplay display, Adafruit_ILI9341 *d) {
@@ -80,7 +138,7 @@ void Preset::displayMenuPreset(unsigned char page, unsigned char parameter, pres
     if (display >= effectDisplay) { // display all gauge & effect title
         unsigned int pageEffect = parameter / 3 + 1;
         unsigned int numPageEffect = ((numParamEffect - 1) / 3) + 1;
-        unsigned int presetLenght = getLenghtPreset();
+        unsigned int presetLenght = getSizePreset();
 
         if (page == presetLenght) {
             drawEffect(effectLeftArrow, effects[page]->name, pageEffect, numPageEffect, &d);

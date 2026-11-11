@@ -326,24 +326,8 @@ float dB2gain(float db) {
 }
 
 float ratioCalc(float ratio) {
-    float ratioOut;
-    int ratioIndex;
-    float unitRatio[9] = {-20, -15, -13, -11, -9.37, -8.6, -7.7, -7, -6.5};               // 1.1 to 1.9:1
-    float decRatio[9] = {-5.8, -3.6, -2.5, -1.95, -1.6, -1.3425, -1.16, -1.02, -0.92};    // 2 to 10:1
-    float highRatio[9] = {-0.45, -0.29, -0.2, -0.165, -0.13, -0.115, -0.1, -0.09, -0.08}; // 20 to 100:1
 
-    if (ratio < 2) {
-        ratioIndex = (int)ratio - 1.1;
-        ratioOut = unitRatio[ratioIndex];
-    } else if (ratio >= 2 && ratio < 11) {
-        ratioIndex = (int)ratio - 2;
-        ratioOut = unitRatio[ratioIndex];
-    } else {
-        ratioIndex = (int)(ratio / 10) - 2;
-        ratioOut = unitRatio[ratioIndex];
-    }
-
-    return ratio;
+    return 1 - (1 / ratio);
 }
 
 // calc the biquad coefficient for a given filter type

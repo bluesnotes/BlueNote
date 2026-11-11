@@ -16,7 +16,7 @@ bool init_MCP23008(void) {
 
     write_1_byte_MCP23008(IOCON, 0b00000010); // interrupt out active at 1 or 0 (select1)
 
-    write_1_byte_MCP23008(GPIO, 0b01100000); // LED BACKGROUND ON & RST_ADAU_PIN ON
+    write_1_byte_MCP23008(GPIO, 0b00100000); // LED BACKGROUND OFF & RST_ADAU_PIN ON
 
     write_1_byte_MCP23008(GPINT, 0b00011111); // in interrupt on change enable
 
